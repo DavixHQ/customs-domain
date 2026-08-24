@@ -24,7 +24,7 @@ use Generator;
  * Two details the format demands and documentation does not mention. Dates
  * arrive as `1972-01-01 00:00:00 UTC`, which is not an ISO string. And every
  * end date in a chapter pull is empty, because filtering by `as_of` returns
- * only lines valid on that date — so a null end date means "in force", never
+ * only lines valid on that date - so a null end date means "in force", never
  * "unknown", and a code that has been withdrawn is simply absent.
  */
 final class ChapterCsvParser
@@ -63,7 +63,7 @@ final class ChapterCsvParser
      * Parse row by row, holding one line in memory at a time.
      *
      * Declared as Generator rather than iterable because it is one, and
-     * because PHP 8.1's iterator_to_array() accepts only Traversable — the
+     * because PHP 8.1's iterator_to_array() accepts only Traversable - the
      * widening to iterable landed in 8.2. Returning the looser type compiles
      * everywhere and then fails static analysis on the oldest version this
      * package supports.
@@ -155,7 +155,7 @@ final class ChapterCsvParser
         $sid = $this->intAt($row, $columns, self::COLUMN_SID);
         $code = $this->stringAt($row, $columns, self::COLUMN_CODE);
 
-        // A row without an identity is not a partial commodity, it is noise —
+        // A row without an identity is not a partial commodity, it is noise -
         // a trailing blank line or a malformed record. Skipping is kinder than
         // failing an entire chapter over one bad line.
         if ($sid === null || $code === null) {

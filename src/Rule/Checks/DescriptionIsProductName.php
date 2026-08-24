@@ -14,9 +14,9 @@ use Davix\Customs\Rule\Severity;
 /**
  * The customs description is a copy of the product name.
  *
- * A strong signal that nobody has actually written a customs description —
+ * A strong signal that nobody has actually written a customs description -
  * the field was populated by a bulk copy or an import default. Product names
- * are written to sell ("Summit Parka — Midnight") and customs descriptions are
+ * are written to sell ("Summit Parka - Midnight") and customs descriptions are
  * written to identify ("Men's parka, outer shell 100% polyester, with hood").
  * The first tells a customs officer nothing.
  *

@@ -10,7 +10,7 @@ use Davix\Customs\Exception\NormalisationFailedException;
  * The outcome of normalising one raw commodity code.
  *
  * Immutable. Either it carries a normalised code, or it carries a failure
- * reason — never both, never neither.
+ * reason - never both, never neither.
  */
 final class NormalisationResult
 {

@@ -12,7 +12,7 @@ namespace Davix\Customs\Validation;
  * originates in a supplier spreadsheet, and spreadsheets mangle codes in a
  * small number of predictable ways: dotted grouping, space grouping, leading
  * zeroes stripped by numeric formatting, a trailing ".0" from float coercion,
- * and — worst of all — scientific notation on ten-digit values.
+ * and - worst of all - scientific notation on ten-digit values.
  *
  * Without this step, a format rule fires on most of a real catalogue on the
  * first scan and the merchant concludes the module is broken.
@@ -147,7 +147,7 @@ final class CodeNormaliser
      *
      * Delimiters are only treated as multi-value when at least two of the
      * resulting parts are substantial enough to be codes in their own right.
-     * That keeps "6201/40/10/19" — a legitimate if unusual grouping style —
+     * That keeps "6201/40/10/19" - a legitimate if unusual grouping style -
      * from being rejected.
      */
     private function holdsMultipleCodes(string $value): bool
@@ -176,7 +176,7 @@ final class CodeNormaliser
      *
      * Deliberately narrow. It fires only when the entire value is a run of six
      * or more digits followed by nothing but zeroes after a single decimal
-     * point, so a genuine dotted code ending in a zero pair — 0101.21.00.00 —
+     * point, so a genuine dotted code ending in a zero pair - 0101.21.00.00 -
      * is left alone.
      */
     private function dropExcelDecimalTail(string $value): string

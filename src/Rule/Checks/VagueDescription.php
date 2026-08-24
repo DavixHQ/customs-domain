@@ -20,8 +20,8 @@ use Davix\Customs\Rule\Severity;
  * practical causes of a shipment being held, and one of the cheapest to catch.
  *
  * Covers the missing case as well as the vague one, distinguished by variant.
- * They are the same problem from the carrier's point of view — nothing usable
- * in the description field — and splitting them into two rules would put half
+ * They are the same problem from the carrier's point of view - nothing usable
+ * in the description field - and splitting them into two rules would put half
  * a merchant's remediation in one dashboard row and half in another.
  *
  * Matching is on whole words against the configured term list, so "gift" fires

@@ -1,8 +1,8 @@
 # Keep development files out of `composer install --prefer-dist` downloads.
 #
 # The recorded API fixtures are 760 KB and every consumer of this package would
-# otherwise pull them into vendor/ for no benefit. They matter enormously here —
-# several bugs were found only because tests replay real responses — and not at
+# otherwise pull them into vendor/ for no benefit. They matter enormously here -
+# several bugs were found only because tests replay real responses - and not at
 # all to someone installing the library.
 #
 # Nothing here affects the repository, only the archive Packagist serves.

@@ -21,7 +21,7 @@ use Davix\Customs\Rule\Severity;
  * quietly produces a confident wrong answer rather than an obvious failure.
  *
  * A ratio near a thousand is called out separately because it is almost always
- * grams entered into a kilogram field — the single most common unit error in
+ * grams entered into a kilogram field - the single most common unit error in
  * customs data, and one a merchant fixes in seconds once told.
  */
 final class NetWeightExceedsGross implements RuleInterface

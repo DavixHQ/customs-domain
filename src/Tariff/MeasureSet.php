@@ -9,7 +9,7 @@ use DateTimeImmutable;
 /**
  * The measures on one commodity, with the filters rules actually need.
  *
- * A real commodity carries dozens — 74 on a cotton parka — spanning both trade
+ * A real commodity carries dozens - 74 on a cotton parka - spanning both trade
  * directions, dozens of geographical areas and every kind of duty, control and
  * prohibition. Handing a rule a raw array would mean every rule reimplementing
  * the same direction and origin filtering, and getting it subtly different.
@@ -128,7 +128,7 @@ final class MeasureSet
      * so one appearing on several measures is listed once.
      *
      * The key type is deliberately array-key rather than string. Document
-     * codes are a mix of lettered and numeric — C052 alongside 9020 — and PHP
+     * codes are a mix of lettered and numeric - C052 alongside 9020 - and PHP
      * silently casts a numeric-string array key to an integer. Declaring these
      * as string-keyed was simply false, and static analysis cannot see the
      * difference: a strict comparison against '9020' fails against the integer

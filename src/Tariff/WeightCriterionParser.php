@@ -19,8 +19,8 @@ namespace Davix\Customs\Tariff;
  * condition.
  *
  * Descriptions are whitespace-normalised before matching. The tariff separates
- * a quantity from its unit with a non-breaking space — the live bytes for
- * "1 kg" are 31 c2 a0 6b 67 — and PCRE's \s does not match one outside Unicode
+ * a quantity from its unit with a non-breaking space - the live bytes for
+ * "1 kg" are 31 c2 a0 6b 67 - and PCRE's \s does not match one outside Unicode
  * mode. Without normalisation every weight condition in the nomenclature reads
  * as no condition at all, and weight narrowing silently does nothing.
  */
@@ -100,13 +100,54 @@ final class WeightCriterionParser
             return null;
         }
 
-        $value = (float) str_replace(',', '', $matches[1]);
-        $unit = strtolower($matches[2]);
+        $value = $this->parseNumber($matches[1]);
 
-        if ($value <= 0.0) {
+        if ($value === null || $value <= 0.0) {
             return null;
         }
 
+        $unit = strtolower($matches[2]);
+
         return str_starts_with($unit, 'g') ? $value / 1000 : $value;
+    }
+
+    /**
+     * Read a number written the way the tariff writes them.
+     *
+     * The tariff uses the European decimal comma: chapter 4 contains "net
+     * content not exceeding 2,5 kg". Treating that comma as a thousands
+     * separator yields 25 kg - a tenfold error, and a far worse failure than
+     * not parsing at all, because it produces a confident threshold that is
+     * simply wrong.
+     *
+     * A comma followed by one or two digits at the end of the number is a
+     * decimal separator. A comma followed by exactly three digits, repeating,
+     * is a thousands separator. Anything else is ambiguous enough that
+     * refusing beats guessing.
+     */
+    private function parseNumber(string $raw): ?float
+    {
+        $value = trim($raw);
+
+        if ($value === '') {
+            return null;
+        }
+
+        // Plain: 1, 1.5, 250
+        if (preg_match('/^\d+(?:\.\d+)?$/', $value) === 1) {
+            return (float) $value;
+        }
+
+        // European decimal comma: 2,5 or 12,75
+        if (preg_match('/^\d+,\d{1,2}$/', $value) === 1) {
+            return (float) str_replace(',', '.', $value);
+        }
+
+        // Thousands separators: 1,000 or 12,345,678
+        if (preg_match('/^\d{1,3}(?:,\d{3})+$/', $value) === 1) {
+            return (float) str_replace(',', '', $value);
+        }
+
+        return null;
     }
 }

@@ -85,7 +85,7 @@ final class MeasureRulesTest extends TestCase
 
     /**
      * Nearly every control measure carries a negative condition reading "not
-     * allowed after control" — the branch taken when the required document is
+     * allowed after control" - the branch taken when the required document is
      * absent, not the measure's normal outcome. Chapter 62 garments carry
      * several. Treating them as prohibitions marks an entire apparel catalogue
      * unshippable.

@@ -22,7 +22,7 @@ use Davix\Customs\Tariff\MeasureCondition;
  * Detected two ways, because they do not always agree. A measure type in
  * series A is a prohibition outright. A control measure prohibits through a
  * negative condition when its document is not presented, and those carry
- * action codes 05, 06 and 09 — matching on 09 alone, as is sometimes
+ * action codes 05, 06 and 09 - matching on 09 alone, as is sometimes
  * documented, misses two thirds of them.
  *
  * Never suppressed for want of an origin. If the origin field is empty the
@@ -84,7 +84,7 @@ final class ProhibitedGoods extends MeasureRule
 
     /**
      * The most specific explanation available, falling back to the measure
-     * type's own description — which always exists, so this never returns null.
+     * type's own description - which always exists, so this never returns null.
      */
     private function reasonFor(Measure $measure): string
     {

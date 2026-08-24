@@ -30,8 +30,8 @@ final class FakeHttpClient implements ClientInterface
 
         // An exhausted queue means the client made more requests than the test
         // described. Serving a default response here would hide exactly the
-        // kind of surprise — an unexpected retry, a second lookup that should
-        // have been cached — that these tests exist to catch.
+        // kind of surprise - an unexpected retry, a second lookup that should
+        // have been cached - that these tests exist to catch.
         if ($next === null) {
             throw new LogicException(sprintf(
                 'FakeHttpClient ran out of queued responses on request %d to %s.',

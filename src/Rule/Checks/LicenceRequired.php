@@ -86,6 +86,12 @@ final class LicenceRequired extends MeasureRule
                 'control_count' => $controls->count(),
                 'document_codes' => implode(',', $codes),
                 'document_count' => count($codes),
+                // Codes alone tell a merchant something is required and
+                // nothing about what. "9023" becomes "DBT Firearms Import
+                // License", which is the difference between a task and a
+                // mystery. Falls back to the bare codes when no index was
+                // fetched.
+                'documents' => $this->describeDocuments($codes, $context),
             ],
             variant: match (true) {
                 $declarationOnly => 'declaration_only',
@@ -94,5 +100,23 @@ final class LicenceRequired extends MeasureRule
             },
             remediation: RemediationHint::requiresInput('record_licence'),
         );
+    }
+
+    /**
+     * @param list<string> $codes
+     */
+    private function describeDocuments(array $codes, EvaluationContext $context): string
+    {
+        $described = [];
+
+        foreach ($codes as $code) {
+            $description = $context->certificates?->describe($code);
+
+            $described[] = $description === null
+                ? $code
+                : sprintf('%s: %s', $code, $description);
+        }
+
+        return implode(' | ', $described);
     }
 }

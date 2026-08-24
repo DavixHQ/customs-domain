@@ -13,8 +13,8 @@ use Davix\Customs\Rule\Severity;
 /**
  * The duty on these goods depends on their composition, via a Meursing code.
  *
- * Applies to composite agricultural goods — confectionery, baked goods,
- * preparations — where duty is calculated from milk fat, milk protein, starch
+ * Applies to composite agricultural goods - confectionery, baked goods,
+ * preparations - where duty is calculated from milk fat, milk protein, starch
  * and sucrose content rather than from the commodity code alone. A merchant
  * who does not know this exists cannot compute their landed cost and will be
  * surprised at the border.

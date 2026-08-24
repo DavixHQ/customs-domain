@@ -4,7 +4,7 @@
 #
 # This package must depend on nothing but PHP and PSR interfaces. The moment it
 # references a framework, it stops being portable to WordPress, Shopify, a CLI
-# tool or a hosted service — which is the entire reason it exists as a separate
+# tool or a hosted service - which is the entire reason it exists as a separate
 # package rather than a directory inside the Magento module.
 
 set -euo pipefail

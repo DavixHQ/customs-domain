@@ -7,7 +7,7 @@ namespace Davix\Customs\Validation;
 /**
  * A level in the tariff hierarchy, identified by its digit length.
  *
- * The first six digits are the internationally harmonised part — every WCO
+ * The first six digits are the internationally harmonised part - every WCO
  * member uses the same subheading for the same goods. Digits seven and eight
  * are the EU Combined Nomenclature, retained by the UK after exit. Digits nine
  * and ten are the national commodity level, and only that level is declarable
@@ -36,7 +36,7 @@ enum CodeLevel: int
      *
      * Only the full ten-digit commodity level qualifies. A six-digit
      * subheading is a perfectly valid code that simply is not specific
-     * enough to declare against — which is a classification problem, not a
+     * enough to declare against - which is a classification problem, not a
      * formatting one.
      */
     public function isDeclarable(): bool

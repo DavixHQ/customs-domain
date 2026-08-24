@@ -19,7 +19,7 @@ use Davix\Customs\Rule\Severity;
  *
  * Only fires where an end date is actually published. A chapter pull filtered
  * by `as_of` returns null end dates throughout, since it only contains lines
- * valid on that date — so this depends on the commodity lookup, which carries
+ * valid on that date - so this depends on the commodity lookup, which carries
  * real validity periods.
  */
 final class CodeExpiringSoon extends MeasureRule

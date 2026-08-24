@@ -32,7 +32,7 @@ use Davix\Customs\Rule\Checks\WithdrawnCode;
  * Every check here resolves against the local mirror or the product's own
  * data, which is what lets a scan run at full speed with zero HTTP per product
  * and keeps a provider outage from flagging an entire catalogue as broken.
- * Measure-dependent checks — prohibitions, licences, quotas, preferences —
+ * Measure-dependent checks - prohibitions, licences, quotas, preferences -
  * arrive separately because they need commodity measures fetched over the wire.
  *
  * A host with its own dependency injection will usually register rules

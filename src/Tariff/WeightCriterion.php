@@ -8,7 +8,7 @@ namespace Davix\Customs\Tariff;
  * A weight condition a commodity line imposes, in kilograms.
  *
  * Apparel subheadings routinely split on garment weight before splitting on
- * anything else — 620140 divides at 1 kg per garment, then again on parka
+ * anything else - 620140 divides at 1 kg per garment, then again on parka
  * versus other. That makes net weight a classification input rather than
  * merely a duty input, and it is the strongest argument for pushing merchants
  * to populate it: a populated weight often halves the candidate list before
@@ -32,7 +32,7 @@ final class WeightCriterion
     }
 
     /**
-     * Goods no heavier than a threshold — "not exceeding", inclusive.
+     * Goods no heavier than a threshold - "not exceeding", inclusive.
      */
     public static function notExceeding(float $kilograms): self
     {

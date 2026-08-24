@@ -19,7 +19,7 @@ use Davix\Customs\Rule\Severity;
  * now. Re-confirming is cheap; discovering the drift at the border is not.
  *
  * Fires only for products someone has previously verified. A product that has
- * never been verified is not stale — it is new, and on a first scan that would
+ * never been verified is not stale - it is new, and on a first scan that would
  * be every product in the catalogue, burying the issues that need attention
  * under thousands that do not. Finding never-verified products is what the
  * grid's saved filter is for.

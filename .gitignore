@@ -6,3 +6,15 @@
 .DS_Store
 .idea/
 .vscode/
+/*.zip
+
+# Raw API captures dropped in the root by curl. Recorded responses that the
+# tests replay belong in tests/Fixtures/Api/ with a note on provenance;
+# everything else is scratch and should not follow you into a commit.
+/chapter-*.csv
+/chapter-*.json
+/commodity-*.json
+/certificate*.json
+/quota*.json
+/changes*.json
+/sections*.json

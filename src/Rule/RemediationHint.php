@@ -9,7 +9,7 @@ namespace Davix\Customs\Rule;
  *
  * Deliberately a hint rather than an executor. Applying a fix writes to
  * storage this package knows nothing about, has to run asynchronously at any
- * real catalogue size, and needs an undo log — all host concerns. A domain
+ * real catalogue size, and needs an undo log - all host concerns. A domain
  * interface with an apply() method would be one no non-Magento consumer could
  * implement sensibly.
  *
@@ -21,7 +21,7 @@ final class RemediationHint
     /**
      * @param string $code Identifies the kind of fix, e.g. 'replace_with_successor'
      * @param bool $automatic True when the fix needs no merchant input, because
-     *                        the answer is already known — a withdrawn code with
+     *                        the answer is already known - a withdrawn code with
      *                        exactly one successor. These earn a one-click button;
      *                        everything else opens a form.
      * @param array<string, string|int|float|bool|null> $payload Data the host needs

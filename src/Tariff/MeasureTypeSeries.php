@@ -13,7 +13,7 @@ namespace Davix\Customs\Tariff;
  * 277 Import prohibition (A), 351 HSE Import Licence (B), 109 Supplementary
  * unit (O), 305 Value added tax (P), 695 Additional duties (J).
  *
- * The set is open — HMRC may introduce series this does not name — so unknown
+ * The set is open - HMRC may introduce series this does not name - so unknown
  * values are preserved rather than rejected.
  */
 final class MeasureTypeSeries

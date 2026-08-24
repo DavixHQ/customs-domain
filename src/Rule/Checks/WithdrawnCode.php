@@ -20,7 +20,7 @@ use Davix\Customs\Tariff\ResolutionOutcome;
  * not existed for four years. That is a very different conversation from a
  * typo, and the merchant deserves to be told which one they have.
  *
- * Deliberately Attention rather than Blocked. The merchant did nothing wrong —
+ * Deliberately Attention rather than Blocked. The merchant did nothing wrong -
  * their data was correct when they recorded it and the world moved. Where the
  * withdrawn line has exactly one successor the module already knows the answer,
  * so the fix is a single click across every affected product.

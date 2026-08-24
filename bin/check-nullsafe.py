@@ -3,12 +3,12 @@
 Flags redundant nullsafe operators.
 
 PHPStan narrows types through assertions and conditionals, so a `?->` on a
-variable already dereferenced earlier in the same method is dead syntax — and
+variable already dereferenced earlier in the same method is dead syntax - and
 level max fails the build over it. This finds them before the build does, and
 explains why each one is redundant rather than just naming a line.
 
 Two cases:
-  1. `$x?->prop ?? $fallback` — `??` uses isset semantics and already tolerates
+  1. `$x?->prop ?? $fallback` - `??` uses isset semantics and already tolerates
      a null `$x`, so the operator does nothing. (Method calls are different:
      `??` does not rescue `null->method()`, so those are left alone.)
   2. `$x?->` where `$x` was already dereferenced earlier in the same method.

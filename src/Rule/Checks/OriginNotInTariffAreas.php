@@ -21,7 +21,7 @@ use Davix\Customs\Rule\Severity;
  * checked. That silence is what makes this Blocked rather than Attention.
  *
  * Two checks, and the second only when the host can support it. Shape is
- * always verified — an origin must be a two-letter ISO country code, which
+ * always verified - an origin must be a two-letter ISO country code, which
  * catches free-text entries like "China" or "Made in PRC". Membership is
  * verified only when the host supplies the recognised set from its own mirror;
  * with an empty list the rule checks shape alone rather than rejecting every

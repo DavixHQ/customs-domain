@@ -146,6 +146,55 @@ final class WeightCriterionParserTest extends TestCase
         self::assertSame('exceeding 0.25 kg', WeightCriterion::exceeding(0.25)->describes());
     }
 
+    /**
+     * The tariff writes decimals with a comma: chapter 4 has "net content not
+     * exceeding 2,5 kg". Reading that as a thousands separator gives 25 kg - a
+     * tenfold error, and worse than not parsing, because it produces a
+     * confident threshold that is wrong.
+     */
+    public function testEuropeanDecimalCommaIsNotReadAsAThousandsSeparator(): void
+    {
+        $criterion = $this->parser->parse('In immediate packings of a net content not exceeding 2,5 kg');
+
+        self::assertNotNull($criterion);
+        self::assertSame(2.5, $criterion->maximumKg);
+    }
+
+    public function testThousandsSeparatorsStillParse(): void
+    {
+        $criterion = $this->parser->parse('Of a weight not exceeding 1,000 g');
+
+        self::assertNotNull($criterion);
+        self::assertSame(1.0, $criterion->maximumKg);
+    }
+
+    /**
+     * Outside apparel the tariff branches on things this parser does not read:
+     * fat and alcohol percentages, volumes in litres, and quantities written
+     * as words. All must yield null rather than a wrong number - a candidate
+     * with no parsed criterion is never eliminated, so failing to parse costs
+     * narrowing while mis-parsing costs correctness.
+     *
+     * @return array<string, array{string}>
+     */
+    public static function nonMassConditionProvider(): array
+    {
+        return [
+            'fat percentage' => ['Of a fat content, by weight, not exceeding 1 %'],
+            'percentage range' => ['Of a fat content, by weight, exceeding 1 % but not exceeding 6 %'],
+            'protein with decimal comma' => ['Soya-based beverages with a protein content of 2,8 % or more by weight'],
+            'volume in litres' => ['In containers holding more than 10 litres'],
+            'volume as a word' => ['In immediate packings of a net content not exceeding two litres'],
+            'alcoholic strength' => ['De-alcoholised wine with an alcoholic strength by volume not exceeding 0,5 % vol'],
+        ];
+    }
+
+    #[DataProvider('nonMassConditionProvider')]
+    public function testNonMassConditionsYieldNullRatherThanAWrongNumber(string $description): void
+    {
+        self::assertNull($this->parser->parse($description));
+    }
+
     public function testCaseInsensitivity(): void
     {
         $criterion = $this->parser->parse('OF A WEIGHT NOT EXCEEDING 1 KG PER GARMENT');

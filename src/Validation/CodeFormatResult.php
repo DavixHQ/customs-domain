@@ -10,7 +10,7 @@ use Davix\Customs\Exception\InvalidCodeException;
  * The outcome of checking one code's format.
  *
  * Either it carries the level the code sits at, or it carries a failure
- * reason — never both, never neither.
+ * reason - never both, never neither.
  */
 final class CodeFormatResult
 {

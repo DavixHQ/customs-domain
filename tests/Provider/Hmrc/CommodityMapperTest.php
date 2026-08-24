@@ -111,7 +111,7 @@ final class CommodityMapperTest extends TestCase
 
     /**
      * Only unconditional prohibitions count. Nearly every control measure
-     * carries a negative condition reading "not allowed after control" — that
+     * carries a negative condition reading "not allowed after control" - that
      * is the branch taken when the required document is absent, not the
      * measure's normal outcome. Counting those would report a firearms-grade
      * prohibition on every garment in chapter 62.
@@ -181,7 +181,7 @@ final class CommodityMapperTest extends TestCase
     /**
      * Documentary options are scoped to control measures, not to every
      * commodity carrying a document code. Duty measures list certificates too
-     * — as conditions of a cheaper rate rather than requirements — and
+     * - as conditions of a cheaper rate rather than requirements - and
      * counting those would report a licence on nearly every product.
      */
     public function testDocumentaryOptionsComeOnlyFromControls(): void
@@ -196,7 +196,7 @@ final class CommodityMapperTest extends TestCase
     /**
      * The numeric prefix says nothing about whether a document must be
      * obtained. The firearms control lists 9020 "This product is exempt as it
-     * is not a firearm" alongside 9023 "DBT Firearms Import License" —
+     * is not a firearm" alongside 9023 "DBT Firearms Import License" -
      * structurally identical, one a formality and one a licence. An earlier
      * version of this mapper used the prefix to tell them apart and was wrong.
      */
@@ -309,7 +309,7 @@ final class CommodityMapperTest extends TestCase
     // ------------------------------------------------------------------ flags
 
     /**
-     * Worth reading rather than deriving — HMRC has already done this work and
+     * Worth reading rather than deriving - HMRC has already done this work and
      * their answer is authoritative where ours would be an inference.
      */
     public function testDutyCalculatorFlagsAreRead(): void

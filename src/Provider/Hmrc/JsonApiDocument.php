@@ -9,7 +9,7 @@ namespace Davix\Customs\Provider\Hmrc;
  *
  * The tariff sideloads heavily: a single commodity arrives with 651 entries in
  * `included`, spanning twenty resource types. Those are referenced from
- * relationships by `(type, id)` pairs, and ids repeat across types — a
+ * relationships by `(type, id)` pairs, and ids repeat across types - a
  * geographical area and a measure type can both be "103" and mean entirely
  * different things. Indexing on the pair rather than the id alone is not
  * fussiness; keying on id would silently mix them.
@@ -98,7 +98,7 @@ final class JsonApiDocument
 
     /**
      * A value from the primary resource's `meta`, which is where the tariff
-     * puts its precomputed duty calculator flags — under `data`, not at the
+     * puts its precomputed duty calculator flags - under `data`, not at the
      * document root.
      *
      * @return array<string, mixed>

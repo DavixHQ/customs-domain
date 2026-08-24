@@ -19,7 +19,7 @@ enum Severity: string
     /** The data is incomplete or questionable, but nothing is stopping. */
     case Attention = 'attention';
 
-    /** There is money on the table — a lower rate the merchant could claim. */
+    /** There is money on the table - a lower rate the merchant could claim. */
     case Opportunity = 'opportunity';
 
     /**

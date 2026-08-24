@@ -8,7 +8,7 @@ namespace Davix\Customs\Validation;
  * Why a raw commodity code could not be normalised.
  *
  * These are distinct from format failures. A code that normalises cleanly to
- * seven digits has not failed normalisation — it has failed validation, which
+ * seven digits has not failed normalisation - it has failed validation, which
  * is CodeFormat's responsibility. Normalisation fails only when the input
  * cannot be interpreted as a single commodity code at all.
  */

@@ -12,7 +12,7 @@ use DateTimeImmutable;
  * The natural key is the goods nomenclature SID, not the commodity code. This
  * matters more than it looks: a commodity code is not unique. In chapter 62,
  * SIDs 106844 and 106845 both carry code 6201200011, distinguished only by
- * their productline suffix — 10 is an intermediate grouping line, 80 is the
+ * their productline suffix - 10 is an intermediate grouping line, 80 is the
  * declarable commodity. Keying anything on the code collides on import and
  * silently drops half the tree.
  *
@@ -22,7 +22,7 @@ use DateTimeImmutable;
 final class Commodity
 {
     /**
-     * Productline suffix marking a commodity line — the only suffix that can
+     * Productline suffix marking a commodity line - the only suffix that can
      * carry declarable goods.
      */
     public const SUFFIX_DECLARABLE = '80';
@@ -72,7 +72,7 @@ final class Commodity
      *
      * Defined as "not the commodity suffix" rather than as a list of known
      * grouping suffixes. Live data carries 10, 20 and 80, and no line outside
-     * suffix 80 is ever declarable — so an unfamiliar suffix appearing in
+     * suffix 80 is ever declarable - so an unfamiliar suffix appearing in
      * future is far more safely read as another grouping level than as
      * something a merchant can declare against.
      */

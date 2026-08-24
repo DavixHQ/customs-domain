@@ -17,7 +17,7 @@ use Davix\Customs\Tariff\MeasureTypeSeries;
  * Named for what it detects rather than for anti-dumping, because the live
  * data does not support the narrower name. A men's cotton parka comes back
  * with `trade_defence: true`, and the measures behind it are a 35% additional
- * duty on Russia and Belarus plus restrictions on North Korea and Ukraine —
+ * duty on Russia and Belarus plus restrictions on North Korea and Ukraine -
  * sanctions rather than dumping.
  *
  * That same finding is why the precomputed flag is not the answer. It is set
@@ -48,7 +48,7 @@ final class AdditionalDutyApplies extends MeasureRule
         $measures = $this->applicableMeasures($data, $context);
 
         // Without an origin this cannot be answered honestly. Unlike a
-        // prohibition, an additional duty is meaningless unnarrowed — every
+        // prohibition, an additional duty is meaningless unnarrowed - every
         // apparel product would report Russia's 35%.
         if ($measures === null || !$this->hasKnownOrigin($data)) {
             return null;

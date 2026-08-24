@@ -16,7 +16,7 @@ use Davix\Customs\Validation\CodeFormat;
  * No fibre composition recorded for goods in a chapter where it decides the
  * classification.
  *
- * Throughout the textile chapters — 50 to 63 — the subheading turns on what
+ * Throughout the textile chapters - 50 to 63 - the subheading turns on what
  * the goods are made of before it turns on anything else. A jacket of wool and
  * a jacket of man-made fibres sit in different branches with different duty
  * rates, and without composition neither the module nor the merchant can pick

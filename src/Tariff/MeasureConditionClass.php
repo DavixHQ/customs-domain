@@ -15,7 +15,7 @@ enum MeasureConditionClass: string
     /** A certificate, licence or statement must be presented. */
     case Document = 'document';
 
-    /** What happens when the condition is not met — often a prohibition. */
+    /** What happens when the condition is not met - often a prohibition. */
     case Negative = 'negative';
 
     /** The goods fall outside the measure. */

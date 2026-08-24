@@ -110,7 +110,7 @@ final class ChapterCsvParserTest extends TestCase
 
     /**
      * Filtering by `as_of` returns only lines valid on that date, so every end
-     * date is empty. A null end means "in force", never "unknown" — which is
+     * date is empty. A null end means "in force", never "unknown" - which is
      * exactly why a withdrawn code needs a separate historic lookup rather
      * than an end-date check.
      */
@@ -133,7 +133,7 @@ final class ChapterCsvParserTest extends TestCase
 
     /**
      * Live chapter 62 carries three productline suffixes, not two. Code
-     * 6203491100 appears at 10, 20 and 80 — "Of artificial fibres", then
+     * 6203491100 appears at 10, 20 and 80 - "Of artificial fibres", then
      * "Trousers and breeches", then the declarable line. Treating 10 as the
      * only grouping suffix reads the middle one as declarable.
      */

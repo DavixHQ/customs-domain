@@ -12,7 +12,7 @@ use DateTimeImmutable;
  * Filtering the nomenclature by a date returns only codes valid on that date,
  * so a withdrawn code is simply absent rather than returned with an end date.
  * Every record in a current chapter pull carries a null end date, which makes
- * "not in the mirror" ambiguous on its own — it could be a typo or a code that
+ * "not in the mirror" ambiguous on its own - it could be a typo or a code that
  * died in a past revision.
  *
  * Resolving that needs a second lookup against the provider at a baseline
@@ -21,7 +21,7 @@ use DateTimeImmutable;
  * answer in here.
  *
  * The difference this buys is the difference between a useful product and a
- * frustrating one: "6201.93 was withdrawn on 1 January 2022 — it meant anoraks
+ * frustrating one: "6201.93 was withdrawn on 1 January 2022 - it meant anoraks
  * of man-made fibres" against "code not found".
  */
 final class HistoricRecord

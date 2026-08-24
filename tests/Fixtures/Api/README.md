@@ -32,6 +32,26 @@ the thing that matters:
 - Document codes in the `90xx` range are national exemption statements paired
   with "Import allowed" actions, not licence requirements.
 
+## Editor-wide find and replace
+
+These files are excluded from any repository-wide character substitution. They
+are recorded API responses, not prose, and their value depends on matching what
+the service actually sent.
+
+Two characters matter more than they look:
+
+- `chapter-62.csv` contains 19 non-breaking spaces, U+00A0, between a quantity
+  and its unit. The weight parser normalises them precisely because PCRE will
+  not treat them as whitespace, and a test asserts they are still present. A
+  replace that turns them into ordinary spaces makes that test pass for the
+  wrong reason and hides a real parsing hazard.
+- `commodity-9301100000.json` contains em dashes inside `guidance_cds` text.
+  Nothing asserts on those, so substituting them is harmless today, but the
+  file has then drifted from the response it claims to record.
+
+If a substitution has already run over them, refetch rather than trying to
+reverse it.
+
 ## Refreshing them
 
 The tariff changes, so a refreshed capture may legitimately differ. If a test

@@ -8,8 +8,8 @@ namespace Davix\Customs\Rule;
  * What a rule emits when a product fails it.
  *
  * Carries a translation key and a context array rather than a finished
- * sentence. This package cannot translate — it has no framework and no locale
- * — and baking English into it would make every consumer inherit one language.
+ * sentence. This package cannot translate - it has no framework and no locale
+ * - and baking English into it would make every consumer inherit one language.
  * The host renders `rule.withdrawn_code.message` with the supplied context.
  *
  * Deliberately holds no product reference. A rule is a pure function over one
@@ -21,7 +21,7 @@ final class Issue
     /**
      * @param array<string, string|int|float|bool|null> $context Values for
      *        interpolation into the message, and structured data the UI can
-     *        act on — the successor code, the candidate count, the raw value
+     *        act on - the successor code, the candidate count, the raw value
      *        the merchant typed.
      * @param string|null $variant Distinguishes wordings of the same rule.
      *        A code withdrawn with one successor deserves a different sentence

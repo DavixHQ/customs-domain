@@ -13,8 +13,8 @@ use Davix\Customs\Tariff\DutyCalculatorFlags;
 /**
  * These goods may qualify for a zero VAT rate.
  *
- * Not a hypothetical: the very first commodity examined during development — a
- * men's cotton parka — carries a VATZ option, because children's clothing is
+ * Not a hypothetical: the very first commodity examined during development - a
+ * men's cotton parka - carries a VATZ option, because children's clothing is
  * zero-rated in the UK. A merchant charging 20% where zero applies is losing
  * margin on every sale and has been for as long as the product has existed.
  *
@@ -25,8 +25,8 @@ use Davix\Customs\Tariff\DutyCalculatorFlags;
  * answer. Presenting it as a finding rather than a fact is the difference
  * between a useful prompt and a VAT liability.
  *
- * Independent of measures fetched per direction — the flag is precomputed on
- * the commodity — but grouped here because it needs the same commodity detail.
+ * Independent of measures fetched per direction - the flag is precomputed on
+ * the commodity - but grouped here because it needs the same commodity detail.
  */
 final class VatZeroRatingAvailable extends MeasureRule
 {

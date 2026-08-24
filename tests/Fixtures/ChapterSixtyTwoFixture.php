@@ -9,7 +9,7 @@ use Davix\Customs\Tariff\InMemoryCommodityRepository;
 use DateTimeImmutable;
 
 /**
- * The real 6201 subtree — men's and boys' overcoats — as returned by the UK
+ * The real 6201 subtree - men's and boys' overcoats - as returned by the UK
  * Trade Tariff.
  *
  * Transcribed from a live chapter 62 response rather than invented, because an
@@ -30,7 +30,7 @@ use DateTimeImmutable;
  *    beneath it. Storage keyed on the code loses one of them.
  *
  * 3. Declarable siblings include options that are almost never the right
- *    answer — "Hand-made ponchos" and "Hand-printed by the batik method" are
+ *    answer - "Hand-made ponchos" and "Hand-printed by the batik method" are
  *    real ten-digit codes sitting alongside "Parkas" and "Other".
  *
  * 4. The weight descriptions below contain a non-breaking space between the
@@ -165,7 +165,7 @@ final class ChapterSixtyTwoFixture
     /**
      * A line withdrawn in the HS2022 restructure, for the withdrawn-code path.
      *
-     * Not part of the repository — the point of a withdrawn code is that the
+     * Not part of the repository - the point of a withdrawn code is that the
      * current mirror does not contain it.
      */
     public static function withdrawnLine(): Commodity

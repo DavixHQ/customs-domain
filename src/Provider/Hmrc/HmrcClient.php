@@ -10,8 +10,10 @@ use Davix\Customs\Provider\Sleeper;
 use Davix\Customs\Provider\SystemClock;
 use Davix\Customs\Provider\SystemSleeper;
 use Davix\Customs\Provider\TariffProviderInterface;
+use Davix\Customs\Tariff\CertificateIndex;
 use Davix\Customs\Tariff\ChangeRecord;
 use Davix\Customs\Tariff\CommodityDetail;
+use Davix\Customs\Tariff\HistoricRecord;
 use DateTimeImmutable;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
@@ -60,6 +62,7 @@ final class HmrcClient implements TariffProviderInterface
         private readonly CommodityMapper $commodityMapper = new CommodityMapper(),
         private readonly ChapterCsvParser $chapterParser = new ChapterCsvParser(),
         private readonly ChangesMapper $changesMapper = new ChangesMapper(),
+        private readonly CertificateMapper $certificateMapper = new CertificateMapper(),
     ) {
     }
 
@@ -120,6 +123,60 @@ final class HmrcClient implements TariffProviderInterface
         } catch (\JsonException $e) {
             throw TariffUnavailableException::malformed($url, $e);
         }
+    }
+
+    public function certificates(?DateTimeImmutable $asOf = null): CertificateIndex
+    {
+        $date = $this->dateFor($asOf);
+        $url = $this->url('/certificates', $date);
+
+        // Cached hard. The listing changes rarely and is fetched once per scan
+        // rather than once per product, so a long life here is the difference
+        // between one call and thousands.
+        $body = $this->cached(
+            $this->cacheKey('certificates', 'all', $date),
+            max($this->options->commodityCacheTtl, 1),
+            fn (): string => $this->fetch($url, self::ACCEPT_JSON),
+        );
+
+        try {
+            return $this->certificateMapper->mapJson($body);
+        } catch (\JsonException $e) {
+            throw TariffUnavailableException::malformed($url, $e);
+        }
+    }
+
+    /**
+     * Look a code up at a past date to see whether it was ever real.
+     *
+     * A code absent from today's tariff is either a typo or a casualty of a
+     * past revision, and those deserve very different messages. Asking again
+     * at a baseline predating the revision separates them.
+     *
+     * A 404 at the baseline is an answer rather than a failure: the code did
+     * not exist then either. Anything else - a timeout, a rate limit - is a
+     * genuine failure and propagates, because reporting "this code never
+     * existed" on the strength of a network problem would be a confident lie.
+     */
+    public function historicRecord(string $code, DateTimeImmutable $baseline): HistoricRecord
+    {
+        try {
+            $detail = $this->commodity($code, $baseline);
+        } catch (TariffUnavailableException $e) {
+            if ($e->statusCode === 404) {
+                return HistoricRecord::absent();
+            }
+
+            throw $e;
+        }
+
+        $commodity = $detail->commodity;
+
+        return HistoricRecord::found(
+            description: $commodity->description,
+            withdrawnOn: $commodity->validityEnd,
+            successorCodes: [],
+        );
     }
 
     public function isAvailable(): bool

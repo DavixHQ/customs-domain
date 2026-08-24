@@ -10,7 +10,7 @@ use DateTimeImmutable;
  * One measure applying to a commodity.
  *
  * Direction is the first thing to get right. A single commodity response mixes
- * import and export measures freely — a cotton parka arrives with third
+ * import and export measures freely - a cotton parka arrives with third
  * country duty, a tariff preference, and export controls on cat and dog fur
  * all in the same array. Anything that does not filter by direction will tell
  * a merchant importing stock about restrictions on goods leaving the country.
@@ -107,7 +107,7 @@ final class Measure
      * A measure type in series A is a prohibition and needs no further reading.
      *
      * Beyond that, nearly every control measure carries a negative condition
-     * reading "import not allowed after control" — that is the branch taken
+     * reading "import not allowed after control" - that is the branch taken
      * when the required document is *not* presented, not the measure's normal
      * outcome. A men's cotton parka carries several: import controls on cat
      * and dog fur, on seal products, on luxury goods. Treating those negative
@@ -143,7 +143,7 @@ final class Measure
      *
      * Both document and exemption conditions count, because both are routes
      * through and the tariff uses whichever fits. The import control on cat
-     * and dog fur — which sits on every garment in chapter 62 — offers its way
+     * and dog fur - which sits on every garment in chapter 62 - offers its way
      * out as an *exemption* carrying code Y922, "Other than cats and dogs fur":
      * a declaration that the goods are not the controlled thing. Reading only
      * document-class conditions misses it and reports every parka in a
@@ -184,7 +184,7 @@ final class Measure
     /**
      * Whether a merchant has to present something for these goods to move.
      *
-     * Scoped to control measures — series B — because that is what the series
+     * Scoped to control measures - series B - because that is what the series
      * means, and because a duty measure with a certificate option attached is
      * offering a cheaper rate rather than imposing a requirement.
      */
@@ -199,7 +199,7 @@ final class Measure
      *
      * Chapter 62 illustrates why this matters. Every garment carries import
      * controls on cat and dog fur and on seal products, and both are satisfied
-     * by stating the goods are not those things — Y922 and Y032. The seal
+     * by stating the goods are not those things - Y922 and Y032. The seal
      * control also lists certificates for anyone genuinely importing seal
      * products, but their presence does not make a cotton parka unshippable.
      *

@@ -7,7 +7,7 @@ namespace Davix\Customs\Tariff;
 /**
  * Which way goods are moving.
  *
- * A single commodity response carries both directions mixed together — a
+ * A single commodity response carries both directions mixed together - a
  * cotton parka comes back with import duty alongside export controls on cat
  * and dog fur. Reporting an export restriction to a merchant importing stock,
  * or the reverse, is noise that teaches them to ignore the module.

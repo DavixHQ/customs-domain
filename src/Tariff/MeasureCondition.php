@@ -8,8 +8,8 @@ namespace Davix\Customs\Tariff;
  * A qualification on a measure: what must be presented, and what happens if it
  * is not.
  *
- * The conditions on a single commodity run to dozens — artillery weapons carry
- * 59 — and most of them are not requirements at all. Reading them well is the
+ * The conditions on a single commodity run to dozens - artillery weapons carry
+ * 59 - and most of them are not requirements at all. Reading them well is the
  * difference between telling a merchant something true and burying them in
  * regulatory noise.
  */
@@ -100,7 +100,7 @@ final class MeasureCondition
      * A control measure is satisfied by presenting any one of its documentary
      * options. Those options mix licences a merchant must obtain with
      * exemptions they may simply declare, and the payload gives no reliable
-     * way to tell which is which — so both count, and the merchant is shown
+     * way to tell which is which - so both count, and the merchant is shown
      * the list to pick from.
      */
     public function isDocumentaryOption(): bool

@@ -12,7 +12,7 @@ namespace Davix\Customs\Tariff;
  * this with no Magento, no network and no fixtures beyond a handful of
  * Commodity objects.
  *
- * Not intended for production use over a full nomenclature — that is 20,000
+ * Not intended for production use over a full nomenclature - that is 20,000
  * or so lines and belongs in indexed storage.
  */
 final class InMemoryCommodityRepository implements CommodityRepositoryInterface
@@ -90,7 +90,7 @@ final class InMemoryCommodityRepository implements CommodityRepositoryInterface
     /**
      * Depth-first descent with a visited set.
      *
-     * The visited set is not paranoia about tree shape — it is protection
+     * The visited set is not paranoia about tree shape - it is protection
      * against a corrupt mirror. A parent reference that loops back on itself
      * turns this walk into infinite recursion that exhausts memory and takes
      * the whole scan with it, and a partial or interrupted sync is exactly the

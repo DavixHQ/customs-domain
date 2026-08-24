@@ -53,7 +53,7 @@ final class DutyCalculatorFlags
      *
      * Cast rather than returned straight from array_keys, because PHP turns a
      * numeric-string key into an integer and the declared type would then be
-     * false. Observed codes are lettered — VATZ, VAT — so this is defensive,
+     * false. Observed codes are lettered - VATZ, VAT - so this is defensive,
      * but the same assumption about document codes was wrong and cost a
      * debugging session.
      *

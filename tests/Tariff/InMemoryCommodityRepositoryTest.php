@@ -170,7 +170,7 @@ final class InMemoryCommodityRepositoryTest extends TestCase
 
     /**
      * A corrupt mirror can contain a parent reference that loops back on
-     * itself — a partial or interrupted sync is exactly the situation that
+     * itself - a partial or interrupted sync is exactly the situation that
      * produces one. Without a visited set this walk recurses until memory is
      * exhausted, taking the whole scan with it.
      */

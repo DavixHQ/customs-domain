@@ -23,7 +23,7 @@ use DateTimeImmutable;
  * Written against recorded live responses rather than documentation, because
  * the documentation and the payload disagree in ways that matter. The most
  * expensive of these is the productline suffix, which the API spells
- * `producline_suffix` — missing the 'd'. Both spellings are accepted here; a
+ * `producline_suffix` - missing the 'd'. Both spellings are accepted here; a
  * mapper reading only the documented name silently nulls the field, and a null
  * suffix collapses the two lines that share a commodity code into one.
  */
@@ -306,7 +306,7 @@ final class CommodityMapper
     /**
      * A pre-formatted duty string from the trade summary.
      *
-     * These arrive wrapped in markup — `<span>12.00</span> %` — because the
+     * These arrive wrapped in markup - `<span>12.00</span> %` - because the
      * tariff's own site highlights the numeral. Markup from an upstream service
      * has no business in a domain object, and a host that renders it unescaped
      * would be injecting someone else's HTML into its admin. Stripped here, at

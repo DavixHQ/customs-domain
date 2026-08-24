@@ -11,7 +11,7 @@ use DateTimeImmutable;
  * The customs data a rule sees when it examines one product.
  *
  * Deliberately not a platform product object. A rule must not be able to reach
- * into a catalogue, load a related entity or trigger a database query — it is
+ * into a catalogue, load a related entity or trigger a database query - it is
  * a pure function over this data and a resolved commodity, which is what makes
  * the whole rule set testable with no framework present.
  *

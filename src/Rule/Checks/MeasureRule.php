@@ -16,7 +16,7 @@ use Davix\Customs\Tariff\MeasureSet;
  * same two ways if left to do it alone.
  *
  * Direction first. A single commodity carries import and export measures
- * together — the artillery fixture has nine import prohibitions and eleven
+ * together - the artillery fixture has nine import prohibitions and eleven
  * export ones, and they are different restrictions. A merchant importing stock
  * told about export controls learns to ignore the module.
  *
@@ -40,7 +40,7 @@ abstract class MeasureRule implements RuleInterface
     /**
      * Measures narrowed to direction and, where known, origin.
      *
-     * Null when no measures were fetched — an offline scan resolves everything
+     * Null when no measures were fetched - an offline scan resolves everything
      * against the mirror and makes no HTTP calls per product. Silence is the
      * only honest answer there.
      */

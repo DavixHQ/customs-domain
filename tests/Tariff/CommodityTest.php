@@ -129,7 +129,7 @@ final class CommodityTest extends TestCase
 
     /**
      * Identity is the SID, never the code. Two lines sharing a code are not
-     * the same line — that is the whole reason the SID is the natural key.
+     * the same line - that is the whole reason the SID is the natural key.
      */
     public function testIdentityIsBySidNotCode(): void
     {

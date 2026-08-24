@@ -107,7 +107,7 @@ final class RulePool
      *
      * A rule whose prerequisite emitted an issue is skipped, and the skip
      * cascades to anything depending on it. A rule the merchant disabled is
-     * treated as passing rather than as unknown — silencing a check should not
+     * treated as passing rather than as unknown - silencing a check should not
      * silently disable everything downstream of it.
      */
     public function evaluate(

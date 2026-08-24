@@ -23,7 +23,7 @@ final class HmrcClientOptions
      *        Measures change daily at most, and a scan may ask for the same
      *        code thousands of times in a run.
      * @param int $chapterCacheTtl Chapter pulls are large and change rarely.
-     *        Zero disables caching for them, which is usually right — the sync
+     *        Zero disables caching for them, which is usually right - the sync
      *        already hashes responses to skip unchanged chapters.
      * @param bool $jitter Spread retries so a fleet of stores hitting a rate
      *        limit does not retry in lockstep and cause the next one.

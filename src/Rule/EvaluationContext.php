@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Davix\Customs\Rule;
 
+use Davix\Customs\Tariff\CertificateIndex;
 use Davix\Customs\Tariff\Commodity;
 use Davix\Customs\Tariff\CommodityDetail;
 use Davix\Customs\Tariff\MeasureSet;
@@ -40,6 +41,11 @@ final class EvaluationContext
      *        commodity. Null on an offline scan, where the mirror answers
      *        everything and no HTTP happens per product. Measure rules stay
      *        silent rather than guessing when it is absent.
+     * @param CertificateIndex|null $certificates Document codes resolved to
+     *        descriptions. Fetched once per scan rather than per product.
+     *        Without it a control reports "9023" instead of "DBT Firearms
+     *        Import License", which tells a merchant something is required but
+     *        nothing about what.
      */
     public function __construct(
         public readonly DateTimeImmutable $evaluatedAt,
@@ -47,6 +53,7 @@ final class EvaluationContext
         public readonly ?Resolution $resolution = null,
         public readonly ?HistoricRecord $historic = null,
         public readonly ?CommodityDetail $detail = null,
+        public readonly ?CertificateIndex $certificates = null,
     ) {
     }
 
@@ -59,6 +66,7 @@ final class EvaluationContext
         ?Resolution $resolution = null,
         ?HistoricRecord $historic = null,
         ?CommodityDetail $detail = null,
+        ?CertificateIndex $certificates = null,
     ): self {
         return new self(
             new DateTimeImmutable($date),
@@ -66,6 +74,7 @@ final class EvaluationContext
             $resolution,
             $historic,
             $detail,
+            $certificates,
         );
     }
 
@@ -139,22 +148,43 @@ final class EvaluationContext
 
     public function withResolution(?Resolution $resolution): self
     {
-        return new self($this->evaluatedAt, $this->settings, $resolution, $this->historic, $this->detail);
+        return new self($this->evaluatedAt, $this->settings, $resolution, $this->historic, $this->detail, $this->certificates);
     }
 
     public function withHistoric(?HistoricRecord $historic): self
     {
-        return new self($this->evaluatedAt, $this->settings, $this->resolution, $historic, $this->detail);
+        return new self($this->evaluatedAt, $this->settings, $this->resolution, $historic, $this->detail, $this->certificates);
     }
 
     public function withDetail(?CommodityDetail $detail): self
     {
-        return new self($this->evaluatedAt, $this->settings, $this->resolution, $this->historic, $detail);
+        return new self($this->evaluatedAt, $this->settings, $this->resolution, $this->historic, $detail, $this->certificates);
     }
 
     public function withSettings(RuleSettings $settings): self
     {
-        return new self($this->evaluatedAt, $settings, $this->resolution, $this->historic, $this->detail);
+        return new self($this->evaluatedAt, $settings, $this->resolution, $this->historic, $this->detail, $this->certificates);
+    }
+
+    public function withCertificates(?CertificateIndex $certificates): self
+    {
+        return new self(
+            $this->evaluatedAt,
+            $this->settings,
+            $this->resolution,
+            $this->historic,
+            $this->detail,
+            $certificates,
+        );
+    }
+
+    /**
+     * Describe a document code, falling back to the code when the index is
+     * absent or does not hold it.
+     */
+    public function describeDocument(string $code): string
+    {
+        return $this->certificates?->describe($code) ?? $code;
     }
 
     public function hasMeasures(): bool

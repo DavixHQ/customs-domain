@@ -16,7 +16,7 @@ use Davix\Customs\Rule\Severity;
  *
  * Some commodities are counted rather than weighed: pairs, items, litres,
  * square metres. Where the tariff asks for one, a declaration without it is
- * incomplete and the entry is rejected — a delay that costs far more than the
+ * incomplete and the entry is rejected - a delay that costs far more than the
  * five seconds it takes to record the number.
  *
  * The unit itself comes from the commodity, never from the product, which is

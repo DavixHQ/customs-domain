@@ -4,9 +4,11 @@ declare(strict_types=1);
 
 namespace Davix\Customs\Provider;
 
+use Davix\Customs\Tariff\CertificateIndex;
 use Davix\Customs\Tariff\ChangeRecord;
 use Davix\Customs\Tariff\Commodity;
 use Davix\Customs\Tariff\CommodityDetail;
+use Davix\Customs\Tariff\HistoricRecord;
 use DateTimeImmutable;
 
 /**
@@ -54,6 +56,35 @@ interface TariffProviderInterface
      * @throws \Davix\Customs\Exception\TariffUnavailableException
      */
     public function changes(DateTimeImmutable $date): array;
+
+    /**
+     * Every certificate the tariff defines, indexed by document code.
+     *
+     * Fetched whole rather than per code. The set is a few hundred entries in
+     * one unpaginated response, and a scan reporting controls across a
+     * catalogue would otherwise make a call per code per product.
+     *
+     * @throws \Davix\Customs\Exception\TariffUnavailableException
+     */
+    public function certificates(?DateTimeImmutable $asOf = null): CertificateIndex;
+
+    /**
+     * What the nomenclature looked like at a past date.
+     *
+     * The lookup that separates a withdrawn code from one that never existed.
+     * Filtering by `as_of` returns only lines valid on that date, so a code
+     * withdrawn in a past revision is simply absent from a current pull - and
+     * absent is indistinguishable from never having existed without asking
+     * again at a date before the revision.
+     *
+     * Returns a record describing what was found, never throwing for a code
+     * that is genuinely absent at the baseline: that is an answer, not a
+     * failure.
+     *
+     * @throws \Davix\Customs\Exception\TariffUnavailableException when the
+     *         service itself cannot be reached
+     */
+    public function historicRecord(string $code, DateTimeImmutable $baseline): HistoricRecord;
 
     /**
      * Whether the service is reachable and answering.

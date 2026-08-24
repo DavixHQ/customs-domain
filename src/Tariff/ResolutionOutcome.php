@@ -25,7 +25,7 @@ enum ResolutionOutcome: string
 
     /**
      * Absent from the mirror. Could be a typo or a code withdrawn in a past
-     * revision — distinguishing those needs a historic lookup against the
+     * revision - distinguishing those needs a historic lookup against the
      * provider, which is not this class's business.
      */
     case NotInMirror = 'not_in_mirror';
@@ -38,7 +38,7 @@ enum ResolutionOutcome: string
     case ChapterNotMirrored = 'chapter_not_mirrored';
 
     /**
-     * A national chapter — 98 or 99 — that the standard nomenclature sync
+     * A national chapter - 98 or 99 - that the standard nomenclature sync
      * never covers. Real codes, just not ones the mirror was going to hold.
      */
     case OutsideStandardNomenclature = 'outside_standard_nomenclature';
@@ -59,7 +59,7 @@ enum ResolutionOutcome: string
      * Whether the mirror was in a position to give a trustworthy answer.
      *
      * False means the module could not check, rather than that the code is
-     * wrong — the distinction that keeps a failed sync from being reported as
+     * wrong - the distinction that keeps a failed sync from being reported as
      * thousands of bad commodity codes.
      */
     public function isConclusive(): bool

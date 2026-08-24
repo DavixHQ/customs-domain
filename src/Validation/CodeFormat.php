@@ -10,7 +10,7 @@ namespace Davix\Customs\Validation;
  *
  * This runs behind CodeNormaliser, and the division between them is
  * deliberate. The normaliser answers "can I read a single commodity code out
- * of this?" — it repairs spreadsheet damage and refuses to guess. This class
+ * of this?" - it repairs spreadsheet damage and refuses to guess. This class
  * answers "is the code I read a shape a commodity code can actually be?"
  *
  * Equally deliberate is what it does *not* judge. A well-formed six-digit

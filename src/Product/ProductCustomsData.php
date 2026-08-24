@@ -12,8 +12,8 @@ use DateTimeImmutable;
  * A plain immutable carrier for one product's customs data.
  *
  * The host application may implement ProductCustomsDataInterface directly over
- * its own objects — Magento will, to avoid materialising every attribute for
- * every product in a batch — but this covers tests, CLI tooling and any
+ * its own objects - Magento will, to avoid materialising every attribute for
+ * every product in a batch - but this covers tests, CLI tooling and any
  * consumer that already has the values to hand.
  */
 final class ProductCustomsData implements ProductCustomsDataInterface

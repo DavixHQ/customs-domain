@@ -8,7 +8,7 @@ namespace Davix\Customs\Tariff;
  * One term of a duty calculation.
  *
  * Most duties are a single percentage. Compound duties combine several
- * components — a percentage plus an amount per unit, or a ceiling.
+ * components - a percentage plus an amount per unit, or a ceiling.
  */
 final class MeasureComponent
 {

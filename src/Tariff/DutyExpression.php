@@ -8,7 +8,7 @@ namespace Davix\Customs\Tariff;
  * A duty rate as the tariff expresses it.
  *
  * Three renderings arrive together: a plain base, an HTML-marked version, and
- * a compact verbose form. Only the plain base is kept — the HTML is presentation
+ * a compact verbose form. Only the plain base is kept - the HTML is presentation
  * the host will style itself, and storing markup from an upstream service in a
  * domain object invites it into places it does not belong.
  */
@@ -35,7 +35,7 @@ final class DutyExpression
     /**
      * The ad valorem percentage, when the rate is a plain one.
      *
-     * Returns null for compound and specific duties — "12.00 % + 8.50 EUR/kg"
+     * Returns null for compound and specific duties - "12.00 % + 8.50 EUR/kg"
      * has no single percentage, and inventing one to make a comparison work
      * would understate what a merchant actually pays.
      */
