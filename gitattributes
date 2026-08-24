@@ -1,0 +1,31 @@
+# Keep development files out of `composer install --prefer-dist` downloads.
+#
+# The recorded API fixtures are 760 KB and every consumer of this package would
+# otherwise pull them into vendor/ for no benefit. They matter enormously here —
+# several bugs were found only because tests replay real responses — and not at
+# all to someone installing the library.
+#
+# Nothing here affects the repository, only the archive Packagist serves.
+
+/.github            export-ignore
+/.gitattributes     export-ignore
+/.gitignore         export-ignore
+/bin                export-ignore
+/tests              export-ignore
+/phpunit.xml        export-ignore
+/phpstan.neon       export-ignore
+/CHANGELOG.md       export-ignore
+
+# Normalise line endings so a Windows checkout does not rewrite the fixtures.
+# The chapter CSV in particular must stay byte-identical: it carries
+# non-breaking spaces that the weight parser depends on finding.
+* text=auto eol=lf
+
+*.json              text eol=lf
+*.csv               text eol=lf
+*.php               text eol=lf
+*.md                text eol=lf
+*.neon              text eol=lf
+*.xml               text eol=lf
+*.yml               text eol=lf
+bin/*.sh            text eol=lf

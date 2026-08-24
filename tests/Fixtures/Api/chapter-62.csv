@@ -1,0 +1,465 @@
+SID,Goods Nomenclature Item ID,Indents,Description,Product Line Suffix,Href,Formatted description,Start date,End date,Declarable,Parent SID
+43115,6200000000,0,"ARTICLES OF APPAREL AND CLOTHING ACCESSORIES, NOT KNITTED OR CROCHETED",80,/uk/api/chapters/62,"Articles of apparel and clothing accessories, not knitted or crocheted",1971-12-31 00:00:00 UTC,,false,
+43116,6201000000,0,"Men's or boys' overcoats, car-coats, capes, cloaks, anoraks (including ski-jackets), wind-cheaters, wind-jackets and similar articles, other than those of heading 6203",80,/uk/api/headings/6201,"Men's or boys' overcoats, car-coats, capes, cloaks, anoraks (including ski-jackets), wind-cheaters, wind-jackets and similar articles, other than those of heading 6203",1972-01-01 00:00:00 UTC,,false,43115
+106820,6201200000,1,Of wool or fine animal hair,80,/uk/api/subheadings/6201200000-80,Of wool or fine animal hair,2022-01-01 00:00:00 UTC,,false,43116
+106844,6201200011,2,"Overcoats, raincoats, car-coats, capes, cloaks and similar articles",10,/uk/api/subheadings/6201200011-10,"Overcoats, raincoats, car-coats, capes, cloaks and similar articles",2022-01-01 00:00:00 UTC,,false,106820
+106845,6201200011,3,Hand-made ponchos,80,/uk/api/commodities/6201200011,Hand-made ponchos,2022-01-01 00:00:00 UTC,,true,106844
+106846,6201200019,3,Other,80,/uk/api/commodities/6201200019,Other,2022-01-01 00:00:00 UTC,,true,106844
+106847,6201200091,2,Other,80,/uk/api/commodities/6201200091,Other,2022-01-01 00:00:00 UTC,,true,106820
+106821,6201300000,1,Of cotton,80,/uk/api/subheadings/6201300000-80,Of cotton,2022-01-01 00:00:00 UTC,,false,43116
+106822,6201301000,2,"Of a weight, per garment, not exceeding 1 kg",80,/uk/api/subheadings/6201301000-80,"Of a weight, per garment, not exceeding 1 kg",2022-01-01 00:00:00 UTC,,false,106821
+106848,6201301011,3,"Overcoats, raincoats, car-coats, capes, cloaks and similar articles",10,/uk/api/subheadings/6201301011-10,"Overcoats, raincoats, car-coats, capes, cloaks and similar articles",2022-01-01 00:00:00 UTC,,false,106822
+106849,6201301011,4,Parkas,80,/uk/api/commodities/6201301011,Parkas,2022-01-01 00:00:00 UTC,,true,106848
+106850,6201301019,4,Other,80,/uk/api/commodities/6201301019,Other,2022-01-01 00:00:00 UTC,,true,106848
+106851,6201301091,3,Other,10,/uk/api/subheadings/6201301091-10,Other,2022-01-01 00:00:00 UTC,,false,106822
+106852,6201301091,4,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6201301091,"Hand-printed by the ""batik"" method",2022-01-01 00:00:00 UTC,,true,106851
+106853,6201301099,4,Other,80,/uk/api/commodities/6201301099,Other,2022-01-01 00:00:00 UTC,,true,106851
+106824,6201309000,2,"Of a weight, per garment, exceeding 1 kg",80,/uk/api/subheadings/6201309000-80,"Of a weight, per garment, exceeding 1 kg",2022-01-01 00:00:00 UTC,,false,106821
+106854,6201309011,3,"Overcoats, raincoats, car-coats, capes, cloaks and similar articles",10,/uk/api/subheadings/6201309011-10,"Overcoats, raincoats, car-coats, capes, cloaks and similar articles",2022-01-01 00:00:00 UTC,,false,106824
+106855,6201309011,4,Parkas,80,/uk/api/commodities/6201309011,Parkas,2022-01-01 00:00:00 UTC,,true,106854
+106856,6201309019,4,Other,80,/uk/api/commodities/6201309019,Other,2022-01-01 00:00:00 UTC,,true,106854
+106857,6201309091,3,Other,10,/uk/api/subheadings/6201309091-10,Other,2022-01-01 00:00:00 UTC,,false,106824
+106858,6201309091,4,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6201309091,"Hand-printed by the ""batik"" method",2022-01-01 00:00:00 UTC,,true,106857
+106859,6201309099,4,Other,80,/uk/api/commodities/6201309099,Other,2022-01-01 00:00:00 UTC,,true,106857
+106825,6201400000,1,Of man-made fibres,80,/uk/api/subheadings/6201400000-80,Of man-made fibres,2022-01-01 00:00:00 UTC,,false,43116
+106826,6201401000,2,"Of a weight, per garment, not exceeding 1 kg",80,/uk/api/subheadings/6201401000-80,"Of a weight, per garment, not exceeding 1 kg",2022-01-01 00:00:00 UTC,,false,106825
+106860,6201401011,3,"Overcoats, raincoats, car-coats, capes, cloaks and similar articles",10,/uk/api/subheadings/6201401011-10,"Overcoats, raincoats, car-coats, capes, cloaks and similar articles",2022-01-01 00:00:00 UTC,,false,106826
+106861,6201401011,4,Parkas,80,/uk/api/commodities/6201401011,Parkas,2022-01-01 00:00:00 UTC,,true,106860
+106862,6201401019,4,Other,80,/uk/api/commodities/6201401019,Other,2022-01-01 00:00:00 UTC,,true,106860
+106863,6201401090,3,Other,80,/uk/api/commodities/6201401090,Other,2022-01-01 00:00:00 UTC,,true,106826
+106827,6201409000,2,"Of a weight, per garment, exceeding 1 kg",80,/uk/api/subheadings/6201409000-80,"Of a weight, per garment, exceeding 1 kg",2022-01-01 00:00:00 UTC,,false,106825
+106864,6201409011,3,"Overcoats, raincoats, car-coats, capes, cloaks and similar articles",10,/uk/api/subheadings/6201409011-10,"Overcoats, raincoats, car-coats, capes, cloaks and similar articles",2022-01-01 00:00:00 UTC,,false,106827
+106866,6201409011,4,Parkas,80,/uk/api/commodities/6201409011,Parkas,2022-01-01 00:00:00 UTC,,true,106864
+106867,6201409019,4,Other,80,/uk/api/commodities/6201409019,Other,2022-01-01 00:00:00 UTC,,true,106864
+106870,6201409090,3,Other,80,/uk/api/commodities/6201409090,Other,2022-01-01 00:00:00 UTC,,true,106827
+106828,6201900000,1,Of other textile materials,80,/uk/api/subheadings/6201900000-80,Of other textile materials,2022-01-01 00:00:00 UTC,,false,43116
+106842,6201900010,2,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6201900010,"Hand-printed by the ""batik"" method",2022-01-01 00:00:00 UTC,,true,106828
+106843,6201900090,2,Other,80,/uk/api/commodities/6201900090,Other,2022-01-01 00:00:00 UTC,,true,106828
+43145,6202000000,0,"Women's or girls' overcoats, car-coats, capes, cloaks, anoraks (including ski-jackets), wind-cheaters, wind-jackets and similar articles, other than those of heading 6204",80,/uk/api/headings/6202,"Women's or girls' overcoats, car-coats, capes, cloaks, anoraks (including ski-jackets), wind-cheaters, wind-jackets and similar articles, other than those of heading 6204",1972-01-01 00:00:00 UTC,,false,43115
+106884,6202200000,1,Of wool or fine animal hair,80,/uk/api/subheadings/6202200000-80,Of wool or fine animal hair,2022-01-01 00:00:00 UTC,,false,43145
+106892,6202200011,2,"Overcoats, raincoats, car-coats, capes, cloaks and similar articles",10,/uk/api/subheadings/6202200011-10,"Overcoats, raincoats, car-coats, capes, cloaks and similar articles",2022-01-01 00:00:00 UTC,,false,106884
+106897,6202200011,3,Hand-made ponchos,80,/uk/api/commodities/6202200011,Hand-made ponchos,2022-01-01 00:00:00 UTC,,true,106892
+106898,6202200015,3,Hand-made capes of wool,80,/uk/api/commodities/6202200015,Hand-made capes of wool,2022-01-01 00:00:00 UTC,,true,106892
+106899,6202200019,3,Other,80,/uk/api/commodities/6202200019,Other,2022-01-01 00:00:00 UTC,,true,106892
+106900,6202200091,2,Other,80,/uk/api/commodities/6202200091,Other,2022-01-01 00:00:00 UTC,,true,106884
+106885,6202300000,1,Of cotton,80,/uk/api/subheadings/6202300000-80,Of cotton,2022-01-01 00:00:00 UTC,,false,43145
+106886,6202301000,2,"Of a weight, per garment, not exceeding 1 kg",80,/uk/api/subheadings/6202301000-80,"Of a weight, per garment, not exceeding 1 kg",2022-01-01 00:00:00 UTC,,false,106885
+106893,6202301011,3,"Overcoats, raincoats, car-coats, capes, cloaks and similar articles",10,/uk/api/subheadings/6202301011-10,"Overcoats, raincoats, car-coats, capes, cloaks and similar articles",2022-01-01 00:00:00 UTC,,false,106886
+106901,6202301011,4,Parkas,80,/uk/api/commodities/6202301011,Parkas,2022-01-01 00:00:00 UTC,,true,106893
+106902,6202301019,4,Other,80,/uk/api/commodities/6202301019,Other,2022-01-01 00:00:00 UTC,,true,106893
+106903,6202301091,3,Other,10,/uk/api/subheadings/6202301091-10,Other,2022-01-01 00:00:00 UTC,,false,106886
+106904,6202301091,4,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6202301091,"Hand-printed by the ""batik"" method",2022-01-01 00:00:00 UTC,,true,106903
+106905,6202301099,4,Other,80,/uk/api/commodities/6202301099,Other,2022-01-01 00:00:00 UTC,,true,106903
+106887,6202309000,2,"Of a weight, per garment, exceeding 1 kg",80,/uk/api/subheadings/6202309000-80,"Of a weight, per garment, exceeding 1 kg",2022-01-01 00:00:00 UTC,,false,106885
+106894,6202309011,3,"Overcoats, raincoats, car-coats, capes, cloaks and similar articles",10,/uk/api/subheadings/6202309011-10,"Overcoats, raincoats, car-coats, capes, cloaks and similar articles",2022-01-01 00:00:00 UTC,,false,106887
+106906,6202309011,4,Parkas,80,/uk/api/commodities/6202309011,Parkas,2022-01-01 00:00:00 UTC,,true,106894
+106907,6202309019,4,Other,80,/uk/api/commodities/6202309019,Other,2022-01-01 00:00:00 UTC,,true,106894
+106911,6202309091,3,Other,10,/uk/api/subheadings/6202309091-10,Other,2022-01-01 00:00:00 UTC,,false,106887
+106909,6202309091,4,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6202309091,"Hand-printed by the ""batik"" method",2022-01-01 00:00:00 UTC,,true,106911
+106910,6202309099,4,Other,80,/uk/api/commodities/6202309099,Other,2022-01-01 00:00:00 UTC,,true,106911
+106888,6202400000,1,Of man-made fibres,80,/uk/api/subheadings/6202400000-80,Of man-made fibres,2022-01-01 00:00:00 UTC,,false,43145
+106889,6202401000,2,"Of a weight, per garment, not exceeding 1 kg",80,/uk/api/subheadings/6202401000-80,"Of a weight, per garment, not exceeding 1 kg",2022-01-01 00:00:00 UTC,,false,106888
+106895,6202401011,3,"Overcoats, raincoats, car-coats, capes, cloaks and similar articles",10,/uk/api/subheadings/6202401011-10,"Overcoats, raincoats, car-coats, capes, cloaks and similar articles",2022-01-01 00:00:00 UTC,,false,106889
+106917,6202401011,4,Parkas,80,/uk/api/commodities/6202401011,Parkas,2022-01-01 00:00:00 UTC,,true,106895
+106918,6202401019,4,Other,80,/uk/api/commodities/6202401019,Other,2022-01-01 00:00:00 UTC,,true,106895
+106919,6202401091,3,Other,80,/uk/api/commodities/6202401091,Other,2022-01-01 00:00:00 UTC,,true,106889
+106890,6202409000,2,"Of a weight, per garment, exceeding 1 kg",80,/uk/api/subheadings/6202409000-80,"Of a weight, per garment, exceeding 1 kg",2022-01-01 00:00:00 UTC,,false,106888
+106896,6202409011,3,"Overcoats, raincoats, car-coats, capes, cloaks and similar articles",10,/uk/api/subheadings/6202409011-10,"Overcoats, raincoats, car-coats, capes, cloaks and similar articles",2022-01-01 00:00:00 UTC,,false,106890
+106923,6202409011,4,Parkas,80,/uk/api/commodities/6202409011,Parkas,2022-01-01 00:00:00 UTC,,true,106896
+106924,6202409019,4,Other,80,/uk/api/commodities/6202409019,Other,2022-01-01 00:00:00 UTC,,true,106896
+106920,6202409091,3,Other,80,/uk/api/commodities/6202409091,Other,2022-01-01 00:00:00 UTC,,true,106890
+106891,6202900000,1,Of other textile materials,80,/uk/api/subheadings/6202900000-80,Of other textile materials,2022-01-01 00:00:00 UTC,,false,43145
+106926,6202900010,2,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6202900010,"Hand-printed by the ""batik"" method",2022-01-01 00:00:00 UTC,,true,106891
+106927,6202900090,2,Other,80,/uk/api/commodities/6202900090,Other,2022-01-01 00:00:00 UTC,,true,106891
+43175,6203000000,0,"Men's or boys' suits, ensembles, jackets, blazers, trousers, bib and brace overalls, breeches and shorts (other than swimwear)",80,/uk/api/headings/6203,"Men's or boys' suits, ensembles, jackets, blazers, trousers, bib and brace overalls, breeches and shorts (other than swimwear)",1972-01-01 00:00:00 UTC,,false,43115
+43176,6203110000,1,Suits,10,/uk/api/subheadings/6203110000-10,Suits,1972-01-01 00:00:00 UTC,,false,43175
+43177,6203110000,2,Of wool or fine animal hair,80,/uk/api/commodities/6203110000,Of wool or fine animal hair,1972-01-01 00:00:00 UTC,,true,43176
+43178,6203120000,2,Of synthetic fibres,80,/uk/api/commodities/6203120000,Of synthetic fibres,1972-01-01 00:00:00 UTC,,true,43176
+43179,6203190000,2,Of other textile materials,80,/uk/api/subheadings/6203190000-80,Of other textile materials,1972-01-01 00:00:00 UTC,,false,43176
+43180,6203191000,3,Of cotton,80,/uk/api/commodities/6203191000,Of cotton,1972-01-01 00:00:00 UTC,,true,43179
+43181,6203193000,3,Of artificial fibres,80,/uk/api/commodities/6203193000,Of artificial fibres,1972-01-01 00:00:00 UTC,,true,43179
+43182,6203199000,3,Of other textile materials,80,/uk/api/commodities/6203199000,Of other textile materials,1972-01-01 00:00:00 UTC,,true,43179
+87425,6203220000,1,Ensembles,10,/uk/api/subheadings/6203220000-10,Ensembles,2007-01-01 00:00:00 UTC,,false,43175
+43185,6203220000,2,Of cotton,80,/uk/api/subheadings/6203220000-80,Of cotton,1972-01-01 00:00:00 UTC,,false,87425
+43186,6203221000,3,Industrial and occupational,80,/uk/api/commodities/6203221000,Industrial and occupational,1972-01-01 00:00:00 UTC,,true,43185
+43187,6203228000,3,Other,80,/uk/api/commodities/6203228000,Other,1992-01-01 00:00:00 UTC,,true,43185
+43189,6203230000,2,Of synthetic fibres,80,/uk/api/subheadings/6203230000-80,Of synthetic fibres,1972-01-01 00:00:00 UTC,,false,87425
+43190,6203231000,3,Industrial and occupational,80,/uk/api/commodities/6203231000,Industrial and occupational,1972-01-01 00:00:00 UTC,,true,43189
+43191,6203238000,3,Other,80,/uk/api/commodities/6203238000,Other,1992-01-01 00:00:00 UTC,,true,43189
+43193,6203290000,2,Of other textile materials,80,/uk/api/subheadings/6203290000-80,Of other textile materials,1972-01-01 00:00:00 UTC,,false,87425
+43194,6203291100,3,Of artificial fibres,10,/uk/api/subheadings/6203291100-10,Of artificial fibres,1972-01-01 00:00:00 UTC,,false,43193
+43195,6203291100,4,Industrial and occupational,80,/uk/api/commodities/6203291100,Industrial and occupational,1972-01-01 00:00:00 UTC,,true,43194
+43196,6203291800,4,Other,80,/uk/api/commodities/6203291800,Other,1992-01-01 00:00:00 UTC,,true,43194
+87424,6203293000,3,Of wool or fine animal hair,80,/uk/api/commodities/6203293000,Of wool or fine animal hair,2007-01-01 00:00:00 UTC,,true,43193
+43198,6203299000,3,Of other textile materials,80,/uk/api/commodities/6203299000,Of other textile materials,1972-01-01 00:00:00 UTC,,true,43193
+43199,6203310000,1,Jackets and blazers,10,/uk/api/subheadings/6203310000-10,Jackets and blazers,1972-01-01 00:00:00 UTC,,false,43175
+43200,6203310000,2,Of wool or fine animal hair,80,/uk/api/commodities/6203310000,Of wool or fine animal hair,1972-01-01 00:00:00 UTC,,true,43199
+43201,6203320000,2,Of cotton,80,/uk/api/subheadings/6203320000-80,Of cotton,1972-01-01 00:00:00 UTC,,false,43199
+43202,6203321000,3,Industrial and occupational,80,/uk/api/commodities/6203321000,Industrial and occupational,1972-01-01 00:00:00 UTC,,true,43201
+43203,6203329000,3,Other,80,/uk/api/commodities/6203329000,Other,1972-01-01 00:00:00 UTC,,true,43201
+43204,6203330000,2,Of synthetic fibres,80,/uk/api/subheadings/6203330000-80,Of synthetic fibres,1972-01-01 00:00:00 UTC,,false,43199
+43205,6203331000,3,Industrial and occupational,80,/uk/api/commodities/6203331000,Industrial and occupational,1972-01-01 00:00:00 UTC,,true,43204
+43206,6203339000,3,Other,80,/uk/api/commodities/6203339000,Other,1972-01-01 00:00:00 UTC,,true,43204
+43207,6203390000,2,Of other textile materials,80,/uk/api/subheadings/6203390000-80,Of other textile materials,1972-01-01 00:00:00 UTC,,false,43199
+43208,6203391100,3,Of artificial fibres,10,/uk/api/subheadings/6203391100-10,Of artificial fibres,1972-01-01 00:00:00 UTC,,false,43207
+43209,6203391100,4,Industrial and occupational,80,/uk/api/commodities/6203391100,Industrial and occupational,1972-01-01 00:00:00 UTC,,true,43208
+43210,6203391900,4,Other,80,/uk/api/commodities/6203391900,Other,1972-01-01 00:00:00 UTC,,true,43208
+43211,6203399000,3,Of other textile materials,80,/uk/api/commodities/6203399000,Of other textile materials,1972-01-01 00:00:00 UTC,,true,43207
+43212,6203410000,1,"Trousers, bib and brace overalls, breeches and shorts",10,/uk/api/subheadings/6203410000-10,"Trousers, bib and brace overalls, breeches and shorts",1972-01-01 00:00:00 UTC,,false,43175
+43213,6203410000,2,Of wool or fine animal hair,80,/uk/api/subheadings/6203410000-80,Of wool or fine animal hair,1972-01-01 00:00:00 UTC,,false,43212
+43214,6203411000,3,Trousers and breeches,80,/uk/api/commodities/6203411000,Trousers and breeches,1972-01-01 00:00:00 UTC,,true,43213
+43215,6203413000,3,Bib and brace overalls,80,/uk/api/commodities/6203413000,Bib and brace overalls,1972-01-01 00:00:00 UTC,,true,43213
+43216,6203419000,3,Other,80,/uk/api/commodities/6203419000,Other,1972-01-01 00:00:00 UTC,,true,43213
+43217,6203420000,2,Of cotton,80,/uk/api/subheadings/6203420000-80,Of cotton,1972-01-01 00:00:00 UTC,,false,43212
+43218,6203421100,3,Trousers and breeches,10,/uk/api/subheadings/6203421100-10,Trousers and breeches,1972-01-01 00:00:00 UTC,,false,43217
+43219,6203421100,4,Industrial and occupational,80,/uk/api/commodities/6203421100,Industrial and occupational,1972-01-01 00:00:00 UTC,,true,43218
+43220,6203423100,4,Other,10,/uk/api/subheadings/6203423100-10,Other,1972-01-01 00:00:00 UTC,,false,43218
+43221,6203423100,5,Of denim,80,/uk/api/commodities/6203423100,Of denim,1972-01-01 00:00:00 UTC,,true,43220
+43222,6203423300,5,Of cut corduroy,80,/uk/api/commodities/6203423300,Of cut corduroy,1972-01-01 00:00:00 UTC,,true,43220
+43223,6203423500,5,Other,80,/uk/api/commodities/6203423500,Other,1972-01-01 00:00:00 UTC,,true,43220
+43224,6203425100,3,Bib and brace overalls,10,/uk/api/subheadings/6203425100-10,Bib and brace overalls,1972-01-01 00:00:00 UTC,,false,43217
+43225,6203425100,4,Industrial and occupational,80,/uk/api/commodities/6203425100,Industrial and occupational,1972-01-01 00:00:00 UTC,,true,43224
+43226,6203425900,4,Other,80,/uk/api/commodities/6203425900,Other,1972-01-01 00:00:00 UTC,,true,43224
+43227,6203429000,3,Other,80,/uk/api/commodities/6203429000,Other,1972-01-01 00:00:00 UTC,,true,43217
+43228,6203430000,2,Of synthetic fibres,80,/uk/api/subheadings/6203430000-80,Of synthetic fibres,1972-01-01 00:00:00 UTC,,false,43212
+43229,6203431100,3,Trousers and breeches,10,/uk/api/subheadings/6203431100-10,Trousers and breeches,1972-01-01 00:00:00 UTC,,false,43228
+43230,6203431100,4,Industrial and occupational,80,/uk/api/commodities/6203431100,Industrial and occupational,1972-01-01 00:00:00 UTC,,true,43229
+43231,6203431900,4,Other,80,/uk/api/commodities/6203431900,Other,1972-01-01 00:00:00 UTC,,true,43229
+43232,6203433100,3,Bib and brace overalls,10,/uk/api/subheadings/6203433100-10,Bib and brace overalls,1972-01-01 00:00:00 UTC,,false,43228
+43233,6203433100,4,Industrial and occupational,80,/uk/api/commodities/6203433100,Industrial and occupational,1972-01-01 00:00:00 UTC,,true,43232
+43234,6203433900,4,Other,80,/uk/api/commodities/6203433900,Other,1972-01-01 00:00:00 UTC,,true,43232
+43235,6203439000,3,Other,80,/uk/api/commodities/6203439000,Other,1972-01-01 00:00:00 UTC,,true,43228
+43236,6203490000,2,Of other textile materials,80,/uk/api/subheadings/6203490000-80,Of other textile materials,1972-01-01 00:00:00 UTC,,false,43212
+43237,6203491100,3,Of artificial fibres,10,/uk/api/subheadings/6203491100-10,Of artificial fibres,1972-01-01 00:00:00 UTC,,false,43236
+43238,6203491100,4,Trousers and breeches,20,/uk/api/subheadings/6203491100-20,Trousers and breeches,1972-01-01 00:00:00 UTC,,false,43237
+43239,6203491100,5,Industrial and occupational,80,/uk/api/commodities/6203491100,Industrial and occupational,1972-01-01 00:00:00 UTC,,true,43238
+43240,6203491900,5,Other,80,/uk/api/commodities/6203491900,Other,1972-01-01 00:00:00 UTC,,true,43238
+43241,6203493100,4,Bib and brace overalls,10,/uk/api/subheadings/6203493100-10,Bib and brace overalls,1972-01-01 00:00:00 UTC,,false,43237
+43242,6203493100,5,Industrial and occupational,80,/uk/api/commodities/6203493100,Industrial and occupational,1972-01-01 00:00:00 UTC,,true,43241
+43243,6203493900,5,Other,80,/uk/api/commodities/6203493900,Other,1972-01-01 00:00:00 UTC,,true,43241
+43244,6203495000,4,Other,80,/uk/api/commodities/6203495000,Other,1972-01-01 00:00:00 UTC,,true,43237
+43245,6203499000,3,Of other textile materials,80,/uk/api/commodities/6203499000,Of other textile materials,1972-01-01 00:00:00 UTC,,true,43236
+43246,6204000000,0,"Women's or girls' suits, ensembles, jackets, blazers, dresses, skirts, divided skirts, trousers, bib and brace overalls, breeches and shorts (other than swimwear)",80,/uk/api/headings/6204,"Women's or girls' suits, ensembles, jackets, blazers, dresses, skirts, divided skirts, trousers, bib and brace overalls, breeches and shorts (other than swimwear)",1972-01-01 00:00:00 UTC,,false,43115
+43247,6204110000,1,Suits,10,/uk/api/subheadings/6204110000-10,Suits,1972-01-01 00:00:00 UTC,,false,43246
+43248,6204110000,2,Of wool or fine animal hair,80,/uk/api/commodities/6204110000,Of wool or fine animal hair,1972-01-01 00:00:00 UTC,,true,43247
+43249,6204120000,2,Of cotton,80,/uk/api/subheadings/6204120000-80,Of cotton,1972-01-01 00:00:00 UTC,,false,43247
+43250,6204120010,3,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6204120010,"Hand-printed by the ""batik"" method",1972-01-01 00:00:00 UTC,,true,43249
+43251,6204120090,3,Other,80,/uk/api/commodities/6204120090,Other,1972-01-01 00:00:00 UTC,,true,43249
+43252,6204130000,2,Of synthetic fibres,80,/uk/api/commodities/6204130000,Of synthetic fibres,1972-01-01 00:00:00 UTC,,true,43247
+43253,6204190000,2,Of other textile materials,80,/uk/api/subheadings/6204190000-80,Of other textile materials,1972-01-01 00:00:00 UTC,,false,43247
+43254,6204191000,3,Of artificial fibres,80,/uk/api/commodities/6204191000,Of artificial fibres,1972-01-01 00:00:00 UTC,,true,43253
+43255,6204199000,3,Of other textile materials,80,/uk/api/commodities/6204199000,Of other textile materials,1972-01-01 00:00:00 UTC,,true,43253
+43256,6204210000,1,Ensembles,10,/uk/api/subheadings/6204210000-10,Ensembles,1972-01-01 00:00:00 UTC,,false,43246
+43257,6204210000,2,Of wool or fine animal hair,80,/uk/api/commodities/6204210000,Of wool or fine animal hair,1972-01-01 00:00:00 UTC,,true,43256
+43258,6204220000,2,Of cotton,80,/uk/api/subheadings/6204220000-80,Of cotton,1972-01-01 00:00:00 UTC,,false,43256
+43259,6204221000,3,Industrial and occupational,80,/uk/api/commodities/6204221000,Industrial and occupational,1972-01-01 00:00:00 UTC,,true,43258
+43260,6204228000,3,Other,80,/uk/api/subheadings/6204228000-80,Other,1992-01-01 00:00:00 UTC,,false,43258
+43261,6204228010,4,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6204228010,"Hand-printed by the ""batik"" method",1992-01-01 00:00:00 UTC,,true,43260
+43262,6204228090,4,Other,80,/uk/api/commodities/6204228090,Other,1992-01-01 00:00:00 UTC,,true,43260
+43266,6204230000,2,Of synthetic fibres,80,/uk/api/subheadings/6204230000-80,Of synthetic fibres,1972-01-01 00:00:00 UTC,,false,43256
+43267,6204231000,3,Industrial and occupational,80,/uk/api/commodities/6204231000,Industrial and occupational,1972-01-01 00:00:00 UTC,,true,43266
+43268,6204238000,3,Other,80,/uk/api/commodities/6204238000,Other,1992-01-01 00:00:00 UTC,,true,43266
+43270,6204290000,2,Of other textile materials,80,/uk/api/subheadings/6204290000-80,Of other textile materials,1972-01-01 00:00:00 UTC,,false,43256
+43271,6204291100,3,Of artificial fibres,10,/uk/api/subheadings/6204291100-10,Of artificial fibres,1972-01-01 00:00:00 UTC,,false,43270
+43272,6204291100,4,Industrial and occupational,80,/uk/api/commodities/6204291100,Industrial and occupational,1972-01-01 00:00:00 UTC,,true,43271
+43273,6204291800,4,Other,80,/uk/api/commodities/6204291800,Other,1992-01-01 00:00:00 UTC,,true,43271
+43275,6204299000,3,Of other textile materials,80,/uk/api/subheadings/6204299000-80,Of other textile materials,1972-01-01 00:00:00 UTC,,false,43270
+43276,6204299010,4,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6204299010,"Hand-printed by the ""batik"" method",1972-01-01 00:00:00 UTC,,true,43275
+43277,6204299090,4,Other,80,/uk/api/commodities/6204299090,Other,1972-01-01 00:00:00 UTC,,true,43275
+43278,6204310000,1,Jackets and blazers,10,/uk/api/subheadings/6204310000-10,Jackets and blazers,1972-01-01 00:00:00 UTC,,false,43246
+43279,6204310000,2,Of wool or fine animal hair,80,/uk/api/commodities/6204310000,Of wool or fine animal hair,1972-01-01 00:00:00 UTC,,true,43278
+43280,6204320000,2,Of cotton,80,/uk/api/subheadings/6204320000-80,Of cotton,1972-01-01 00:00:00 UTC,,false,43278
+43281,6204321000,3,Industrial and occupational,80,/uk/api/commodities/6204321000,Industrial and occupational,1972-01-01 00:00:00 UTC,,true,43280
+43282,6204329000,3,Other,80,/uk/api/subheadings/6204329000-80,Other,1972-01-01 00:00:00 UTC,,false,43280
+43283,6204329010,4,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6204329010,"Hand-printed by the ""batik"" method",1972-01-01 00:00:00 UTC,,true,43282
+43284,6204329090,4,Other,80,/uk/api/commodities/6204329090,Other,1972-01-01 00:00:00 UTC,,true,43282
+43285,6204330000,2,Of synthetic fibres,80,/uk/api/subheadings/6204330000-80,Of synthetic fibres,1972-01-01 00:00:00 UTC,,false,43278
+43286,6204331000,3,Industrial and occupational,80,/uk/api/commodities/6204331000,Industrial and occupational,1972-01-01 00:00:00 UTC,,true,43285
+43287,6204339000,3,Other,80,/uk/api/commodities/6204339000,Other,1972-01-01 00:00:00 UTC,,true,43285
+43288,6204390000,2,Of other textile materials,80,/uk/api/subheadings/6204390000-80,Of other textile materials,1972-01-01 00:00:00 UTC,,false,43278
+43289,6204391100,3,Of artificial fibres,10,/uk/api/subheadings/6204391100-10,Of artificial fibres,1972-01-01 00:00:00 UTC,,false,43288
+43290,6204391100,4,Industrial and occupational,80,/uk/api/commodities/6204391100,Industrial and occupational,1972-01-01 00:00:00 UTC,,true,43289
+43291,6204391900,4,Other,80,/uk/api/commodities/6204391900,Other,1972-01-01 00:00:00 UTC,,true,43289
+43292,6204399000,3,Of other textile materials,80,/uk/api/subheadings/6204399000-80,Of other textile materials,1972-01-01 00:00:00 UTC,,false,43288
+43293,6204399010,4,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6204399010,"Hand-printed by the ""batik"" method",1972-01-01 00:00:00 UTC,,true,43292
+43294,6204399090,4,Other,80,/uk/api/commodities/6204399090,Other,1972-01-01 00:00:00 UTC,,true,43292
+43295,6204410000,1,Dresses,10,/uk/api/subheadings/6204410000-10,Dresses,1972-01-01 00:00:00 UTC,,false,43246
+43296,6204410000,2,Of wool or fine animal hair,80,/uk/api/commodities/6204410000,Of wool or fine animal hair,1972-01-01 00:00:00 UTC,,true,43295
+43297,6204420000,2,Of cotton,80,/uk/api/subheadings/6204420000-80,Of cotton,1972-01-01 00:00:00 UTC,,false,43295
+43298,6204420010,3,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6204420010,"Hand-printed by the ""batik"" method",1972-01-01 00:00:00 UTC,,true,43297
+43299,6204420090,3,Other,80,/uk/api/commodities/6204420090,Other,1972-01-01 00:00:00 UTC,,true,43297
+43300,6204430000,2,Of synthetic fibres,80,/uk/api/commodities/6204430000,Of synthetic fibres,1972-01-01 00:00:00 UTC,,true,43295
+43301,6204440000,2,Of artificial fibres,80,/uk/api/subheadings/6204440000-80,Of artificial fibres,1972-01-01 00:00:00 UTC,,false,43295
+43302,6204440010,3,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6204440010,"Hand-printed by the ""batik"" method",1972-01-01 00:00:00 UTC,,true,43301
+43303,6204440090,3,Other,80,/uk/api/commodities/6204440090,Other,1972-01-01 00:00:00 UTC,,true,43301
+43304,6204490000,2,Of other textile materials,80,/uk/api/subheadings/6204490000-80,Of other textile materials,1972-01-01 00:00:00 UTC,,false,43295
+89754,6204491000,3,Of silk or silk waste,80,/uk/api/commodities/6204491000,Of silk or silk waste,2008-01-01 00:00:00 UTC,,true,43304
+89764,6204499000,3,Of other textile materials,80,/uk/api/subheadings/6204499000-80,Of other textile materials,2008-01-01 00:00:00 UTC,,false,43304
+89766,6204499010,4,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6204499010,"Hand-printed by the ""batik"" method",2008-01-01 00:00:00 UTC,,true,89764
+89765,6204499090,4,Other,80,/uk/api/commodities/6204499090,Other,2008-01-01 00:00:00 UTC,,true,89764
+43309,6204510000,1,Skirts and divided skirts,10,/uk/api/subheadings/6204510000-10,Skirts and divided skirts,1972-01-01 00:00:00 UTC,,false,43246
+43310,6204510000,2,Of wool or fine animal hair,80,/uk/api/subheadings/6204510000-80,Of wool or fine animal hair,1972-01-01 00:00:00 UTC,,false,43309
+43311,6204510011,3,Of wool,10,/uk/api/subheadings/6204510011-10,Of wool,1972-01-01 00:00:00 UTC,,false,43310
+43312,6204510011,4,Hand-made,80,/uk/api/commodities/6204510011,Hand-made,1972-01-01 00:00:00 UTC,,true,43311
+43313,6204510019,4,Other,80,/uk/api/commodities/6204510019,Other,1972-01-01 00:00:00 UTC,,true,43311
+43314,6204510090,3,Other,80,/uk/api/commodities/6204510090,Other,1972-01-01 00:00:00 UTC,,true,43310
+43315,6204520000,2,Of cotton,80,/uk/api/subheadings/6204520000-80,Of cotton,1972-01-01 00:00:00 UTC,,false,43309
+43316,6204520010,3,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6204520010,"Hand-printed by the ""batik"" method",1972-01-01 00:00:00 UTC,,true,43315
+43317,6204520090,3,Other,80,/uk/api/commodities/6204520090,Other,1972-01-01 00:00:00 UTC,,true,43315
+43318,6204530000,2,Of synthetic fibres,80,/uk/api/subheadings/6204530000-80,Of synthetic fibres,1972-01-01 00:00:00 UTC,,false,43309
+43319,6204530010,3,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6204530010,"Hand-printed by the ""batik"" method",1972-01-01 00:00:00 UTC,,true,43318
+43320,6204530090,3,Other,80,/uk/api/commodities/6204530090,Other,1972-01-01 00:00:00 UTC,,true,43318
+43321,6204590000,2,Of other textile materials,80,/uk/api/subheadings/6204590000-80,Of other textile materials,1972-01-01 00:00:00 UTC,,false,43309
+43322,6204591000,3,Of artificial fibres,80,/uk/api/subheadings/6204591000-80,Of artificial fibres,1972-01-01 00:00:00 UTC,,false,43321
+43323,6204591010,4,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6204591010,"Hand-printed by the ""batik"" method",1972-01-01 00:00:00 UTC,,true,43322
+43324,6204591090,4,Other,80,/uk/api/commodities/6204591090,Other,1972-01-01 00:00:00 UTC,,true,43322
+43325,6204599000,3,Of other textile materials,80,/uk/api/subheadings/6204599000-80,Of other textile materials,1972-01-01 00:00:00 UTC,,false,43321
+43326,6204599010,4,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6204599010,"Hand-printed by the ""batik"" method",1972-01-01 00:00:00 UTC,,true,43325
+43327,6204599090,4,Other,80,/uk/api/commodities/6204599090,Other,1972-01-01 00:00:00 UTC,,true,43325
+43328,6204610000,1,"Trousers, bib and brace overalls, breeches and shorts",10,/uk/api/subheadings/6204610000-10,"Trousers, bib and brace overalls, breeches and shorts",1972-01-01 00:00:00 UTC,,false,43246
+43329,6204610000,2,Of wool or fine animal hair,80,/uk/api/subheadings/6204610000-80,Of wool or fine animal hair,1972-01-01 00:00:00 UTC,,false,43328
+43330,6204611000,3,Trousers and breeches,80,/uk/api/commodities/6204611000,Trousers and breeches,1972-01-01 00:00:00 UTC,,true,43329
+80929,6204618500,3,Other,80,/uk/api/commodities/6204618500,Other,2005-01-01 00:00:00 UTC,,true,43329
+43333,6204620000,2,Of cotton,80,/uk/api/subheadings/6204620000-80,Of cotton,1972-01-01 00:00:00 UTC,,false,43328
+43334,6204621100,3,Trousers and breeches,10,/uk/api/subheadings/6204621100-10,Trousers and breeches,1972-01-01 00:00:00 UTC,,false,43333
+43335,6204621100,4,Industrial and occupational,80,/uk/api/commodities/6204621100,Industrial and occupational,1972-01-01 00:00:00 UTC,,true,43334
+43336,6204623100,4,Other,10,/uk/api/subheadings/6204623100-10,Other,1972-01-01 00:00:00 UTC,,false,43334
+43337,6204623100,5,Of denim,80,/uk/api/subheadings/6204623100-80,Of denim,1972-01-01 00:00:00 UTC,,false,43336
+43338,6204623110,6,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6204623110,"Hand-printed by the ""batik"" method",1972-01-01 00:00:00 UTC,,true,43337
+43339,6204623190,6,Other,80,/uk/api/commodities/6204623190,Other,1972-01-01 00:00:00 UTC,,true,43337
+43340,6204623300,5,Of cut corduroy,80,/uk/api/subheadings/6204623300-80,Of cut corduroy,1972-01-01 00:00:00 UTC,,false,43336
+43341,6204623310,6,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6204623310,"Hand-printed by the ""batik"" method",1972-01-01 00:00:00 UTC,,true,43340
+43342,6204623390,6,Other,80,/uk/api/commodities/6204623390,Other,1972-01-01 00:00:00 UTC,,true,43340
+43346,6204623900,5,Other,80,/uk/api/subheadings/6204623900-80,Other,1992-01-01 00:00:00 UTC,,false,43336
+43347,6204623910,6,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6204623910,"Hand-printed by the ""batik"" method",1992-01-01 00:00:00 UTC,,true,43346
+43348,6204623990,6,Other,80,/uk/api/commodities/6204623990,Other,1992-01-01 00:00:00 UTC,,true,43346
+43349,6204625100,3,Bib and brace overalls,10,/uk/api/subheadings/6204625100-10,Bib and brace overalls,1972-01-01 00:00:00 UTC,,false,43333
+43350,6204625100,4,Industrial and occupational,80,/uk/api/commodities/6204625100,Industrial and occupational,1972-01-01 00:00:00 UTC,,true,43349
+43351,6204625900,4,Other,80,/uk/api/subheadings/6204625900-80,Other,1972-01-01 00:00:00 UTC,,false,43349
+43352,6204625910,5,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6204625910,"Hand-printed by the ""batik"" method",1972-01-01 00:00:00 UTC,,true,43351
+43353,6204625990,5,Other,80,/uk/api/commodities/6204625990,Other,1972-01-01 00:00:00 UTC,,true,43351
+43354,6204629000,3,Other,80,/uk/api/subheadings/6204629000-80,Other,1972-01-01 00:00:00 UTC,,false,43333
+43355,6204629010,4,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6204629010,"Hand-printed by the ""batik"" method",1972-01-01 00:00:00 UTC,,true,43354
+43356,6204629090,4,Other,80,/uk/api/commodities/6204629090,Other,1972-01-01 00:00:00 UTC,,true,43354
+43357,6204630000,2,Of synthetic fibres,80,/uk/api/subheadings/6204630000-80,Of synthetic fibres,1972-01-01 00:00:00 UTC,,false,43328
+43358,6204631100,3,Trousers and breeches,10,/uk/api/subheadings/6204631100-10,Trousers and breeches,1972-01-01 00:00:00 UTC,,false,43357
+43359,6204631100,4,Industrial and occupational,80,/uk/api/commodities/6204631100,Industrial and occupational,1972-01-01 00:00:00 UTC,,true,43358
+43360,6204631800,4,Other,80,/uk/api/subheadings/6204631800-80,Other,1992-01-01 00:00:00 UTC,,false,43358
+43361,6204631810,5,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6204631810,"Hand-printed by the ""batik"" method",1992-01-01 00:00:00 UTC,,true,43360
+43362,6204631890,5,Other,80,/uk/api/commodities/6204631890,Other,1992-01-01 00:00:00 UTC,,true,43360
+43366,6204633100,3,Bib and brace overalls,10,/uk/api/subheadings/6204633100-10,Bib and brace overalls,1972-01-01 00:00:00 UTC,,false,43357
+43367,6204633100,4,Industrial and occupational,80,/uk/api/commodities/6204633100,Industrial and occupational,1972-01-01 00:00:00 UTC,,true,43366
+43368,6204633900,4,Other,80,/uk/api/subheadings/6204633900-80,Other,1972-01-01 00:00:00 UTC,,false,43366
+43369,6204633910,5,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6204633910,"Hand-printed by the ""batik"" method",1972-01-01 00:00:00 UTC,,true,43368
+43370,6204633990,5,Other,80,/uk/api/commodities/6204633990,Other,1972-01-01 00:00:00 UTC,,true,43368
+43371,6204639000,3,Other,80,/uk/api/subheadings/6204639000-80,Other,1972-01-01 00:00:00 UTC,,false,43357
+43372,6204639010,4,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6204639010,"Hand-printed by the ""batik"" method",1972-01-01 00:00:00 UTC,,true,43371
+43373,6204639090,4,Other,80,/uk/api/commodities/6204639090,Other,1972-01-01 00:00:00 UTC,,true,43371
+43374,6204690000,2,Of other textile materials,80,/uk/api/subheadings/6204690000-80,Of other textile materials,1972-01-01 00:00:00 UTC,,false,43328
+43375,6204691100,3,Of artificial fibres,10,/uk/api/subheadings/6204691100-10,Of artificial fibres,1972-01-01 00:00:00 UTC,,false,43374
+43376,6204691100,4,Trousers and breeches,20,/uk/api/subheadings/6204691100-20,Trousers and breeches,1972-01-01 00:00:00 UTC,,false,43375
+43377,6204691100,5,Industrial and occupational,80,/uk/api/commodities/6204691100,Industrial and occupational,1972-01-01 00:00:00 UTC,,true,43376
+43378,6204691800,5,Other,80,/uk/api/subheadings/6204691800-80,Other,1992-01-01 00:00:00 UTC,,false,43376
+43379,6204691810,6,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6204691810,"Hand-printed by the ""batik"" method",1992-01-01 00:00:00 UTC,,true,43378
+43380,6204691890,6,Other,80,/uk/api/commodities/6204691890,Other,1992-01-01 00:00:00 UTC,,true,43378
+43384,6204693100,4,Bib and brace overalls,10,/uk/api/subheadings/6204693100-10,Bib and brace overalls,1972-01-01 00:00:00 UTC,,false,43375
+43385,6204693100,5,Industrial and occupational,80,/uk/api/commodities/6204693100,Industrial and occupational,1972-01-01 00:00:00 UTC,,true,43384
+43386,6204693900,5,Other,80,/uk/api/subheadings/6204693900-80,Other,1972-01-01 00:00:00 UTC,,false,43384
+43387,6204693910,6,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6204693910,"Hand-printed by the ""batik"" method",1972-01-01 00:00:00 UTC,,true,43386
+43388,6204693990,6,Other,80,/uk/api/commodities/6204693990,Other,1972-01-01 00:00:00 UTC,,true,43386
+43389,6204695000,4,Other,80,/uk/api/subheadings/6204695000-80,Other,1972-01-01 00:00:00 UTC,,false,43375
+43390,6204695010,5,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6204695010,"Hand-printed by the ""batik"" method",1972-01-01 00:00:00 UTC,,true,43389
+43391,6204695090,5,Other,80,/uk/api/commodities/6204695090,Other,1972-01-01 00:00:00 UTC,,true,43389
+43392,6204699000,3,Of other textile materials,80,/uk/api/subheadings/6204699000-80,Of other textile materials,1972-01-01 00:00:00 UTC,,false,43374
+43393,6204699010,4,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6204699010,"Hand-printed by the ""batik"" method",1972-01-01 00:00:00 UTC,,true,43392
+43394,6204699090,4,Other,80,/uk/api/commodities/6204699090,Other,1972-01-01 00:00:00 UTC,,true,43392
+43395,6205000000,0,Men's or boys' shirts,80,/uk/api/headings/6205,Men's or boys' shirts,1972-01-01 00:00:00 UTC,,false,43115
+43397,6205200000,1,Of cotton,80,/uk/api/subheadings/6205200000-80,Of cotton,1972-01-01 00:00:00 UTC,,false,43395
+43398,6205200010,2,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6205200010,"Hand-printed by the ""batik"" method",1972-01-01 00:00:00 UTC,,true,43397
+43399,6205200090,2,Other,80,/uk/api/commodities/6205200090,Other,1972-01-01 00:00:00 UTC,,true,43397
+43400,6205300000,1,Of man-made fibres,80,/uk/api/commodities/6205300000,Of man-made fibres,1972-01-01 00:00:00 UTC,,true,43395
+43401,6205900000,1,Of other textile materials,80,/uk/api/subheadings/6205900000-80,Of other textile materials,1972-01-01 00:00:00 UTC,,false,43395
+43402,6205901000,2,Of flax or ramie,80,/uk/api/subheadings/6205901000-80,Of flax or ramie,1972-01-01 00:00:00 UTC,,false,43401
+43403,6205901010,3,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6205901010,"Hand-printed by the ""batik"" method",1972-01-01 00:00:00 UTC,,true,43402
+43404,6205901090,3,Other,80,/uk/api/commodities/6205901090,Other,1972-01-01 00:00:00 UTC,,true,43402
+87426,6205908000,2,Of other textile materials,80,/uk/api/subheadings/6205908000-80,Of other textile materials,2007-01-01 00:00:00 UTC,,false,43401
+87427,6205908010,3,Of wool or fine animal hair,80,/uk/api/commodities/6205908010,Of wool or fine animal hair,2007-01-01 00:00:00 UTC,,true,87426
+87428,6205908090,3,Other,80,/uk/api/commodities/6205908090,Other,2007-01-01 00:00:00 UTC,,true,87426
+43406,6206000000,0,"Women's or girls' blouses, shirts and shirt-blouses",80,/uk/api/headings/6206,"Women's or girls' blouses, shirts and shirt-blouses",1972-01-01 00:00:00 UTC,,false,43115
+43407,6206100000,1,Of silk or silk waste,80,/uk/api/commodities/6206100000,Of silk or silk waste,1972-01-01 00:00:00 UTC,,true,43406
+43408,6206200000,1,Of wool or fine animal hair,80,/uk/api/commodities/6206200000,Of wool or fine animal hair,1972-01-01 00:00:00 UTC,,true,43406
+43409,6206300000,1,Of cotton,80,/uk/api/subheadings/6206300000-80,Of cotton,1972-01-01 00:00:00 UTC,,false,43406
+43410,6206300010,2,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6206300010,"Hand-printed by the ""batik"" method",1972-01-01 00:00:00 UTC,,true,43409
+43411,6206300090,2,Other,80,/uk/api/commodities/6206300090,Other,1972-01-01 00:00:00 UTC,,true,43409
+43412,6206400000,1,Of man-made fibres,80,/uk/api/commodities/6206400000,Of man-made fibres,1972-01-01 00:00:00 UTC,,true,43406
+43413,6206900000,1,Of other textile materials,80,/uk/api/subheadings/6206900000-80,Of other textile materials,1972-01-01 00:00:00 UTC,,false,43406
+43414,6206901000,2,Of flax or ramie,80,/uk/api/subheadings/6206901000-80,Of flax or ramie,1972-01-01 00:00:00 UTC,,false,43413
+43415,6206901010,3,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6206901010,"Hand-printed by the ""batik"" method",1972-01-01 00:00:00 UTC,,true,43414
+43416,6206901090,3,Other,80,/uk/api/commodities/6206901090,Other,1972-01-01 00:00:00 UTC,,true,43414
+43417,6206909000,2,Of other textile materials,80,/uk/api/commodities/6206909000,Of other textile materials,1972-01-01 00:00:00 UTC,,true,43413
+43418,6207000000,0,"Men's or boys' singlets and other vests, underpants, briefs, nightshirts, pyjamas, bathrobes, dressing gowns and similar articles",80,/uk/api/headings/6207,"Men's or boys' singlets and other vests, underpants, briefs, nightshirts, pyjamas, bathrobes, dressing gowns and similar articles",1972-01-01 00:00:00 UTC,,false,43115
+43419,6207110000,1,Underpants and briefs,10,/uk/api/subheadings/6207110000-10,Underpants and briefs,1972-01-01 00:00:00 UTC,,false,43418
+43420,6207110000,2,Of cotton,80,/uk/api/commodities/6207110000,Of cotton,1972-01-01 00:00:00 UTC,,true,43419
+43421,6207190000,2,Of other textile materials,80,/uk/api/commodities/6207190000,Of other textile materials,1972-01-01 00:00:00 UTC,,true,43419
+43424,6207210000,1,Nightshirts and pyjamas,10,/uk/api/subheadings/6207210000-10,Nightshirts and pyjamas,1972-01-01 00:00:00 UTC,,false,43418
+43425,6207210000,2,Of cotton,80,/uk/api/commodities/6207210000,Of cotton,1972-01-01 00:00:00 UTC,,true,43424
+43426,6207220000,2,Of man-made fibres,80,/uk/api/commodities/6207220000,Of man-made fibres,1972-01-01 00:00:00 UTC,,true,43424
+43427,6207290000,2,Of other textile materials,80,/uk/api/commodities/6207290000,Of other textile materials,1972-01-01 00:00:00 UTC,,true,43424
+43430,6207910000,1,Other,10,/uk/api/subheadings/6207910000-10,Other,1972-01-01 00:00:00 UTC,,false,43418
+43431,6207910000,2,Of cotton,80,/uk/api/subheadings/6207910000-80,Of cotton,1972-01-01 00:00:00 UTC,,false,43430
+80932,6207910011,3,"Bathrobes, dressing gowns and similar articles of terry towelling and similar woven terry fabrics",80,/uk/api/commodities/6207910011,"Bathrobes, dressing gowns and similar articles of terry towelling and similar woven terry fabrics",2005-01-01 00:00:00 UTC,,true,43431
+80933,6207910091,3,Other,10,/uk/api/subheadings/6207910091-10,Other,2005-01-01 00:00:00 UTC,,false,43431
+80934,6207910091,4,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6207910091,"Hand-printed by the ""batik"" method",2005-01-01 00:00:00 UTC,,true,80933
+80935,6207910099,4,Other,80,/uk/api/commodities/6207910099,Other,2005-01-01 00:00:00 UTC,,true,80933
+43439,6207990000,2,Of other textile materials,80,/uk/api/subheadings/6207990000-80,Of other textile materials,1972-01-01 00:00:00 UTC,,false,43430
+87434,6207991000,3,Of man-made fibres,80,/uk/api/commodities/6207991000,Of man-made fibres,2007-01-01 00:00:00 UTC,,true,43439
+87433,6207999000,3,Of other textile materials,80,/uk/api/subheadings/6207999000-80,Of other textile materials,2007-01-01 00:00:00 UTC,,false,43439
+87431,6207999091,4,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6207999091,"Hand-printed by the ""batik"" method",2007-01-01 00:00:00 UTC,,true,87433
+87432,6207999099,4,Other,80,/uk/api/commodities/6207999099,Other,2007-01-01 00:00:00 UTC,,true,87433
+43446,6208000000,0,"Women's or girls' singlets and other vests, slips, petticoats, briefs, panties, nightdresses, pyjamas, négligés, bathrobes, dressing gowns and similar articles",80,/uk/api/headings/6208,"Women's or girls' singlets and other vests, slips, petticoats, briefs, panties, nightdresses, pyjamas, négligés, bathrobes, dressing gowns and similar articles",1972-01-01 00:00:00 UTC,,false,43115
+43447,6208110000,1,Slips and petticoats,10,/uk/api/subheadings/6208110000-10,Slips and petticoats,1972-01-01 00:00:00 UTC,,false,43446
+43448,6208110000,2,Of man-made fibres,80,/uk/api/commodities/6208110000,Of man-made fibres,1972-01-01 00:00:00 UTC,,true,43447
+43449,6208190000,2,Of other textile materials,80,/uk/api/commodities/6208190000,Of other textile materials,1972-01-01 00:00:00 UTC,,true,43447
+43454,6208210000,1,Nightdresses and pyjamas,10,/uk/api/subheadings/6208210000-10,Nightdresses and pyjamas,1972-01-01 00:00:00 UTC,,false,43446
+43455,6208210000,2,Of cotton,80,/uk/api/commodities/6208210000,Of cotton,1972-01-01 00:00:00 UTC,,true,43454
+43456,6208220000,2,Of man-made fibres,80,/uk/api/commodities/6208220000,Of man-made fibres,1972-01-01 00:00:00 UTC,,true,43454
+43457,6208290000,2,Of other textile materials,80,/uk/api/commodities/6208290000,Of other textile materials,1972-01-01 00:00:00 UTC,,true,43454
+43460,6208910000,1,Other,10,/uk/api/subheadings/6208910000-10,Other,1972-01-01 00:00:00 UTC,,false,43446
+43461,6208910000,2,Of cotton,80,/uk/api/subheadings/6208910000-80,Of cotton,1972-01-01 00:00:00 UTC,,false,43460
+80938,6208910011,3,"Négligés, bathrobes, dressing gowns and similar articles",10,/uk/api/subheadings/6208910011-10,"Négligés, bathrobes, dressing gowns and similar articles",2005-01-01 00:00:00 UTC,,false,43461
+80939,6208910011,4,Of terry towelling and similar woven terry fabrics,80,/uk/api/commodities/6208910011,Of terry towelling and similar woven terry fabrics,2005-01-01 00:00:00 UTC,,true,80938
+80940,6208910018,4,Other,10,/uk/api/subheadings/6208910018-10,Other,2005-01-01 00:00:00 UTC,,false,80938
+80941,6208910018,5,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6208910018,"Hand-printed by the ""batik"" method",2005-01-01 00:00:00 UTC,,true,80940
+80942,6208910019,5,Other,80,/uk/api/commodities/6208910019,Other,2005-01-01 00:00:00 UTC,,true,80940
+80943,6208910090,3,Other,80,/uk/api/commodities/6208910090,Other,2005-01-01 00:00:00 UTC,,true,43461
+43471,6208920000,2,Of man-made fibres,80,/uk/api/commodities/6208920000,Of man-made fibres,1972-01-01 00:00:00 UTC,,true,43460
+43474,6208990000,2,Of other textile materials,80,/uk/api/subheadings/6208990000-80,Of other textile materials,1972-01-01 00:00:00 UTC,,false,43460
+43479,6208990091,3,"Hand-printed by the ""batik"" method",80,/uk/api/commodities/6208990091,"Hand-printed by the ""batik"" method",1994-03-13 00:00:00 UTC,,true,43474
+43480,6208990099,3,Other,80,/uk/api/commodities/6208990099,Other,1994-03-13 00:00:00 UTC,,true,43474
+43481,6209000000,0,Babies' garments and clothing accessories,80,/uk/api/headings/6209,Babies' garments and clothing accessories,1972-01-01 00:00:00 UTC,,false,43115
+43486,6209200000,1,Of cotton,80,/uk/api/subheadings/6209200000-80,Of cotton,1972-01-01 00:00:00 UTC,,false,43481
+43487,6209200010,2,"Gloves, mittens and mitts",80,/uk/api/commodities/6209200010,"Gloves, mittens and mitts",1972-01-01 00:00:00 UTC,,true,43486
+43488,6209200020,2,"Stockings, socks and sockettes",80,/uk/api/commodities/6209200020,"Stockings, socks and sockettes",1972-01-01 00:00:00 UTC,,true,43486
+43489,6209200090,2,Other,80,/uk/api/commodities/6209200090,Other,1972-01-01 00:00:00 UTC,,true,43486
+43490,6209300000,1,Of synthetic fibres,80,/uk/api/subheadings/6209300000-80,Of synthetic fibres,1972-01-01 00:00:00 UTC,,false,43481
+43491,6209300010,2,"Gloves, mittens and mitts",80,/uk/api/commodities/6209300010,"Gloves, mittens and mitts",1972-01-01 00:00:00 UTC,,true,43490
+43492,6209300020,2,"Stockings, socks and sockettes",80,/uk/api/commodities/6209300020,"Stockings, socks and sockettes",1972-01-01 00:00:00 UTC,,true,43490
+43493,6209300090,2,Other,80,/uk/api/commodities/6209300090,Other,1972-01-01 00:00:00 UTC,,true,43490
+43494,6209900000,1,Of other textile materials,80,/uk/api/subheadings/6209900000-80,Of other textile materials,1972-01-01 00:00:00 UTC,,false,43481
+87474,6209901000,2,Of wool or fine animal hair,80,/uk/api/subheadings/6209901000-80,Of wool or fine animal hair,2007-01-01 00:00:00 UTC,,false,43494
+87475,6209901010,3,"Gloves, mittens and mitts",80,/uk/api/commodities/6209901010,"Gloves, mittens and mitts",2007-01-01 00:00:00 UTC,,true,87474
+87476,6209901020,3,"Stockings, socks and sockettes",80,/uk/api/commodities/6209901020,"Stockings, socks and sockettes",2007-01-01 00:00:00 UTC,,true,87474
+87477,6209901090,3,Other,80,/uk/api/commodities/6209901090,Other,2007-01-01 00:00:00 UTC,,true,87474
+87478,6209909000,2,Of other textile materials,80,/uk/api/subheadings/6209909000-80,Of other textile materials,2007-01-01 00:00:00 UTC,,false,43494
+87479,6209909010,3,"Gloves, mittens and mitts",80,/uk/api/commodities/6209909010,"Gloves, mittens and mitts",2007-01-01 00:00:00 UTC,,true,87478
+87480,6209909020,3,"Stockings, socks and sockettes",80,/uk/api/commodities/6209909020,"Stockings, socks and sockettes",2007-01-01 00:00:00 UTC,,true,87478
+87481,6209909090,3,Other,80,/uk/api/commodities/6209909090,Other,2007-01-01 00:00:00 UTC,,true,87478
+43498,6210000000,0,"Garments, made up of fabrics of heading 5602, 5603, 5903, 5906 or 5907",80,/uk/api/headings/6210,"Garments, made up of fabrics of heading 5602, 5603, 5903, 5906 or 5907",1972-01-01 00:00:00 UTC,,false,43115
+43499,6210100000,1,Of fabrics of heading 5602 or 5603,80,/uk/api/subheadings/6210100000-80,Of fabrics of heading 5602 or 5603,1972-01-01 00:00:00 UTC,,false,43498
+43500,6210101000,2,Of fabrics of heading 5602,80,/uk/api/commodities/6210101000,Of fabrics of heading 5602,1972-01-01 00:00:00 UTC,,true,43499
+95732,6210109200,2,Of fabrics of heading 5603,10,/uk/api/subheadings/6210109200-10,Of fabrics of heading 5603,2012-01-01 00:00:00 UTC,,false,43499
+95733,6210109200,3,"Single-use gowns, of a kind used by patients or surgeons during surgical procedures",80,/uk/api/commodities/6210109200,"Single-use gowns, of a kind used by patients or surgeons during surgical procedures",2012-01-01 00:00:00 UTC,,true,95732
+95734,6210109800,3,Other,80,/uk/api/commodities/6210109800,Other,2012-01-01 00:00:00 UTC,,true,95732
+43508,6210200000,1,"Other garments, of the type described in heading 6201",80,/uk/api/subheadings/6210200000-80,"Other garments, of the type described in heading 6201",1972-01-01 00:00:00 UTC,,false,43498
+106949,6210200010,2,"Anoraks (including ski jackets), windcheaters, wind-jackets and similar articles",80,/uk/api/commodities/6210200010,"Anoraks (including ski jackets), windcheaters, wind-jackets and similar articles",2022-01-01 00:00:00 UTC,,true,43508
+106951,6210200090,2,Other,80,/uk/api/commodities/6210200090,Other,2022-01-01 00:00:00 UTC,,true,43508
+43509,6210300000,1,"Other garments, of the type described in heading 6202",80,/uk/api/subheadings/6210300000-80,"Other garments, of the type described in heading 6202",1972-01-01 00:00:00 UTC,,false,43498
+106950,6210300010,2,"Anoraks (including ski jackets), windcheaters, wind-jackets and similar articles",80,/uk/api/commodities/6210300010,"Anoraks (including ski jackets), windcheaters, wind-jackets and similar articles",2022-01-01 00:00:00 UTC,,true,43509
+106952,6210300090,2,Other,80,/uk/api/commodities/6210300090,Other,2022-01-01 00:00:00 UTC,,true,43509
+43510,6210400000,1,Other men's or boys' garments,80,/uk/api/commodities/6210400000,Other men's or boys' garments,1972-01-01 00:00:00 UTC,,true,43498
+43511,6210500000,1,Other women's or girls' garments,80,/uk/api/commodities/6210500000,Other women's or girls' garments,1972-01-01 00:00:00 UTC,,true,43498
+43512,6211000000,0,"Tracksuits, ski suits and swimwear; other garments",80,/uk/api/headings/6211,"Tracksuits, ski suits and swimwear; other garments",1972-01-01 00:00:00 UTC,,false,43115
+43513,6211110000,1,Swimwear,10,/uk/api/subheadings/6211110000-10,Swimwear,1972-01-01 00:00:00 UTC,,false,43512
+43514,6211110000,2,Men's or boys',80,/uk/api/commodities/6211110000,Men's or boys',1972-01-01 00:00:00 UTC,,true,43513
+43515,6211120000,2,Women's or girls',80,/uk/api/commodities/6211120000,Women's or girls',1972-01-01 00:00:00 UTC,,true,43513
+43516,6211200000,1,Ski suits,80,/uk/api/subheadings/6211200000-80,Ski suits,1972-01-01 00:00:00 UTC,,false,43512
+43517,6211200010,2,"Of wool or fine animal hair, of cotton or of man-made fibres",80,/uk/api/commodities/6211200010,"Of wool or fine animal hair, of cotton or of man-made fibres",1972-01-01 00:00:00 UTC,,true,43516
+43518,6211200090,2,Other,80,/uk/api/commodities/6211200090,Other,1972-01-01 00:00:00 UTC,,true,43516
+87866,6211320000,1,"Other garments, men's or boys'",10,/uk/api/subheadings/6211320000-10,"Other garments, men's or boys'",2007-01-01 00:00:00 UTC,,false,43512
+43521,6211320000,2,Of cotton,80,/uk/api/subheadings/6211320000-80,Of cotton,1972-01-01 00:00:00 UTC,,false,87866
+43522,6211321000,3,Industrial and occupational clothing,80,/uk/api/commodities/6211321000,Industrial and occupational clothing,1972-01-01 00:00:00 UTC,,true,43521
+43523,6211323100,3,Tracksuits with lining,10,/uk/api/subheadings/6211323100-10,Tracksuits with lining,1992-01-01 00:00:00 UTC,,false,43521
+43524,6211323100,4,With an outer shell of a single identical fabric,80,/uk/api/commodities/6211323100,With an outer shell of a single identical fabric,1992-01-01 00:00:00 UTC,,true,43523
+43525,6211324100,4,Other,10,/uk/api/subheadings/6211324100-10,Other,1992-01-01 00:00:00 UTC,,false,43523
+43526,6211324100,5,Upper parts,80,/uk/api/commodities/6211324100,Upper parts,1992-01-01 00:00:00 UTC,,true,43525
+43527,6211324200,5,Lower parts,80,/uk/api/commodities/6211324200,Lower parts,1992-01-01 00:00:00 UTC,,true,43525
+43528,6211329000,3,Other,80,/uk/api/commodities/6211329000,Other,1972-01-01 00:00:00 UTC,,true,43521
+43529,6211330000,2,Of man-made fibres,80,/uk/api/subheadings/6211330000-80,Of man-made fibres,1972-01-01 00:00:00 UTC,,false,87866
+43530,6211331000,3,Industrial and occupational clothing,80,/uk/api/commodities/6211331000,Industrial and occupational clothing,1972-01-01 00:00:00 UTC,,true,43529
+43531,6211333100,3,Tracksuits with lining,10,/uk/api/subheadings/6211333100-10,Tracksuits with lining,1992-01-01 00:00:00 UTC,,false,43529
+43532,6211333100,4,With an outer shell of a single identical fabric,80,/uk/api/commodities/6211333100,With an outer shell of a single identical fabric,1992-01-01 00:00:00 UTC,,true,43531
+43533,6211334100,4,Other,10,/uk/api/subheadings/6211334100-10,Other,1992-01-01 00:00:00 UTC,,false,43531
+43534,6211334100,5,Upper parts,80,/uk/api/commodities/6211334100,Upper parts,1992-01-01 00:00:00 UTC,,true,43533
+43535,6211334200,5,Lower parts,80,/uk/api/commodities/6211334200,Lower parts,1992-01-01 00:00:00 UTC,,true,43533
+43536,6211339000,3,Other,80,/uk/api/commodities/6211339000,Other,1972-01-01 00:00:00 UTC,,true,43529
+43537,6211390000,2,Of other textile materials,80,/uk/api/subheadings/6211390000-80,Of other textile materials,1972-01-01 00:00:00 UTC,,false,87866
+87483,6211390010,3,Of wool or fine animal hair,80,/uk/api/commodities/6211390010,Of wool or fine animal hair,2007-01-01 00:00:00 UTC,,true,43537
+87484,6211390090,3,Other,80,/uk/api/commodities/6211390090,Other,2007-01-01 00:00:00 UTC,,true,43537
+95735,6211420000,1,"Other garments, women's or girls'",10,/uk/api/subheadings/6211420000-10,"Other garments, women's or girls'",2012-01-01 00:00:00 UTC,,false,43512
+43540,6211420000,2,Of cotton,80,/uk/api/subheadings/6211420000-80,Of cotton,1972-01-01 00:00:00 UTC,,false,95735
+43541,6211421000,3,"Aprons, overalls, smock-overalls and other industrial and occupational clothing (whether or not also suitable for domestic use)",80,/uk/api/commodities/6211421000,"Aprons, overalls, smock-overalls and other industrial and occupational clothing (whether or not also suitable for domestic use)",1972-01-01 00:00:00 UTC,,true,43540
+43542,6211423100,3,Tracksuits with lining,10,/uk/api/subheadings/6211423100-10,Tracksuits with lining,1992-01-01 00:00:00 UTC,,false,43540
+43543,6211423100,4,With an outer shell of a single identical fabric,80,/uk/api/commodities/6211423100,With an outer shell of a single identical fabric,1992-01-01 00:00:00 UTC,,true,43542
+43544,6211424100,4,Other,10,/uk/api/subheadings/6211424100-10,Other,1992-01-01 00:00:00 UTC,,false,43542
+43545,6211424100,5,Upper parts,80,/uk/api/commodities/6211424100,Upper parts,1992-01-01 00:00:00 UTC,,true,43544
+43546,6211424200,5,Lower parts,80,/uk/api/commodities/6211424200,Lower parts,1992-01-01 00:00:00 UTC,,true,43544
+43547,6211429000,3,Other,80,/uk/api/commodities/6211429000,Other,1972-01-01 00:00:00 UTC,,true,43540
+43548,6211430000,2,Of man-made fibres,80,/uk/api/subheadings/6211430000-80,Of man-made fibres,1972-01-01 00:00:00 UTC,,false,95735
+43549,6211431000,3,"Aprons, overalls, smock-overalls and other industrial and occupational clothing (whether or not also suitable for domestic use)",80,/uk/api/commodities/6211431000,"Aprons, overalls, smock-overalls and other industrial and occupational clothing (whether or not also suitable for domestic use)",1972-01-01 00:00:00 UTC,,true,43548
+43550,6211433100,3,Tracksuits with lining,10,/uk/api/subheadings/6211433100-10,Tracksuits with lining,1992-01-01 00:00:00 UTC,,false,43548
+43551,6211433100,4,With an outer shell of a single identical fabric,80,/uk/api/commodities/6211433100,With an outer shell of a single identical fabric,1992-01-01 00:00:00 UTC,,true,43550
+43552,6211434100,4,Other,10,/uk/api/subheadings/6211434100-10,Other,1992-01-01 00:00:00 UTC,,false,43550
+43553,6211434100,5,Upper parts,80,/uk/api/commodities/6211434100,Upper parts,1992-01-01 00:00:00 UTC,,true,43552
+43554,6211434200,5,Lower parts,80,/uk/api/commodities/6211434200,Lower parts,1992-01-01 00:00:00 UTC,,true,43552
+43555,6211439000,3,Other,80,/uk/api/commodities/6211439000,Other,1972-01-01 00:00:00 UTC,,true,43548
+43556,6211490000,2,Of other textile materials,80,/uk/api/commodities/6211490000,Of other textile materials,1972-01-01 00:00:00 UTC,,true,95735
+43557,6212000000,0,"Brassières, girdles, corsets, braces, suspenders, garters and similar articles and parts thereof, whether or not knitted or crocheted",80,/uk/api/headings/6212,"Brassières, girdles, corsets, braces, suspenders, garters and similar articles and parts thereof, whether or not knitted or crocheted",1972-01-01 00:00:00 UTC,,false,43115
+43558,6212100000,1,Brassières,80,/uk/api/subheadings/6212100000-80,Brassières,1972-01-01 00:00:00 UTC,,false,43557
+70447,6212101000,2,In a set made up for retail sale containing a brassière and a pair of briefs,80,/uk/api/commodities/6212101000,In a set made up for retail sale containing a brassière and a pair of briefs,1999-01-01 00:00:00 UTC,,true,43558
+70448,6212109000,2,Other,80,/uk/api/commodities/6212109000,Other,1999-01-01 00:00:00 UTC,,true,43558
+43559,6212200000,1,Girdles and panty girdles,80,/uk/api/commodities/6212200000,Girdles and panty girdles,1972-01-01 00:00:00 UTC,,true,43557
+43560,6212300000,1,Corselettes,80,/uk/api/commodities/6212300000,Corselettes,1972-01-01 00:00:00 UTC,,true,43557
+43561,6212900000,1,Other,80,/uk/api/commodities/6212900000,Other,1972-01-01 00:00:00 UTC,,true,43557
+43562,6213000000,0,Handkerchiefs,80,/uk/api/headings/6213,Handkerchiefs,1972-01-01 00:00:00 UTC,,false,43115
+43564,6213200000,1,Of cotton,80,/uk/api/subheadings/6213200000-80,Of cotton,1972-01-01 00:00:00 UTC,,false,43562
+43565,6213200010,2,Hand-made,80,/uk/api/commodities/6213200010,Hand-made,1972-01-01 00:00:00 UTC,,true,43564
+43566,6213200090,2,Other,80,/uk/api/commodities/6213200090,Other,1972-01-01 00:00:00 UTC,,true,43564
+43567,6213900000,1,Of other textile materials,80,/uk/api/subheadings/6213900000-80,Of other textile materials,1972-01-01 00:00:00 UTC,,false,43562
+87485,6213900010,2,Of silk or silk waste,80,/uk/api/commodities/6213900010,Of silk or silk waste,2007-01-01 00:00:00 UTC,,true,43567
+87486,6213900090,2,Other,80,/uk/api/commodities/6213900090,Other,2007-01-01 00:00:00 UTC,,true,43567
+43568,6214000000,0,"Shawls, scarves, mufflers, mantillas, veils and the like",80,/uk/api/headings/6214,"Shawls, scarves, mufflers, mantillas, veils and the like",1972-01-01 00:00:00 UTC,,false,43115
+43569,6214100000,1,Of silk or silk waste,80,/uk/api/subheadings/6214100000-80,Of silk or silk waste,1972-01-01 00:00:00 UTC,,false,43568
+43570,6214100010,2,Hand-made,80,/uk/api/commodities/6214100010,Hand-made,1972-01-01 00:00:00 UTC,,true,43569
+43571,6214100090,2,Other,80,/uk/api/commodities/6214100090,Other,1972-01-01 00:00:00 UTC,,true,43569
+43572,6214200000,1,Of wool or fine animal hair,80,/uk/api/subheadings/6214200000-80,Of wool or fine animal hair,1972-01-01 00:00:00 UTC,,false,43568
+43573,6214200010,2,Hand-made,80,/uk/api/commodities/6214200010,Hand-made,1972-01-01 00:00:00 UTC,,true,43572
+43574,6214200090,2,Other,80,/uk/api/commodities/6214200090,Other,1972-01-01 00:00:00 UTC,,true,43572
+43575,6214300000,1,Of synthetic fibres,80,/uk/api/subheadings/6214300000-80,Of synthetic fibres,1972-01-01 00:00:00 UTC,,false,43568
+43576,6214300010,2,Hand-made,80,/uk/api/commodities/6214300010,Hand-made,1972-01-01 00:00:00 UTC,,true,43575
+43577,6214300090,2,Other,80,/uk/api/commodities/6214300090,Other,1972-01-01 00:00:00 UTC,,true,43575
+43578,6214400000,1,Of artificial fibres,80,/uk/api/subheadings/6214400000-80,Of artificial fibres,1972-01-01 00:00:00 UTC,,false,43568
+43579,6214400010,2,Hand-made,80,/uk/api/commodities/6214400010,Hand-made,1972-01-01 00:00:00 UTC,,true,43578
+43580,6214400090,2,Other,80,/uk/api/commodities/6214400090,Other,1972-01-01 00:00:00 UTC,,true,43578
+43581,6214900000,1,Of other textile materials,80,/uk/api/subheadings/6214900000-80,Of other textile materials,1972-01-01 00:00:00 UTC,,false,43568
+83079,6214900011,2,Of cotton,10,/uk/api/subheadings/6214900011-10,Of cotton,2006-01-01 00:00:00 UTC,,false,43581
+83080,6214900011,3,Hand-made,80,/uk/api/commodities/6214900011,Hand-made,2006-01-01 00:00:00 UTC,,true,83079
+83081,6214900019,3,Other,80,/uk/api/commodities/6214900019,Other,2006-01-01 00:00:00 UTC,,true,83079
+83082,6214900091,2,Other,10,/uk/api/subheadings/6214900091-10,Other,2006-01-01 00:00:00 UTC,,false,43581
+83083,6214900091,3,Hand-made,80,/uk/api/commodities/6214900091,Hand-made,2006-01-01 00:00:00 UTC,,true,83082
+83084,6214900099,3,Other,80,/uk/api/commodities/6214900099,Other,2006-01-01 00:00:00 UTC,,true,83082
+43594,6215000000,0,"Ties, bow ties and cravats",80,/uk/api/headings/6215,"Ties, bow ties and cravats",1972-01-01 00:00:00 UTC,,false,43115
+43595,6215100000,1,Of silk or silk waste,80,/uk/api/subheadings/6215100000-80,Of silk or silk waste,1972-01-01 00:00:00 UTC,,false,43594
+43596,6215100010,2,Hand-made,80,/uk/api/commodities/6215100010,Hand-made,1972-01-01 00:00:00 UTC,,true,43595
+43597,6215100090,2,Other,80,/uk/api/commodities/6215100090,Other,1972-01-01 00:00:00 UTC,,true,43595
+43598,6215200000,1,Of man-made fibres,80,/uk/api/subheadings/6215200000-80,Of man-made fibres,1972-01-01 00:00:00 UTC,,false,43594
+43599,6215200010,2,Hand-made,80,/uk/api/commodities/6215200010,Hand-made,1972-01-01 00:00:00 UTC,,true,43598
+43600,6215200090,2,Other,80,/uk/api/commodities/6215200090,Other,1972-01-01 00:00:00 UTC,,true,43598
+43601,6215900000,1,Of other textile materials,80,/uk/api/subheadings/6215900000-80,Of other textile materials,1972-01-01 00:00:00 UTC,,false,43594
+43602,6215900010,2,Hand-made,80,/uk/api/commodities/6215900010,Hand-made,1972-01-01 00:00:00 UTC,,true,43601
+43603,6215900090,2,Other,80,/uk/api/commodities/6215900090,Other,1972-01-01 00:00:00 UTC,,true,43601
+43604,6216000000,0,"Gloves, mittens and mitts",80,/uk/api/headings/6216,"Gloves, mittens and mitts",1972-01-01 00:00:00 UTC,,true,43115
+43605,6217000000,0,"Other made-up clothing accessories; parts of garments or of clothing accessories, other than those of heading 6212",80,/uk/api/headings/6217,"Other made-up clothing accessories; parts of garments or of clothing accessories, other than those of heading 6212",1972-01-01 00:00:00 UTC,,false,43115
+43606,6217100000,1,Accessories,80,/uk/api/subheadings/6217100000-80,Accessories,1972-01-01 00:00:00 UTC,,false,43605
+43607,6217100010,2,Hand-made,80,/uk/api/commodities/6217100010,Hand-made,1972-01-01 00:00:00 UTC,,true,43606
+43608,6217100090,2,Other,80,/uk/api/commodities/6217100090,Other,1972-01-01 00:00:00 UTC,,true,43606
+43609,6217900000,1,Parts,80,/uk/api/commodities/6217900000,Parts,1972-01-01 00:00:00 UTC,,true,43605
