@@ -54,6 +54,30 @@ final class HmrcClientTest extends TestCase
         return new Response($status, $headers, $body);
     }
 
+    /**
+     * Collect an iterable that may be either a generator or an array.
+     *
+     * TariffProviderInterface::chapter() returns iterable deliberately: an
+     * implementation that already holds the lines should be free to hand back
+     * an array. iterator_to_array() only accepts Traversable on PHP 8.1 — the
+     * widening to iterable arrived in 8.2 — so the test normalises rather than
+     * narrowing the contract to suit one runtime.
+     *
+     * @template T
+     * @param iterable<T> $lines
+     * @return list<T>
+     */
+    private function collect(iterable $lines): array
+    {
+        $collected = [];
+
+        foreach ($lines as $line) {
+            $collected[] = $line;
+        }
+
+        return $collected;
+    }
+
     private function fixture(string $name): string
     {
         $body = file_get_contents(__DIR__ . '/../../Fixtures/Api/' . $name);
@@ -137,7 +161,7 @@ final class HmrcClientTest extends TestCase
     {
         $client = $this->client([$this->response(200, $this->fixture('chapter-62.csv'))]);
 
-        $lines = iterator_to_array($client->chapter('62'), false);
+        $lines = $this->collect($client->chapter('62'));
 
         self::assertCount(464, $lines);
         self::assertStringContainsString('/goods_nomenclatures/chapter/62.csv', $this->requestedUrls()[0]);

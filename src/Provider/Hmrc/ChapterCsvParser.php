@@ -7,6 +7,7 @@ namespace Davix\Customs\Provider\Hmrc;
 use Davix\Customs\Exception\TariffParseException;
 use Davix\Customs\Tariff\Commodity;
 use DateTimeImmutable;
+use Generator;
 
 /**
  * Parses a chapter's nomenclature from the tariff's CSV form.
@@ -61,10 +62,16 @@ final class ChapterCsvParser
     /**
      * Parse row by row, holding one line in memory at a time.
      *
-     * @return iterable<Commodity>
+     * Declared as Generator rather than iterable because it is one, and
+     * because PHP 8.1's iterator_to_array() accepts only Traversable — the
+     * widening to iterable landed in 8.2. Returning the looser type compiles
+     * everywhere and then fails static analysis on the oldest version this
+     * package supports.
+     *
+     * @return Generator<int, Commodity>
      * @throws TariffParseException when the header is missing or unusable
      */
-    public function stream(string $csv): iterable
+    public function stream(string $csv): Generator
     {
         $handle = fopen('php://memory', 'r+');
 
@@ -87,10 +94,10 @@ final class ChapterCsvParser
      * response rather than materialising the whole body as a string first.
      *
      * @param resource $handle
-     * @return iterable<Commodity>
+     * @return Generator<int, Commodity>
      * @throws TariffParseException when the header is missing or unusable
      */
-    public function streamHandle($handle): iterable
+    public function streamHandle($handle): Generator
     {
         $header = fgetcsv($handle);
 
