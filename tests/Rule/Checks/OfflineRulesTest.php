@@ -20,6 +20,7 @@ use Davix\Customs\Rule\RuleSettings;
 use Davix\Customs\Rule\Severity;
 use Davix\Customs\Rule\SkipReason;
 use Davix\Customs\Tariff\CommodityResolver;
+use Davix\Customs\Tariff\MeasuredProperty;
 use Davix\Customs\Tariff\HistoricRecord;
 use Davix\Customs\Tariff\Resolution;
 use Davix\Customs\Tests\Fixtures\ChapterSixtyTwoFixture as Chapter62;
@@ -224,7 +225,7 @@ final class OfflineRulesTest extends TestCase
 
     public function testAmbiguousExpansionReportsWeightNarrowing(): void
     {
-        $resolution = $this->resolver()->resolve('620130', netWeightKg: 1.5);
+        $resolution = $this->resolver()->resolve('620130', [MeasuredProperty::NET_WEIGHT => 1.5]);
         $context = EvaluationContext::at(resolution: $resolution);
 
         $issue = (new AmbiguousExpansion())->evaluate(
@@ -234,8 +235,8 @@ final class OfflineRulesTest extends TestCase
 
         self::assertNotNull($issue);
         self::assertSame('narrowed', $issue->variant);
-        self::assertTrue($issue->contextValue('narrowed_by_weight'));
-        self::assertSame(4, $issue->contextValue('eliminated_by_weight'));
+        self::assertTrue($issue->contextValue('narrowed_by_measurement'));
+        self::assertSame(4, $issue->contextValue('eliminated_by_measurement'));
     }
 
     public function testAmbiguousExpansionCarriesCandidatesForThePicker(): void

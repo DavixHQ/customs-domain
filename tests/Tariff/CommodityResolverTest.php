@@ -7,6 +7,7 @@ namespace Davix\Customs\Tests\Tariff;
 use Davix\Customs\Tariff\Commodity;
 use Davix\Customs\Tariff\CommodityResolver;
 use Davix\Customs\Tariff\InMemoryCommodityRepository;
+use Davix\Customs\Tariff\MeasuredProperty;
 use Davix\Customs\Tariff\ResolutionOutcome;
 use Davix\Customs\Tests\Fixtures\ChapterSixtyTwoFixture as Chapter62;
 use PHPUnit\Framework\TestCase;
@@ -100,7 +101,7 @@ final class CommodityResolverTest extends TestCase
      * The behaviour a made-up fixture got wrong.
      *
      * Weight conditions sit on grouping lines two levels above anything
-     * declarable - the candidates are "Parkas", "Other" and "Hand-printed by
+     * declarable — the candidates are "Parkas", "Other" and "Hand-printed by
      * the batik method", none of which mention weight. Reading only the
      * candidate's own description finds no condition at all and narrows
      * nothing.
@@ -108,11 +109,11 @@ final class CommodityResolverTest extends TestCase
     public function testWeightNarrowsUsingAncestorConditionsNotCandidateDescriptions(): void
     {
         $unweighted = $this->resolver->resolve('6201300000');
-        $weighted = $this->resolver->resolve('6201300000', netWeightKg: 0.5);
+        $weighted = $this->resolver->resolve('6201300000', [MeasuredProperty::NET_WEIGHT => 0.5]);
 
         self::assertSame(8, $unweighted->candidateCount());
         self::assertSame(4, $weighted->candidateCount());
-        self::assertTrue($weighted->narrowedByWeight);
+        self::assertTrue($weighted->narrowedByMeasurement);
 
         foreach ($weighted->candidates as $candidate) {
             self::assertStringNotContainsStringIgnoringCase(
@@ -125,7 +126,7 @@ final class CommodityResolverTest extends TestCase
 
     public function testALightGarmentSelectsTheLightBranch(): void
     {
-        $sids = $this->sids($this->resolver->resolve('6201300000', netWeightKg: 0.5)->candidates);
+        $sids = $this->sids($this->resolver->resolve('6201300000', [MeasuredProperty::NET_WEIGHT => 0.5])->candidates);
 
         self::assertContains(Chapter62::COTTON_LIGHT_PARKA_SID, $sids);
         self::assertContains(Chapter62::COTTON_LIGHT_BATIK_SID, $sids);
@@ -135,7 +136,7 @@ final class CommodityResolverTest extends TestCase
 
     public function testAHeavyGarmentSelectsTheHeavyBranch(): void
     {
-        $sids = $this->sids($this->resolver->resolve('6201300000', netWeightKg: 1.5)->candidates);
+        $sids = $this->sids($this->resolver->resolve('6201300000', [MeasuredProperty::NET_WEIGHT => 1.5])->candidates);
 
         self::assertContains(Chapter62::COTTON_HEAVY_PARKA_SID, $sids);
         self::assertNotContains(Chapter62::COTTON_LIGHT_PARKA_SID, $sids);
@@ -147,7 +148,7 @@ final class CommodityResolverTest extends TestCase
      */
     public function testTheThresholdItselfFallsToTheLightBranch(): void
     {
-        $sids = $this->sids($this->resolver->resolve('6201300000', netWeightKg: 1.0)->candidates);
+        $sids = $this->sids($this->resolver->resolve('6201300000', [MeasuredProperty::NET_WEIGHT => 1.0])->candidates);
 
         self::assertContains(Chapter62::COTTON_LIGHT_PARKA_SID, $sids);
         self::assertNotContains(Chapter62::COTTON_HEAVY_PARKA_SID, $sids);
@@ -160,7 +161,7 @@ final class CommodityResolverTest extends TestCase
      */
     public function testNarrowingReducesWithoutResolving(): void
     {
-        $resolution = $this->resolver->resolve('6201300000', netWeightKg: 0.5);
+        $resolution = $this->resolver->resolve('6201300000', [MeasuredProperty::NET_WEIGHT => 0.5]);
 
         self::assertTrue($resolution->isAmbiguous());
         self::assertSame(8, $resolution->candidatesBeforeNarrowing);
@@ -174,11 +175,11 @@ final class CommodityResolverTest extends TestCase
      */
     public function testAConditionOnTheMatchedLineDoesNotNarrow(): void
     {
-        $resolution = $this->resolver->resolve('6201301000', netWeightKg: 0.5);
+        $resolution = $this->resolver->resolve('6201301000', [MeasuredProperty::NET_WEIGHT => 0.5]);
 
         self::assertTrue($resolution->isAmbiguous());
         self::assertSame(4, $resolution->candidateCount());
-        self::assertFalse($resolution->narrowedByWeight);
+        self::assertFalse($resolution->narrowedByMeasurement);
     }
 
     public function testNarrowingCanResolveWhenTheBranchHasASingleLeaf(): void
@@ -198,11 +199,11 @@ final class CommodityResolverTest extends TestCase
                 description: 'Parkas', declarable: true, parentSid: 4),
         ]);
 
-        $resolution = (new CommodityResolver($repository))->resolve('6201300000', netWeightKg: 1.5);
+        $resolution = (new CommodityResolver($repository))->resolve('6201300000', [MeasuredProperty::NET_WEIGHT => 1.5]);
 
         self::assertTrue($resolution->isResolved());
         self::assertSame(5, $resolution->commodity?->sid);
-        self::assertTrue($resolution->narrowedByWeight);
+        self::assertTrue($resolution->narrowedByMeasurement);
     }
 
     /**
@@ -224,21 +225,55 @@ final class CommodityResolverTest extends TestCase
                 description: 'Other', declarable: true, parentSid: 2),
         ]);
 
-        $resolution = (new CommodityResolver($repository))->resolve('6201300000', netWeightKg: 0.5);
+        $resolution = (new CommodityResolver($repository))->resolve('6201300000', [MeasuredProperty::NET_WEIGHT => 0.5]);
 
         self::assertTrue($resolution->isAmbiguous());
         self::assertSame(2, $resolution->candidateCount());
-        self::assertFalse($resolution->narrowedByWeight);
+        self::assertFalse($resolution->narrowedByMeasurement);
     }
 
-    public function testZeroOrNullWeightDoesNotNarrow(): void
+    /**
+     * A garment weighing nothing is missing data dressed up as a measurement,
+     * and narrowing on it would push the product into a branch chosen by an
+     * empty field.
+     */
+    public function testAnAbsentOrImpossibleWeightDoesNotNarrow(): void
     {
-        foreach ([null, 0.0, -1.0] as $weight) {
-            $resolution = $this->resolver->resolve('6201300000', netWeightKg: $weight);
+        foreach ([[], [MeasuredProperty::NET_WEIGHT => 0.0], [MeasuredProperty::NET_WEIGHT => -1.0]] as $properties) {
+            $resolution = $this->resolver->resolve('6201300000', $properties);
 
             self::assertSame(8, $resolution->candidateCount());
-            self::assertFalse($resolution->narrowedByWeight);
+            self::assertFalse($resolution->narrowedByMeasurement);
         }
+    }
+
+    /**
+     * Zero is not universally meaningless. A drink of zero per cent alcohol is
+     * an ordinary product with its own tariff lines, so rejecting zero across
+     * the board would push every alcohol-free beverage into the wrong branch.
+     */
+    public function testZeroIsMeaningfulForAPercentage(): void
+    {
+        $resolver = new CommodityResolver(new InMemoryCommodityRepository([
+            new Commodity(sid: 1, code: '2202000000', productlineSuffix: '80',
+                description: 'Waters, with added sugar', declarable: false),
+            new Commodity(sid: 2, code: '2202100000', productlineSuffix: '80',
+                description: 'Of an actual alcoholic strength by volume not exceeding 0.5 % vol',
+                declarable: false, parentSid: 1),
+            new Commodity(sid: 3, code: '2202101100', productlineSuffix: '80',
+                description: 'In bottles', declarable: true, parentSid: 2),
+            new Commodity(sid: 4, code: '2202900000', productlineSuffix: '80',
+                description: 'Of an actual alcoholic strength by volume exceeding 0.5 % vol',
+                declarable: false, parentSid: 1),
+            new Commodity(sid: 5, code: '2202901100', productlineSuffix: '80',
+                description: 'In bottles', declarable: true, parentSid: 4),
+        ]));
+
+        $resolution = $resolver->resolve('2202000000', [MeasuredProperty::ALCOHOL_STRENGTH => 0.0]);
+
+        self::assertTrue($resolution->isResolved());
+        self::assertSame(3, $resolution->commodity?->sid);
+        self::assertTrue($resolution->narrowedByMeasurement);
     }
 
     /**
@@ -247,7 +282,7 @@ final class CommodityResolverTest extends TestCase
      */
     public function testCandidatesWithNoConditionAboveThemSurvive(): void
     {
-        $sids = $this->sids($this->resolver->resolve('6201000000', netWeightKg: 1.5)->candidates);
+        $sids = $this->sids($this->resolver->resolve('6201000000', [MeasuredProperty::NET_WEIGHT => 1.5])->candidates);
 
         self::assertContains(Chapter62::PONCHO_SID, $sids, 'The wool branch has no weight split');
         self::assertContains(Chapter62::WOOL_OTHER_TOP_SID, $sids);
@@ -332,7 +367,7 @@ final class CommodityResolverTest extends TestCase
                 description: 'Other', declarable: true, parentSid: 1),
         ]);
 
-        $resolution = (new CommodityResolver($repository))->resolve('6201300000', netWeightKg: 1.5);
+        $resolution = (new CommodityResolver($repository))->resolve('6201300000', [MeasuredProperty::NET_WEIGHT => 1.5]);
 
         self::assertSame(2, $resolution->candidateCount());
     }

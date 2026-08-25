@@ -1,0 +1,341 @@
+SID,Goods Nomenclature Item ID,Indents,Description,Product Line Suffix,Href,Formatted description,Start date,End date,Declarable,Parent SID
+29417,0400000000,0,"DAIRY PRODUCE; BIRDS' EGGS; NATURAL HONEY; EDIBLE PRODUCTS OF ANIMAL ORIGIN, NOT ELSEWHERE SPECIFIED OR INCLUDED",80,/uk/api/chapters/04,"Dairy produce; birds' eggs; natural honey; edible products of animal origin, not elsewhere specified or included",1971-12-31 00:00:00 UTC,,false,
+29418,0401000000,0,"Milk and cream, not concentrated nor containing added sugar or other sweetening matter",80,/uk/api/headings/0401,"Milk and cream, not concentrated nor containing added sugar or other sweetening matter",1972-01-01 00:00:00 UTC,,false,29417
+29419,0401100000,1,"Of a fat content, by weight, not exceeding 1 %",80,/uk/api/subheadings/0401100000-80,"Of a fat content, by weight, not exceeding 1%",1972-01-01 00:00:00 UTC,,false,29418
+29420,0401101000,2,In immediate packings of a net content not exceeding two litres,80,/uk/api/commodities/0401101000,In immediate packings of a net content not exceeding two litres,1972-01-01 00:00:00 UTC,,true,29419
+29421,0401109000,2,Other,80,/uk/api/commodities/0401109000,Other,1972-01-01 00:00:00 UTC,,true,29419
+29422,0401200000,1,"Of a fat content, by weight, exceeding 1 % but not exceeding 6 %",80,/uk/api/subheadings/0401200000-80,"Of a fat content, by weight, exceeding 1% but not exceeding 6%",1972-01-01 00:00:00 UTC,,false,29418
+29423,0401201100,2,Not exceeding 3 %,10,/uk/api/subheadings/0401201100-10,Not exceeding 3%,1972-01-01 00:00:00 UTC,,false,29422
+29424,0401201100,3,In immediate packings of a net content not exceeding two litres,80,/uk/api/commodities/0401201100,In immediate packings of a net content not exceeding two litres,1972-01-01 00:00:00 UTC,,true,29423
+29425,0401201900,3,Other,80,/uk/api/commodities/0401201900,Other,1972-01-01 00:00:00 UTC,,true,29423
+29426,0401209100,2,Exceeding 3 %,10,/uk/api/subheadings/0401209100-10,Exceeding 3%,1972-01-01 00:00:00 UTC,,false,29422
+29427,0401209100,3,In immediate packings of a net content not exceeding two litres,80,/uk/api/commodities/0401209100,In immediate packings of a net content not exceeding two litres,1972-01-01 00:00:00 UTC,,true,29426
+29428,0401209900,3,Other,80,/uk/api/commodities/0401209900,Other,1972-01-01 00:00:00 UTC,,true,29426
+94360,0401400000,1,"Of a fat content, by weight, exceeding 6 % but not exceeding 10 %",80,/uk/api/subheadings/0401400000-80,"Of a fat content, by weight, exceeding 6% but not exceeding 10%",2012-01-01 00:00:00 UTC,,false,29418
+94362,0401401000,2,In immediate packings of a net content not exceeding two litres,80,/uk/api/subheadings/0401401000-80,In immediate packings of a net content not exceeding two litres,2012-01-01 00:00:00 UTC,,false,94360
+94364,0401401010,3,Cream,80,/uk/api/commodities/0401401010,Cream,2012-01-01 00:00:00 UTC,,true,94362
+94366,0401401090,3,Milk,80,/uk/api/commodities/0401401090,Milk,2012-01-01 00:00:00 UTC,,true,94362
+94368,0401409000,2,Other,80,/uk/api/subheadings/0401409000-80,Other,2012-01-01 00:00:00 UTC,,false,94360
+94371,0401409010,3,Cream,80,/uk/api/commodities/0401409010,Cream,2012-01-01 00:00:00 UTC,,true,94368
+94373,0401409090,3,Milk,80,/uk/api/commodities/0401409090,Milk,2012-01-01 00:00:00 UTC,,true,94368
+94359,0401500000,1,"Of a fat content, by weight, exceeding 10 %",80,/uk/api/subheadings/0401500000-80,"Of a fat content, by weight, exceeding 10%",2012-01-01 00:00:00 UTC,,false,29418
+94361,0401501100,2,Not exceeding 21 %,10,/uk/api/subheadings/0401501100-10,Not exceeding 21%,2012-01-01 00:00:00 UTC,,false,94359
+94363,0401501100,3,In immediate packings of a net content not exceeding two litres,80,/uk/api/subheadings/0401501100-80,In immediate packings of a net content not exceeding two litres,2012-01-01 00:00:00 UTC,,false,94361
+94365,0401501110,4,Cream,80,/uk/api/commodities/0401501110,Cream,2012-01-01 00:00:00 UTC,,true,94363
+94367,0401501190,4,Milk,80,/uk/api/commodities/0401501190,Milk,2012-01-01 00:00:00 UTC,,true,94363
+94369,0401501900,3,Other,80,/uk/api/subheadings/0401501900-80,Other,2012-01-01 00:00:00 UTC,,false,94361
+94370,0401501910,4,Cream,80,/uk/api/commodities/0401501910,Cream,2012-01-01 00:00:00 UTC,,true,94369
+94372,0401501990,4,Milk,80,/uk/api/commodities/0401501990,Milk,2012-01-01 00:00:00 UTC,,true,94369
+94374,0401503100,2,Exceeding 21 % but not exceeding 45 %,10,/uk/api/subheadings/0401503100-10,Exceeding 21% but not exceeding 45%,2012-01-01 00:00:00 UTC,,false,94359
+94375,0401503100,3,In immediate packings of a net content not exceeding two litres,80,/uk/api/subheadings/0401503100-80,In immediate packings of a net content not exceeding two litres,2012-01-01 00:00:00 UTC,,false,94374
+94376,0401503110,4,Cream,80,/uk/api/commodities/0401503110,Cream,2012-01-01 00:00:00 UTC,,true,94375
+94377,0401503190,4,Milk,80,/uk/api/commodities/0401503190,Milk,2012-01-01 00:00:00 UTC,,true,94375
+94378,0401503900,3,Other,80,/uk/api/subheadings/0401503900-80,Other,2012-01-01 00:00:00 UTC,,false,94374
+94382,0401503910,4,Cream,80,/uk/api/commodities/0401503910,Cream,2012-01-01 00:00:00 UTC,,true,94378
+94385,0401503990,4,Milk,80,/uk/api/commodities/0401503990,Milk,2012-01-01 00:00:00 UTC,,true,94378
+94379,0401509100,2,Exceeding 45 %,10,/uk/api/subheadings/0401509100-10,Exceeding 45%,2012-01-01 00:00:00 UTC,,false,94359
+94380,0401509100,3,In immediate packings of a net content not exceeding two litres,80,/uk/api/subheadings/0401509100-80,In immediate packings of a net content not exceeding two litres,2012-01-01 00:00:00 UTC,,false,94379
+94383,0401509110,4,Cream,80,/uk/api/commodities/0401509110,Cream,2012-01-01 00:00:00 UTC,,true,94380
+94386,0401509190,4,Milk,80,/uk/api/commodities/0401509190,Milk,2012-01-01 00:00:00 UTC,,true,94380
+94381,0401509900,3,Other,80,/uk/api/subheadings/0401509900-80,Other,2012-01-01 00:00:00 UTC,,false,94379
+94384,0401509910,4,Cream,80,/uk/api/commodities/0401509910,Cream,2012-01-01 00:00:00 UTC,,true,94381
+94387,0401509990,4,Milk,80,/uk/api/commodities/0401509990,Milk,2012-01-01 00:00:00 UTC,,true,94381
+29439,0402000000,0,"Milk and cream, concentrated or containing added sugar or other sweetening matter",80,/uk/api/headings/0402,"Milk and cream, concentrated or containing added sugar or other sweetening matter",1972-01-01 00:00:00 UTC,,false,29417
+29440,0402100000,1,"In powder, granules or other solid forms, of a fat content, by weight, not exceeding 1,5 %",80,/uk/api/subheadings/0402100000-80,"In powder, granules or other solid forms, of a fat content, by weight, not exceeding 1.5%",1972-01-01 00:00:00 UTC,,false,29439
+29441,0402101100,2,Not containing added sugar or other sweetening matter,10,/uk/api/subheadings/0402101100-10,Not containing added sugar or other sweetening matter,1972-01-01 00:00:00 UTC,,false,29440
+29442,0402101100,3,"In immediate packings of a net content not exceeding 2,5 kg",80,/uk/api/commodities/0402101100,In immediate packings of a net content not exceeding 2.5 kg,1972-01-01 00:00:00 UTC,,true,29441
+29443,0402101900,3,Other,80,/uk/api/commodities/0402101900,Other,1972-01-01 00:00:00 UTC,,true,29441
+29444,0402109100,2,Other,10,/uk/api/subheadings/0402109100-10,Other,1972-01-01 00:00:00 UTC,,false,29440
+29445,0402109100,3,"In immediate packings of a net content not exceeding 2,5 kg",80,/uk/api/commodities/0402109100,In immediate packings of a net content not exceeding 2.5 kg,1972-01-01 00:00:00 UTC,,true,29444
+29446,0402109900,3,Other,80,/uk/api/commodities/0402109900,Other,1972-01-01 00:00:00 UTC,,true,29444
+29447,0402210000,1,"In powder, granules or other solid forms, of a fat content, by weight, exceeding 1,5 %",10,/uk/api/subheadings/0402210000-10,"In powder, granules or other solid forms, of a fat content, by weight, exceeding 1.5%",1972-01-01 00:00:00 UTC,,false,29439
+29448,0402210000,2,Not containing added sugar or other sweetening matter,80,/uk/api/subheadings/0402210000-80,Not containing added sugar or other sweetening matter,1972-01-01 00:00:00 UTC,,false,29447
+29449,0402211100,3,"Of a fat content, by weight, not exceeding 27 %",10,/uk/api/subheadings/0402211100-10,"Of a fat content, by weight, not exceeding 27%",1972-01-01 00:00:00 UTC,,false,29448
+29450,0402211100,4,"In immediate packings of a net content not exceeding 2,5 kg",80,/uk/api/commodities/0402211100,In immediate packings of a net content not exceeding 2.5 kg,1972-01-01 00:00:00 UTC,,true,29449
+94388,0402211800,4,Other,80,/uk/api/commodities/0402211800,Other,2012-01-01 00:00:00 UTC,,true,29449
+29454,0402219100,3,"Of a fat content, by weight, exceeding 27 %",10,/uk/api/subheadings/0402219100-10,"Of a fat content, by weight, exceeding 27%",1972-01-01 00:00:00 UTC,,false,29448
+29455,0402219100,4,"In immediate packings of a net content not exceeding 2,5 kg",80,/uk/api/commodities/0402219100,In immediate packings of a net content not exceeding 2.5 kg,1972-01-01 00:00:00 UTC,,true,29454
+29456,0402219900,4,Other,80,/uk/api/commodities/0402219900,Other,1972-01-01 00:00:00 UTC,,true,29454
+29457,0402290000,2,Other,80,/uk/api/subheadings/0402290000-80,Other,1972-01-01 00:00:00 UTC,,false,29447
+29458,0402291100,3,"Of a fat content, by weight, not exceeding 27 %",10,/uk/api/subheadings/0402291100-10,"Of a fat content, by weight, not exceeding 27%",1972-01-01 00:00:00 UTC,,false,29457
+29459,0402291100,4,"Special milk, for infants, in hermetically sealed containers of a net content not exceeding 500 g, of a fat content, by weight, exceeding 10 %",80,/uk/api/commodities/0402291100,"Special milk, for infants, in hermetically sealed containers of a net content not exceeding 500 g, of a fat content, by weight, exceeding 10%",1972-01-01 00:00:00 UTC,,true,29458
+29460,0402291500,4,Other,10,/uk/api/subheadings/0402291500-10,Other,1972-01-01 00:00:00 UTC,,false,29458
+29461,0402291500,5,"In immediate packings of a net content not exceeding 2,5 kg",80,/uk/api/commodities/0402291500,In immediate packings of a net content not exceeding 2.5 kg,1972-01-01 00:00:00 UTC,,true,29460
+29462,0402291900,5,Other,80,/uk/api/commodities/0402291900,Other,1972-01-01 00:00:00 UTC,,true,29460
+29463,0402299100,3,"Of a fat content, by weight, exceeding 27 %",10,/uk/api/subheadings/0402299100-10,"Of a fat content, by weight, exceeding 27%",1972-01-01 00:00:00 UTC,,false,29457
+29464,0402299100,4,"In immediate packings of a net content not exceeding 2,5 kg",80,/uk/api/commodities/0402299100,In immediate packings of a net content not exceeding 2.5 kg,1972-01-01 00:00:00 UTC,,true,29463
+29465,0402299900,4,Other,80,/uk/api/commodities/0402299900,Other,1972-01-01 00:00:00 UTC,,true,29463
+29466,0402910000,1,Other,10,/uk/api/subheadings/0402910000-10,Other,1972-01-01 00:00:00 UTC,,false,29439
+29467,0402910000,2,Not containing added sugar or other sweetening matter,80,/uk/api/subheadings/0402910000-80,Not containing added sugar or other sweetening matter,1972-01-01 00:00:00 UTC,,false,29466
+89844,0402911000,3,"Of a fat content, by weight, not exceeding 8 %",80,/uk/api/commodities/0402911000,"Of a fat content, by weight, not exceeding 8%",2008-01-01 00:00:00 UTC,,true,29467
+89184,0402913000,3,"Of a fat content, by weight, exceeding 8 % but not exceeding 10 %",80,/uk/api/commodities/0402913000,"Of a fat content, by weight, exceeding 8% but not exceeding 10%",2008-01-01 00:00:00 UTC,,true,29467
+29474,0402915100,3,"Of a fat content, by weight, exceeding 10 % but not exceeding 45 %",10,/uk/api/subheadings/0402915100-10,"Of a fat content, by weight, exceeding 10% but not exceeding 45%",1972-01-01 00:00:00 UTC,,false,29467
+29475,0402915100,4,"In immediate packings of a net content not exceeding 2,5 kg",80,/uk/api/commodities/0402915100,In immediate packings of a net content not exceeding 2.5 kg,1972-01-01 00:00:00 UTC,,true,29474
+29476,0402915900,4,Other,80,/uk/api/commodities/0402915900,Other,1972-01-01 00:00:00 UTC,,true,29474
+29477,0402919100,3,"Of a fat content, by weight, exceeding 45 %",10,/uk/api/subheadings/0402919100-10,"Of a fat content, by weight, exceeding 45%",1972-01-01 00:00:00 UTC,,false,29467
+29478,0402919100,4,"In immediate packings of a net content not exceeding 2,5 kg",80,/uk/api/commodities/0402919100,In immediate packings of a net content not exceeding 2.5 kg,1972-01-01 00:00:00 UTC,,true,29477
+29479,0402919900,4,Other,80,/uk/api/commodities/0402919900,Other,1972-01-01 00:00:00 UTC,,true,29477
+29480,0402990000,2,Other,80,/uk/api/subheadings/0402990000-80,Other,1972-01-01 00:00:00 UTC,,false,29466
+89195,0402991000,3,"Of a fat content, by weight, not exceeding 9,5 %",80,/uk/api/commodities/0402991000,"Of a fat content, by weight, not exceeding 9.5%",2008-01-01 00:00:00 UTC,,true,29480
+29484,0402993100,3,"Of a fat content, by weight, exceeding 9,5 % but not exceeding 45 %",10,/uk/api/subheadings/0402993100-10,"Of a fat content, by weight, exceeding 9.5% but not exceeding 45%",1972-01-01 00:00:00 UTC,,false,29480
+29485,0402993100,4,"In immediate packings of a net content not exceeding 2,5 kg",80,/uk/api/commodities/0402993100,In immediate packings of a net content not exceeding 2.5 kg,1972-01-01 00:00:00 UTC,,true,29484
+29486,0402993900,4,Other,80,/uk/api/commodities/0402993900,Other,1972-01-01 00:00:00 UTC,,true,29484
+29487,0402999100,3,"Of a fat content, by weight, exceeding 45 %",10,/uk/api/subheadings/0402999100-10,"Of a fat content, by weight, exceeding 45%",1972-01-01 00:00:00 UTC,,false,29480
+29488,0402999100,4,"In immediate packings of a net content not exceeding 2,5 kg",80,/uk/api/commodities/0402999100,In immediate packings of a net content not exceeding 2.5 kg,1972-01-01 00:00:00 UTC,,true,29487
+29489,0402999900,4,Other,80,/uk/api/commodities/0402999900,Other,1972-01-01 00:00:00 UTC,,true,29487
+29490,0403000000,0,"Yogurt; buttermilk, curdled milk and cream, kephir and other fermented or acidified milk and cream, whether or not concentrated or containing added sugar or other sweetening matter or flavoured or containing added fruit, nuts or cocoa",80,/uk/api/headings/0403,"Yogurt; buttermilk, curdled milk and cream, kephir and other fermented or acidified milk and cream, whether or not concentrated or containing added sugar or other sweetening matter or flavoured or containing added fruit, nuts or cocoa",1972-01-01 00:00:00 UTC,,false,29417
+106475,0403200000,1,Yogurt,80,/uk/api/subheadings/0403200000-80,Yogurt,2022-01-01 00:00:00 UTC,,false,29490
+106476,0403201100,2,"Not flavoured nor containing added fruit, nuts, cocoa, chocolate, spices, coffee or coffee extract, plants, parts of plants, cereals or bakers' wares",10,/uk/api/subheadings/0403201100-10,"Not flavoured nor containing added fruit, nuts, cocoa, chocolate, spices, coffee or coffee extract, plants, parts of plants, cereals or bakers' wares",2022-01-01 00:00:00 UTC,,false,106475
+106477,0403201100,3,"Not containing added sugar or other sweetening matter, of a fat content, by weight",20,/uk/api/subheadings/0403201100-20,"Not containing added sugar or other sweetening matter, of a fat content, by weight",2022-01-01 00:00:00 UTC,,false,106476
+106478,0403201100,4,Not exceeding 3 %,80,/uk/api/commodities/0403201100,Not exceeding 3%,2022-01-01 00:00:00 UTC,,true,106477
+106479,0403201300,4,Exceeding 3 % but not exceeding 6 %,80,/uk/api/commodities/0403201300,Exceeding 3% but not exceeding 6%,2022-01-01 00:00:00 UTC,,true,106477
+106480,0403201900,4,Exceeding 6 %,80,/uk/api/commodities/0403201900,Exceeding 6%,2022-01-01 00:00:00 UTC,,true,106477
+106481,0403203100,3,"Other, of a fat content, by weight",10,/uk/api/subheadings/0403203100-10,"Other, of a fat content, by weight",2022-01-01 00:00:00 UTC,,false,106476
+106482,0403203100,4,Not exceeding 3 %,80,/uk/api/commodities/0403203100,Not exceeding 3%,2022-01-01 00:00:00 UTC,,true,106481
+106483,0403203300,4,Exceeding 3 % but not exceeding 6 %,80,/uk/api/commodities/0403203300,Exceeding 3% but not exceeding 6%,2022-01-01 00:00:00 UTC,,true,106481
+106484,0403203900,4,Exceeding 6 %,80,/uk/api/commodities/0403203900,Exceeding 6%,2022-01-01 00:00:00 UTC,,true,106481
+106485,0403204100,2,"Containing added chocolate, spices, coffee or coffee extract, plants, parts of plants, cereals or bakers' wares",10,/uk/api/subheadings/0403204100-10,"Containing added chocolate, spices, coffee or coffee extract, plants, parts of plants, cereals or bakers' wares",2022-01-01 00:00:00 UTC,,false,106475
+106486,0403204100,3,"Containing, by weight, less than 1,5 % milkfat, 5 % sucrose (including invert sugar) or isoglucose, 5 % glucose or starch",80,/uk/api/commodities/0403204100,"Containing, by weight, less than 1.5% milkfat, 5% sucrose (including invert sugar) or isoglucose, 5% glucose or starch",2022-01-01 00:00:00 UTC,,true,106485
+106487,0403204900,3,Other,80,/uk/api/subheadings/0403204900-80,Other,2022-01-01 00:00:00 UTC,,false,106485
+106497,0403204933,4,Containing 60 % or more by weight of sucrose (including invert sugar expressed as sucrose) or isoglucose expressed as sucrose,10,/uk/api/subheadings/0403204933-10,Containing 60% or more by weight of sucrose (including invert sugar expressed as sucrose) or isoglucose expressed as sucrose,2022-01-01 00:00:00 UTC,,false,106487
+106498,0403204933,5,Containing less than 70 % of sucrose (including invert sugar expessed as sucrose),80,/uk/api/commodities/0403204933,Containing less than 70% of sucrose (including invert sugar expessed as sucrose),2022-01-01 00:00:00 UTC,,true,106497
+106499,0403204936,5,Other,80,/uk/api/commodities/0403204936,Other,2022-01-01 00:00:00 UTC,,true,106497
+106502,0403204990,4,Other,80,/uk/api/commodities/0403204990,Other,2022-01-01 00:00:00 UTC,,true,106487
+106488,0403205100,2,"Other, flavoured or containing added fruit, nuts or cocoa",10,/uk/api/subheadings/0403205100-10,"Other, flavoured or containing added fruit, nuts or cocoa",2022-01-01 00:00:00 UTC,,false,106475
+106489,0403205100,3,"In powder, granules or other solid forms, of a milkfat content, by weight",20,/uk/api/subheadings/0403205100-20,"In powder, granules or other solid forms, of a milkfat content, by weight",2022-01-01 00:00:00 UTC,,false,106488
+106490,0403205100,4,"Not exceeding 1,5 %",80,/uk/api/commodities/0403205100,Not exceeding 1.5%,2022-01-01 00:00:00 UTC,,true,106489
+106491,0403205300,4,"Exceeding 1,5 % but not exceeding 27 %",80,/uk/api/commodities/0403205300,Exceeding 1.5% but not exceeding 27%,2022-01-01 00:00:00 UTC,,true,106489
+106492,0403205900,4,Exceeding 27 %,80,/uk/api/commodities/0403205900,Exceeding 27%,2022-01-01 00:00:00 UTC,,true,106489
+106493,0403209100,3,"Other, of a milkfat content, by weight",10,/uk/api/subheadings/0403209100-10,"Other, of a milkfat content, by weight",2022-01-01 00:00:00 UTC,,false,106488
+106494,0403209100,4,Not exceeding 3 %,80,/uk/api/commodities/0403209100,Not exceeding 3%,2022-01-01 00:00:00 UTC,,true,106493
+106495,0403209300,4,Exceeding 3 % but not exceeding 6 %,80,/uk/api/commodities/0403209300,Exceeding 3% but not exceeding 6%,2022-01-01 00:00:00 UTC,,true,106493
+106496,0403209900,4,Exceeding 6 %,80,/uk/api/commodities/0403209900,Exceeding 6%,2022-01-01 00:00:00 UTC,,true,106493
+29561,0403900000,1,Other,80,/uk/api/subheadings/0403900000-80,Other,1972-01-01 00:00:00 UTC,,false,29490
+29562,0403901100,2,"Not flavoured nor containing added fruit, nuts or cocoa",10,/uk/api/subheadings/0403901100-10,"Not flavoured nor containing added fruit, nuts or cocoa",1972-01-01 00:00:00 UTC,,false,29561
+29563,0403901100,3,"In powder, granules or other solid forms",20,/uk/api/subheadings/0403901100-20,"In powder, granules or other solid forms",1972-01-01 00:00:00 UTC,,false,29562
+29564,0403901100,4,"Not containing added sugar or other sweetening matter, of a fat content, by weight",30,/uk/api/subheadings/0403901100-30,"Not containing added sugar or other sweetening matter, of a fat content, by weight",1972-01-01 00:00:00 UTC,,false,29563
+29565,0403901100,5,"Not exceeding 1,5 %",80,/uk/api/commodities/0403901100,Not exceeding 1.5%,1972-01-01 00:00:00 UTC,,true,29564
+29566,0403901300,5,"Exceeding 1,5 % but not exceeding 27 %",80,/uk/api/commodities/0403901300,Exceeding 1.5% but not exceeding 27%,1972-01-01 00:00:00 UTC,,true,29564
+29567,0403901900,5,Exceeding 27 %,80,/uk/api/commodities/0403901900,Exceeding 27%,1972-01-01 00:00:00 UTC,,true,29564
+29568,0403903100,4,"Other, of a fat content, by weight",10,/uk/api/subheadings/0403903100-10,"Other, of a fat content, by weight",1972-01-01 00:00:00 UTC,,false,29563
+29569,0403903100,5,"Not exceeding 1,5 %",80,/uk/api/commodities/0403903100,Not exceeding 1.5%,1972-01-01 00:00:00 UTC,,true,29568
+29570,0403903300,5,"Exceeding 1,5 % but not exceeding 27 %",80,/uk/api/commodities/0403903300,Exceeding 1.5% but not exceeding 27%,1972-01-01 00:00:00 UTC,,true,29568
+29571,0403903900,5,Exceeding 27 %,80,/uk/api/commodities/0403903900,Exceeding 27%,1972-01-01 00:00:00 UTC,,true,29568
+29572,0403905100,3,Other,10,/uk/api/subheadings/0403905100-10,Other,1972-01-01 00:00:00 UTC,,false,29562
+29573,0403905100,4,"Not containing added sugar or other sweetening matter, of a fat content, by weight",20,/uk/api/subheadings/0403905100-20,"Not containing added sugar or other sweetening matter, of a fat content, by weight",1972-01-01 00:00:00 UTC,,false,29572
+29574,0403905100,5,Not exceeding 3 %,80,/uk/api/commodities/0403905100,Not exceeding 3%,1972-01-01 00:00:00 UTC,,true,29573
+29577,0403905300,5,Exceeding 3 % but not exceeding 6 %,80,/uk/api/commodities/0403905300,Exceeding 3% but not exceeding 6%,1972-01-01 00:00:00 UTC,,true,29573
+29580,0403905900,5,Exceeding 6 %,80,/uk/api/commodities/0403905900,Exceeding 6%,1972-01-01 00:00:00 UTC,,true,29573
+29583,0403906100,4,"Other, of a fat content, by weight",10,/uk/api/subheadings/0403906100-10,"Other, of a fat content, by weight",1972-01-01 00:00:00 UTC,,false,29572
+29584,0403906100,5,Not exceeding 3 %,80,/uk/api/commodities/0403906100,Not exceeding 3%,1972-01-01 00:00:00 UTC,,true,29583
+29585,0403906300,5,Exceeding 3 % but not exceeding 6 %,80,/uk/api/commodities/0403906300,Exceeding 3% but not exceeding 6%,1972-01-01 00:00:00 UTC,,true,29583
+29586,0403906900,5,Exceeding 6 %,80,/uk/api/commodities/0403906900,Exceeding 6%,1972-01-01 00:00:00 UTC,,true,29583
+29587,0403907100,2,"Flavoured or containing added fruit, nuts or cocoa",10,/uk/api/subheadings/0403907100-10,"Flavoured or containing added fruit, nuts or cocoa",1972-01-01 00:00:00 UTC,,false,29561
+29588,0403907100,3,"In powder, granules or other solid forms, of a milkfat content, by weight",20,/uk/api/subheadings/0403907100-20,"In powder, granules or other solid forms, of a milkfat content, by weight",1972-01-01 00:00:00 UTC,,false,29587
+29589,0403907100,4,"Not exceeding 1,5 %",80,/uk/api/commodities/0403907100,Not exceeding 1.5%,1972-01-01 00:00:00 UTC,,true,29588
+29592,0403907300,4,"Exceeding 1,5 % but not exceeding 27 %",80,/uk/api/commodities/0403907300,Exceeding 1.5% but not exceeding 27%,1972-01-01 00:00:00 UTC,,true,29588
+29595,0403907900,4,Exceeding 27 %,80,/uk/api/commodities/0403907900,Exceeding 27%,1972-01-01 00:00:00 UTC,,true,29588
+29598,0403909100,3,"Other, of a milkfat content, by weight",10,/uk/api/subheadings/0403909100-10,"Other, of a milkfat content, by weight",1972-01-01 00:00:00 UTC,,false,29587
+29599,0403909100,4,Not exceeding 3 %,80,/uk/api/commodities/0403909100,Not exceeding 3%,1972-01-01 00:00:00 UTC,,true,29598
+29602,0403909300,4,Exceeding 3 % but not exceeding 6 %,80,/uk/api/commodities/0403909300,Exceeding 3% but not exceeding 6%,1972-01-01 00:00:00 UTC,,true,29598
+29605,0403909900,4,Exceeding 6 %,80,/uk/api/commodities/0403909900,Exceeding 6%,1972-01-01 00:00:00 UTC,,true,29598
+29608,0404000000,0,"Whey, whether or not concentrated or containing added sugar or other sweetening matter; products consisting of natural milk constituents, whether or not containing added sugar or other sweetening matter, not elsewhere specified or included",80,/uk/api/headings/0404,"Whey, whether or not concentrated or containing added sugar or other sweetening matter; products consisting of natural milk constituents, whether or not containing added sugar or other sweetening matter, not elsewhere specified or included",1972-01-01 00:00:00 UTC,,false,29417
+29609,0404100000,1,"Whey and modified whey, whether or not concentrated or containing added sugar or other sweetening matter",80,/uk/api/subheadings/0404100000-80,"Whey and modified whey, whether or not concentrated or containing added sugar or other sweetening matter",1972-01-01 00:00:00 UTC,,false,29608
+29610,0404100200,2,"In powder, granules or other solid forms",10,/uk/api/subheadings/0404100200-10,"In powder, granules or other solid forms",1993-01-01 00:00:00 UTC,,false,29609
+29611,0404100200,3,"Not containing added sugar or other sweetening matter, of a protein content (nitrogen content × 6,38), by weight",20,/uk/api/subheadings/0404100200-20,"Not containing added sugar or other sweetening matter, of a protein content (nitrogen content × 6.38), by weight",1993-01-01 00:00:00 UTC,,false,29610
+29612,0404100200,4,"Not exceeding 15 %, and of a fat content, by weight",30,/uk/api/subheadings/0404100200-30,"Not exceeding 15%, and of a fat content, by weight",1993-01-01 00:00:00 UTC,,false,29611
+29613,0404100200,5,"Not exceeding 1,5 %",80,/uk/api/commodities/0404100200,Not exceeding 1.5%,1993-01-01 00:00:00 UTC,,true,29612
+29614,0404100400,5,"Exceeding 1,5 % but not exceeding 27 %",80,/uk/api/commodities/0404100400,Exceeding 1.5% but not exceeding 27%,1993-01-01 00:00:00 UTC,,true,29612
+29615,0404100600,5,Exceeding 27 %,80,/uk/api/commodities/0404100600,Exceeding 27%,1993-01-01 00:00:00 UTC,,true,29612
+29627,0404101200,4,"Exceeding 15 %, and of a fat content, by weight",10,/uk/api/subheadings/0404101200-10,"Exceeding 15%, and of a fat content, by weight",1993-01-01 00:00:00 UTC,,false,29611
+29628,0404101200,5,"Not exceeding 1,5 %",80,/uk/api/commodities/0404101200,Not exceeding 1.5%,1993-01-01 00:00:00 UTC,,true,29627
+29629,0404101400,5,"Exceeding 1,5 % but not exceeding 27 %",80,/uk/api/commodities/0404101400,Exceeding 1.5% but not exceeding 27%,1993-01-01 00:00:00 UTC,,true,29627
+29630,0404101600,5,Exceeding 27 %,80,/uk/api/commodities/0404101600,Exceeding 27%,1993-01-01 00:00:00 UTC,,true,29627
+29641,0404102600,3,"Other, of a protein content (nitrogen content × 6,38), by weight",10,/uk/api/subheadings/0404102600-10,"Other, of a protein content (nitrogen content × 6.38), by weight",1993-01-01 00:00:00 UTC,,false,29610
+29642,0404102600,4,"Not exceeding 15 %, and of a fat content, by weight",20,/uk/api/subheadings/0404102600-20,"Not exceeding 15%, and of a fat content, by weight",1993-01-01 00:00:00 UTC,,false,29641
+29643,0404102600,5,"Not exceeding 1,5 %",80,/uk/api/commodities/0404102600,Not exceeding 1.5%,1993-01-01 00:00:00 UTC,,true,29642
+29644,0404102800,5,"Exceeding 1,5 % but not exceeding 27 %",80,/uk/api/commodities/0404102800,Exceeding 1.5% but not exceeding 27%,1993-01-01 00:00:00 UTC,,true,29642
+29645,0404103200,5,Exceeding 27 %,80,/uk/api/commodities/0404103200,Exceeding 27%,1993-01-01 00:00:00 UTC,,true,29642
+29646,0404103400,4,"Exceeding 15 %, and of a fat content, by weight",10,/uk/api/subheadings/0404103400-10,"Exceeding 15%, and of a fat content, by weight",1993-01-01 00:00:00 UTC,,false,29641
+29647,0404103400,5,"Not exceeding 1,5 %",80,/uk/api/commodities/0404103400,Not exceeding 1.5%,1993-01-01 00:00:00 UTC,,true,29646
+29648,0404103600,5,"Exceeding 1,5 % but not exceeding 27 %",80,/uk/api/commodities/0404103600,Exceeding 1.5% but not exceeding 27%,1993-01-01 00:00:00 UTC,,true,29646
+29649,0404103800,5,Exceeding 27 %,80,/uk/api/commodities/0404103800,Exceeding 27%,1993-01-01 00:00:00 UTC,,true,29646
+29650,0404104800,2,Other,10,/uk/api/subheadings/0404104800-10,Other,1993-01-01 00:00:00 UTC,,false,29609
+29651,0404104800,3,"Not containing added sugar or other sweetening matter, of a protein content (nitrogen content × 6,38), by weight",20,/uk/api/subheadings/0404104800-20,"Not containing added sugar or other sweetening matter, of a protein content (nitrogen content × 6.38), by weight",1993-01-01 00:00:00 UTC,,false,29650
+29652,0404104800,4,"Not exceeding 15 %, and of a fat content, by weight",30,/uk/api/subheadings/0404104800-30,"Not exceeding 15%, and of a fat content, by weight",1993-01-01 00:00:00 UTC,,false,29651
+29653,0404104800,5,"Not exceeding 1,5 %",80,/uk/api/commodities/0404104800,Not exceeding 1.5%,1993-01-01 00:00:00 UTC,,true,29652
+29654,0404105200,5,"Exceeding 1,5 % but not exceeding 27 %",80,/uk/api/commodities/0404105200,Exceeding 1.5% but not exceeding 27%,1993-01-01 00:00:00 UTC,,true,29652
+29655,0404105400,5,Exceeding 27 %,80,/uk/api/commodities/0404105400,Exceeding 27%,1993-01-01 00:00:00 UTC,,true,29652
+29656,0404105600,4,"Exceeding 15 %, and of a fat content, by weight",10,/uk/api/subheadings/0404105600-10,"Exceeding 15%, and of a fat content, by weight",1993-01-01 00:00:00 UTC,,false,29651
+29657,0404105600,5,"Not exceeding 1,5 %",80,/uk/api/commodities/0404105600,Not exceeding 1.5%,1993-01-01 00:00:00 UTC,,true,29656
+29658,0404105800,5,"Exceeding 1,5 % but not exceeding 27 %",80,/uk/api/commodities/0404105800,Exceeding 1.5% but not exceeding 27%,1993-01-01 00:00:00 UTC,,true,29656
+29659,0404106200,5,Exceeding 27 %,80,/uk/api/commodities/0404106200,Exceeding 27%,1993-01-01 00:00:00 UTC,,true,29656
+29660,0404107200,3,"Other, of a protein content (nitrogen content × 6,38), by weight",10,/uk/api/subheadings/0404107200-10,"Other, of a protein content (nitrogen content × 6.38), by weight",1993-01-01 00:00:00 UTC,,false,29650
+29661,0404107200,4,"Not exceeding 15 %, and of a fat content, by weight",20,/uk/api/subheadings/0404107200-20,"Not exceeding 15%, and of a fat content, by weight",1993-01-01 00:00:00 UTC,,false,29660
+29662,0404107200,5,"Not exceeding 1,5 %",80,/uk/api/commodities/0404107200,Not exceeding 1.5%,1993-01-01 00:00:00 UTC,,true,29661
+29663,0404107400,5,"Exceeding 1,5 % but not exceeding 27 %",80,/uk/api/commodities/0404107400,Exceeding 1.5% but not exceeding 27%,1993-01-01 00:00:00 UTC,,true,29661
+29664,0404107600,5,Exceeding 27 %,80,/uk/api/commodities/0404107600,Exceeding 27%,1993-01-01 00:00:00 UTC,,true,29661
+29665,0404107800,4,"Exceeding 15 %, and of a fat content, by weight",10,/uk/api/subheadings/0404107800-10,"Exceeding 15%, and of a fat content, by weight",1993-01-01 00:00:00 UTC,,false,29660
+29666,0404107800,5,"Not exceeding 1,5 %",80,/uk/api/commodities/0404107800,Not exceeding 1.5%,1993-01-01 00:00:00 UTC,,true,29665
+29667,0404108200,5,"Exceeding 1,5 % but not exceeding 27 %",80,/uk/api/commodities/0404108200,Exceeding 1.5% but not exceeding 27%,1993-01-01 00:00:00 UTC,,true,29665
+29668,0404108400,5,Exceeding 27 %,80,/uk/api/commodities/0404108400,Exceeding 27%,1993-01-01 00:00:00 UTC,,true,29665
+29690,0404900000,1,Other,80,/uk/api/subheadings/0404900000-80,Other,1972-01-01 00:00:00 UTC,,false,29608
+59389,0404902100,2,"Not containing added sugar or other sweetening matter, of a fat content, by weight",10,/uk/api/subheadings/0404902100-10,"Not containing added sugar or other sweetening matter, of a fat content, by weight",1996-01-01 00:00:00 UTC,,false,29690
+59390,0404902100,3,"Not exceeding 1,5 %",80,/uk/api/commodities/0404902100,Not exceeding 1.5%,1996-01-01 00:00:00 UTC,,true,59389
+59391,0404902300,3,"Exceeding 1,5 % but not exceeding 27 %",80,/uk/api/commodities/0404902300,Exceeding 1.5% but not exceeding 27%,1996-01-01 00:00:00 UTC,,true,59389
+59392,0404902900,3,Exceeding 27 %,80,/uk/api/commodities/0404902900,Exceeding 27%,1996-01-01 00:00:00 UTC,,true,59389
+59393,0404908100,2,"Other, of a fat content, by weight",10,/uk/api/subheadings/0404908100-10,"Other, of a fat content, by weight",1996-01-01 00:00:00 UTC,,false,29690
+59394,0404908100,3,"Not exceeding 1,5 %",80,/uk/api/commodities/0404908100,Not exceeding 1.5%,1996-01-01 00:00:00 UTC,,true,59393
+59395,0404908300,3,"Exceeding 1,5 % but not exceeding 27 %",80,/uk/api/subheadings/0404908300-80,Exceeding 1.5% but not exceeding 27%,1996-01-01 00:00:00 UTC,,false,59393
+60996,0404908310,4,"Special milk, for infants, in hermetically sealed containers of a net content not exceeding 500 g of a fat content, by weight, exceeding 10 %",80,/uk/api/commodities/0404908310,"Special milk, for infants, in hermetically sealed containers of a net content not exceeding 500 g of a fat content, by weight, exceeding 10%",1996-01-01 00:00:00 UTC,,true,59395
+60998,0404908390,4,Other,80,/uk/api/commodities/0404908390,Other,1996-01-01 00:00:00 UTC,,true,59395
+59396,0404908900,3,Exceeding 27 %,80,/uk/api/commodities/0404908900,Exceeding 27%,1996-01-01 00:00:00 UTC,,true,59393
+29713,0405000000,0,Butter and other fats and oils derived from milk; dairy spreads,80,/uk/api/headings/0405,Butter and other fats and oils derived from milk; dairy spreads,1972-01-01 00:00:00 UTC,,false,29417
+59397,0405100000,1,Butter,80,/uk/api/subheadings/0405100000-80,Butter,1996-01-01 00:00:00 UTC,,false,29713
+59398,0405101100,2,"Of a fat content, by weight, not exceeding 85 %",10,/uk/api/subheadings/0405101100-10,"Of a fat content, by weight, not exceeding 85%",1996-01-01 00:00:00 UTC,,false,59397
+59399,0405101100,3,Natural butter,20,/uk/api/subheadings/0405101100-20,Natural butter,1996-01-01 00:00:00 UTC,,false,59398
+59400,0405101100,4,In immediate packings of a net content not exceeding 1 kg,80,/uk/api/commodities/0405101100,In immediate packings of a net content not exceeding 1 kg,1996-01-01 00:00:00 UTC,,true,59399
+59401,0405101900,4,Other,80,/uk/api/commodities/0405101900,Other,1996-01-01 00:00:00 UTC,,true,59399
+59402,0405103000,3,Recombined butter,80,/uk/api/commodities/0405103000,Recombined butter,1996-01-01 00:00:00 UTC,,true,59398
+59403,0405105000,3,Whey butter,80,/uk/api/commodities/0405105000,Whey butter,1996-01-01 00:00:00 UTC,,true,59398
+59404,0405109000,2,Other,80,/uk/api/commodities/0405109000,Other,1996-01-01 00:00:00 UTC,,true,59397
+59405,0405200000,1,Dairy spreads,80,/uk/api/subheadings/0405200000-80,Dairy spreads,1996-01-01 00:00:00 UTC,,false,29713
+59406,0405201000,2,"Of a fat content, by weight, of 39 % or more but less than 60 %",80,/uk/api/subheadings/0405201000-80,"Of a fat content, by weight, of 39% or more but less than 60%",1996-01-01 00:00:00 UTC,,false,59405
+63362,0405201010,3,In immediate packings of a net capacity of 1 kg or less,80,/uk/api/commodities/0405201010,In immediate packings of a net capacity of 1 kg or less,1996-01-01 00:00:00 UTC,,true,59406
+63363,0405201080,3,Other,80,/uk/api/commodities/0405201080,Other,1996-01-01 00:00:00 UTC,,true,59406
+59407,0405203000,2,"Of a fat content, by weight, of 60 % or more but not exceeding 75 %",80,/uk/api/subheadings/0405203000-80,"Of a fat content, by weight, of 60% or more but not exceeding 75%",1996-01-01 00:00:00 UTC,,false,59405
+63364,0405203010,3,In immediate packings of a net capacity of 1 kg or less,80,/uk/api/commodities/0405203010,In immediate packings of a net capacity of 1 kg or less,1996-01-01 00:00:00 UTC,,true,59407
+63365,0405203080,3,Other,80,/uk/api/commodities/0405203080,Other,1996-01-01 00:00:00 UTC,,true,59407
+59408,0405209000,2,"Of a fat content, by weight, of more than 75 % but less than 80 %",80,/uk/api/commodities/0405209000,"Of a fat content, by weight, of more than 75% but less than 80%",1996-01-01 00:00:00 UTC,,true,59405
+59409,0405900000,1,Other,80,/uk/api/subheadings/0405900000-80,Other,1996-01-01 00:00:00 UTC,,false,29713
+59410,0405901000,2,"Of a fat content, by weight, of 99,3 % or more and of a water content, by weight, not exceeding 0,5 %",80,/uk/api/commodities/0405901000,"Of a fat content, by weight, of 99.3% or more and of a water content, by weight, not exceeding 0.5%",1996-01-01 00:00:00 UTC,,true,59409
+59411,0405909000,2,Other,80,/uk/api/commodities/0405909000,Other,1996-01-01 00:00:00 UTC,,true,59409
+29719,0406000000,0,Cheese and curd,80,/uk/api/headings/0406,Cheese and curd,1972-01-01 00:00:00 UTC,,false,29417
+29720,0406100000,1,"Fresh (unripened or uncured) cheese, including whey cheese, and curd",80,/uk/api/subheadings/0406100000-80,"Fresh (unripened or uncured) cheese, including whey cheese, and curd",1972-01-01 00:00:00 UTC,,false,29719
+98904,0406103000,2,"Of a fat content, by weight, not exceeding 40 %",10,/uk/api/subheadings/0406103000-10,"Of a fat content, by weight, not exceeding 40%",2015-01-01 00:00:00 UTC,,false,29720
+98905,0406103000,3,"Mozzarella, whether or not in a liquid",80,/uk/api/subheadings/0406103000-80,"Mozzarella, whether or not in a liquid",2015-01-01 00:00:00 UTC,,false,98904
+98907,0406103010,4,"Pizza cheese, frozen, cut into pieces each weighing not more than 1 gram, in containers with a net content of 5kg or more, of a water content, by weight, of 52% or more, and a fat content by weight in the dry matter of 38% or more",80,/uk/api/commodities/0406103010,"Pizza cheese, frozen, cut into pieces each weighing not more than 1 gram, in containers with a net content of 5kg or more, of a water content, by weight, of 52% or more, and a fat content by weight in the dry matter of 38% or more",2015-01-01 00:00:00 UTC,,true,98905
+98908,0406103090,4,Other,80,/uk/api/commodities/0406103090,Other,2015-01-01 00:00:00 UTC,,true,98905
+98906,0406105000,3,Other,80,/uk/api/subheadings/0406105000-80,Other,2015-01-01 00:00:00 UTC,,false,98904
+98909,0406105010,4,Skyr,80,/uk/api/commodities/0406105010,Skyr,2015-01-01 00:00:00 UTC,,true,98906
+99062,0406105030,4,"Pizza cheese, frozen, cut into pieces each weighing not more than 1 gram, in containers with a net content of 5kg or more, of a water content, by weight, of 52% or more, and a fat content by weight in the dry matter of 38% or more",80,/uk/api/commodities/0406105030,"Pizza cheese, frozen, cut into pieces each weighing not more than 1 gram, in containers with a net content of 5kg or more, of a water content, by weight, of 52% or more, and a fat content by weight in the dry matter of 38% or more",2015-01-01 00:00:00 UTC,,true,98906
+98910,0406105090,4,Other,80,/uk/api/commodities/0406105090,Other,2015-01-01 00:00:00 UTC,,true,98906
+29723,0406108000,2,Other,80,/uk/api/subheadings/0406108000-80,Other,1992-01-01 00:00:00 UTC,,false,29720
+59112,0406108010,3,"Pizza cheese, frozen, cut into pieces each weighing not more than 1 gram, in containers with a net content of 5kg or more, or a water content, by weight, of 52% or more, and a fat content by weight in the dry matter of 38% or more",80,/uk/api/commodities/0406108010,"Pizza cheese, frozen, cut into pieces each weighing not more than 1 gram, in containers with a net content of 5kg or more, or a water content, by weight, of 52% or more, and a fat content by weight in the dry matter of 38% or more",1995-07-01 00:00:00 UTC,,true,29723
+81026,0406108080,3,Other,80,/uk/api/commodities/0406108080,Other,2005-01-01 00:00:00 UTC,,true,29723
+29725,0406200000,1,"Grated or powdered cheese, of all kinds",80,/uk/api/commodities/0406200000,"Grated or powdered cheese, of all kinds",1972-01-01 00:00:00 UTC,,true,29719
+29728,0406300000,1,"Processed cheese, not grated or powdered",80,/uk/api/subheadings/0406300000-80,"Processed cheese, not grated or powdered",1972-01-01 00:00:00 UTC,,false,29719
+29729,0406301000,2,"In the manufacture of which no cheeses other than Emmentaler, Gruyère and Appenzell have been used and which may contain, as an addition, Glarus herb cheese (known as Schabziger); put up for retail sale, of a fat content by weight in the dry matter not exceeding 56 %",80,/uk/api/subheadings/0406301000-80,"In the manufacture of which no cheeses other than emmentaler, gruyère and appenzell have been used and which may contain, as an addition, glarus herb cheese (known as schabziger); put up for retail sale, of a fat content by weight in the dry matter not exceeding 56%",1972-01-01 00:00:00 UTC,,false,29728
+75874,0406301010,3,Processed Emmentaler,80,/uk/api/commodities/0406301010,Processed emmentaler,2002-06-01 00:00:00 UTC,,true,29729
+75875,0406301020,3,Processed Gruyère,80,/uk/api/commodities/0406301020,Processed gruyère,2002-06-01 00:00:00 UTC,,true,29729
+75876,0406301090,3,Other,80,/uk/api/commodities/0406301090,Other,2002-06-01 00:00:00 UTC,,true,29729
+29732,0406303100,2,Other,10,/uk/api/subheadings/0406303100-10,Other,1972-01-01 00:00:00 UTC,,false,29728
+29733,0406303100,3,"Of a fat content, by weight, not exceeding 36 % and of a fat content, by weight, in the dry matter",20,/uk/api/subheadings/0406303100-20,"Of a fat content, by weight, not exceeding 36% and of a fat content, by weight, in the dry matter",1972-01-01 00:00:00 UTC,,false,29732
+29734,0406303100,4,Not exceeding 48 %,80,/uk/api/commodities/0406303100,Not exceeding 48%,1972-01-01 00:00:00 UTC,,true,29733
+29737,0406303900,4,Exceeding 48 %,80,/uk/api/commodities/0406303900,Exceeding 48%,1972-01-01 00:00:00 UTC,,true,29733
+29740,0406309000,3,"Of a fat content, by weight, exceeding 36 %",80,/uk/api/commodities/0406309000,"Of a fat content, by weight, exceeding 36%",1972-01-01 00:00:00 UTC,,true,29732
+29743,0406400000,1,Blue-veined cheese and other cheese containing veins produced by Penicillium roqueforti,80,/uk/api/subheadings/0406400000-80,Blue-veined cheese and other cheese containing veins produced by penicillium roqueforti,1972-01-01 00:00:00 UTC,,false,29719
+29746,0406401000,2,Roquefort,80,/uk/api/commodities/0406401000,Roquefort,1994-01-01 00:00:00 UTC,,true,29743
+29747,0406405000,2,Gorgonzola,80,/uk/api/commodities/0406405000,Gorgonzola,1994-01-01 00:00:00 UTC,,true,29743
+29748,0406409000,2,Other,80,/uk/api/commodities/0406409000,Other,1994-01-01 00:00:00 UTC,,true,29743
+29751,0406900000,1,Other cheese,80,/uk/api/subheadings/0406900000-80,Other cheese,1972-01-01 00:00:00 UTC,,false,29719
+57641,0406900100,2,For processing,80,/uk/api/commodities/0406900100,For processing,1995-01-01 00:00:00 UTC,,true,29751
+64903,0406901300,2,Other,10,/uk/api/subheadings/0406901300-10,Other,1997-01-01 00:00:00 UTC,,false,29751
+64904,0406901300,3,Emmentaler,80,/uk/api/commodities/0406901300,Emmentaler,1997-01-01 00:00:00 UTC,,true,64903
+64907,0406901500,3,"Gruyère, Sbrinz",80,/uk/api/commodities/0406901500,"Gruyère, sbrinz",1997-01-01 00:00:00 UTC,,true,64903
+64910,0406901700,3,"Bergkäse, Appenzell",80,/uk/api/commodities/0406901700,"Bergkäse, appenzell",1997-01-01 00:00:00 UTC,,true,64903
+57640,0406901800,3,"Fromage fribourgeois, Vacherin Mont d'Or and Tête de Moine",80,/uk/api/commodities/0406901800,"Fromage fribourgeois, vacherin mont d'or and tête de moine",1995-01-01 00:00:00 UTC,,true,64903
+29844,0406902100,3,Cheddar,80,/uk/api/subheadings/0406902100-80,Cheddar,1972-01-01 00:00:00 UTC,,false,64903
+29846,0406902120,4,"Whole cheeses (of the conventional flat cylindrical shape of a net weight of not less than 33 kg but not more than 44 kg and cheeses in cubic blocks or in parallelepiped shape, of a net weight of 10 kg or more) of a minimum fat content of 50% by weight, in the dry matter, matured for at least three months",80,/uk/api/commodities/0406902120,"Whole cheeses (of the conventional flat cylindrical shape of a net weight of not less than 33 kg but not more than 44 kg and cheeses in cubic blocks or in parallelepiped shape, of a net weight of 10 kg or more) of a minimum fat content of 50% by weight, in the dry matter, matured for at least three months",1972-01-01 00:00:00 UTC,,true,29844
+29847,0406902190,4,Other,80,/uk/api/commodities/0406902190,Other,1972-01-01 00:00:00 UTC,,true,29844
+29848,0406902300,3,Edam,80,/uk/api/commodities/0406902300,Edam,1972-01-01 00:00:00 UTC,,true,64903
+29851,0406902500,3,Tilsit,80,/uk/api/commodities/0406902500,Tilsit,1972-01-01 00:00:00 UTC,,true,64903
+29864,0406902900,3,Kashkaval,80,/uk/api/commodities/0406902900,Kashkaval,1972-01-01 00:00:00 UTC,,true,64903
+86190,0406903200,3,Feta,80,/uk/api/commodities/0406903200,Feta,2007-01-01 00:00:00 UTC,,true,64903
+29873,0406903500,3,Kefalo-Tyri,80,/uk/api/commodities/0406903500,Kefalo-tyri,1972-01-01 00:00:00 UTC,,true,64903
+29876,0406903700,3,Finlandia,80,/uk/api/commodities/0406903700,Finlandia,1972-01-01 00:00:00 UTC,,true,64903
+29879,0406903900,3,Jarlsberg,80,/uk/api/commodities/0406903900,Jarlsberg,1972-01-01 00:00:00 UTC,,true,64903
+29882,0406905000,3,Other,10,/uk/api/subheadings/0406905000-10,Other,1972-01-01 00:00:00 UTC,,false,64903
+29883,0406905000,4,"Cheese of sheep's milk or buffalo milk in containers containing brine, or in sheepskin or goatskin bottles",80,/uk/api/commodities/0406905000,"Cheese of sheep's milk or buffalo milk in containers containing brine, or in sheepskin or goatskin bottles",1972-01-01 00:00:00 UTC,,true,29882
+29886,0406906100,4,Other,10,/uk/api/subheadings/0406906100-10,Other,1972-01-01 00:00:00 UTC,,false,29882
+29887,0406906100,5,"Of a fat content, by weight, not exceeding 40 % and a water content, by weight, in the non-fatty matter",20,/uk/api/subheadings/0406906100-20,"Of a fat content, by weight, not exceeding 40% and a water content, by weight, in the non-fatty matter",1972-01-01 00:00:00 UTC,,false,29886
+29888,0406906100,6,Not exceeding 47 %,30,/uk/api/subheadings/0406906100-30,Not exceeding 47%,1972-01-01 00:00:00 UTC,,false,29887
+29889,0406906100,7,"Grana Padano, Parmigiano Reggiano",80,/uk/api/commodities/0406906100,"Grana padano, parmigiano reggiano",1972-01-01 00:00:00 UTC,,true,29888
+29890,0406906300,7,"Fiore Sardo, Pecorino",80,/uk/api/subheadings/0406906300-80,"Fiore sardo, pecorino",1972-01-01 00:00:00 UTC,,false,29888
+70836,0406906310,8,Pecorino,80,/uk/api/commodities/0406906310,Pecorino,1999-07-01 00:00:00 UTC,,true,29890
+70837,0406906390,8,Other,80,/uk/api/commodities/0406906390,Other,1999-07-01 00:00:00 UTC,,true,29890
+29891,0406906900,7,Other,80,/uk/api/commodities/0406906900,Other,1972-01-01 00:00:00 UTC,,true,29888
+29896,0406907300,6,Exceeding 47 % but not exceeding 72 %,10,/uk/api/subheadings/0406907300-10,Exceeding 47% but not exceeding 72%,1994-01-01 00:00:00 UTC,,false,29887
+29897,0406907300,7,Provolone,80,/uk/api/commodities/0406907300,Provolone,1972-01-01 00:00:00 UTC,,true,29896
+98911,0406907400,7,Maasdam,80,/uk/api/commodities/0406907400,Maasdam,2015-01-01 00:00:00 UTC,,true,29896
+29898,0406907500,7,"Asiago, Caciocavallo, Montasio, Ragusano",80,/uk/api/subheadings/0406907500-80,"Asiago, caciocavallo, montasio, ragusano",1972-01-01 00:00:00 UTC,,false,29896
+70838,0406907510,8,Caciocavallo,80,/uk/api/commodities/0406907510,Caciocavallo,1999-07-01 00:00:00 UTC,,true,29898
+70839,0406907590,8,Other,80,/uk/api/commodities/0406907590,Other,1999-07-01 00:00:00 UTC,,true,29898
+29899,0406907600,7,"Danbo, Fontal, Fontina, Fynbo, Havarti, Maribo, Samsø",80,/uk/api/subheadings/0406907600-80,"Danbo, fontal, fontina, fynbo, havarti, maribo, samsø",1994-01-01 00:00:00 UTC,,false,29896
+70840,0406907610,8,Fontina,80,/uk/api/commodities/0406907610,Fontina,1999-07-01 00:00:00 UTC,,true,29899
+70841,0406907690,8,Other,80,/uk/api/commodities/0406907690,Other,1999-07-01 00:00:00 UTC,,true,29899
+29901,0406907800,7,Gouda,80,/uk/api/commodities/0406907800,Gouda,1994-01-01 00:00:00 UTC,,true,29896
+29902,0406907900,7,"Esrom, Italico, Kernhem, Saint-Nectaire, Saint-Paulin, Taleggio",80,/uk/api/subheadings/0406907900-80,"Esrom, italico, kernhem, saint-nectaire, saint-paulin, taleggio",1972-01-01 00:00:00 UTC,,false,29896
+70842,0406907910,8,"Esrom, Italico, Kernhem, Saint-Paulin",80,/uk/api/commodities/0406907910,"Esrom, italico, kernhem, saint-paulin",1999-07-01 00:00:00 UTC,,true,29902
+70843,0406907990,8,Other,80,/uk/api/commodities/0406907990,Other,1999-07-01 00:00:00 UTC,,true,29902
+29903,0406908100,7,"Cantal, Cheshire, Wensleydale, Lancashire, Double Gloucester, Blarney, Colby, Monterey",80,/uk/api/subheadings/0406908100-80,"Cantal, cheshire, wensleydale, lancashire, double gloucester, blarney, colby, monterey",1972-01-01 00:00:00 UTC,,false,29896
+70844,0406908110,8,Cantal,80,/uk/api/commodities/0406908110,Cantal,1999-07-01 00:00:00 UTC,,true,29903
+70846,0406908190,8,Other,80,/uk/api/commodities/0406908190,Other,1999-07-01 00:00:00 UTC,,true,29903
+29904,0406908200,7,Camembert,80,/uk/api/commodities/0406908200,Camembert,1994-01-01 00:00:00 UTC,,true,29896
+29906,0406908400,7,Brie,80,/uk/api/commodities/0406908400,Brie,1994-01-01 00:00:00 UTC,,true,29896
+29907,0406908500,7,"Kefalograviera, Kasseri",80,/uk/api/commodities/0406908500,"Kefalograviera, kasseri",1972-01-01 00:00:00 UTC,,true,29896
+29908,0406908600,7,"Other cheese, of a water content, by weight, in the non-fatty matter",10,/uk/api/subheadings/0406908600-10,"Other cheese, of a water content, by weight, in the non-fatty matter",1994-01-01 00:00:00 UTC,,false,29896
+29909,0406908600,8,Exceeding 47 % but not exceeding 52 %,80,/uk/api/subheadings/0406908600-80,Exceeding 47% but not exceeding 52%,1994-01-01 00:00:00 UTC,,false,29908
+29913,0406908620,9,"Tulum Peyniri, made from sheep’s milk or buffalo milk, in individual plastic or other kind of packings of less than 10 kg",80,/uk/api/commodities/0406908620,"Tulum peyniri, made from sheep’s milk or buffalo milk, in individual plastic or other kind of packings of less than 10 kg",1994-01-01 00:00:00 UTC,,true,29909
+69474,0406908690,9,Other,80,/uk/api/commodities/0406908690,Other,1998-01-01 00:00:00 UTC,,true,29909
+98914,0406908900,8,Exceeding 52 % but not exceeding 62 %,80,/uk/api/subheadings/0406908900-80,Exceeding 52% but not exceeding 62%,2015-01-01 00:00:00 UTC,,false,29908
+98915,0406908910,9,"Tulum Peyniri, made from sheep’s milk or buffalo milk, in individual plastic or other kind of packings of less than 10 kg",80,/uk/api/commodities/0406908910,"Tulum peyniri, made from sheep’s milk or buffalo milk, in individual plastic or other kind of packings of less than 10 kg",2015-01-01 00:00:00 UTC,,true,98914
+98916,0406908990,9,Other,80,/uk/api/commodities/0406908990,Other,2015-01-01 00:00:00 UTC,,true,98914
+98917,0406909200,8,Exceeding 62 % but not exceeding 72 %,80,/uk/api/subheadings/0406909200-80,Exceeding 62% but not exceeding 72%,2015-01-01 00:00:00 UTC,,false,29908
+98918,0406909210,9,"Tulum Peyniri, made from sheep’s milk or buffalo milk, in individual plastic or other kind of packings of less than 10 kg",80,/uk/api/commodities/0406909210,"Tulum peyniri, made from sheep’s milk or buffalo milk, in individual plastic or other kind of packings of less than 10 kg",2015-01-01 00:00:00 UTC,,true,98917
+98919,0406909290,9,Other,80,/uk/api/commodities/0406909290,Other,2015-01-01 00:00:00 UTC,,true,98917
+29969,0406909300,6,Exceeding 72 %,80,/uk/api/commodities/0406909300,Exceeding 72%,1972-01-01 00:00:00 UTC,,true,29887
+29974,0406909900,5,Other,80,/uk/api/commodities/0406909900,Other,1972-01-01 00:00:00 UTC,,true,29886
+29977,0407000000,0,"Birds' eggs, in shell, fresh, preserved or cooked",80,/uk/api/headings/0407,"Birds' eggs, in shell, fresh, preserved or cooked",1972-01-01 00:00:00 UTC,,false,29417
+94389,0407110000,1,Fertilised eggs for incubation,10,/uk/api/subheadings/0407110000-10,Fertilised eggs for incubation,2012-01-01 00:00:00 UTC,,false,29977
+94390,0407110000,2,Of fowls of the species Gallus domesticus,80,/uk/api/commodities/0407110000,Of fowls of the species gallus domesticus,2012-01-01 00:00:00 UTC,,true,94389
+94392,0407190000,2,Other,80,/uk/api/subheadings/0407190000-80,Other,2012-01-01 00:00:00 UTC,,false,94389
+94391,0407191100,3,"Of poultry, other than of fowls of the species Gallus domesticus",10,/uk/api/subheadings/0407191100-10,"Of poultry, other than of fowls of the species gallus domesticus",2012-01-01 00:00:00 UTC,,false,94392
+94393,0407191100,4,Of turkeys or geese,80,/uk/api/commodities/0407191100,Of turkeys or geese,2012-01-01 00:00:00 UTC,,true,94391
+94394,0407191900,4,Other,80,/uk/api/commodities/0407191900,Other,2012-01-01 00:00:00 UTC,,true,94391
+94395,0407199000,3,Other,80,/uk/api/commodities/0407199000,Other,2012-01-01 00:00:00 UTC,,true,94392
+94396,0407210000,1,Other fresh eggs,10,/uk/api/subheadings/0407210000-10,Other fresh eggs,2012-01-01 00:00:00 UTC,,false,29977
+94397,0407210000,2,Of fowls of the species Gallus domesticus,80,/uk/api/commodities/0407210000,Of fowls of the species gallus domesticus,2012-01-01 00:00:00 UTC,,true,94396
+94398,0407290000,2,Other,80,/uk/api/subheadings/0407290000-80,Other,2012-01-01 00:00:00 UTC,,false,94396
+94399,0407291000,3,"Of poultry, other than of fowls of the species Gallus domesticus",80,/uk/api/commodities/0407291000,"Of poultry, other than of fowls of the species gallus domesticus",2012-01-01 00:00:00 UTC,,true,94398
+94400,0407299000,3,Other,80,/uk/api/commodities/0407299000,Other,2012-01-01 00:00:00 UTC,,true,94398
+94401,0407900000,1,Other,80,/uk/api/subheadings/0407900000-80,Other,2012-01-01 00:00:00 UTC,,false,29977
+94402,0407901000,2,Of poultry,80,/uk/api/commodities/0407901000,Of poultry,2012-01-01 00:00:00 UTC,,true,94401
+94403,0407909000,2,Other,80,/uk/api/commodities/0407909000,Other,2012-01-01 00:00:00 UTC,,true,94401
+29984,0408000000,0,"Birds' eggs, not in shell, and egg yolks, fresh, dried, cooked by steaming or by boiling in water, moulded, frozen or otherwise preserved, whether or not containing added sugar or other sweetening matter",80,/uk/api/headings/0408,"Birds' eggs, not in shell, and egg yolks, fresh, dried, cooked by steaming or by boiling in water, moulded, frozen or otherwise preserved, whether or not containing added sugar or other sweetening matter",1972-01-01 00:00:00 UTC,,false,29417
+29985,0408110000,1,Egg yolks,10,/uk/api/subheadings/0408110000-10,Egg yolks,1972-01-01 00:00:00 UTC,,false,29984
+29986,0408110000,2,Dried,80,/uk/api/subheadings/0408110000-80,Dried,1972-01-01 00:00:00 UTC,,false,29985
+29988,0408112000,3,Unfit for human consumption,80,/uk/api/commodities/0408112000,Unfit for human consumption,1994-01-01 00:00:00 UTC,,true,29986
+29989,0408118000,3,Other,80,/uk/api/commodities/0408118000,Other,1994-01-01 00:00:00 UTC,,true,29986
+29991,0408190000,2,Other,80,/uk/api/subheadings/0408190000-80,Other,1972-01-01 00:00:00 UTC,,false,29985
+29995,0408192000,3,Unfit for human consumption,80,/uk/api/commodities/0408192000,Unfit for human consumption,1994-01-01 00:00:00 UTC,,true,29991
+29996,0408198100,3,Other,10,/uk/api/subheadings/0408198100-10,Other,1994-01-01 00:00:00 UTC,,false,29991
+29997,0408198100,4,Liquid,80,/uk/api/commodities/0408198100,Liquid,1994-01-01 00:00:00 UTC,,true,29996
+29998,0408198900,4,"Other, including frozen",80,/uk/api/commodities/0408198900,"Other, including frozen",1994-01-01 00:00:00 UTC,,true,29996
+30000,0408910000,1,Other,10,/uk/api/subheadings/0408910000-10,Other,1972-01-01 00:00:00 UTC,,false,29984
+30001,0408910000,2,Dried,80,/uk/api/subheadings/0408910000-80,Dried,1972-01-01 00:00:00 UTC,,false,30000
+30003,0408912000,3,Unfit for human consumption,80,/uk/api/commodities/0408912000,Unfit for human consumption,1994-01-01 00:00:00 UTC,,true,30001
+30004,0408918000,3,Other,80,/uk/api/commodities/0408918000,Other,1994-01-01 00:00:00 UTC,,true,30001
+30006,0408990000,2,Other,80,/uk/api/subheadings/0408990000-80,Other,1972-01-01 00:00:00 UTC,,false,30000
+30008,0408992000,3,Unfit for human consumption,80,/uk/api/commodities/0408992000,Unfit for human consumption,1994-01-01 00:00:00 UTC,,true,30006
+30009,0408998000,3,Other,80,/uk/api/commodities/0408998000,Other,1994-01-01 00:00:00 UTC,,true,30006
+30011,0409000000,0,Natural honey,80,/uk/api/headings/0409,Natural honey,1972-01-01 00:00:00 UTC,,false,29417
+109080,0409000010,1,Mānuka honey,80,/uk/api/commodities/0409000010,Mānuka honey,2024-05-01 00:00:00 UTC,,true,30011
+109079,0409000090,1,Other,80,/uk/api/commodities/0409000090,Other,2024-05-01 00:00:00 UTC,,true,30011
+30012,0410000000,0,"Insects and other edible products of animal origin, not elsewhere specified or included",80,/uk/api/headings/0410,"Insects and other edible products of animal origin, not elsewhere specified or included",1972-01-01 00:00:00 UTC,,false,29417
+106504,0410100000,1,Insects,80,/uk/api/subheadings/0410100000-80,Insects,2022-01-01 00:00:00 UTC,,false,30012
+106505,0410101000,2,"Fresh, chilled or frozen, other than flours and meals",80,/uk/api/commodities/0410101000,"Fresh, chilled or frozen, other than flours and meals",2022-01-01 00:00:00 UTC,,true,106504
+106507,0410109100,2,Other,10,/uk/api/subheadings/0410109100-10,Other,2022-01-01 00:00:00 UTC,,false,106504
+106506,0410109100,3,Flours and meals,80,/uk/api/commodities/0410109100,Flours and meals,2022-01-01 00:00:00 UTC,,true,106507
+106508,0410109900,3,Other,80,/uk/api/commodities/0410109900,Other,2022-01-01 00:00:00 UTC,,true,106507
+106509,0410900000,1,Other,80,/uk/api/commodities/0410900000,Other,2022-01-01 00:00:00 UTC,,true,30012

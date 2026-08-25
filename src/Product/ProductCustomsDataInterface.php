@@ -11,7 +11,7 @@ use DateTimeImmutable;
  * The customs data a rule sees when it examines one product.
  *
  * Deliberately not a platform product object. A rule must not be able to reach
- * into a catalogue, load a related entity or trigger a database query - it is
+ * into a catalogue, load a related entity or trigger a database query — it is
  * a pure function over this data and a resolved commodity, which is what makes
  * the whole rule set testable with no framework present.
  *
@@ -97,4 +97,25 @@ interface ProductCustomsDataInterface
      * When a person last confirmed this product's customs data was correct.
      */
     public function verifiedAt(): ?DateTimeImmutable;
+
+    /**
+     * Measured properties of the goods, keyed by property name.
+     *
+     * What the tariff branches on, beyond weight. Chapter 22 splits 348 times
+     * on alcoholic strength and 43 on container volume; chapter 4 splits on
+     * fat content. A merchant who records those gets their candidate list
+     * narrowed the same way an apparel merchant does when they record a
+     * garment weight.
+     *
+     * An open map rather than fixed accessors, because the nomenclature
+     * measures dozens of things and a host that can supply one this package
+     * has not named should not have to wait for a release. See
+     * MeasuredProperty for the well-known keys.
+     *
+     * A condition on a property absent from this map never eliminates a
+     * candidate.
+     *
+     * @return array<string, float>
+     */
+    public function measuredProperties(): array;
 }

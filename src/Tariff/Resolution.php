@@ -17,9 +17,10 @@ final class Resolution
      *        Carries the official description, which is what makes a message
      *        like "620140 means 'Of man-made fibres'" possible.
      * @param list<Commodity> $candidates Declarable lines to choose between.
-     * @param bool $narrowedByWeight Whether net weight removed any candidate.
-     * @param int $candidatesBeforeNarrowing How many there were before weight
-     *        was applied, so the UI can say what the merchant's data bought them.
+     * @param bool $narrowedByMeasurement Whether a measured property removed any candidate.
+     * @param int $candidatesBeforeNarrowing How many there were before the
+     *        measurements were applied, so the UI can say what the merchant's
+     *        data bought them.
      */
     private function __construct(
         public readonly ResolutionOutcome $outcome,
@@ -27,7 +28,7 @@ final class Resolution
         public readonly ?Commodity $commodity = null,
         public readonly ?Commodity $matchedLine = null,
         public readonly array $candidates = [],
-        public readonly bool $narrowedByWeight = false,
+        public readonly bool $narrowedByMeasurement = false,
         public readonly int $candidatesBeforeNarrowing = 0,
     ) {
     }
@@ -36,7 +37,7 @@ final class Resolution
         string $code,
         Commodity $commodity,
         ?Commodity $matchedLine = null,
-        bool $narrowedByWeight = false,
+        bool $narrowedByMeasurement = false,
         int $candidatesBeforeNarrowing = 1,
     ): self {
         return new self(
@@ -45,7 +46,7 @@ final class Resolution
             $commodity,
             $matchedLine ?? $commodity,
             [],
-            $narrowedByWeight,
+            $narrowedByMeasurement,
             $candidatesBeforeNarrowing,
         );
     }
@@ -57,7 +58,7 @@ final class Resolution
         string $code,
         array $candidates,
         ?Commodity $matchedLine = null,
-        bool $narrowedByWeight = false,
+        bool $narrowedByMeasurement = false,
         int $candidatesBeforeNarrowing = 0,
     ): self {
         return new self(
@@ -66,7 +67,7 @@ final class Resolution
             null,
             $matchedLine,
             $candidates,
-            $narrowedByWeight,
+            $narrowedByMeasurement,
             $candidatesBeforeNarrowing !== 0 ? $candidatesBeforeNarrowing : count($candidates),
         );
     }
@@ -112,11 +113,11 @@ final class Resolution
     }
 
     /**
-     * How many candidates net weight eliminated.
+     * How many candidates the measurements eliminated.
      */
     public function candidatesEliminated(): int
     {
-        if (!$this->narrowedByWeight) {
+        if (!$this->narrowedByMeasurement) {
             return 0;
         }
 

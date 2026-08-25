@@ -1,0 +1,746 @@
+SID,Goods Nomenclature Item ID,Indents,Description,Product Line Suffix,Href,Formatted description,Start date,End date,Declarable,Parent SID
+34628,2200000000,0,"BEVERAGES, SPIRITS AND VINEGAR",80,/uk/api/chapters/22,"Beverages, spirits and vinegar",1971-12-31 00:00:00 UTC,,false,
+34629,2201000000,0,"Waters, including natural or artificial mineral waters and aerated waters, not containing added sugar or other sweetening matter nor flavoured; ice and snow",80,/uk/api/headings/2201,"Waters, including natural or artificial mineral waters and aerated waters, not containing added sugar or other sweetening matter nor flavoured; ice and snow",1972-01-01 00:00:00 UTC,,false,34628
+34630,2201100000,1,Mineral waters and aerated waters,80,/uk/api/subheadings/2201100000-80,Mineral waters and aerated waters,1972-01-01 00:00:00 UTC,,false,34629
+34631,2201101100,2,Natural mineral waters,10,/uk/api/subheadings/2201101100-10,Natural mineral waters,1992-01-01 00:00:00 UTC,,false,34630
+34632,2201101100,3,Not carbonated,80,/uk/api/commodities/2201101100,Not carbonated,1992-01-01 00:00:00 UTC,,true,34631
+34633,2201101900,3,Other,80,/uk/api/commodities/2201101900,Other,1992-01-01 00:00:00 UTC,,true,34631
+72302,2201109000,2,Other,80,/uk/api/commodities/2201109000,Other,2001-01-01 00:00:00 UTC,,true,34630
+34637,2201900000,1,Other,80,/uk/api/commodities/2201900000,Other,1972-01-01 00:00:00 UTC,,true,34629
+34638,2202000000,0,"Waters, including mineral waters and aerated waters, containing added sugar or other sweetening matter or flavoured, and other non-alcoholic beverages, not including fruit, nut or vegetable juices of heading 2009",80,/uk/api/headings/2202,"Waters, including mineral waters and aerated waters, containing added sugar or other sweetening matter or flavoured, and other non-alcoholic beverages, not including fruit, nut or vegetable juices of heading 2009",1972-01-01 00:00:00 UTC,,false,34628
+34639,2202100000,1,"Waters, including mineral waters and aerated waters, containing added sugar or other sweetening matter or flavoured",80,/uk/api/commodities/2202100000,"Waters, including mineral waters and aerated waters, containing added sugar or other sweetening matter or flavoured",1972-01-01 00:00:00 UTC,,true,34638
+101010,2202910000,1,Other,10,/uk/api/subheadings/2202910000-10,Other,2017-01-01 00:00:00 UTC,,false,34638
+100976,2202910000,2,Non-alcoholic beer,80,/uk/api/subheadings/2202910000-80,Non-alcoholic beer,2017-01-01 00:00:00 UTC,,false,101010
+101173,2202910010,3,Containing sugar (sucrose or invert sugar),80,/uk/api/commodities/2202910010,Containing sugar (sucrose or invert sugar),2017-01-01 00:00:00 UTC,,true,100976
+101174,2202910090,3,Other,80,/uk/api/commodities/2202910090,Other,2017-01-01 00:00:00 UTC,,true,100976
+100977,2202990000,2,Other,80,/uk/api/subheadings/2202990000-80,Other,2017-01-01 00:00:00 UTC,,false,101010
+100978,2202991100,3,Not containing products of headings 0401 to 0404 or fat obtained from products of headings 0401 to 0404,10,/uk/api/subheadings/2202991100-10,Not containing products of headings 0401 to 0404 or fat obtained from products of headings 0401 to 0404,2017-01-01 00:00:00 UTC,,false,100977
+100979,2202991100,4,"Soya-based beverages with a protein content of 2,8 % or more by weight",80,/uk/api/subheadings/2202991100-80,Soya-based beverages with a protein content of 2.8% or more by weight,2017-01-01 00:00:00 UTC,,false,100978
+100980,2202991111,5,Containing sugar (sucrose or invert sugar),10,/uk/api/subheadings/2202991111-10,Containing sugar (sucrose or invert sugar),2017-01-01 00:00:00 UTC,,false,100979
+100981,2202991111,6,Fruit juice or vegetable juice diluted with water or aerated,80,/uk/api/commodities/2202991111,Fruit juice or vegetable juice diluted with water or aerated,2017-01-01 00:00:00 UTC,,true,100980
+100982,2202991119,6,Other,80,/uk/api/commodities/2202991119,Other,2017-01-01 00:00:00 UTC,,true,100980
+100983,2202991191,5,Other,10,/uk/api/subheadings/2202991191-10,Other,2017-01-01 00:00:00 UTC,,false,100979
+100984,2202991191,6,Fruit juice or vegetable juice diluted with water or aerated,80,/uk/api/commodities/2202991191,Fruit juice or vegetable juice diluted with water or aerated,2017-01-01 00:00:00 UTC,,true,100983
+100985,2202991199,6,Other,80,/uk/api/commodities/2202991199,Other,2017-01-01 00:00:00 UTC,,true,100983
+100986,2202991500,4,"Soya-based beverages with a protein content of less than 2,8 % by weight; beverages based on nuts of Chapter 8, cereals of Chapter 10 or seeds of Chapter 12",80,/uk/api/subheadings/2202991500-80,"Soya-based beverages with a protein content of less than 2.8% by weight; beverages based on nuts of chapter 8, cereals of chapter 10 or seeds of chapter 12",2017-01-01 00:00:00 UTC,,false,100978
+100987,2202991511,5,Containing sugar (sucrose or invert sugar),10,/uk/api/subheadings/2202991511-10,Containing sugar (sucrose or invert sugar),2017-01-01 00:00:00 UTC,,false,100986
+100990,2202991511,6,Fruit juice or vegetable juice diluted with water or aerated,80,/uk/api/commodities/2202991511,Fruit juice or vegetable juice diluted with water or aerated,2017-01-01 00:00:00 UTC,,true,100987
+100988,2202991519,6,Other,80,/uk/api/commodities/2202991519,Other,2017-01-01 00:00:00 UTC,,true,100987
+100989,2202991591,5,Other,10,/uk/api/subheadings/2202991591-10,Other,2017-01-01 00:00:00 UTC,,false,100986
+100991,2202991591,6,Fruit juice or vegetable juice diluted with water or aerated,80,/uk/api/commodities/2202991591,Fruit juice or vegetable juice diluted with water or aerated,2017-01-01 00:00:00 UTC,,true,100989
+100992,2202991599,6,Other,80,/uk/api/commodities/2202991599,Other,2017-01-01 00:00:00 UTC,,true,100989
+100993,2202991900,4,Other,80,/uk/api/subheadings/2202991900-80,Other,2017-01-01 00:00:00 UTC,,false,100978
+100994,2202991911,5,Containing sugar (sucrose or invert sugar),10,/uk/api/subheadings/2202991911-10,Containing sugar (sucrose or invert sugar),2017-01-01 00:00:00 UTC,,false,100993
+100995,2202991911,6,Fruit juice or vegetable juice diluted with water or aerated,80,/uk/api/commodities/2202991911,Fruit juice or vegetable juice diluted with water or aerated,2017-01-01 00:00:00 UTC,,true,100994
+100996,2202991919,6,Other,80,/uk/api/commodities/2202991919,Other,2017-01-01 00:00:00 UTC,,true,100994
+100997,2202991991,5,Other,10,/uk/api/subheadings/2202991991-10,Other,2017-01-01 00:00:00 UTC,,false,100993
+100998,2202991991,6,Fruit juice or vegetable juice diluted with water or aerated,80,/uk/api/commodities/2202991991,Fruit juice or vegetable juice diluted with water or aerated,2017-01-01 00:00:00 UTC,,true,100997
+108252,2202991995,6,"De-alcoholised wine with an alcoholic strength by volume not exceeding 0,5%<br> vol.",80,/uk/api/commodities/2202991995,De-alcoholised wine with an alcoholic strength by volume not exceeding 0.5%<br> vol.,2022-04-30 00:00:00 UTC,,true,100997
+100999,2202991999,6,Other,80,/uk/api/commodities/2202991999,Other,2017-01-01 00:00:00 UTC,,true,100997
+101000,2202999100,3,"Other, containing by weight of fat obtained from the products of headings 0401 to 0404",10,/uk/api/subheadings/2202999100-10,"Other, containing by weight of fat obtained from the products of headings 0401 to 0404",2017-01-01 00:00:00 UTC,,false,100977
+101001,2202999100,4,"Less than 0,2 %",80,/uk/api/subheadings/2202999100-80,Less than 0.2%,2017-01-01 00:00:00 UTC,,false,101000
+101002,2202999110,5,Fruit juice or vegetable juice diluted with water or aerated,80,/uk/api/commodities/2202999110,Fruit juice or vegetable juice diluted with water or aerated,2017-01-01 00:00:00 UTC,,true,101001
+101003,2202999190,5,Other,80,/uk/api/commodities/2202999190,Other,2017-01-01 00:00:00 UTC,,true,101001
+101004,2202999500,4,"0,2 % or more but less than 2 %",80,/uk/api/subheadings/2202999500-80,0.2% or more but less than 2%,2017-01-01 00:00:00 UTC,,false,101000
+101005,2202999510,5,Fruit juice or vegetable juice diluted with water or aerated,80,/uk/api/commodities/2202999510,Fruit juice or vegetable juice diluted with water or aerated,2017-01-01 00:00:00 UTC,,true,101004
+101006,2202999590,5,Other,80,/uk/api/commodities/2202999590,Other,2017-01-01 00:00:00 UTC,,true,101004
+101007,2202999900,4,2 % or more,80,/uk/api/subheadings/2202999900-80,2% or more,2017-01-01 00:00:00 UTC,,false,101000
+101008,2202999910,5,Fruit juice or vegetable juice diluted with water or aerated,80,/uk/api/commodities/2202999910,Fruit juice or vegetable juice diluted with water or aerated,2017-01-01 00:00:00 UTC,,true,101007
+101009,2202999990,5,Other,80,/uk/api/commodities/2202999990,Other,2017-01-01 00:00:00 UTC,,true,101007
+34648,2203000000,0,Beer made from malt,80,/uk/api/headings/2203,Beer made from malt,1972-01-01 00:00:00 UTC,,false,34628
+34649,2203000100,1,In containers holding 10 litres or less,10,/uk/api/subheadings/2203000100-10,In containers holding 10 litres or less,1994-01-01 00:00:00 UTC,,false,34648
+34650,2203000100,2,In bottles,80,/uk/api/commodities/2203000100,In bottles,1994-01-01 00:00:00 UTC,,true,34649
+34651,2203000900,2,Other,80,/uk/api/commodities/2203000900,Other,1994-01-01 00:00:00 UTC,,true,34649
+34652,2203001000,1,In containers holding more than 10 litres,80,/uk/api/commodities/2203001000,In containers holding more than 10 litres,1972-01-01 00:00:00 UTC,,true,34648
+34654,2204000000,0,"Wine of fresh grapes, including fortified wines; grape must other than that of heading 2009",80,/uk/api/headings/2204,"Wine of fresh grapes, including fortified wines; grape must other than that of heading 2009",1972-01-01 00:00:00 UTC,,false,34628
+34655,2204100000,1,Sparkling wine,80,/uk/api/subheadings/2204100000-80,Sparkling wine,1972-01-01 00:00:00 UTC,,false,34654
+34656,2204101100,2,With a protected designation of origin (PDO),10,/uk/api/subheadings/2204101100-10,With a protected designation of origin (pdo),1972-01-01 00:00:00 UTC,,false,34655
+34657,2204101100,3,Champagne,80,/uk/api/commodities/2204101100,Champagne,1972-01-01 00:00:00 UTC,,true,34656
+101011,2204101300,3,Cava,80,/uk/api/commodities/2204101300,Cava,2017-01-01 00:00:00 UTC,,true,34656
+101012,2204101500,3,Prosecco,80,/uk/api/commodities/2204101500,Prosecco,2017-01-01 00:00:00 UTC,,true,34656
+34669,2204109100,3,Asti spumante,80,/uk/api/commodities/2204109100,Asti spumante,1994-01-01 00:00:00 UTC,,true,34656
+91991,2204109300,3,Other,80,/uk/api/subheadings/2204109300-80,Other,2010-01-01 00:00:00 UTC,,false,34656
+110726,2204109310,4,Of a FOB value per litre equal or higher than 8 USD,80,/uk/api/commodities/2204109310,Of a fob value per litre equal or higher than 8 usd,2026-05-01 00:00:00 UTC,,true,91991
+110722,2204109390,4,Other,80,/uk/api/commodities/2204109390,Other,2026-05-01 00:00:00 UTC,,true,91991
+91989,2204109400,2,With a protected geographical indication (PGI),80,/uk/api/subheadings/2204109400-80,With a protected geographical indication (pgi),2010-01-01 00:00:00 UTC,,false,34655
+110727,2204109410,3,Of a FOB value per litre equal or higher than 8 USD,80,/uk/api/commodities/2204109410,Of a fob value per litre equal or higher than 8 usd,2026-05-01 00:00:00 UTC,,true,91989
+110723,2204109490,3,Other,80,/uk/api/commodities/2204109490,Other,2026-05-01 00:00:00 UTC,,true,91989
+91990,2204109600,2,Other varietal wines,80,/uk/api/subheadings/2204109600-80,Other varietal wines,2010-01-01 00:00:00 UTC,,false,34655
+110728,2204109610,3,Of a FOB value per litre equal or higher than 8 USD,80,/uk/api/commodities/2204109610,Of a fob value per litre equal or higher than 8 usd,2026-05-01 00:00:00 UTC,,true,91990
+110724,2204109690,3,Other,80,/uk/api/commodities/2204109690,Other,2026-05-01 00:00:00 UTC,,true,91990
+91988,2204109800,2,Other,80,/uk/api/subheadings/2204109800-80,Other,2010-01-01 00:00:00 UTC,,false,34655
+110729,2204109810,3,Of a FOB value per litre equal or higher than 8 USD,80,/uk/api/commodities/2204109810,Of a fob value per litre equal or higher than 8 usd,2026-05-01 00:00:00 UTC,,true,91988
+110725,2204109890,3,Other,80,/uk/api/commodities/2204109890,Other,2026-05-01 00:00:00 UTC,,true,91988
+34675,2204210000,1,Other wine; grape must with fermentation prevented or arrested by the addition of alcohol,10,/uk/api/subheadings/2204210000-10,Other wine; grape must with fermentation prevented or arrested by the addition of alcohol,1972-01-01 00:00:00 UTC,,false,34654
+34676,2204210000,2,In containers holding 2 litres or less,80,/uk/api/subheadings/2204210000-80,In containers holding 2 litres or less,1972-01-01 00:00:00 UTC,,false,34675
+91914,2204210600,3,"Wine, other than that referred to in subheading 2204 10, in bottles with 'mushroom' stoppers held in place by ties or fastenings; wine, otherwise put up, with an excess pressure due to carbon dioxide in solution of not less than 1 bar but less than 3 bar, measured at a temperature of 20 °C",10,/uk/api/subheadings/2204210600-10,"Wine, other than that referred to in subheading 2204 10, in bottles with 'mushroom' stoppers held in place by ties or fastenings; wine, otherwise put up, with an excess pressure due to carbon dioxide in solution of not less than 1 bar but less than 3 bar, measured at a temperature of 20 °c",2010-01-01 00:00:00 UTC,,false,34676
+91915,2204210600,4,With a protected designation of origin (PDO),80,/uk/api/commodities/2204210600,With a protected designation of origin (pdo),2010-01-01 00:00:00 UTC,,true,91914
+91916,2204210700,4,With a protected geographical indication (PGI),80,/uk/api/commodities/2204210700,With a protected geographical indication (pgi),2010-01-01 00:00:00 UTC,,true,91914
+91917,2204210800,4,Other varietal wines,80,/uk/api/commodities/2204210800,Other varietal wines,2010-01-01 00:00:00 UTC,,true,91914
+91918,2204210900,4,Other,80,/uk/api/commodities/2204210900,Other,2010-01-01 00:00:00 UTC,,true,91914
+55019,2204211100,3,Other,10,/uk/api/subheadings/2204211100-10,Other,1995-01-01 00:00:00 UTC,,false,34676
+55020,2204211100,4,Produced in the European Union,20,/uk/api/subheadings/2204211100-20,Produced in the european union,1995-01-01 00:00:00 UTC,,false,55019
+55021,2204211100,5,Of an actual alcoholic strength by volume not exceeding 15 % vol,30,/uk/api/subheadings/2204211100-30,Of an actual alcoholic strength by volume not exceeding 15% vol,1995-01-01 00:00:00 UTC,,false,55020
+55022,2204211100,6,Wine with a protected designation of origin (PDO),40,/uk/api/subheadings/2204211100-40,Wine with a protected designation of origin (pdo),1995-01-01 00:00:00 UTC,,false,55021
+91919,2204211100,7,White,50,/uk/api/subheadings/2204211100-50,White,2010-01-01 00:00:00 UTC,,false,55022
+54804,2204211100,8,Alsace,80,/uk/api/subheadings/2204211100-80,Alsace,1995-01-01 00:00:00 UTC,,false,91919
+91921,2204211110,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204211110,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54804
+91955,2204211190,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204211190,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54804
+54805,2204211200,8,Bordeaux,80,/uk/api/subheadings/2204211200-80,Bordeaux,1995-01-01 00:00:00 UTC,,false,91919
+91922,2204211210,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204211210,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54805
+91956,2204211290,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204211290,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54805
+54806,2204211300,8,Bourgogne (Burgundy),80,/uk/api/subheadings/2204211300-80,Bourgogne (burgundy),1995-01-01 00:00:00 UTC,,false,91919
+91923,2204211310,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204211310,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54806
+91957,2204211390,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204211390,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54806
+54807,2204211700,8,Val de Loire (Loire Valley),80,/uk/api/subheadings/2204211700-80,Val de loire (loire valley),1995-01-01 00:00:00 UTC,,false,91919
+91924,2204211710,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204211710,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54807
+91958,2204211790,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204211790,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54807
+54809,2204211800,8,Mosel,80,/uk/api/subheadings/2204211800-80,Mosel,1995-01-01 00:00:00 UTC,,false,91919
+91925,2204211810,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204211810,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54809
+91959,2204211890,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204211890,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54809
+54810,2204211900,8,Pfalz,80,/uk/api/subheadings/2204211900-80,Pfalz,1995-01-01 00:00:00 UTC,,false,91919
+91926,2204211910,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204211910,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54810
+91960,2204211990,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204211990,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54810
+54811,2204212200,8,Rheinhessen,80,/uk/api/subheadings/2204212200-80,Rheinhessen,1995-01-01 00:00:00 UTC,,false,91919
+91927,2204212210,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204212210,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54811
+91961,2204212290,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204212290,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54811
+81154,2204212300,8,Tokaj,80,/uk/api/subheadings/2204212300-80,Tokaj,2005-01-01 00:00:00 UTC,,false,91919
+91928,2204212310,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204212310,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,81154
+91962,2204212390,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204212390,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,81154
+54813,2204212400,8,Lazio (Latium),80,/uk/api/subheadings/2204212400-80,Lazio (latium),1995-01-01 00:00:00 UTC,,false,91919
+91929,2204212410,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204212410,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54813
+91963,2204212490,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204212490,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54813
+54815,2204212600,8,Toscana (Tuscany),80,/uk/api/subheadings/2204212600-80,Toscana (tuscany),1995-01-01 00:00:00 UTC,,false,91919
+91930,2204212610,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204212610,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54815
+91964,2204212690,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204212690,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54815
+54816,2204212700,8,"Trentino, Alto Adige and Friuli",80,/uk/api/subheadings/2204212700-80,"Trentino, alto adige and friuli",1995-01-01 00:00:00 UTC,,false,91919
+91931,2204212710,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204212710,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54816
+91965,2204212790,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204212790,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54816
+54817,2204212800,8,Veneto,80,/uk/api/subheadings/2204212800-80,Veneto,1995-01-01 00:00:00 UTC,,false,91919
+91932,2204212810,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204212810,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54817
+91966,2204212890,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204212890,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54817
+101013,2204213100,8,Sicilia,80,/uk/api/subheadings/2204213100-80,Sicilia,2017-01-01 00:00:00 UTC,,false,91919
+101014,2204213110,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204213110,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101013
+101015,2204213190,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204213190,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101013
+54818,2204213200,8,Vinho Verde,80,/uk/api/subheadings/2204213200-80,Vinho verde,1995-01-01 00:00:00 UTC,,false,91919
+91933,2204213210,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204213210,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54818
+91967,2204213290,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204213290,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54818
+54819,2204213400,8,Penedés,80,/uk/api/subheadings/2204213400-80,Penedés,1995-01-01 00:00:00 UTC,,false,91919
+91934,2204213410,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204213410,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54819
+91968,2204213490,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204213490,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54819
+54821,2204213600,8,Rioja,80,/uk/api/subheadings/2204213600-80,Rioja,1995-01-01 00:00:00 UTC,,false,91919
+91935,2204213610,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204213610,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54821
+91969,2204213690,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204213690,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54821
+54822,2204213700,8,Valencia,80,/uk/api/subheadings/2204213700-80,Valencia,1995-01-01 00:00:00 UTC,,false,91919
+91936,2204213710,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204213710,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54822
+91970,2204213790,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204213790,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54822
+55123,2204213800,8,Other,80,/uk/api/subheadings/2204213800-80,Other,1995-01-01 00:00:00 UTC,,false,91919
+91937,2204213810,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204213810,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,55123
+91971,2204213890,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204213890,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,55123
+55124,2204214200,7,Other,10,/uk/api/subheadings/2204214200-10,Other,1995-01-01 00:00:00 UTC,,false,55022
+54876,2204214200,8,Bordeaux,80,/uk/api/subheadings/2204214200-80,Bordeaux,1995-01-01 00:00:00 UTC,,false,55124
+91938,2204214210,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204214210,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54876
+91972,2204214290,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204214290,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54876
+54879,2204214300,8,Bourgogne (Burgundy),80,/uk/api/subheadings/2204214300-80,Bourgogne (burgundy),1995-01-01 00:00:00 UTC,,false,55124
+91939,2204214310,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204214310,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54879
+91973,2204214390,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204214390,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54879
+54890,2204214400,8,Beaujolais,80,/uk/api/subheadings/2204214400-80,Beaujolais,1995-01-01 00:00:00 UTC,,false,55124
+91940,2204214410,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204214410,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54890
+91974,2204214490,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204214490,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54890
+54891,2204214600,8,Vallée du Rhône,80,/uk/api/subheadings/2204214600-80,Vallée du rhône,1995-01-01 00:00:00 UTC,,false,55124
+91941,2204214610,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204214610,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54891
+91975,2204214690,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204214690,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54891
+54893,2204214700,8,Languedoc-Roussillon,80,/uk/api/subheadings/2204214700-80,Languedoc-roussillon,1995-01-01 00:00:00 UTC,,false,55124
+91942,2204214710,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204214710,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54893
+91976,2204214790,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204214790,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54893
+54894,2204214800,8,Val de Loire (Loire Valley),80,/uk/api/subheadings/2204214800-80,Val de loire (loire valley),1995-01-01 00:00:00 UTC,,false,55124
+91943,2204214810,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204214810,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54894
+91977,2204214890,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204214890,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54894
+101016,2204216100,8,Sicilia,80,/uk/api/subheadings/2204216100-80,Sicilia,2017-01-01 00:00:00 UTC,,false,55124
+101017,2204216110,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204216110,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101016
+101018,2204216190,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204216190,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101016
+54898,2204216200,8,Piemonte (Piedmont),80,/uk/api/subheadings/2204216200-80,Piemonte (piedmont),1995-01-01 00:00:00 UTC,,false,55124
+91944,2204216210,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204216210,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54898
+91978,2204216290,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204216290,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54898
+54904,2204216600,8,Toscana (Tuscany),80,/uk/api/subheadings/2204216600-80,Toscana (tuscany),1995-01-01 00:00:00 UTC,,false,55124
+91945,2204216610,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204216610,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54904
+91979,2204216690,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204216690,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54904
+54906,2204216700,8,Trentino and Alto Adige,80,/uk/api/subheadings/2204216700-80,Trentino and alto adige,1995-01-01 00:00:00 UTC,,false,55124
+91946,2204216710,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204216710,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54906
+91980,2204216790,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204216790,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54906
+54907,2204216800,8,Veneto,80,/uk/api/subheadings/2204216800-80,Veneto,1995-01-01 00:00:00 UTC,,false,55124
+91947,2204216810,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204216810,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54907
+91981,2204216890,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204216890,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54907
+54908,2204216900,8,"Dão, Bairrada and Douro",80,/uk/api/subheadings/2204216900-80,"Dão, bairrada and douro",1995-01-01 00:00:00 UTC,,false,55124
+91948,2204216910,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204216910,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54908
+91982,2204216990,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204216990,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54908
+54909,2204217100,8,Navarra,80,/uk/api/subheadings/2204217100-80,Navarra,1995-01-01 00:00:00 UTC,,false,55124
+91950,2204217110,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204217110,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54909
+91983,2204217190,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204217190,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54909
+54910,2204217400,8,Penedés,80,/uk/api/subheadings/2204217400-80,Penedés,1995-01-01 00:00:00 UTC,,false,55124
+91951,2204217410,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204217410,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54910
+91984,2204217490,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204217490,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54910
+54911,2204217600,8,Rioja,80,/uk/api/subheadings/2204217600-80,Rioja,1995-01-01 00:00:00 UTC,,false,55124
+91952,2204217610,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204217610,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54911
+91985,2204217690,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204217690,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54911
+54912,2204217700,8,Valdepeñas,80,/uk/api/subheadings/2204217700-80,Valdepeñas,1995-01-01 00:00:00 UTC,,false,55124
+91953,2204217710,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204217710,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54912
+91986,2204217790,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204217790,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54912
+55125,2204217800,8,Other,80,/uk/api/subheadings/2204217800-80,Other,1995-01-01 00:00:00 UTC,,false,55124
+91954,2204217810,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204217810,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,55125
+91987,2204217890,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204217890,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,55125
+54929,2204217900,6,Wine with a protected geographical indication (PGI),10,/uk/api/subheadings/2204217900-10,Wine with a protected geographical indication (pgi),1995-01-01 00:00:00 UTC,,false,55021
+55075,2204217900,7,White,80,/uk/api/subheadings/2204217900-80,White,1995-01-01 00:00:00 UTC,,false,54929
+92445,2204217910,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204217910,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,55075
+92050,2204217990,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204217990,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,55075
+55076,2204218000,7,Other,80,/uk/api/subheadings/2204218000-80,Other,1995-01-01 00:00:00 UTC,,false,54929
+92124,2204218010,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204218010,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,55076
+92125,2204218090,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204218090,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,55076
+55077,2204218100,6,Other varietal wines,10,/uk/api/subheadings/2204218100-10,Other varietal wines,1995-01-01 00:00:00 UTC,,false,55021
+55079,2204218100,7,White,80,/uk/api/subheadings/2204218100-80,White,1995-01-01 00:00:00 UTC,,false,55077
+92009,2204218110,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204218110,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,55079
+92008,2204218190,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204218190,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,55079
+55080,2204218200,7,Other,80,/uk/api/subheadings/2204218200-80,Other,1995-01-01 00:00:00 UTC,,false,55077
+92010,2204218210,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204218210,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,55080
+92011,2204218290,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204218290,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,55080
+92004,2204218300,6,Other,10,/uk/api/subheadings/2204218300-10,Other,2010-01-01 00:00:00 UTC,,false,55021
+55082,2204218300,7,White,80,/uk/api/subheadings/2204218300-80,White,1995-01-01 00:00:00 UTC,,false,92004
+92013,2204218310,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204218310,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,55082
+92012,2204218390,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204218390,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,55082
+55083,2204218400,7,Other,80,/uk/api/subheadings/2204218400-80,Other,1995-01-01 00:00:00 UTC,,false,92004
+92015,2204218410,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204218410,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,55083
+92014,2204218490,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204218490,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,55083
+92016,2204218500,5,Of an actual alcoholic strength by volume exceeding 15 % vol,10,/uk/api/subheadings/2204218500-10,Of an actual alcoholic strength by volume exceeding 15% vol,2010-01-01 00:00:00 UTC,,false,55020
+92017,2204218500,6,Wine with a protected designation of origin (PDO) or a protected geographical indication (PGI),20,/uk/api/subheadings/2204218500-20,Wine with a protected designation of origin (pdo) or a protected geographical indication (pgi),2010-01-01 00:00:00 UTC,,false,92016
+81084,2204218500,7,Madeira and Setubal muscatel,80,/uk/api/subheadings/2204218500-80,Madeira and setubal muscatel,2005-01-01 00:00:00 UTC,,false,92017
+92018,2204218510,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204218510,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,81084
+92019,2204218590,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204218590,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,81084
+101019,2204218595,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204218595,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,81084
+92020,2204218600,7,Sherry,80,/uk/api/subheadings/2204218600-80,Sherry,2010-01-01 00:00:00 UTC,,false,92017
+92021,2204218610,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204218610,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,92020
+92022,2204218690,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204218690,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92020
+101020,2204218695,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204218695,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,92020
+54914,2204218700,7,Marsala,80,/uk/api/subheadings/2204218700-80,Marsala,1995-01-01 00:00:00 UTC,,false,92017
+92023,2204218710,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204218710,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,54914
+92024,2204218790,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204218790,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,54914
+101021,2204218795,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204218795,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,54914
+54915,2204218800,7,Samos and Muscat de Lemnos,80,/uk/api/subheadings/2204218800-80,Samos and muscat de lemnos,1995-01-01 00:00:00 UTC,,false,92017
+92025,2204218810,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204218810,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,54915
+92026,2204218890,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204218890,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,54915
+101022,2204218895,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204218895,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,54915
+54916,2204218900,7,Port,80,/uk/api/subheadings/2204218900-80,Port,1995-01-01 00:00:00 UTC,,false,92017
+92027,2204218910,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204218910,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,54916
+92028,2204218990,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204218990,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,54916
+101023,2204218995,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204218995,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,54916
+92029,2204219000,7,Other,80,/uk/api/subheadings/2204219000-80,Other,2010-01-01 00:00:00 UTC,,false,92017
+92030,2204219010,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204219010,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,92029
+92031,2204219090,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204219090,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92029
+101024,2204219095,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204219095,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,92029
+92032,2204219100,6,Other,80,/uk/api/subheadings/2204219100-80,Other,2010-01-01 00:00:00 UTC,,false,92016
+92033,2204219110,7,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204219110,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,92032
+92034,2204219190,7,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204219190,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92032
+101025,2204219195,7,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204219195,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,92032
+92036,2204219300,4,Other,10,/uk/api/subheadings/2204219300-10,Other,2010-01-01 00:00:00 UTC,,false,55019
+92037,2204219300,5,Wine with a protected designation of origin (PDO) or a protected geographical indication (PGI),20,/uk/api/subheadings/2204219300-20,Wine with a protected designation of origin (pdo) or a protected geographical indication (pgi),2010-01-01 00:00:00 UTC,,false,92036
+92038,2204219300,6,White,80,/uk/api/subheadings/2204219300-80,White,2010-01-01 00:00:00 UTC,,false,92037
+92039,2204219311,7,Of an actual alcoholic strength by volume not exceeding 13 % vol,10,/uk/api/subheadings/2204219311-10,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,false,92038
+92040,2204219311,8,"Aïn Bessem-Bouira, Médéa, Coteaux du Zaccar, Dahra, Coteaux de Mascara, Monts du Tessalah, Coteaux de Tlemcen",80,/uk/api/commodities/2204219311,"Aïn bessem-bouira, médéa, coteaux du zaccar, dahra, coteaux de mascara, monts du tessalah, coteaux de tlemcen",2010-01-01 00:00:00 UTC,,true,92039
+92041,2204219312,8,"Berkane, Saïs, Beni M'Tir, Guerrouane, Zemmour, Zennata",80,/uk/api/commodities/2204219312,"Berkane, saïs, beni m'tir, guerrouane, zemmour, zennata",2010-01-01 00:00:00 UTC,,true,92039
+92042,2204219313,8,"Coteaux d'Utique, Kelibia, Thibar, Mornag",80,/uk/api/commodities/2204219313,"Coteaux d'utique, kelibia, thibar, mornag",2010-01-01 00:00:00 UTC,,true,92039
+92043,2204219319,8,Other,80,/uk/api/commodities/2204219319,Other,2010-01-01 00:00:00 UTC,,true,92039
+92044,2204219321,7,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,10,/uk/api/subheadings/2204219321-10,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,false,92038
+92045,2204219321,8,"Aïn Bessem-Bouira, Médéa, Coteaux du Zaccar, Dahra, Coteaux de Mascara, Monts du Tessalah, Coteaux de Tlemcen",80,/uk/api/commodities/2204219321,"Aïn bessem-bouira, médéa, coteaux du zaccar, dahra, coteaux de mascara, monts du tessalah, coteaux de tlemcen",2010-01-01 00:00:00 UTC,,true,92044
+92046,2204219322,8,"Berkane, Saïs, Beni M'Tir, Guerrouane, Zemmour, Zennata",80,/uk/api/commodities/2204219322,"Berkane, saïs, beni m'tir, guerrouane, zemmour, zennata",2010-01-01 00:00:00 UTC,,true,92044
+92047,2204219323,8,"Coteaux d'Utique, Kelibia, Thibar, Mornag",80,/uk/api/commodities/2204219323,"Coteaux d'utique, kelibia, thibar, mornag",2010-01-01 00:00:00 UTC,,true,92044
+92048,2204219329,8,Other,80,/uk/api/commodities/2204219329,Other,2010-01-01 00:00:00 UTC,,true,92044
+92075,2204219331,7,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204219331,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,92038
+92076,2204219341,7,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204219341,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92038
+92079,2204219351,7,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204219351,Of an actual alcoholic strength by volume exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92038
+55085,2204219400,6,Other,80,/uk/api/subheadings/2204219400-80,Other,1995-01-01 00:00:00 UTC,,false,92037
+92061,2204219411,7,Wine of fresh grapes,10,/uk/api/subheadings/2204219411-10,Wine of fresh grapes,2010-01-01 00:00:00 UTC,,false,55085
+92062,2204219411,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,20,/uk/api/subheadings/2204219411-20,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,false,92061
+92052,2204219411,9,"Aïn Bessem-Bouira, Médéa, Coteaux du Zaccar, Dahra, Coteaux de Mascara, Monts du Tessalah, Coteaux de Tlemcen",80,/uk/api/commodities/2204219411,"Aïn bessem-bouira, médéa, coteaux du zaccar, dahra, coteaux de mascara, monts du tessalah, coteaux de tlemcen",2010-01-01 00:00:00 UTC,,true,92062
+92053,2204219412,9,"Berkane, Saïs, Beni M'Tir, Guerrouane, Zemmour, Zennata",80,/uk/api/commodities/2204219412,"Berkane, saïs, beni m'tir, guerrouane, zemmour, zennata",2010-01-01 00:00:00 UTC,,true,92062
+92054,2204219413,9,"Coteaux de Tebourba, Coteaux d'Utique, Sidi-Salem, Thibar, Mornag, grand cru Mornag",80,/uk/api/commodities/2204219413,"Coteaux de tebourba, coteaux d'utique, sidi-salem, thibar, mornag, grand cru mornag",2010-01-01 00:00:00 UTC,,true,92062
+92055,2204219419,9,Other,80,/uk/api/commodities/2204219419,Other,2010-01-01 00:00:00 UTC,,true,92062
+92056,2204219421,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,10,/uk/api/subheadings/2204219421-10,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,false,92061
+92057,2204219421,9,"Aïn Bessem-Bouira, Médéa, Coteaux du Zaccar, Dahra, Coteaux de Mascara, Monts du Tessalah, Coteaux de Tlemcen",80,/uk/api/commodities/2204219421,"Aïn bessem-bouira, médéa, coteaux du zaccar, dahra, coteaux de mascara, monts du tessalah, coteaux de tlemcen",2010-01-01 00:00:00 UTC,,true,92056
+92058,2204219422,9,"Berkane, Saïs, Beni M'Tir, Guerrouane, Zemmour, Zennata",80,/uk/api/commodities/2204219422,"Berkane, saïs, beni m'tir, guerrouane, zemmour, zennata",2010-01-01 00:00:00 UTC,,true,92056
+92059,2204219423,9,"Coteaux de Tebourba, Coteaux d'Utique, Sidi-Salem, Thibar, Mornag, grand cru Mornag",80,/uk/api/commodities/2204219423,"Coteaux de tebourba, coteaux d'utique, sidi-salem, thibar, mornag, grand cru mornag",2010-01-01 00:00:00 UTC,,true,92056
+92060,2204219429,9,Other,80,/uk/api/commodities/2204219429,Other,2010-01-01 00:00:00 UTC,,true,92056
+92078,2204219431,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204219431,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,92061
+92077,2204219441,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204219441,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92061
+92080,2204219451,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204219451,Of an actual alcoholic strength by volume exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92061
+92082,2204219461,7,Other,10,/uk/api/subheadings/2204219461-10,Other,2010-01-01 00:00:00 UTC,,false,55085
+92083,2204219461,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204219461,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,92082
+92084,2204219471,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204219471,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,92082
+92085,2204219481,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204219481,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,92082
+92086,2204219491,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204219491,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92082
+92087,2204219495,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204219495,Of an actual alcoholic strength by volume exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92082
+55086,2204219500,5,Other varietal wines,10,/uk/api/subheadings/2204219500-10,Other varietal wines,1995-01-01 00:00:00 UTC,,false,92036
+54920,2204219500,6,White,80,/uk/api/subheadings/2204219500-80,White,1995-01-01 00:00:00 UTC,,false,55086
+92071,2204219511,7,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204219511,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,54920
+92072,2204219521,7,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204219521,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,54920
+92073,2204219531,7,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204219531,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,54920
+92074,2204219541,7,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204219541,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,54920
+92081,2204219551,7,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204219551,Of an actual alcoholic strength by volume exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,54920
+92089,2204219600,6,Other,80,/uk/api/subheadings/2204219600-80,Other,2010-01-01 00:00:00 UTC,,false,55086
+92090,2204219611,7,Wine of fresh grapes,10,/uk/api/subheadings/2204219611-10,Wine of fresh grapes,2010-01-01 00:00:00 UTC,,false,92089
+92091,2204219611,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204219611,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,92090
+92092,2204219621,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204219621,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,92090
+92093,2204219631,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204219631,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,92090
+92094,2204219641,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204219641,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92090
+92095,2204219651,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204219651,Of an actual alcoholic strength by volume exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92090
+92096,2204219661,7,Other,10,/uk/api/subheadings/2204219661-10,Other,2010-01-01 00:00:00 UTC,,false,92089
+92097,2204219661,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204219661,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,92096
+92098,2204219671,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204219671,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,92096
+92099,2204219681,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204219681,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,92096
+92100,2204219691,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204219691,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92096
+92101,2204219695,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204219695,Of an actual alcoholic strength by volume exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92096
+92102,2204219700,5,Other,10,/uk/api/subheadings/2204219700-10,Other,2010-01-01 00:00:00 UTC,,false,92036
+92103,2204219700,6,White,80,/uk/api/subheadings/2204219700-80,White,2010-01-01 00:00:00 UTC,,false,92102
+92104,2204219711,7,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204219711,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,92103
+92105,2204219721,7,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204219721,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,92103
+92106,2204219731,7,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204219731,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,92103
+92107,2204219741,7,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204219741,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92103
+92108,2204219751,7,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204219751,Of an actual alcoholic strength by volume exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92103
+55087,2204219800,6,Other,80,/uk/api/subheadings/2204219800-80,Other,1995-01-01 00:00:00 UTC,,false,92102
+92109,2204219811,7,Wine of fresh grapes,10,/uk/api/subheadings/2204219811-10,Wine of fresh grapes,2010-01-01 00:00:00 UTC,,false,55087
+92110,2204219811,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204219811,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,92109
+92111,2204219821,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204219821,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,92109
+92112,2204219831,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204219831,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,92109
+92113,2204219841,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204219841,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92109
+92114,2204219851,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204219851,Of an actual alcoholic strength by volume exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92109
+92115,2204219861,7,Other,10,/uk/api/subheadings/2204219861-10,Other,2010-01-01 00:00:00 UTC,,false,55087
+92116,2204219861,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204219861,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,92115
+92117,2204219871,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204219871,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,92115
+92118,2204219881,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204219881,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,92115
+92119,2204219891,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204219891,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92115
+92120,2204219895,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204219895,Of an actual alcoholic strength by volume exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92115
+101026,2204220000,2,In containers holding more than 2 litres but not more than 10 litres,80,/uk/api/subheadings/2204220000-80,In containers holding more than 2 litres but not more than 10 litres,2017-01-01 00:00:00 UTC,,false,34675
+101027,2204221000,3,"Wine, other than that referred to in subheading 2204 10, in bottles with 'mushroom' stoppers held in place by ties or fastenings; wine, otherwise put up, with an excess pressure due to carbon dioxide in solution of not less than 1 bar but less than 3 bar, measured at a temperature of 20 °C",80,/uk/api/commodities/2204221000,"Wine, other than that referred to in subheading 2204 10, in bottles with 'mushroom' stoppers held in place by ties or fastenings; wine, otherwise put up, with an excess pressure due to carbon dioxide in solution of not less than 1 bar but less than 3 bar, measured at a temperature of 20 °c",2017-01-01 00:00:00 UTC,,true,101026
+101028,2204222200,3,Other,10,/uk/api/subheadings/2204222200-10,Other,2017-01-01 00:00:00 UTC,,false,101026
+101029,2204222200,4,Produced in the European Union,20,/uk/api/subheadings/2204222200-20,Produced in the european union,2017-01-01 00:00:00 UTC,,false,101028
+101030,2204222200,5,Of an actual alcoholic strength by volume not exceeding 15 % vol,30,/uk/api/subheadings/2204222200-30,Of an actual alcoholic strength by volume not exceeding 15% vol,2017-01-01 00:00:00 UTC,,false,101029
+101031,2204222200,6,Wine with a protected designation of origin (PDO),40,/uk/api/subheadings/2204222200-40,Wine with a protected designation of origin (pdo),2017-01-01 00:00:00 UTC,,false,101030
+101032,2204222200,7,Bordeaux,80,/uk/api/subheadings/2204222200-80,Bordeaux,2017-01-01 00:00:00 UTC,,false,101031
+101033,2204222210,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204222210,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101032
+101034,2204222290,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204222290,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101032
+101035,2204222300,7,Bourgogne (Burgundy),80,/uk/api/subheadings/2204222300-80,Bourgogne (burgundy),2017-01-01 00:00:00 UTC,,false,101031
+101036,2204222310,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204222310,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101035
+101037,2204222390,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204222390,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101035
+101038,2204222400,7,Beaujolais,80,/uk/api/subheadings/2204222400-80,Beaujolais,2017-01-01 00:00:00 UTC,,false,101031
+101039,2204222410,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204222410,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101038
+101040,2204222490,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204222490,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101038
+101041,2204222600,7,Vallée du Rhône,80,/uk/api/subheadings/2204222600-80,Vallée du rhône,2017-01-01 00:00:00 UTC,,false,101031
+101042,2204222610,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204222610,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101041
+101043,2204222690,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204222690,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101041
+101045,2204222700,7,Languedoc-Roussillon,80,/uk/api/subheadings/2204222700-80,Languedoc-roussillon,2017-01-01 00:00:00 UTC,,false,101031
+101046,2204222710,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204222710,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101045
+101047,2204222790,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204222790,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101045
+101048,2204222800,7,Val de Loire (Loire Valley),80,/uk/api/subheadings/2204222800-80,Val de loire (loire valley),2017-01-01 00:00:00 UTC,,false,101031
+101052,2204222810,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204222810,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101048
+101053,2204222890,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204222890,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101048
+101054,2204223200,7,Piemonte (Piedmont),80,/uk/api/subheadings/2204223200-80,Piemonte (piedmont),2017-01-01 00:00:00 UTC,,false,101031
+101055,2204223210,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204223210,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101054
+101056,2204223290,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204223290,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101054
+101057,2204223300,7,Tokaj,80,/uk/api/subheadings/2204223300-80,Tokaj,2017-01-01 00:00:00 UTC,,false,101031
+101058,2204223310,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204223310,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101057
+101059,2204223390,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204223390,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101057
+101060,2204223800,7,Other,10,/uk/api/subheadings/2204223800-10,Other,2017-01-01 00:00:00 UTC,,false,101031
+101061,2204223800,8,White,80,/uk/api/subheadings/2204223800-80,White,2017-01-01 00:00:00 UTC,,false,101060
+101062,2204223810,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204223810,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101061
+101063,2204223890,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204223890,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101061
+101065,2204227800,8,Other,80,/uk/api/subheadings/2204227800-80,Other,2017-01-01 00:00:00 UTC,,false,101060
+101066,2204227810,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204227810,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101065
+101067,2204227890,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204227890,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101065
+101068,2204227900,6,Wine with a protected geographical indication (PGI),10,/uk/api/subheadings/2204227900-10,Wine with a protected geographical indication (pgi),2017-01-01 00:00:00 UTC,,false,101030
+101069,2204227900,7,White,80,/uk/api/subheadings/2204227900-80,White,2017-01-01 00:00:00 UTC,,false,101068
+101070,2204227910,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204227910,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101069
+101071,2204227990,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204227990,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101069
+101072,2204228000,7,Other,80,/uk/api/subheadings/2204228000-80,Other,2017-01-01 00:00:00 UTC,,false,101068
+101073,2204228010,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204228010,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101072
+101074,2204228090,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204228090,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101072
+101075,2204228100,6,Other varietal wines,10,/uk/api/subheadings/2204228100-10,Other varietal wines,2017-01-01 00:00:00 UTC,,false,101030
+101076,2204228100,7,White,80,/uk/api/subheadings/2204228100-80,White,2017-01-01 00:00:00 UTC,,false,101075
+101077,2204228110,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204228110,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101076
+101078,2204228190,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204228190,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101076
+101079,2204228200,7,Other,80,/uk/api/subheadings/2204228200-80,Other,2017-01-01 00:00:00 UTC,,false,101075
+101080,2204228210,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204228210,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101079
+101081,2204228290,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204228290,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101079
+101082,2204228300,6,Other,10,/uk/api/subheadings/2204228300-10,Other,2017-01-01 00:00:00 UTC,,false,101030
+101083,2204228300,7,White,80,/uk/api/subheadings/2204228300-80,White,2017-01-01 00:00:00 UTC,,false,101082
+101084,2204228310,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204228310,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101083
+101085,2204228390,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204228390,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101083
+101086,2204228400,7,Other,80,/uk/api/subheadings/2204228400-80,Other,2017-01-01 00:00:00 UTC,,false,101082
+101087,2204228410,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204228410,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101086
+101088,2204228490,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204228490,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101086
+101089,2204228500,5,Of an actual alcoholic strength by volume exceeding 15 % vol,10,/uk/api/subheadings/2204228500-10,Of an actual alcoholic strength by volume exceeding 15% vol,2017-01-01 00:00:00 UTC,,false,101029
+101090,2204228500,6,Wine with a protected designation of origin (PDO) or a protected geographical indication (PGI),20,/uk/api/subheadings/2204228500-20,Wine with a protected designation of origin (pdo) or a protected geographical indication (pgi),2017-01-01 00:00:00 UTC,,false,101089
+101091,2204228500,7,Madeira and Setubal muscatel,80,/uk/api/subheadings/2204228500-80,Madeira and setubal muscatel,2017-01-01 00:00:00 UTC,,false,101090
+101092,2204228510,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204228510,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2017-01-01 00:00:00 UTC,,true,101091
+101093,2204228520,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204228520,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101091
+101094,2204228590,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204228590,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101091
+101095,2204228600,7,Sherry,80,/uk/api/subheadings/2204228600-80,Sherry,2017-01-01 00:00:00 UTC,,false,101090
+101096,2204228610,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204228610,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2017-01-01 00:00:00 UTC,,true,101095
+101097,2204228620,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204228620,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101095
+101098,2204228690,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204228690,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101095
+101099,2204228800,7,Samos and Muscat de Lemnos,80,/uk/api/subheadings/2204228800-80,Samos and muscat de lemnos,2017-01-01 00:00:00 UTC,,false,101090
+101100,2204228810,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204228810,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2017-01-01 00:00:00 UTC,,true,101099
+101101,2204228820,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204228820,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101099
+101102,2204228890,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204228890,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101099
+101104,2204229000,7,Other,80,/uk/api/subheadings/2204229000-80,Other,2017-01-01 00:00:00 UTC,,false,101090
+101105,2204229010,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204229010,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2017-01-01 00:00:00 UTC,,true,101104
+101106,2204229020,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204229020,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101104
+101107,2204229090,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204229090,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101104
+101108,2204229100,6,Other,80,/uk/api/subheadings/2204229100-80,Other,2017-01-01 00:00:00 UTC,,false,101089
+101109,2204229110,7,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204229110,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2017-01-01 00:00:00 UTC,,true,101108
+101110,2204229120,7,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204229120,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101108
+101111,2204229190,7,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204229190,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101108
+101112,2204229300,4,Other,10,/uk/api/subheadings/2204229300-10,Other,2017-01-01 00:00:00 UTC,,false,101028
+101113,2204229300,5,Wine with a protected designation of origin (PDO) or a protected geographical indication (PGI),20,/uk/api/subheadings/2204229300-20,Wine with a protected designation of origin (pdo) or a protected geographical indication (pgi),2017-01-01 00:00:00 UTC,,false,101112
+101114,2204229300,6,White,80,/uk/api/subheadings/2204229300-80,White,2017-01-01 00:00:00 UTC,,false,101113
+101115,2204229310,7,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204229310,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101114
+101119,2204229320,7,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204229320,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101114
+101118,2204229330,7,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204229330,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2017-01-01 00:00:00 UTC,,true,101114
+101117,2204229340,7,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204229340,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101114
+101116,2204229390,7,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204229390,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101114
+101120,2204229400,6,Other,80,/uk/api/subheadings/2204229400-80,Other,2017-01-01 00:00:00 UTC,,false,101113
+101121,2204229411,7,Wine of fresh grapes,10,/uk/api/subheadings/2204229411-10,Wine of fresh grapes,2017-01-01 00:00:00 UTC,,false,101120
+101126,2204229411,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204229411,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101121
+101125,2204229421,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204229421,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101121
+101124,2204229431,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204229431,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2017-01-01 00:00:00 UTC,,true,101121
+101123,2204229441,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204229441,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101121
+101122,2204229451,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204229451,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101121
+101127,2204229461,7,Other,10,/uk/api/subheadings/2204229461-10,Other,2017-01-01 00:00:00 UTC,,false,101120
+101214,2204229461,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204229461,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101127
+101131,2204229471,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204229471,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101127
+101130,2204229481,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204229481,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2017-01-01 00:00:00 UTC,,true,101127
+101129,2204229491,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204229491,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101127
+101128,2204229495,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204229495,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101127
+101132,2204229500,5,Other varietal wines,10,/uk/api/subheadings/2204229500-10,Other varietal wines,2017-01-01 00:00:00 UTC,,false,101112
+101133,2204229500,6,White,80,/uk/api/subheadings/2204229500-80,White,2017-01-01 00:00:00 UTC,,false,101132
+101138,2204229510,7,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204229510,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101133
+101137,2204229520,7,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204229520,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101133
+101136,2204229530,7,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204229530,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2017-01-01 00:00:00 UTC,,true,101133
+101135,2204229540,7,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204229540,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101133
+101134,2204229590,7,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204229590,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101133
+101139,2204229600,6,Other,80,/uk/api/subheadings/2204229600-80,Other,2017-01-01 00:00:00 UTC,,false,101132
+101140,2204229611,7,Wine of fresh grapes,10,/uk/api/subheadings/2204229611-10,Wine of fresh grapes,2017-01-01 00:00:00 UTC,,false,101139
+101145,2204229611,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204229611,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101140
+101144,2204229621,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204229621,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101140
+101143,2204229631,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204229631,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2017-01-01 00:00:00 UTC,,true,101140
+101142,2204229641,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204229641,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101140
+101141,2204229651,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204229651,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101140
+101146,2204229661,7,Other,10,/uk/api/subheadings/2204229661-10,Other,2017-01-01 00:00:00 UTC,,false,101139
+101151,2204229661,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204229661,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101146
+101150,2204229671,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204229671,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101146
+101149,2204229681,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204229681,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2017-01-01 00:00:00 UTC,,true,101146
+101148,2204229691,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204229691,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101146
+101147,2204229695,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204229695,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101146
+101152,2204229700,5,Other,10,/uk/api/subheadings/2204229700-10,Other,2017-01-01 00:00:00 UTC,,false,101112
+101153,2204229700,6,White,80,/uk/api/subheadings/2204229700-80,White,2017-01-01 00:00:00 UTC,,false,101152
+101158,2204229710,7,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204229710,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101153
+101157,2204229720,7,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204229720,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101153
+101156,2204229730,7,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204229730,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2017-01-01 00:00:00 UTC,,true,101153
+101155,2204229740,7,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204229740,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101153
+101154,2204229790,7,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204229790,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101153
+101159,2204229800,6,Other,80,/uk/api/subheadings/2204229800-80,Other,2017-01-01 00:00:00 UTC,,false,101152
+101160,2204229811,7,Wine of fresh grapes,10,/uk/api/subheadings/2204229811-10,Wine of fresh grapes,2017-01-01 00:00:00 UTC,,false,101159
+101171,2204229811,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204229811,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101160
+101170,2204229821,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204229821,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101160
+101169,2204229831,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204229831,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2017-01-01 00:00:00 UTC,,true,101160
+101168,2204229841,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204229841,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101160
+101167,2204229851,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204229851,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101160
+101166,2204229861,7,Other,10,/uk/api/subheadings/2204229861-10,Other,2017-01-01 00:00:00 UTC,,false,101159
+101165,2204229861,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204229861,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101166
+101164,2204229871,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204229871,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101166
+101163,2204229881,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204229881,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2017-01-01 00:00:00 UTC,,true,101166
+101162,2204229891,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204229891,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101166
+101161,2204229895,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204229895,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,101166
+34812,2204290000,2,Other,80,/uk/api/subheadings/2204290000-80,Other,1972-01-01 00:00:00 UTC,,false,34675
+34813,2204291000,3,"Wine, other than that referred to in subheading 2204 10, in bottles with 'mushroom' stoppers held in place by ties or fastenings; wine, otherwise put up, with an excess pressure due to carbon dioxide in solution of not less than 1 bar but less than 3 bar, measured at a temperature of 20 °C",80,/uk/api/commodities/2204291000,"Wine, other than that referred to in subheading 2204 10, in bottles with 'mushroom' stoppers held in place by ties or fastenings; wine, otherwise put up, with an excess pressure due to carbon dioxide in solution of not less than 1 bar but less than 3 bar, measured at a temperature of 20 °c",1972-01-01 00:00:00 UTC,,true,34812
+101179,2204292200,3,Other,10,/uk/api/subheadings/2204292200-10,Other,2017-01-01 00:00:00 UTC,,false,34812
+101178,2204292200,4,Produced in the European Union,20,/uk/api/subheadings/2204292200-20,Produced in the european union,2017-01-01 00:00:00 UTC,,false,101179
+101177,2204292200,5,Of an actual alcoholic strength by volume not exceeding 15 % vol,30,/uk/api/subheadings/2204292200-30,Of an actual alcoholic strength by volume not exceeding 15% vol,2017-01-01 00:00:00 UTC,,false,101178
+101176,2204292200,6,Wine with a protected designation of origin (PDO),40,/uk/api/subheadings/2204292200-40,Wine with a protected designation of origin (pdo),2017-01-01 00:00:00 UTC,,false,101177
+101175,2204292200,7,Bordeaux,80,/uk/api/subheadings/2204292200-80,Bordeaux,2017-01-01 00:00:00 UTC,,false,101176
+101180,2204292210,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204292210,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101175
+101181,2204292290,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204292290,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101175
+101182,2204292300,7,Bourgogne (Burgundy),80,/uk/api/subheadings/2204292300-80,Bourgogne (burgundy),2017-01-01 00:00:00 UTC,,false,101176
+101183,2204292310,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204292310,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101182
+101184,2204292390,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204292390,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101182
+101185,2204292400,7,Beaujolais,80,/uk/api/subheadings/2204292400-80,Beaujolais,2017-01-01 00:00:00 UTC,,false,101176
+101186,2204292410,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204292410,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101185
+101187,2204292490,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204292490,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101185
+101188,2204292600,7,Vallée du Rhône,80,/uk/api/subheadings/2204292600-80,Vallée du rhône,2017-01-01 00:00:00 UTC,,false,101176
+101189,2204292610,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204292610,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101188
+101190,2204292690,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204292690,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101188
+101191,2204292700,7,Languedoc-Roussillon,80,/uk/api/subheadings/2204292700-80,Languedoc-roussillon,2017-01-01 00:00:00 UTC,,false,101176
+101192,2204292710,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204292710,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101191
+101193,2204292790,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204292790,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101191
+101194,2204292800,7,Val de Loire (Loire Valley),80,/uk/api/subheadings/2204292800-80,Val de loire (loire valley),2017-01-01 00:00:00 UTC,,false,101176
+101195,2204292810,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204292810,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101194
+101196,2204292890,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204292890,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101194
+101197,2204293200,7,Piemonte (Piedmont),80,/uk/api/subheadings/2204293200-80,Piemonte (piedmont),2017-01-01 00:00:00 UTC,,false,101176
+101198,2204293210,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204293210,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101197
+101199,2204293290,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204293290,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101197
+101200,2204293800,7,Other,10,/uk/api/subheadings/2204293800-10,Other,2017-01-01 00:00:00 UTC,,false,101176
+101201,2204293800,8,White,80,/uk/api/subheadings/2204293800-80,White,2017-01-01 00:00:00 UTC,,false,101200
+101219,2204293810,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204293810,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101201
+101220,2204293890,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204293890,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101201
+101202,2204297800,8,Other,80,/uk/api/subheadings/2204297800-80,Other,2017-01-01 00:00:00 UTC,,false,101200
+101221,2204297810,9,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204297810,Of an actual alcoholic strength by volume not exceeding 13% vol,2017-01-01 00:00:00 UTC,,true,101202
+101222,2204297890,9,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204297890,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2017-01-01 00:00:00 UTC,,true,101202
+92153,2204297900,6,Wine with a protected geographical indication (PGI),10,/uk/api/subheadings/2204297900-10,Wine with a protected geographical indication (pgi),2010-01-01 00:00:00 UTC,,false,101177
+92154,2204297900,7,White,80,/uk/api/subheadings/2204297900-80,White,2010-01-01 00:00:00 UTC,,false,92153
+92156,2204297910,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204297910,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,92154
+92157,2204297990,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204297990,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,92154
+92155,2204298000,7,Other,80,/uk/api/subheadings/2204298000-80,Other,2010-01-01 00:00:00 UTC,,false,92153
+92159,2204298010,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204298010,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,92155
+92158,2204298090,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204298090,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,92155
+92160,2204298100,6,Other varietal wines,10,/uk/api/subheadings/2204298100-10,Other varietal wines,2010-01-01 00:00:00 UTC,,false,101177
+92161,2204298100,7,White,80,/uk/api/subheadings/2204298100-80,White,2010-01-01 00:00:00 UTC,,false,92160
+92162,2204298110,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204298110,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,92161
+92163,2204298190,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204298190,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,92161
+55030,2204298200,7,Other,80,/uk/api/subheadings/2204298200-80,Other,1995-01-01 00:00:00 UTC,,false,92160
+92164,2204298210,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204298210,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,55030
+92165,2204298290,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204298290,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,55030
+55031,2204298300,6,Other,10,/uk/api/subheadings/2204298300-10,Other,1995-01-01 00:00:00 UTC,,false,101177
+55032,2204298300,7,White,80,/uk/api/subheadings/2204298300-80,White,1995-01-01 00:00:00 UTC,,false,55031
+92166,2204298310,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204298310,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,55032
+92167,2204298390,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204298390,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,55032
+55033,2204298400,7,Other,80,/uk/api/subheadings/2204298400-80,Other,1995-01-01 00:00:00 UTC,,false,55031
+92169,2204298410,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204298410,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,55033
+92168,2204298490,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204298490,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,55033
+92170,2204298500,5,Of an actual alcoholic strength by volume exceeding 15 % vol,10,/uk/api/subheadings/2204298500-10,Of an actual alcoholic strength by volume exceeding 15% vol,2010-01-01 00:00:00 UTC,,false,101178
+92171,2204298500,6,Wine with a protected designation of origin (PDO) or a protected geographical indication (PGI),20,/uk/api/subheadings/2204298500-20,Wine with a protected designation of origin (pdo) or a protected geographical indication (pgi),2010-01-01 00:00:00 UTC,,false,92170
+92172,2204298500,7,Madeira and Setubal muscatel,80,/uk/api/subheadings/2204298500-80,Madeira and setubal muscatel,2010-01-01 00:00:00 UTC,,false,92171
+92174,2204298510,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204298510,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,92172
+92177,2204298590,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204298590,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92172
+101203,2204298599,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204298599,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,92172
+92173,2204298600,7,Sherry,80,/uk/api/subheadings/2204298600-80,Sherry,2010-01-01 00:00:00 UTC,,false,92171
+92175,2204298610,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204298610,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,92173
+92178,2204298690,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204298690,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92173
+101204,2204298699,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204298699,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,92173
+54869,2204298800,7,Samos and Muscat de Lemnos,80,/uk/api/subheadings/2204298800-80,Samos and muscat de lemnos,1995-01-01 00:00:00 UTC,,false,92171
+92181,2204298810,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204298810,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,54869
+92184,2204298890,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204298890,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,54869
+101205,2204298899,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204298899,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,54869
+92180,2204299000,7,Other,80,/uk/api/subheadings/2204299000-80,Other,2010-01-01 00:00:00 UTC,,false,92171
+92183,2204299010,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204299010,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,92180
+92186,2204299090,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204299090,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92180
+101206,2204299099,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204299099,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,92180
+92187,2204299100,6,Other,80,/uk/api/subheadings/2204299100-80,Other,2010-01-01 00:00:00 UTC,,false,92170
+92188,2204299110,7,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204299110,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,92187
+92189,2204299190,7,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204299190,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92187
+101211,2204299199,7,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204299199,Of an actual alcoholic strength by volume exceeding 22% vol,2017-01-01 00:00:00 UTC,,true,92187
+92191,2204299300,4,Other,10,/uk/api/subheadings/2204299300-10,Other,2010-01-01 00:00:00 UTC,,false,101179
+92192,2204299300,5,Wine with a protected designation of origin (PDO) or a protected geographical indication (PGI),20,/uk/api/subheadings/2204299300-20,Wine with a protected designation of origin (pdo) or a protected geographical indication (pgi),2010-01-01 00:00:00 UTC,,false,92191
+92193,2204299300,6,White,80,/uk/api/subheadings/2204299300-80,White,2010-01-01 00:00:00 UTC,,false,92192
+92194,2204299310,7,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204299310,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,92193
+92195,2204299320,7,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204299320,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,92193
+92196,2204299330,7,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204299330,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,92193
+92197,2204299340,7,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204299340,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92193
+92198,2204299390,7,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204299390,Of an actual alcoholic strength by volume exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92193
+92199,2204299400,6,Other,80,/uk/api/subheadings/2204299400-80,Other,2010-01-01 00:00:00 UTC,,false,92192
+92200,2204299411,7,Wine of fresh grapes,10,/uk/api/subheadings/2204299411-10,Wine of fresh grapes,2010-01-01 00:00:00 UTC,,false,92199
+92201,2204299411,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204299411,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,92200
+92202,2204299421,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204299421,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,92200
+92203,2204299431,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204299431,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,92200
+92204,2204299441,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204299441,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92200
+92205,2204299451,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204299451,Of an actual alcoholic strength by volume exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92200
+92206,2204299461,7,Other,10,/uk/api/subheadings/2204299461-10,Other,2010-01-01 00:00:00 UTC,,false,92199
+92207,2204299461,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204299461,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,92206
+92208,2204299471,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204299471,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,92206
+92209,2204299481,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204299481,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,92206
+92210,2204299491,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204299491,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92206
+92211,2204299495,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204299495,Of an actual alcoholic strength by volume exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92206
+92212,2204299500,5,Other varietal wines,10,/uk/api/subheadings/2204299500-10,Other varietal wines,2010-01-01 00:00:00 UTC,,false,92191
+92213,2204299500,6,White,80,/uk/api/subheadings/2204299500-80,White,2010-01-01 00:00:00 UTC,,false,92212
+92214,2204299510,7,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204299510,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,92213
+92215,2204299520,7,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204299520,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,92213
+92216,2204299530,7,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204299530,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,92213
+92217,2204299540,7,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204299540,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92213
+92218,2204299590,7,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204299590,Of an actual alcoholic strength by volume exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92213
+92219,2204299600,6,Other,80,/uk/api/subheadings/2204299600-80,Other,2010-01-01 00:00:00 UTC,,false,92212
+92220,2204299611,7,Wine of fresh grapes,10,/uk/api/subheadings/2204299611-10,Wine of fresh grapes,2010-01-01 00:00:00 UTC,,false,92219
+92221,2204299611,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204299611,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,92220
+92222,2204299621,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204299621,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,92220
+92223,2204299631,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204299631,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,92220
+92224,2204299641,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204299641,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92220
+92225,2204299651,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204299651,Of an actual alcoholic strength by volume exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92220
+92226,2204299661,7,Other,10,/uk/api/subheadings/2204299661-10,Other,2010-01-01 00:00:00 UTC,,false,92219
+92227,2204299661,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204299661,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,92226
+92228,2204299671,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204299671,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,92226
+92229,2204299681,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204299681,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,92226
+92230,2204299691,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204299691,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92226
+92231,2204299695,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204299695,Of an actual alcoholic strength by volume exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92226
+92232,2204299700,5,Other,10,/uk/api/subheadings/2204299700-10,Other,2010-01-01 00:00:00 UTC,,false,92191
+92233,2204299700,6,White,80,/uk/api/subheadings/2204299700-80,White,2010-01-01 00:00:00 UTC,,false,92232
+92234,2204299710,7,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204299710,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,92233
+92235,2204299720,7,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204299720,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,92233
+92236,2204299730,7,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204299730,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,92233
+92237,2204299740,7,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204299740,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92233
+92238,2204299790,7,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204299790,Of an actual alcoholic strength by volume exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92233
+92239,2204299800,6,Other,80,/uk/api/subheadings/2204299800-80,Other,2010-01-01 00:00:00 UTC,,false,92232
+92240,2204299811,7,Wine of fresh grapes,10,/uk/api/subheadings/2204299811-10,Wine of fresh grapes,2010-01-01 00:00:00 UTC,,false,92239
+92241,2204299811,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204299811,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,92240
+92242,2204299821,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204299821,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,92240
+92243,2204299831,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204299831,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,92240
+92244,2204299841,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204299841,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92240
+92245,2204299851,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204299851,Of an actual alcoholic strength by volume exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92240
+92246,2204299861,7,Other,10,/uk/api/subheadings/2204299861-10,Other,2010-01-01 00:00:00 UTC,,false,92239
+92247,2204299861,8,Of an actual alcoholic strength by volume not exceeding 13 % vol,80,/uk/api/commodities/2204299861,Of an actual alcoholic strength by volume not exceeding 13% vol,2010-01-01 00:00:00 UTC,,true,92246
+92248,2204299871,8,Of an actual alcoholic strength by volume exceeding 13 % vol but not exceeding 15 % vol,80,/uk/api/commodities/2204299871,Of an actual alcoholic strength by volume exceeding 13% vol but not exceeding 15% vol,2010-01-01 00:00:00 UTC,,true,92246
+92249,2204299881,8,Of an actual alcoholic strength by volume exceeding 15 % vol but not exceeding 18 % vol,80,/uk/api/commodities/2204299881,Of an actual alcoholic strength by volume exceeding 15% vol but not exceeding 18% vol,2010-01-01 00:00:00 UTC,,true,92246
+92250,2204299891,8,Of an actual alcoholic strength by volume exceeding 18 % vol but not exceeding 22 % vol,80,/uk/api/commodities/2204299891,Of an actual alcoholic strength by volume exceeding 18% vol but not exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92246
+92251,2204299895,8,Of an actual alcoholic strength by volume exceeding 22 % vol,80,/uk/api/commodities/2204299895,Of an actual alcoholic strength by volume exceeding 22% vol,2010-01-01 00:00:00 UTC,,true,92246
+34928,2204300000,1,Other grape must,80,/uk/api/subheadings/2204300000-80,Other grape must,1972-01-01 00:00:00 UTC,,false,34654
+34929,2204301000,2,In fermentation or with fermentation arrested otherwise than by the addition of alcohol,80,/uk/api/commodities/2204301000,In fermentation or with fermentation arrested otherwise than by the addition of alcohol,1972-01-01 00:00:00 UTC,,true,34928
+55655,2204309200,2,Other,10,/uk/api/subheadings/2204309200-10,Other,1995-01-01 00:00:00 UTC,,false,34928
+55656,2204309200,3,"Of a density of 1,33 g/cm<sup>3</sup> or less at 20 °C and of an actual alcoholic strength by volume not exceeding 1 % vol",20,/uk/api/subheadings/2204309200-20,Of a density of 1.33 g/cm<sup>3</sup> or less at 20 °c and of an actual alcoholic strength by volume not exceeding 1% vol,1995-01-01 00:00:00 UTC,,false,55655
+55658,2204309200,4,Concentrated,80,/uk/api/commodities/2204309200,Concentrated,1995-01-01 00:00:00 UTC,,true,55656
+55659,2204309400,4,Other,80,/uk/api/commodities/2204309400,Other,1995-01-01 00:00:00 UTC,,true,55656
+55657,2204309600,3,Other,10,/uk/api/subheadings/2204309600-10,Other,1995-01-01 00:00:00 UTC,,false,55655
+55660,2204309600,4,Concentrated,80,/uk/api/commodities/2204309600,Concentrated,1995-01-01 00:00:00 UTC,,true,55657
+55661,2204309800,4,Other,80,/uk/api/commodities/2204309800,Other,1995-01-01 00:00:00 UTC,,true,55657
+34941,2205000000,0,Vermouth and other wine of fresh grapes flavoured with plants or aromatic substances,80,/uk/api/headings/2205,Vermouth and other wine of fresh grapes flavoured with plants or aromatic substances,1972-01-01 00:00:00 UTC,,false,34628
+34942,2205100000,1,In containers holding 2 litres or less,80,/uk/api/subheadings/2205100000-80,In containers holding 2 litres or less,1972-01-01 00:00:00 UTC,,false,34941
+34943,2205101000,2,Of an actual alcoholic strength by volume of 18 % vol or less,80,/uk/api/commodities/2205101000,Of an actual alcoholic strength by volume of 18% vol or less,1972-01-01 00:00:00 UTC,,true,34942
+34944,2205109000,2,Of an actual alcoholic strength by volume exceeding 18 % vol,80,/uk/api/commodities/2205109000,Of an actual alcoholic strength by volume exceeding 18% vol,1972-01-01 00:00:00 UTC,,true,34942
+34945,2205900000,1,Other,80,/uk/api/subheadings/2205900000-80,Other,1972-01-01 00:00:00 UTC,,false,34941
+34946,2205901000,2,Of an actual alcoholic strength by volume of 18 % vol or less,80,/uk/api/commodities/2205901000,Of an actual alcoholic strength by volume of 18% vol or less,1972-01-01 00:00:00 UTC,,true,34945
+34947,2205909000,2,Of an actual alcoholic strength by volume exceeding 18 % vol,80,/uk/api/commodities/2205909000,Of an actual alcoholic strength by volume exceeding 18% vol,1972-01-01 00:00:00 UTC,,true,34945
+34948,2206000000,0,"Other fermented beverages (for example, cider, perry, mead, saké); mixtures of fermented beverages and mixtures of fermented beverages and non-alcoholic beverages, not elsewhere specified or included",80,/uk/api/headings/2206,"Other fermented beverages (for example, cider, perry, mead, saké); mixtures of fermented beverages and mixtures of fermented beverages and non-alcoholic beverages, not elsewhere specified or included",1972-01-01 00:00:00 UTC,,false,34628
+34949,2206001000,1,Piquette,80,/uk/api/commodities/2206001000,Piquette,1972-01-01 00:00:00 UTC,,true,34948
+34950,2206003100,1,Other,10,/uk/api/subheadings/2206003100-10,Other,1994-01-01 00:00:00 UTC,,false,34948
+34951,2206003100,2,Sparkling,20,/uk/api/subheadings/2206003100-20,Sparkling,1994-01-01 00:00:00 UTC,,false,34950
+34952,2206003100,3,Cider and perry,80,/uk/api/commodities/2206003100,Cider and perry,1994-01-01 00:00:00 UTC,,true,34951
+34953,2206003900,3,Other,80,/uk/api/commodities/2206003900,Other,1994-01-01 00:00:00 UTC,,true,34951
+34954,2206005100,2,"Still, in containers holding",10,/uk/api/subheadings/2206005100-10,"Still, in containers holding",1994-01-01 00:00:00 UTC,,false,34950
+34955,2206005100,3,2 litres or less,20,/uk/api/subheadings/2206005100-20,2 litres or less,1994-01-01 00:00:00 UTC,,false,34954
+34956,2206005100,4,Cider and perry,80,/uk/api/commodities/2206005100,Cider and perry,1994-01-01 00:00:00 UTC,,true,34955
+34957,2206005900,4,Other,80,/uk/api/commodities/2206005900,Other,1994-01-01 00:00:00 UTC,,true,34955
+34958,2206008100,3,More than 2 litres,10,/uk/api/subheadings/2206008100-10,More than 2 litres,1994-01-01 00:00:00 UTC,,false,34954
+34959,2206008100,4,Cider and perry,80,/uk/api/commodities/2206008100,Cider and perry,1994-01-01 00:00:00 UTC,,true,34958
+34960,2206008900,4,Other,80,/uk/api/commodities/2206008900,Other,1994-01-01 00:00:00 UTC,,true,34958
+34966,2207000000,0,"Undenatured ethyl alcohol of an alcoholic strength by volume of 80 % vol or higher; ethyl alcohol and other spirits, denatured, of any strength",80,/uk/api/headings/2207,"Undenatured ethyl alcohol of an alcoholic strength by volume of 80% vol or higher; ethyl alcohol and other spirits, denatured, of any strength",1972-01-01 00:00:00 UTC,,false,34628
+34967,2207100000,1,Undenatured ethyl alcohol of an alcoholic strength by volume of 80 % vol or higher,80,/uk/api/subheadings/2207100000-80,Undenatured ethyl alcohol of an alcoholic strength by volume of 80% vol or higher,1972-01-01 00:00:00 UTC,,false,34966
+108921,2207100011,2,Goods obtained from agricultural products listed in Annex I to the Treaty on the Functioning of the European Union,10,/uk/api/subheadings/2207100011-10,Goods obtained from agricultural products listed in annex i to the treaty on the functioning of the european union,2023-09-16 00:00:00 UTC,,false,34967
+108922,2207100011,3,"Ethyl alcohol produced from agricultural products (as listed in Annex I to the Treaty on the Functioning of the European Union), excluding products with a water content of more than 0,3 % (m/m) measured according to the standard EN 15376",80,/uk/api/commodities/2207100011,"Ethyl alcohol produced from agricultural products (as listed in annex i to the treaty on the functioning of the european union), excluding products with a water content of more than 0.3% (m/m) measured according to the standard en 15376",2023-09-16 00:00:00 UTC,,true,108921
+108923,2207100019,3,Other,80,/uk/api/commodities/2207100019,Other,2023-09-16 00:00:00 UTC,,true,108921
+34973,2207100090,2,Other,80,/uk/api/commodities/2207100090,Other,1972-01-01 00:00:00 UTC,,true,34967
+34974,2207200000,1,"Ethyl alcohol and other spirits, denatured, of any strength",80,/uk/api/subheadings/2207200000-80,"Ethyl alcohol and other spirits, denatured, of any strength",1972-01-01 00:00:00 UTC,,false,34966
+108924,2207200011,2,Goods obtained from agricultural products listed in Annex I to the Treaty on the Functioning of the European Union,10,/uk/api/subheadings/2207200011-10,Goods obtained from agricultural products listed in annex i to the treaty on the functioning of the european union,2023-09-16 00:00:00 UTC,,false,34974
+108925,2207200011,3,"Ethyl alcohol produced from agricultural products (as listed in Annex I to the Treaty on the Functioning of the European Union), excluding products with a water content of more than 0,3 % (m/m) measured according to the standard EN 15376",80,/uk/api/commodities/2207200011,"Ethyl alcohol produced from agricultural products (as listed in annex i to the treaty on the functioning of the european union), excluding products with a water content of more than 0.3% (m/m) measured according to the standard en 15376",2023-09-16 00:00:00 UTC,,true,108924
+108926,2207200019,3,Other,80,/uk/api/commodities/2207200019,Other,2023-09-16 00:00:00 UTC,,true,108924
+99848,2207200090,2,Other,80,/uk/api/commodities/2207200090,Other,2016-01-01 00:00:00 UTC,,true,34974
+34981,2208000000,0,"Undenatured ethyl alcohol of an alcoholic strength by volume of less than 80 % vol; spirits, liqueurs and other spirituous beverages",80,/uk/api/headings/2208,"Undenatured ethyl alcohol of an alcoholic strength by volume of less than 80% vol; spirits, liqueurs and other spirituous beverages",1972-01-01 00:00:00 UTC,,false,34628
+34985,2208200000,1,Spirits obtained by distilling grape wine or grape marc,80,/uk/api/subheadings/2208200000-80,Spirits obtained by distilling grape wine or grape marc,1972-01-01 00:00:00 UTC,,false,34981
+34989,2208201200,2,In containers holding 2 litres or less,10,/uk/api/subheadings/2208201200-10,In containers holding 2 litres or less,1994-01-01 00:00:00 UTC,,false,34985
+104913,2208201200,3,Obtained by distilling grape wine,20,/uk/api/subheadings/2208201200-20,Obtained by distilling grape wine,2020-01-01 00:00:00 UTC,,false,34989
+34990,2208201200,4,Cognac,80,/uk/api/commodities/2208201200,Cognac,1994-01-01 00:00:00 UTC,,true,104913
+34991,2208201400,4,Armagnac,80,/uk/api/commodities/2208201400,Armagnac,1994-01-01 00:00:00 UTC,,true,104913
+104918,2208201600,4,Brandy or Weinbrand,10,/uk/api/subheadings/2208201600-10,Brandy or weinbrand,2020-01-01 00:00:00 UTC,,false,104913
+104916,2208201600,5,Brandy de Jerez,80,/uk/api/commodities/2208201600,Brandy de jerez,2020-01-01 00:00:00 UTC,,true,104918
+104915,2208201800,5,Other,80,/uk/api/commodities/2208201800,Other,2020-01-01 00:00:00 UTC,,true,104918
+104914,2208201900,4,Other,80,/uk/api/commodities/2208201900,Other,2020-01-01 00:00:00 UTC,,true,104913
+104917,2208202600,3,Obtained by distilling grape marc,10,/uk/api/subheadings/2208202600-10,Obtained by distilling grape marc,2020-01-01 00:00:00 UTC,,false,34989
+34993,2208202600,4,Grappa,80,/uk/api/commodities/2208202600,Grappa,1994-01-01 00:00:00 UTC,,true,104917
+104919,2208202800,4,Other,80,/uk/api/commodities/2208202800,Other,2020-01-01 00:00:00 UTC,,true,104917
+34997,2208206200,2,In containers holding more than 2 litres,10,/uk/api/subheadings/2208206200-10,In containers holding more than 2 litres,1994-01-01 00:00:00 UTC,,false,34985
+104921,2208206200,3,Obtained by distilling grape wine,20,/uk/api/subheadings/2208206200-20,Obtained by distilling grape wine,2020-01-01 00:00:00 UTC,,false,34997
+34998,2208206200,4,Cognac,80,/uk/api/commodities/2208206200,Cognac,1994-01-01 00:00:00 UTC,,true,104921
+104922,2208206600,4,Brandy or Weinbrand,80,/uk/api/commodities/2208206600,Brandy or weinbrand,2020-01-01 00:00:00 UTC,,true,104921
+104923,2208206900,4,Other,80,/uk/api/commodities/2208206900,Other,2020-01-01 00:00:00 UTC,,true,104921
+104924,2208208600,3,Obtained by distilling grape marc,10,/uk/api/subheadings/2208208600-10,Obtained by distilling grape marc,2020-01-01 00:00:00 UTC,,false,34997
+35000,2208208600,4,Grappa,80,/uk/api/commodities/2208208600,Grappa,1994-01-01 00:00:00 UTC,,true,104924
+104925,2208208800,4,Other,80,/uk/api/commodities/2208208800,Other,2020-01-01 00:00:00 UTC,,true,104924
+35006,2208300000,1,Whiskies,80,/uk/api/subheadings/2208300000-80,Whiskies,1972-01-01 00:00:00 UTC,,false,34981
+35007,2208301100,2,"Bourbon whiskey, in containers holding",10,/uk/api/subheadings/2208301100-10,"Bourbon whiskey, in containers holding",1972-01-01 00:00:00 UTC,,false,35006
+35008,2208301100,3,2 litres or less,80,/uk/api/commodities/2208301100,2 litres or less,1972-01-01 00:00:00 UTC,,true,35007
+35009,2208301900,3,More than 2 litres,80,/uk/api/commodities/2208301900,More than 2 litres,1972-01-01 00:00:00 UTC,,true,35007
+91562,2208303000,2,Scotch whisky,10,/uk/api/subheadings/2208303000-10,Scotch whisky,2010-01-01 00:00:00 UTC,,false,35006
+91561,2208303000,3,Single malt whisky,80,/uk/api/commodities/2208303000,Single malt whisky,2010-01-01 00:00:00 UTC,,true,91562
+91563,2208304100,3,"Blended malt whisky, in containers holding",10,/uk/api/subheadings/2208304100-10,"Blended malt whisky, in containers holding",2010-01-01 00:00:00 UTC,,false,91562
+91564,2208304100,4,2 litres or less,80,/uk/api/commodities/2208304100,2 litres or less,2010-01-01 00:00:00 UTC,,true,91563
+91567,2208304900,4,More than 2 litres,80,/uk/api/commodities/2208304900,More than 2 litres,2010-01-01 00:00:00 UTC,,true,91563
+91570,2208306100,3,"Single grain whisky and blended grain whisky, in containers holding",10,/uk/api/subheadings/2208306100-10,"Single grain whisky and blended grain whisky, in containers holding",2010-01-01 00:00:00 UTC,,false,91562
+91565,2208306100,4,2 litres or less,80,/uk/api/commodities/2208306100,2 litres or less,2010-01-01 00:00:00 UTC,,true,91570
+91568,2208306900,4,More than 2 litres,80,/uk/api/commodities/2208306900,More than 2 litres,2010-01-01 00:00:00 UTC,,true,91570
+91572,2208307100,3,"Other blended whisky, in containers holding",10,/uk/api/subheadings/2208307100-10,"Other blended whisky, in containers holding",2010-01-01 00:00:00 UTC,,false,91562
+91566,2208307100,4,2 litres or less,80,/uk/api/commodities/2208307100,2 litres or less,2010-01-01 00:00:00 UTC,,true,91572
+91569,2208307900,4,More than 2 litres,80,/uk/api/commodities/2208307900,More than 2 litres,2010-01-01 00:00:00 UTC,,true,91572
+55046,2208308200,2,"Other, in containers holding",10,/uk/api/subheadings/2208308200-10,"Other, in containers holding",1995-01-01 00:00:00 UTC,,false,35006
+55047,2208308200,3,2 litres or less,80,/uk/api/commodities/2208308200,2 litres or less,1995-01-01 00:00:00 UTC,,true,55046
+55048,2208308800,3,More than 2 litres,80,/uk/api/commodities/2208308800,More than 2 litres,1995-01-01 00:00:00 UTC,,true,55046
+35022,2208400000,1,Rum and other spirits obtained by distilling fermented sugar-cane products,80,/uk/api/subheadings/2208400000-80,Rum and other spirits obtained by distilling fermented sugar-cane products,1972-01-01 00:00:00 UTC,,false,34981
+69074,2208401100,2,In containers holding 2 litres or less,10,/uk/api/subheadings/2208401100-10,In containers holding 2 litres or less,1998-01-01 00:00:00 UTC,,false,35022
+69075,2208401100,3,Rum with a content of volatile substances other than ethyl and methyl alcohol equal to or exceeding 225 grams per hectolitre of pure alcohol (with a 10 % tolerance),80,/uk/api/commodities/2208401100,Rum with a content of volatile substances other than ethyl and methyl alcohol equal to or exceeding 225 grams per hectolitre of pure alcohol (with a 10% tolerance),1998-01-01 00:00:00 UTC,,true,69074
+69076,2208403100,3,Other,10,/uk/api/subheadings/2208403100-10,Other,1998-01-01 00:00:00 UTC,,false,69074
+69077,2208403100,4,Of a value exceeding 6.60 GBP per litre of pure alcohol,80,/uk/api/commodities/2208403100,Of a value exceeding 6.60 gbp per litre of pure alcohol,1998-01-01 00:00:00 UTC,,true,69076
+69078,2208403900,4,Other,80,/uk/api/commodities/2208403900,Other,1998-01-01 00:00:00 UTC,,true,69076
+69079,2208405100,2,In containers holding more than 2 litres,10,/uk/api/subheadings/2208405100-10,In containers holding more than 2 litres,1998-01-01 00:00:00 UTC,,false,35022
+69080,2208405100,3,Rum with a content of volatile substances other than ethyl and methyl alcohol equal to or exceeding 225 grams per hectolitre of pure alcohol (with a 10 % tolerance),80,/uk/api/commodities/2208405100,Rum with a content of volatile substances other than ethyl and methyl alcohol equal to or exceeding 225 grams per hectolitre of pure alcohol (with a 10% tolerance),1998-01-01 00:00:00 UTC,,true,69079
+69081,2208409100,3,Other,10,/uk/api/subheadings/2208409100-10,Other,1998-01-01 00:00:00 UTC,,false,69079
+69082,2208409100,4,Of a value exceeding 1.60 GBP per litre of pure alcohol,80,/uk/api/commodities/2208409100,Of a value exceeding 1.60 gbp per litre of pure alcohol,1998-01-01 00:00:00 UTC,,true,69081
+69083,2208409900,4,Other,80,/uk/api/commodities/2208409900,Other,1998-01-01 00:00:00 UTC,,true,69081
+35025,2208500000,1,Gin and Geneva,80,/uk/api/subheadings/2208500000-80,Gin and geneva,1972-01-01 00:00:00 UTC,,false,34981
+35026,2208501100,2,"Gin, in containers holding",10,/uk/api/subheadings/2208501100-10,"Gin, in containers holding",1972-01-01 00:00:00 UTC,,false,35025
+35027,2208501100,3,2 litres or less,80,/uk/api/commodities/2208501100,2 litres or less,1972-01-01 00:00:00 UTC,,true,35026
+35028,2208501900,3,More than 2 litres,80,/uk/api/commodities/2208501900,More than 2 litres,1972-01-01 00:00:00 UTC,,true,35026
+35029,2208509100,2,"Geneva, in containers holding",10,/uk/api/subheadings/2208509100-10,"Geneva, in containers holding",1972-01-01 00:00:00 UTC,,false,35025
+35030,2208509100,3,2 litres or less,80,/uk/api/commodities/2208509100,2 litres or less,1972-01-01 00:00:00 UTC,,true,35029
+35031,2208509900,3,More than 2 litres,80,/uk/api/commodities/2208509900,More than 2 litres,1972-01-01 00:00:00 UTC,,true,35029
+59526,2208600000,1,Vodka,80,/uk/api/subheadings/2208600000-80,Vodka,1996-01-01 00:00:00 UTC,,false,34981
+59527,2208601100,2,"Of an alcoholic strength by volume of 45,4 % vol or less in containers holding",10,/uk/api/subheadings/2208601100-10,Of an alcoholic strength by volume of 45.4% vol or less in containers holding,1996-01-01 00:00:00 UTC,,false,59526
+59528,2208601100,3,2 litres or less,80,/uk/api/commodities/2208601100,2 litres or less,1996-01-01 00:00:00 UTC,,true,59527
+59529,2208601900,3,More than 2 litres,80,/uk/api/commodities/2208601900,More than 2 litres,1996-01-01 00:00:00 UTC,,true,59527
+59530,2208609100,2,"Of an alcoholic strength by volume of more than 45,4 % vol in containers holding",10,/uk/api/subheadings/2208609100-10,Of an alcoholic strength by volume of more than 45.4% vol in containers holding,1996-01-01 00:00:00 UTC,,false,59526
+59531,2208609100,3,2 litres or less,80,/uk/api/commodities/2208609100,2 litres or less,1996-01-01 00:00:00 UTC,,true,59530
+59532,2208609900,3,More than 2 litres,80,/uk/api/commodities/2208609900,More than 2 litres,1996-01-01 00:00:00 UTC,,true,59530
+59533,2208700000,1,Liqueurs and cordials,80,/uk/api/subheadings/2208700000-80,Liqueurs and cordials,1996-01-01 00:00:00 UTC,,false,34981
+59534,2208701000,2,In containers holding 2 litres or less,80,/uk/api/commodities/2208701000,In containers holding 2 litres or less,1996-01-01 00:00:00 UTC,,true,59533
+59535,2208709000,2,In containers holding more than 2 litres,80,/uk/api/commodities/2208709000,In containers holding more than 2 litres,1996-01-01 00:00:00 UTC,,true,59533
+35032,2208900000,1,Other,80,/uk/api/subheadings/2208900000-80,Other,1972-01-01 00:00:00 UTC,,false,34981
+35033,2208901100,2,"Arrack, in containers holding",10,/uk/api/subheadings/2208901100-10,"Arrack, in containers holding",1972-01-01 00:00:00 UTC,,false,35032
+35034,2208901100,3,2 litres or less,80,/uk/api/commodities/2208901100,2 litres or less,1972-01-01 00:00:00 UTC,,true,35033
+35035,2208901900,3,More than 2 litres,80,/uk/api/commodities/2208901900,More than 2 litres,1972-01-01 00:00:00 UTC,,true,35033
+59536,2208903300,2,"Plum, pear or cherry spirit (excluding liqueurs), in containers holding",10,/uk/api/subheadings/2208903300-10,"Plum, pear or cherry spirit (excluding liqueurs), in containers holding",1996-01-01 00:00:00 UTC,,false,35032
+63261,2208903300,3,2 litres or less,80,/uk/api/commodities/2208903300,2 litres or less,1996-01-01 00:00:00 UTC,,true,59536
+35044,2208903800,3,More than 2 litres,80,/uk/api/commodities/2208903800,More than 2 litres,1994-01-01 00:00:00 UTC,,true,59536
+35046,2208904100,2,"Other spirits and other spirituous beverages, in containers holding",10,/uk/api/subheadings/2208904100-10,"Other spirits and other spirituous beverages, in containers holding",1994-01-01 00:00:00 UTC,,false,35032
+35047,2208904100,3,2 litres or less,20,/uk/api/subheadings/2208904100-20,2 litres or less,1994-01-01 00:00:00 UTC,,false,35046
+35048,2208904100,4,Ouzo,80,/uk/api/commodities/2208904100,Ouzo,1994-01-01 00:00:00 UTC,,true,35047
+35049,2208904500,4,Other,10,/uk/api/subheadings/2208904500-10,Other,1994-01-01 00:00:00 UTC,,false,35047
+35050,2208904500,5,Spirits (excluding liqueurs),20,/uk/api/subheadings/2208904500-20,Spirits (excluding liqueurs),1994-01-01 00:00:00 UTC,,false,35049
+35051,2208904500,6,Distilled from fruit,30,/uk/api/subheadings/2208904500-30,Distilled from fruit,1994-01-01 00:00:00 UTC,,false,35050
+35052,2208904500,7,Calvados,80,/uk/api/commodities/2208904500,Calvados,1994-01-01 00:00:00 UTC,,true,35051
+35053,2208904800,7,Other,80,/uk/api/commodities/2208904800,Other,1994-01-01 00:00:00 UTC,,true,35051
+95145,2208905400,6,Other,10,/uk/api/subheadings/2208905400-10,Other,2012-01-01 00:00:00 UTC,,false,35050
+76086,2208905400,7,Tequila,80,/uk/api/commodities/2208905400,Tequila,2003-01-01 00:00:00 UTC,,true,95145
+76087,2208905600,7,Other,80,/uk/api/commodities/2208905600,Other,2003-01-01 00:00:00 UTC,,true,95145
+35090,2208906900,5,Other spirituous beverages,80,/uk/api/commodities/2208906900,Other spirituous beverages,1994-01-01 00:00:00 UTC,,true,35049
+35093,2208907100,3,More than 2 litres,10,/uk/api/subheadings/2208907100-10,More than 2 litres,1972-01-01 00:00:00 UTC,,false,35046
+35094,2208907100,4,Spirits (excluding liqueurs),20,/uk/api/subheadings/2208907100-20,Spirits (excluding liqueurs),1972-01-01 00:00:00 UTC,,false,35093
+35095,2208907100,5,Distilled from fruit,80,/uk/api/commodities/2208907100,Distilled from fruit,1972-01-01 00:00:00 UTC,,true,35094
+76088,2208907500,5,Tequila,80,/uk/api/commodities/2208907500,Tequila,2003-01-01 00:00:00 UTC,,true,35094
+76089,2208907700,5,Other,80,/uk/api/commodities/2208907700,Other,2003-01-01 00:00:00 UTC,,true,35094
+59537,2208907800,4,Other spirituous beverages,80,/uk/api/commodities/2208907800,Other spirituous beverages,1996-01-01 00:00:00 UTC,,true,35093
+35111,2208909100,2,"Undenatured ethyl alcohol of an alcoholic strength by volume of less than 80 % vol, in containers holding",10,/uk/api/subheadings/2208909100-10,"Undenatured ethyl alcohol of an alcoholic strength by volume of less than 80% vol, in containers holding",1972-01-01 00:00:00 UTC,,false,35032
+35112,2208909100,3,2 litres or less,80,/uk/api/subheadings/2208909100-80,2 litres or less,1972-01-01 00:00:00 UTC,,false,35111
+35113,2208909110,4,Goods obtained from agricultural products listed in Annex I to the Treaty on the Functioning of the European Union,80,/uk/api/commodities/2208909110,Goods obtained from agricultural products listed in annex i to the treaty on the functioning of the european union,1972-01-01 00:00:00 UTC,,true,35112
+35114,2208909190,4,Other,80,/uk/api/commodities/2208909190,Other,1972-01-01 00:00:00 UTC,,true,35112
+35115,2208909900,3,More than 2 litres,80,/uk/api/subheadings/2208909900-80,More than 2 litres,1972-01-01 00:00:00 UTC,,false,35111
+104794,2208909911,4,Goods obtained from agricultural products listed in Annex I to the Treaty on the Functioning of the European Union,10,/uk/api/subheadings/2208909911-10,Goods obtained from agricultural products listed in annex i to the treaty on the functioning of the european union,2019-07-01 00:00:00 UTC,,false,35115
+104795,2208909911,5,"Ethyl alcohol produced from agricultural products (as listed in Annex I to the Treaty on the Functioning of the European Union), excluding products with a water content of more than 0,3 % (m/m) measured according to the standard EN 15376",80,/uk/api/commodities/2208909911,"Ethyl alcohol produced from agricultural products (as listed in annex i to the treaty on the functioning of the european union), excluding products with a water content of more than 0.3% (m/m) measured according to the standard en 15376",2019-07-01 00:00:00 UTC,,true,104794
+96706,2208909919,5,Other,80,/uk/api/commodities/2208909919,Other,2012-08-25 00:00:00 UTC,,true,104794
+35117,2208909990,4,Other,80,/uk/api/commodities/2208909990,Other,1972-01-01 00:00:00 UTC,,true,35115
+35118,2209000000,0,Vinegar and substitutes for vinegar obtained from acetic acid,80,/uk/api/headings/2209,Vinegar and substitutes for vinegar obtained from acetic acid,1972-01-01 00:00:00 UTC,,false,34628
+35119,2209001100,1,"Wine vinegar, in containers holding",10,/uk/api/subheadings/2209001100-10,"Wine vinegar, in containers holding",1972-01-01 00:00:00 UTC,,false,35118
+35120,2209001100,2,2 litres or less,80,/uk/api/commodities/2209001100,2 litres or less,1972-01-01 00:00:00 UTC,,true,35119
+35121,2209001900,2,More than 2 litres,80,/uk/api/commodities/2209001900,More than 2 litres,1972-01-01 00:00:00 UTC,,true,35119
+35122,2209009100,1,"Other, in containers holding",10,/uk/api/subheadings/2209009100-10,"Other, in containers holding",1972-01-01 00:00:00 UTC,,false,35118
+35123,2209009100,2,2 litres or less,80,/uk/api/commodities/2209009100,2 litres or less,1972-01-01 00:00:00 UTC,,true,35122
+35124,2209009900,2,More than 2 litres,80,/uk/api/commodities/2209009900,More than 2 litres,1972-01-01 00:00:00 UTC,,true,35122

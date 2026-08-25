@@ -19,7 +19,7 @@ use Davix\Customs\Validation\CodeLevel;
  *
  * Codes shorter than ten digits are looked up as supplied first and only then
  * zero-padded. The nomenclature stores every line at full length with trailing
- * zeroes - heading 6201 as 6201000000 - but trying the literal value first
+ * zeroes — heading 6201 as 6201000000 — but trying the literal value first
  * costs one lookup and makes the resolver correct under either convention.
  */
 final class CommodityResolver
@@ -33,15 +33,17 @@ final class CommodityResolver
     public function __construct(
         private readonly CommodityRepositoryInterface $repository,
         private readonly CodeFormat $format = new CodeFormat(),
-        private readonly WeightCriterionParser $weights = new WeightCriterionParser(),
+        private readonly QuantityCriterionParser $quantities = new QuantityCriterionParser(),
     ) {
     }
 
     /**
-     * @param float|null $netWeightKg Net weight per item, used to narrow
-     *        candidates where the tariff branches on garment weight.
+     * @param array<string, float> $measuredProperties What is known about the
+     *        goods, keyed by property name. Net weight narrows apparel; alcoholic
+     *        strength narrows chapter 22, where 348 lines branch on it; fat
+     *        content narrows chapter 4. See MeasuredProperty for the keys.
      */
-    public function resolve(string $code, ?float $netWeightKg = null): Resolution
+    public function resolve(string $code, array $measuredProperties = []): Resolution
     {
         $chapter = $this->format->chapterOf($code);
 
@@ -80,7 +82,7 @@ final class CommodityResolver
             return Resolution::resolved($code, $candidates[0], $matched);
         }
 
-        return $this->narrow($code, $matched, $candidates, $netWeightKg);
+        return $this->narrow($code, $matched, $candidates, $measuredProperties);
     }
 
     /**
@@ -134,7 +136,7 @@ final class CommodityResolver
      *
      * The weight condition is almost never on the candidate itself. In the real
      * nomenclature the split at 1 kg per garment sits on a grouping line two
-     * levels above anything declarable - the candidates are "Parkas", "Other"
+     * levels above anything declarable — the candidates are "Parkas", "Other"
      * and "Hand-printed by the batik method", none of which mention weight. So
      * each candidate is matched against the nearest weight condition found by
      * walking up its ancestors, stopping at the line the merchant's own code
@@ -147,21 +149,23 @@ final class CommodityResolver
      * presenting one extra option.
      *
      * If weight eliminates everything, the narrowing is abandoned and the full
-     * set returned. That means the weight contradicts the whole branch - most
-     * likely grams entered as kilograms - and an empty list would be both
+     * set returned. That means the weight contradicts the whole branch — most
+     * likely grams entered as kilograms — and an empty list would be both
      * useless and misleading.
      *
      * @param list<Commodity> $candidates
+     * @param array<string, float> $measuredProperties
      */
     private function narrow(
         string $code,
         Commodity $matched,
         array $candidates,
-        ?float $netWeightKg,
+        array $measuredProperties,
     ): Resolution {
         $total = count($candidates);
+        $measuredProperties = $this->usableProperties($measuredProperties);
 
-        if ($netWeightKg === null || $netWeightKg <= 0.0) {
+        if ($measuredProperties === []) {
             return Resolution::ambiguous($code, $candidates, $matched, false, $total);
         }
 
@@ -170,10 +174,10 @@ final class CommodityResolver
 
         $surviving = array_values(array_filter(
             $candidates,
-            function (Commodity $candidate) use ($netWeightKg, $matched, &$ancestors): bool {
-                $criterion = $this->weightConditionAbove($candidate, $matched, $ancestors);
+            function (Commodity $candidate) use ($measuredProperties, $matched, &$ancestors): bool {
+                $criterion = $this->conditionAbove($candidate, $matched, $ancestors);
 
-                return $criterion === null || $criterion->matches($netWeightKg);
+                return $criterion === null || $criterion->matchesProperties($measuredProperties);
             },
         ));
 
@@ -189,38 +193,89 @@ final class CommodityResolver
     }
 
     /**
-     * The nearest weight condition on or above a candidate, below the matched
-     * line.
+     * Discard measurements that cannot be real.
+     *
+     * A negative value is never meaningful. Zero is more delicate: a garment
+     * weighing nothing and a container holding nothing are both missing data
+     * dressed up as a measurement, but a drink of zero per cent alcohol is an
+     * ordinary product and chapter 22 has lines for it. Rejecting zero across
+     * the board would push every alcohol-free beverage into the wrong branch.
+     *
+     * @param array<string, float> $properties
+     * @return array<string, float>
+     */
+    private function usableProperties(array $properties): array
+    {
+        $usable = [];
+
+        foreach ($properties as $name => $value) {
+            if ($value < 0.0) {
+                continue;
+            }
+
+            $dimension = MeasuredProperty::dimensionOf($name);
+            $zeroIsMeaningful = $dimension === Dimension::Percentage;
+
+            if ($value === 0.0 && !$zeroIsMeaningful) {
+                continue;
+            }
+
+            $usable[$name] = $value;
+        }
+
+        return $usable;
+    }
+
+    /**
+     * The nearest quantity condition on or above a candidate, below the
+     * matched line.
      *
      * Nearest wins: a condition closer to the candidate is more specific than
      * one further up. Ancestors are cached across candidates because siblings
      * share them, which turns a quadratic walk into a handful of lookups.
      *
+     * A condition naming no subject has its subject filled in from further up
+     * the same chain. Chapter 4 has 73 lines reading simply "Not exceeding
+     * 3 %", whose parent says "Of a fat content, by weight" and carries no
+     * number - so the threshold and the thing it measures live on different
+     * lines, and neither is usable without the other.
+     *
      * @param array<int, Commodity|null> $ancestors
      */
-    private function weightConditionAbove(
+    private function conditionAbove(
         Commodity $candidate,
         ?Commodity $stopAt,
         array &$ancestors,
-    ): ?WeightCriterion {
+    ): ?QuantityCriterion {
         $node = $candidate;
         $depth = 0;
+        $criterion = null;
 
         while ($node !== null && $depth < self::MAX_ANCESTOR_DEPTH) {
             if ($stopAt !== null && $node->sid === $stopAt->sid) {
                 return null;
             }
 
-            $criterion = $this->weights->parse($node->description);
+            if ($criterion === null) {
+                $criterion = $this->quantities->parse($node->description);
 
-            if ($criterion !== null) {
-                return $criterion;
+                if ($criterion !== null && $criterion->hasKnownProperty()) {
+                    return $criterion;
+                }
+            } else {
+                // Carrying a subjectless condition upward, looking for the
+                // line that names what it measures.
+                $subject = $this->quantities->subjectIn($node->description);
+
+                if ($subject !== null) {
+                    return $criterion->withProperty($subject);
+                }
             }
 
             $parentSid = $node->parentSid;
 
             if ($parentSid === null) {
-                return null;
+                break;
             }
 
             if (!array_key_exists($parentSid, $ancestors)) {
@@ -231,6 +286,8 @@ final class CommodityResolver
             ++$depth;
         }
 
-        return null;
+        // A condition whose subject was never found stays unusable, and an
+        // unusable condition eliminates nothing.
+        return $criterion !== null && $criterion->hasKnownProperty() ? $criterion : null;
     }
 }

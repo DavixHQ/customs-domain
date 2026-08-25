@@ -9,6 +9,13 @@ verbatim. Tests replay these; nothing in the suite contacts the live service.
 | `commodity-9301100000.json` | `/commodities/9301100000` — artillery weapons, heavily controlled |
 | `changes.json` | `/changes/{date}` — the daily changes feed |
 
+The three chapters were chosen because they branch on entirely different
+things. Apparel splits on garment weight, dairy on fat content, beverages on
+alcoholic strength - and a quantity parser that reads only mass works for the
+first and does nothing for the other two. Coverage is asserted against them
+directly, so a pattern that stops matching shows up as a failing count rather
+than as quietly worse narrowing.
+
 Both commodities were chosen to exercise different parts of the mapper. The
 parka carries ordinary duty, a tariff preference, a quota, VAT with a zero-rate
 option and a trade defence flag. The artillery weapons carry an import
