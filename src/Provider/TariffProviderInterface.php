@@ -9,6 +9,7 @@ use Davix\Customs\Tariff\ChangeRecord;
 use Davix\Customs\Tariff\Commodity;
 use Davix\Customs\Tariff\CommodityDetail;
 use Davix\Customs\Tariff\HistoricRecord;
+use Davix\Customs\Tariff\Jurisdiction;
 use Davix\Customs\Tariff\QuotaSet;
 use DateTimeImmutable;
 
@@ -98,6 +99,16 @@ interface TariffProviderInterface
      * @throws \Davix\Customs\Exception\TariffUnavailableException
      */
     public function quotas(string $code, ?DateTimeImmutable $asOf = null): QuotaSet;
+
+    /**
+     * Which tariff this provider queries.
+     *
+     * Great Britain and Northern Ireland are separate tariffs with identical
+     * response shapes, so nothing about a reply reveals a client pointed at
+     * the wrong one. A host holding a mirror should compare this against the
+     * mirror's own jurisdiction before scanning.
+     */
+    public function jurisdiction(): Jurisdiction;
 
     /**
      * Whether the service is reachable and answering.

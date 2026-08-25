@@ -12,7 +12,7 @@ namespace Davix\Customs\Tariff;
  *
  * The ancestors matter more than they look. Weight conditions live on grouping
  * lines rather than declarable ones, so a rule reasoning about the conditions
- * on a specific commodity has to read upward - the line itself says only
+ * on a specific commodity has to read upward — the line itself says only
  * "Other".
  */
 final class CommodityDetail
@@ -37,6 +37,25 @@ final class CommodityDetail
     public function code(): string
     {
         return $this->commodity->code;
+    }
+
+    /**
+     * Which tariff answered, according to the response itself.
+     *
+     * Worth checking against what was asked for. A UK and a Northern Ireland
+     * response are structurally identical, so a client pointed at the wrong
+     * base URI returns something that looks entirely correct and answers a
+     * different question. This marker is the only thing that distinguishes
+     * them.
+     */
+    public function jurisdiction(): ?Jurisdiction
+    {
+        return Jurisdiction::fromSource($this->flags->source);
+    }
+
+    public function isFor(Jurisdiction $jurisdiction): bool
+    {
+        return $this->jurisdiction() === $jurisdiction;
     }
 
     public function isDeclarable(): bool

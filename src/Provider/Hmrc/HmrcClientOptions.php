@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Davix\Customs\Provider\Hmrc;
 
+use Davix\Customs\Tariff\Jurisdiction;
+
 /**
  * How the client should behave. Plain values, supplied by the host from its
  * own configuration.
@@ -23,7 +25,7 @@ final class HmrcClientOptions
      *        Measures change daily at most, and a scan may ask for the same
      *        code thousands of times in a run.
      * @param int $chapterCacheTtl Chapter pulls are large and change rarely.
-     *        Zero disables caching for them, which is usually right - the sync
+     *        Zero disables caching for them, which is usually right — the sync
      *        already hashes responses to skip unchanged chapters.
      * @param bool $jitter Spread retries so a fleet of stores hitting a rate
      *        limit does not retry in lockstep and cause the next one.
@@ -37,7 +39,36 @@ final class HmrcClientOptions
         public readonly int $chapterCacheTtl = 0,
         public readonly bool $jitter = true,
         public readonly ?string $userAgent = null,
+        public readonly Jurisdiction $jurisdiction = Jurisdiction::Uk,
     ) {
+    }
+
+    /**
+     * Options pointed at a jurisdiction's own service.
+     *
+     * Northern Ireland is a different tariff, not a variation on the UK one,
+     * and its responses are structurally identical - so a client left pointing
+     * at the wrong base URI returns plausible answers to the wrong question.
+     * Naming the jurisdiction rather than pasting a URI makes that harder to
+     * get wrong and easier to notice.
+     */
+    public static function for(
+        Jurisdiction $jurisdiction,
+        ?self $template = null,
+    ): self {
+        $template ??= new self();
+
+        return new self(
+            $jurisdiction->baseUri(),
+            $template->maxAttempts,
+            $template->baseDelaySeconds,
+            $template->maxDelaySeconds,
+            $template->commodityCacheTtl,
+            $template->chapterCacheTtl,
+            $template->jitter,
+            $template->userAgent,
+            $jurisdiction,
+        );
     }
 
     public function withBaseUri(string $baseUri): self
@@ -51,6 +82,7 @@ final class HmrcClientOptions
             $this->chapterCacheTtl,
             $this->jitter,
             $this->userAgent,
+            $this->jurisdiction,
         );
     }
 

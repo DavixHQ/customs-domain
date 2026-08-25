@@ -7,7 +7,7 @@ namespace Davix\Customs\Tariff;
 /**
  * Read access to the local nomenclature mirror.
  *
- * The host application implements this over whatever storage it uses - a
+ * The host application implements this over whatever storage it uses — a
  * Magento resource model over `customsradar_commodity`, a WordPress table, a
  * SQLite file. This package never knows which.
  *
@@ -17,13 +17,23 @@ namespace Davix\Customs\Tariff;
  * keeps this interface from growing a parameter that almost every caller would
  * pass the same value to.
  *
- * Every method reads the mirror only. Nothing here makes a network call -
+ * Every method reads the mirror only. Nothing here makes a network call —
  * that is what makes the offline rules evaluable with zero HTTP per product,
  * and what stops a provider outage from flagging an entire catalogue as
  * broken.
  */
 interface CommodityRepositoryInterface
 {
+    /**
+     * Which tariff this mirror holds.
+     *
+     * Declared rather than assumed, because a Great Britain mirror queried
+     * alongside a Northern Ireland client produces answers that are wrong
+     * without looking wrong. A host holding both should compare this against
+     * its client's jurisdiction before scanning.
+     */
+    public function jurisdiction(): Jurisdiction;
+
     /**
      * Find one line by its goods nomenclature SID.
      */
@@ -32,7 +42,7 @@ interface CommodityRepositoryInterface
     /**
      * Find every line carrying a commodity code.
      *
-     * Returns a list because commodity codes are not unique - the same code
+     * Returns a list because commodity codes are not unique — the same code
      * routinely appears as both an intermediate grouping line and a declarable
      * line. Callers wanting the declarable one should use findDeclarable().
      *

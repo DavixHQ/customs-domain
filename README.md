@@ -10,7 +10,7 @@ equivalent integrations elsewhere without modification.
 
 ## Requirements
 
-PHP 8.1 or later. The only runtime dependencies are PSR interfaces -
+PHP 8.1 or later. The only runtime dependencies are PSR interfaces —
 `psr/http-client`, `psr/http-factory`, `psr/http-message`, `psr/log` and
 `psr/simple-cache`. No concrete HTTP client, cache or logger is bundled; the
 consuming application supplies those.
@@ -72,8 +72,8 @@ $result->wasModified();                          // true
 $normaliser->formatForDisplay($result->code());  // '6201.40.10.19'
 ```
 
-It repairs what can be repaired unambiguously - dotted and spaced grouping,
-Excel's trailing `.0`, leading zeroes stripped by numeric formatting - and
+It repairs what can be repaired unambiguously — dotted and spaced grouping,
+Excel's trailing `.0`, leading zeroes stripped by numeric formatting — and
 refuses to guess at anything else:
 
 ```php
@@ -109,6 +109,40 @@ $resolution->narrowedByWeight; // whether net weight eliminated any
 check". An unmirrored chapter proves nothing about a code, and reporting a
 failed sync as thousands of bad merchant codes would be both wrong and
 corrosive to trust.
+
+## Northern Ireland
+
+Great Britain and Northern Ireland are separate tariffs. The same commodity
+code can carry different duty, different quotas and different controls in each
+- the men's parka in the test fixtures has 74 measures under the UK tariff and
+94 under the Northern Ireland one.
+
+The two services return byte-identical structures, which is a mercy for the
+mapper and a hazard for everyone else: a client pointed at the wrong base URI
+returns something that looks entirely correct and answers a different
+question. So the jurisdiction is chosen explicitly and carried everywhere.
+
+```php
+use Davix\Customs\Provider\Hmrc\HmrcClientOptions;
+use Davix\Customs\Tariff\Jurisdiction;
+
+$options = HmrcClientOptions::for(Jurisdiction::NorthernIreland);
+
+$detail->jurisdiction();                            // which tariff answered
+$detail->isFor(Jurisdiction::NorthernIreland);      // did we get what we asked for
+```
+
+Two territories means two mirrors. A repository declares which tariff it holds,
+so a host serving both can compare it against its client before scanning rather
+than discovering the mismatch in the duty rates:
+
+```php
+if ($repository->jurisdiction() !== $provider->jurisdiction()) {
+    // reading a Great Britain mirror against a Northern Ireland client
+}
+```
+
+Cache keys are scoped by jurisdiction for the same reason.
 
 ## Running the rules
 
@@ -174,7 +208,7 @@ scan is harmless rather than wrong.
 Two things these get right that a naive reading of the payload does not.
 
 **A negative condition is not a prohibition.** Nearly every control measure
-carries one reading "not allowed after control" - the branch taken when the
+carries one reading "not allowed after control" — the branch taken when the
 required document is absent, not the measure's normal outcome. Chapter 62
 garments carry several, so counting them marks an entire apparel catalogue
 unshippable. A prohibition means measure series A, or a negative condition with
@@ -201,7 +235,7 @@ public function prerequisites(): array
 ```
 
 A rule whose prerequisite emitted an issue is skipped, and skipping cascades.
-A rule the merchant *disabled* counts as passing instead - silencing one check
+A rule the merchant *disabled* counts as passing instead — silencing one check
 should not silently disable everything downstream of it. `RuleEvaluation`
 keeps the skip list with reasons, so a host can honestly report that a check
 did not run rather than implying it passed.
@@ -242,8 +276,8 @@ with an explanation rather than a lint code. It needs `python3` on PATH.
 
 ## Status
 
-Pre-1.0 and under active development. Public interfaces - particularly
-`RuleInterface`, `EvaluationContext` and `CommodityRepositoryInterface` -
+Pre-1.0 and under active development. Public interfaces — particularly
+`RuleInterface`, `EvaluationContext` and `CommodityRepositoryInterface` —
 should be treated as unstable until a 1.0 tag.
 
 ## Licence

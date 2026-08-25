@@ -15,7 +15,7 @@ interfaces. `RuleInterface`, `EvaluationContext` and
 
 #### Validation
 
-- `CodeNormaliser` - repairs spreadsheet damage to commodity codes: dotted and
+- `CodeNormaliser` — repairs spreadsheet damage to commodity codes: dotted and
   spaced grouping, quoting, invisible whitespace, Excel's trailing `.0`, and
   leading zeroes stripped by numeric cell formatting. Returns a
   `NormalisationResult` carrying the raw input, the normalised code, the
@@ -25,7 +25,7 @@ interfaces. `RuleInterface`, `EvaluationContext` and
   Excel destroys the trailing digits of a ten-digit code rendered as
   `6.20140102E+09`; producing a plausible wrong classification would be worse
   than reporting the problem.
-- `CodeFormat` - validates shape and reports the hierarchy level, with
+- `CodeFormat` — validates shape and reports the hierarchy level, with
   truncation and padding helpers. A six-digit subheading is *valid* here and
   simply not declarable, which keeps format failures separate from
   classification work.
@@ -34,11 +34,11 @@ interfaces. `RuleInterface`, `EvaluationContext` and
 #### Tariff
 
 - `Commodity` value object keyed on the goods nomenclature SID rather than the
-  commodity code, because codes are not unique - the same code appears as both
+  commodity code, because codes are not unique — the same code appears as both
   an intermediate grouping line and a declarable line.
 - `CommodityRepositoryInterface` and an `InMemoryCommodityRepository` for
   tests and small consumers.
-- `CommodityResolver` - matches a code against the mirror, tries the padded
+- `CommodityResolver` — matches a code against the mirror, tries the padded
   form for codes shorter than ten digits, walks the tree through intermediate
   lines, and narrows candidates by net weight.
 - `Resolution` and `ResolutionOutcome`, separating "checked and wrong" from
@@ -46,7 +46,7 @@ interfaces. `RuleInterface`, `EvaluationContext` and
   reported as inconclusive.
 - `WeightCriterion` and `WeightCriterionParser` for the weight conditions the
   tariff expresses in prose.
-- `HistoricRecord` - the result of a baseline lookup, which is what separates a
+- `HistoricRecord` — the result of a baseline lookup, which is what separates a
   withdrawn code from one that never existed.
 
 #### Product
@@ -64,8 +64,8 @@ interfaces. `RuleInterface`, `EvaluationContext` and
 - Prerequisite declaration and short-circuiting, so one unreadable code
   produces one issue rather than five derived ones. Skipping cascades; a
   disabled prerequisite counts as passing.
-- Configuration errors - duplicate codes, unknown prerequisites, self
-  references and cycles - throw at pool construction rather than mid-scan.
+- Configuration errors — duplicate codes, unknown prerequisites, self
+  references and cycles — throw at pool construction rather than mid-scan.
 - Merchant severity overrides applied by the pool, so rules never read config.
 - Twelve offline checks: `missing_hs_code`, `invalid_code_format`,
   `withdrawn_code`, `unknown_code`, `ambiguous_expansion`, `missing_origin`,
@@ -104,32 +104,72 @@ interfaces. `RuleInterface`, `EvaluationContext` and
 - `TradeDirection` on `RuleSettings`. A single commodity carries import and
   export measures together and they are different restrictions.
 
+#### Jurisdictions
+
+- `Jurisdiction` covering Great Britain and Northern Ireland, with the base URI
+  for each. The two services return structurally identical responses, so a
+  misconfigured client answers a different question without anything looking
+  wrong; the jurisdiction is therefore carried explicitly on options, the
+  client, the mirror and every cache key.
+- `CommodityDetail::jurisdiction()` reads which tariff actually answered, from
+  the `source` marker, so a host can check it got what it asked for.
+
+#### Quantities
+
+- `QuantityCriterion` and `QuantityCriterionParser` replace the weight-only
+  pair. The tariff branches on far more than mass: chapter 22 splits 348 times
+  on alcoholic strength and 43 on container volume, chapter 4 on fat content.
+  Narrowing takes 365 candidates to 126 in chapter 22 and 34 to 14 in chapter 4.
+- Bounds carry their own inclusivity, since "exceeding 1 kg" excludes exactly
+  1 kg and thresholds sit where products cluster.
+- Ranges parse in one pass, and quantities written as words are read.
+- Chapter 4's 73 subject-less lines work by carrying the condition up to the
+  parent that names what it measures.
+- Zero is dimension-aware: a zero-weight garment is missing data, zero-per-cent
+  alcohol is a product with its own tariff lines.
+- `ProductCustomsDataInterface::measuredProperties()` and a property map on
+  `resolve()` replace the single weight argument.
+
+#### Certificates and quotas
+
+- `CertificateIndex` resolves document codes to descriptions, so a control
+  reports "DBT Firearms Import License" rather than "9023". The whole listing
+  arrives in one call and is cached per scan.
+- `QuotaDefinition` carries the remaining balance, and `quota_exhausted` warns
+  before exhaustion as well as after, reporting what the merchant pays instead.
+- `historicRecord()` refetches a code at a baseline date, which is what
+  separates a withdrawn code from one that never existed.
+
 #### Tooling
 
-- `bin/check-boundary.sh` - fails the build if platform-specific code appears
+- `bin/check-boundary.sh` — fails the build if platform-specific code appears
   under `src/`. Fails loudly on a missing or empty target directory, so a typo
   cannot read as a clean result, and reports the file count checked.
-- `bin/check-nullsafe.py` - catches redundant nullsafe operators with an
+- `bin/check-nullsafe.py` — catches redundant nullsafe operators with an
   explanation, ahead of PHPStan.
 - CI across PHP 8.1 to 8.4, PHPStan at level max.
 
 ### Fixed
 
+- **The European decimal comma was read as a thousands separator.** Chapter 4
+  states "net content not exceeding 2,5 kg"; that parsed as 25 kg. A tenfold
+  error, and worse than not parsing, because it produced a confident threshold
+  that was simply wrong.
 - **A negative condition was treated as a prohibition.** Nearly every control
-  measure carries one reading "not allowed after control" - the branch taken
+  measure carries one reading "not allowed after control" — the branch taken
   when the required document is absent, not the measure's normal outcome.
   Chapter 62 garments carry several, so the first version of `prohibited_goods`
   reported every parka in a catalogue as unshippable. A prohibition now means
   measure series A, or a negative condition with no documentary route at all.
 - **Licences were told from statements by their code prefix.** They cannot be.
   The firearms control lists 9020 "This product is exempt as it is not a
-  firearm" beside 9023 "DBT Firearms Import License" - structurally identical,
+  firearm" beside 9023 "DBT Firearms Import License" — structurally identical,
   one a formality and one a licence. `licence_required` now names the control
   and lists every option that would satisfy it, and splits severity on whether
   a declaration suffices rather than guessing which document is which.
 - **Weight narrowing read the wrong descriptions.** Candidates were matched
   against their own description, but the real nomenclature never puts a weight
-  condition on a declarable line - the split at 1 kg per garment sits on a
+  condition on a declarable line — the split at 1 kg per garment sits on a
   grouping line two levels above, and the candidates are "Parkas", "Other" and
   "Hand-printed by the batik method". Narrowing therefore did nothing at all on
   live data. Each candidate is now matched against the nearest weight condition
@@ -138,8 +178,8 @@ interfaces. `RuleInterface`, `EvaluationContext` and
   and cannot discriminate. Found by rebuilding the test fixture from a live
   chapter 62 response.
 - **A cyclic parent reference could exhaust memory.** `declarableDescendantsOf`
-  recursed without a visited set, so a corrupt mirror - which a partial or
-  interrupted sync can produce - would loop until the process died, taking the
+  recursed without a visited set, so a corrupt mirror — which a partial or
+  interrupted sync can produce — would loop until the process died, taking the
   whole scan with it. Both directions of the tree walk are now bounded: a
   visited set descending, a depth guard ascending.
 

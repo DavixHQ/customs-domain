@@ -14,6 +14,7 @@ use Davix\Customs\Tariff\CertificateIndex;
 use Davix\Customs\Tariff\ChangeRecord;
 use Davix\Customs\Tariff\CommodityDetail;
 use Davix\Customs\Tariff\HistoricRecord;
+use Davix\Customs\Tariff\Jurisdiction;
 use Davix\Customs\Tariff\QuotaSet;
 use DateTimeImmutable;
 use Psr\Http\Client\ClientExceptionInterface;
@@ -206,6 +207,19 @@ final class HmrcClient implements TariffProviderInterface
         );
     }
 
+    /**
+     * Which tariff this client is querying.
+     *
+     * Exposed so a host can compare it against its mirror's jurisdiction
+     * before scanning. A Great Britain mirror read alongside a Northern
+     * Ireland client returns answers that are wrong without looking wrong, and
+     * the responses carry no shape difference to catch it by.
+     */
+    public function jurisdiction(): Jurisdiction
+    {
+        return $this->options->jurisdiction;
+    }
+
     public function isAvailable(): bool
     {
         try {
@@ -367,9 +381,21 @@ final class HmrcClient implements TariffProviderInterface
         return $body;
     }
 
+    /**
+     * The jurisdiction belongs in the key.
+     *
+     * Without it a store serving both Great Britain and Northern Ireland
+     * caches one commodity's UK answer and serves it for the XI lookup, which
+     * is a wrong duty rate that no test would catch and no response would
+     * contradict.
+     */
     private function cacheKey(string $kind, string $identifier, DateTimeImmutable $date): string
     {
-        return self::CACHE_PREFIX . $kind . '.' . $identifier . '.' . $date->format('Y-m-d');
+        return self::CACHE_PREFIX
+            . $this->options->jurisdiction->value . '.'
+            . $kind . '.'
+            . $identifier . '.'
+            . $date->format('Y-m-d');
     }
 
     /**
