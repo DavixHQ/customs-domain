@@ -9,6 +9,7 @@ use Davix\Customs\Tariff\ChangeRecord;
 use Davix\Customs\Tariff\Commodity;
 use Davix\Customs\Tariff\CommodityDetail;
 use Davix\Customs\Tariff\HistoricRecord;
+use Davix\Customs\Tariff\QuotaSet;
 use DateTimeImmutable;
 
 /**
@@ -85,6 +86,18 @@ interface TariffProviderInterface
      *         service itself cannot be reached
      */
     public function historicRecord(string $code, DateTimeImmutable $baseline): HistoricRecord;
+
+    /**
+     * Tariff quotas attached to a commodity, with their remaining balances.
+     *
+     * Balances are the reason this is a separate call: a measure states that a
+     * preferential rate exists under an order number, and says nothing about
+     * whether the quota still has volume in it. A merchant quoting a landed
+     * cost against an exhausted quota is paying full duty without knowing.
+     *
+     * @throws \Davix\Customs\Exception\TariffUnavailableException
+     */
+    public function quotas(string $code, ?DateTimeImmutable $asOf = null): QuotaSet;
 
     /**
      * Whether the service is reachable and answering.

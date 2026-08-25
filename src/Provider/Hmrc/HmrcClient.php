@@ -14,6 +14,7 @@ use Davix\Customs\Tariff\CertificateIndex;
 use Davix\Customs\Tariff\ChangeRecord;
 use Davix\Customs\Tariff\CommodityDetail;
 use Davix\Customs\Tariff\HistoricRecord;
+use Davix\Customs\Tariff\QuotaSet;
 use DateTimeImmutable;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
@@ -63,6 +64,7 @@ final class HmrcClient implements TariffProviderInterface
         private readonly ChapterCsvParser $chapterParser = new ChapterCsvParser(),
         private readonly ChangesMapper $changesMapper = new ChangesMapper(),
         private readonly CertificateMapper $certificateMapper = new CertificateMapper(),
+        private readonly QuotaMapper $quotaMapper = new QuotaMapper(),
     ) {
     }
 
@@ -141,6 +143,31 @@ final class HmrcClient implements TariffProviderInterface
 
         try {
             return $this->certificateMapper->mapJson($body);
+        } catch (\JsonException $e) {
+            throw TariffUnavailableException::malformed($url, $e);
+        }
+    }
+
+    public function quotas(string $code, ?DateTimeImmutable $asOf = null): QuotaSet
+    {
+        $date = $this->dateFor($asOf);
+        $url = $this->url(
+            '/quotas/search?goods_nomenclature_item_id=' . rawurlencode($code),
+            $date,
+            separator: '&',
+        );
+
+        // Cached far more briefly than a commodity. A balance is the one thing
+        // here that genuinely moves during a day, and a stale one is worse
+        // than none: it reports headroom that has already gone.
+        $body = $this->cached(
+            $this->cacheKey('quotas', $code, $date),
+            (int) min($this->options->commodityCacheTtl, 3600),
+            fn (): string => $this->fetch($url, self::ACCEPT_JSON),
+        );
+
+        try {
+            return $this->quotaMapper->mapJson($body);
         } catch (\JsonException $e) {
             throw TariffUnavailableException::malformed($url, $e);
         }
@@ -345,11 +372,15 @@ final class HmrcClient implements TariffProviderInterface
         return self::CACHE_PREFIX . $kind . '.' . $identifier . '.' . $date->format('Y-m-d');
     }
 
-    private function url(string $path, ?DateTimeImmutable $asOf): string
+    /**
+     * @param string $separator '?' for a plain path, '&' when the path already
+     *        carries a query string.
+     */
+    private function url(string $path, ?DateTimeImmutable $asOf, string $separator = '?'): string
     {
         $url = rtrim($this->options->baseUri, '/') . $path;
 
-        return $asOf === null ? $url : $url . '?as_of=' . $asOf->format('Y-m-d');
+        return $asOf === null ? $url : $url . $separator . 'as_of=' . $asOf->format('Y-m-d');
     }
 
     private function dateFor(?DateTimeImmutable $asOf): DateTimeImmutable

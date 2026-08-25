@@ -16,7 +16,7 @@ final class RuleSettings
 {
     /**
      * Descriptions that get customs declarations rejected. Generic to the
-     * point of uselessness - a carrier cannot classify "gift" or "parts".
+     * point of uselessness — a carrier cannot classify "gift" or "parts".
      *
      * @var list<string>
      */
@@ -60,13 +60,16 @@ final class RuleSettings
      * @param list<string> $compositionChapters
      * @param list<string> $recognisedOriginCodes Country codes the tariff has a
      *        matching geographical area for. Supplied by the host from its own
-     *        mirror. Left empty, origins are checked for shape only - better
+     *        mirror. Left empty, origins are checked for shape only — better
      *        than rejecting valid countries against an empty list.
      * @param TradeDirection $direction Which way the merchant's goods move.
      *        A single commodity carries both directions' measures, and they
-     *        are different restrictions - the artillery fixture has nine
+     *        are different restrictions — the artillery fixture has nine
      *        import prohibitions and eleven export ones. Reporting the wrong
      *        set is noise that teaches merchants to ignore the module.
+     * @param float $quotaLowThreshold Remaining fraction below which a quota is
+     *        worth warning about. Ten per cent by default: early enough to
+     *        bring a shipment forward, late enough not to cry wolf all year.
      */
     public function __construct(
         public readonly int $staleVerificationMonths = 12,
@@ -77,6 +80,7 @@ final class RuleSettings
         public readonly int $expiryWarningDays = 60,
         public readonly array $recognisedOriginCodes = [],
         public readonly TradeDirection $direction = TradeDirection::Import,
+        public readonly float $quotaLowThreshold = 0.1,
     ) {
     }
 

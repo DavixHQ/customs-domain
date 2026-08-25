@@ -8,6 +8,7 @@ use Davix\Customs\Tariff\CertificateIndex;
 use Davix\Customs\Tariff\Commodity;
 use Davix\Customs\Tariff\CommodityDetail;
 use Davix\Customs\Tariff\MeasureSet;
+use Davix\Customs\Tariff\QuotaSet;
 use Davix\Customs\Tariff\HistoricRecord;
 use Davix\Customs\Tariff\Resolution;
 use Davix\Customs\Tariff\ResolutionOutcome;
@@ -46,6 +47,9 @@ final class EvaluationContext
      *        Without it a control reports "9023" instead of "DBT Firearms
      *        Import License", which tells a merchant something is required but
      *        nothing about what.
+     * @param QuotaSet|null $quotas Quota balances for the resolved commodity.
+     *        A measure states that a preferential rate exists under an order
+     *        number; only the balance says whether it is still available.
      */
     public function __construct(
         public readonly DateTimeImmutable $evaluatedAt,
@@ -54,6 +58,7 @@ final class EvaluationContext
         public readonly ?HistoricRecord $historic = null,
         public readonly ?CommodityDetail $detail = null,
         public readonly ?CertificateIndex $certificates = null,
+        public readonly ?QuotaSet $quotas = null,
     ) {
     }
 
@@ -67,6 +72,7 @@ final class EvaluationContext
         ?HistoricRecord $historic = null,
         ?CommodityDetail $detail = null,
         ?CertificateIndex $certificates = null,
+        ?QuotaSet $quotas = null,
     ): self {
         return new self(
             new DateTimeImmutable($date),
@@ -75,6 +81,7 @@ final class EvaluationContext
             $historic,
             $detail,
             $certificates,
+            $quotas,
         );
     }
 
@@ -148,22 +155,22 @@ final class EvaluationContext
 
     public function withResolution(?Resolution $resolution): self
     {
-        return new self($this->evaluatedAt, $this->settings, $resolution, $this->historic, $this->detail, $this->certificates);
+        return new self($this->evaluatedAt, $this->settings, $resolution, $this->historic, $this->detail, $this->certificates, $this->quotas);
     }
 
     public function withHistoric(?HistoricRecord $historic): self
     {
-        return new self($this->evaluatedAt, $this->settings, $this->resolution, $historic, $this->detail, $this->certificates);
+        return new self($this->evaluatedAt, $this->settings, $this->resolution, $historic, $this->detail, $this->certificates, $this->quotas);
     }
 
     public function withDetail(?CommodityDetail $detail): self
     {
-        return new self($this->evaluatedAt, $this->settings, $this->resolution, $this->historic, $detail, $this->certificates);
+        return new self($this->evaluatedAt, $this->settings, $this->resolution, $this->historic, $detail, $this->certificates, $this->quotas);
     }
 
     public function withSettings(RuleSettings $settings): self
     {
-        return new self($this->evaluatedAt, $settings, $this->resolution, $this->historic, $this->detail, $this->certificates);
+        return new self($this->evaluatedAt, $settings, $this->resolution, $this->historic, $this->detail, $this->certificates, $this->quotas);
     }
 
     public function withCertificates(?CertificateIndex $certificates): self
@@ -175,6 +182,20 @@ final class EvaluationContext
             $this->historic,
             $this->detail,
             $certificates,
+            $this->quotas,
+        );
+    }
+
+    public function withQuotas(?QuotaSet $quotas): self
+    {
+        return new self(
+            $this->evaluatedAt,
+            $this->settings,
+            $this->resolution,
+            $this->historic,
+            $this->detail,
+            $this->certificates,
+            $quotas,
         );
     }
 

@@ -59,8 +59,8 @@ final class HmrcClientTest extends TestCase
      *
      * TariffProviderInterface::chapter() returns iterable deliberately: an
      * implementation that already holds the lines should be free to hand back
-     * an array. iterator_to_array() only accepts Traversable on PHP 8.1 - the
-     * widening to iterable arrived in 8.2 - so the test normalises rather than
+     * an array. iterator_to_array() only accepts Traversable on PHP 8.1 — the
+     * widening to iterable arrived in 8.2 — so the test normalises rather than
      * narrowing the contract to suit one runtime.
      *
      * @template T
@@ -387,6 +387,90 @@ final class HmrcClientTest extends TestCase
         ]);
 
         self::assertFalse($failing->isAvailable());
+    }
+
+    // -------------------------------------------------------------- historic
+
+    /**
+     * The lookup that separates a withdrawn code from one that never existed.
+     * Needs no new endpoint: it is the commodity endpoint asked at a date
+     * before the revision that removed the code.
+     */
+    public function testAHistoricLookupAsksAtTheBaselineDate(): void
+    {
+        $client = $this->client([$this->response(200, $this->fixture('commodity-6201401019.json'))]);
+
+        $record = $client->historicRecord('6201930000', new DateTimeImmutable('2021-12-31'));
+
+        self::assertTrue($record->existed);
+        self::assertStringContainsString('as_of=2021-12-31', $this->requestedUrls()[0]);
+    }
+
+    /**
+     * A 404 at the baseline is an answer, not a failure: the code did not
+     * exist then either.
+     */
+    public function testAbsenceAtTheBaselineMeansTheCodeWasNeverReal(): void
+    {
+        $client = $this->client([$this->response(404)]);
+
+        self::assertFalse($client->historicRecord('6299999999', new DateTimeImmutable('2021-12-31'))->existed);
+    }
+
+    /**
+     * Anything other than a 404 propagates. Reporting "this code never
+     * existed" on the strength of a rate limit would be a confident lie.
+     */
+    public function testATransientFailureDoesNotMasqueradeAsAbsence(): void
+    {
+        $client = $this->client([
+            $this->response(503),
+            $this->response(503),
+            $this->response(503),
+        ]);
+
+        $this->expectException(TariffUnavailableException::class);
+
+        $client->historicRecord('6201930000', new DateTimeImmutable('2021-12-31'));
+    }
+
+    // ---------------------------------------------------------- certificates
+
+    public function testCertificatesAreFetchedAndIndexed(): void
+    {
+        $client = $this->client([$this->response(200, $this->fixture('certificates.json'))]);
+
+        $index = $client->certificates();
+
+        self::assertSame(596, $index->count());
+        self::assertSame('DBT Firearms Import License', $index->describe('9023'));
+    }
+
+    public function testQuotasAreFetchedForACommodity(): void
+    {
+        $client = $this->client([$this->response(200, $this->fixture('quota-by-commodity.json'))]);
+
+        $quotas = $client->quotas('6201401019');
+
+        self::assertSame(1, $quotas->count());
+        self::assertSame('057031', $quotas->first()?->orderNumber);
+    }
+
+    /**
+     * The quota path already carries a query string, so the date has to be
+     * appended with an ampersand rather than a second question mark.
+     */
+    public function testTheQuotaUrlAppendsTheDateCorrectly(): void
+    {
+        $client = $this->client([$this->response(200, $this->fixture('quota-by-commodity.json'))]);
+
+        $client->quotas('6201401019');
+
+        $url = $this->requestedUrls()[0];
+
+        self::assertStringContainsString('goods_nomenclature_item_id=6201401019', $url);
+        self::assertStringContainsString('&as_of=', $url);
+        self::assertSame(1, substr_count($url, '?'));
     }
 
     // ------------------------------------------------------------- malformed
