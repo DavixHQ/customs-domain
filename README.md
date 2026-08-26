@@ -240,6 +240,55 @@ should not silently disable everything downstream of it. `RuleEvaluation`
 keeps the skip list with reasons, so a host can honestly report that a check
 did not run rather than implying it passed.
 
+## Scanning a catalogue
+
+The rule engine checks one product. `ProductScanner` runs it across a
+catalogue, and lives here rather than in each platform module because the
+expensive decisions are identical everywhere and easy to get quietly wrong.
+
+```php
+use Davix\Customs\Scan\ProductScanner;
+use Davix\Customs\Scan\ScanOptions;
+
+$scanner = new ProductScanner(
+    rules: DefaultRuleSet::fullPool(),
+    resolver: $resolver,
+    provider: $client,
+    settings: $settings,
+    options: new ScanOptions(),
+);
+
+foreach ($scanner->scan($products) as $result) {
+    // persist $result->evaluation against $result->identifier
+}
+
+$scanner->summary()->productsWithIssues();
+```
+
+**Lookups are per commodity code, not per product.** A 5,000-product apparel
+catalogue commonly holds a couple of hundred distinct codes, so fetching per
+product is 5,000 calls where 200 will do. Certificates are fetched once for the
+whole scan. In the test suite, 200 products resolve with three network calls.
+Deduplication keys on the resolved code, so a catalogue written variously as
+`620130`, `6201.30` and `6201300000` still shares one lookup.
+
+**Nothing is fetched where it cannot help.** An ambiguous code spans several
+classifications at once, so there is no single measure set to ask for; a code
+missing from the mirror has no measures at all, but is exactly where a historic
+lookup earns its call.
+
+**An outage does not discard the scan.** Offline findings survive, the affected
+products are marked incomplete rather than clean, and a run that fails
+repeatedly abandons itself rather than producing a catalogue-wide report built
+on nothing.
+
+`ScanOptions::offline()` makes no network calls at all - what a nightly
+catalogue-wide run should use, leaving the measure rules silent rather than
+guessing.
+
+What stays with the host: iterating the catalogue, persistence, queueing,
+progress and cancellation. Those look nothing alike across platforms.
+
 ### Adding a rule
 
 One class implementing `RuleInterface`, and one registration. If it ever takes

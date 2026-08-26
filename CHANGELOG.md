@@ -104,6 +104,22 @@ interfaces. `RuleInterface`, `EvaluationContext` and
 - `TradeDirection` on `RuleSettings`. A single commodity carries import and
   export measures together and they are different restrictions.
 
+#### Scanning
+
+- `ProductScanner` runs the rule set across a catalogue, with the deduplication
+  and ordering that would otherwise be written once per platform and drift
+  three ways. Lookups are per commodity code rather than per product, keyed on
+  the resolved code so inconsistent spellings share one call; certificates are
+  fetched once per scan.
+- Nothing is fetched where it cannot help: an ambiguous code has no single
+  measure set, a national chapter was never in the mirror, and a missing code
+  gets a historic lookup instead.
+- A provider outage leaves offline findings intact and marks affected products
+  incomplete rather than clean. Repeated failures abandon the scan rather than
+  producing a report built on nothing.
+- `ScanSummary` counts products and issues separately, because they are
+  different numbers and a dashboard conflating them will not add up.
+
 #### Jurisdictions
 
 - `Jurisdiction` covering Great Britain and Northern Ireland, with the base URI
