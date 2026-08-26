@@ -21,8 +21,8 @@ use DateTimeImmutable;
  * without every caller knowing.
  *
  * Every method takes an optional `asOf`. The tariff is a function of a date,
- * not a fixed thing — a code valid today may not have been last year and may
- * not be next — so a lookup without a date is a lookup whose answer changes
+ * not a fixed thing, a code valid today may not have been last year and may
+ * not be next, so a lookup without a date is a lookup whose answer changes
  * underneath you.
  */
 interface TariffProviderInterface
@@ -50,7 +50,7 @@ interface TariffProviderInterface
      * What changed on a given date.
      *
      * An empty result means the feed reported nothing, which is not the same
-     * as nothing having changed — the feed is only retained for a window, and
+     * as nothing having changed, the feed is only retained for a window, and
      * a request for a date outside it also returns empty. Callers that care
      * about the difference should track their own last successful poll.
      *

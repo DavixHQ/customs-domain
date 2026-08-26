@@ -35,7 +35,7 @@ the thing that matters:
 - `excluded_countries` on a measure are references to `geographical_area`
   resources keyed by country code, while the measure's own area is a numeric
   group id. Both appear in `included`.
-- Prohibition action codes are `09`, `06` and `05` — not `09` alone.
+- Prohibition action codes are `09`, `06` and `05` not `09` alone.
 - Document codes in the `90xx` range are national exemption statements paired
   with "Import allowed" actions, not licence requirements.
 

@@ -14,7 +14,7 @@ use Davix\Customs\Tariff\MeasureCondition;
 /**
  * These goods are controlled, and something must be presented for them to move.
  *
- * Scoped to control measures — series B — rather than to any commodity
+ * Scoped to control measures, series B rather than to any commodity
  * carrying a document code, because document codes are everywhere and most of
  * them hang off duty measures offering a cheaper rate. A parka carries fifteen
  * and artillery seventeen; firing on all of them would flag nearly every
@@ -25,7 +25,7 @@ use Davix\Customs\Tariff\MeasureCondition;
  * because the payload does not support that claim. The firearms control offers
  * 9020 "This product is exempt as it is not a firearm", 9026 "manufactured
  * before 1 January 1900", 9044 "private import", and 9023 "DBT Firearms Import
- * License" — a formality, two exemptions and an actual licence, structurally
+ * License" - a formality, two exemptions and an actual licence, structurally
  * identical and any one of which satisfies the measure. Only the merchant
  * knows which describes their goods, so the module names the control and lists
  * what would satisfy it.
@@ -62,11 +62,6 @@ final class LicenceRequired extends MeasureRule
 
         $codes = $measures->documentCodes();
 
-        // A control a merchant can satisfy by declaring what their goods are
-        // not is a formality rather than a blocker. Chapter 62 garments all
-        // carry the cat-and-dog-fur and seal-product controls, both answered
-        // by a statement. Only a control with no declaration route — a
-        // firearms licence, say — genuinely stops a shipment.
         $declarationOnly = true;
 
         foreach ($controls->all() as $control) {
@@ -86,11 +81,6 @@ final class LicenceRequired extends MeasureRule
                 'control_count' => $controls->count(),
                 'document_codes' => implode(',', $codes),
                 'document_count' => count($codes),
-                // Codes alone tell a merchant something is required and
-                // nothing about what. "9023" becomes "DBT Firearms Import
-                // License", which is the difference between a task and a
-                // mystery. Falls back to the bare codes when no index was
-                // fetched.
                 'documents' => $this->describeDocuments($codes, $context),
             ],
             variant: match (true) {

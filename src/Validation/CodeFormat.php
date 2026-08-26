@@ -37,7 +37,7 @@ final class CodeFormat
 
     /**
      * Chapters reserved for national use. These are real and appear in the UK
-     * tariff for special procedures, but they sit outside the standard 01–97
+     * tariff for special procedures, but they sit outside the standard 01-97
      * nomenclature that the chapter sync pulls.
      *
      * @var list<string>

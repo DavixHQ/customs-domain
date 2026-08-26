@@ -152,7 +152,7 @@ final class QuantityCriterionParserTest extends TestCase
 
     /**
      * The tariff writes decimals with a comma: chapter 4 has "net content not
-     * exceeding 2,5 kg". Reading that as a thousands separator gives 25 kg — a
+     * exceeding 2,5 kg". Reading that as a thousands separator gives 25 kg, a
      * tenfold error, and worse than not parsing, because it produces a
      * confident threshold that is wrong.
      */

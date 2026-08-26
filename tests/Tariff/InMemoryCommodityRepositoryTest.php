@@ -115,7 +115,7 @@ final class InMemoryCommodityRepositoryTest extends TestCase
 
     /**
      * Descent must cross intermediate lines rather than stopping at them. The
-     * wool branch is heading → intermediate → declarable, and the declarable
+     * wool branch is heading -> intermediate -> declarable, and the declarable
      * line has to be reachable from the heading.
      */
     public function testDeclarableDescendantsDescendThroughIntermediateLines(): void

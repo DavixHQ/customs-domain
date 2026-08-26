@@ -59,8 +59,8 @@ final class HmrcClientTest extends TestCase
      *
      * TariffProviderInterface::chapter() returns iterable deliberately: an
      * implementation that already holds the lines should be free to hand back
-     * an array. iterator_to_array() only accepts Traversable on PHP 8.1 — the
-     * widening to iterable arrived in 8.2 — so the test normalises rather than
+     * an array. iterator_to_array() only accepts Traversable on PHP 8.1 - the
+     * widening to iterable arrived in 8.2 - so the test normalises rather than
      * narrowing the contract to suit one runtime.
      *
      * @template T

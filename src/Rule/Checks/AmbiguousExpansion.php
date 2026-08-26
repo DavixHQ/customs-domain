@@ -16,7 +16,7 @@ use Davix\Customs\Tariff\Commodity;
  * The code is real but describes a group rather than a specific commodity.
  *
  * A six-digit subheading is what most merchants hold and what most suppliers
- * send. It is correct on an export declaration and HMRC recognises it — it is
+ * send. It is correct on an export declaration and HMRC recognises it, it is
  * simply not specific enough to declare against on import, and more than one
  * ten-digit line sits beneath it.
  *
@@ -27,7 +27,7 @@ use Davix\Customs\Tariff\Commodity;
  * research task into a five-second choice, which is why the candidate list
  * travels in the issue context rather than being looked up again by the UI.
  *
- * Where net weight has already narrowed the field, that is reported too — it
+ * Where net weight has already narrowed the field, that is reported too, it
  * is the most persuasive argument for populating net weight that the module
  * can make.
  */

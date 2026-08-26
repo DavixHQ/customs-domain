@@ -18,6 +18,9 @@ jobs:
       - name: Assert no redundant nullsafe operators
         run: python3 bin/check-nullsafe.py src tests
 
+      - name: Assert plain ASCII punctuation
+        run: python3 bin/check-characters.py
+
   test:
     name: PHP ${{ matrix.php }}
     runs-on: ubuntu-latest

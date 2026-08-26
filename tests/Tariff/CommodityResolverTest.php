@@ -95,13 +95,11 @@ final class CommodityResolverTest extends TestCase
         self::assertNotContains(Chapter62::COTTON_LIGHT_SID, $sids);
     }
 
-    // --------------------------------------------------------------- narrowing
-
     /**
      * The behaviour a made-up fixture got wrong.
      *
      * Weight conditions sit on grouping lines two levels above anything
-     * declarable — the candidates are "Parkas", "Other" and "Hand-printed by
+     * declarable the candidates are "Parkas", "Other" and "Hand-printed by
      * the batik method", none of which mention weight. Reading only the
      * candidate's own description finds no condition at all and narrows
      * nothing.

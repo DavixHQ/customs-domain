@@ -19,7 +19,7 @@ use Davix\Customs\Validation\CodeLevel;
  *
  * Codes shorter than ten digits are looked up as supplied first and only then
  * zero-padded. The nomenclature stores every line at full length with trailing
- * zeroes — heading 6201 as 6201000000 — but trying the literal value first
+ * zeroes heading 6201 as 6201000000, but trying the literal value first
  * costs one lookup and makes the resolver correct under either convention.
  */
 final class CommodityResolver
@@ -136,7 +136,7 @@ final class CommodityResolver
      *
      * The weight condition is almost never on the candidate itself. In the real
      * nomenclature the split at 1 kg per garment sits on a grouping line two
-     * levels above anything declarable — the candidates are "Parkas", "Other"
+     * levels above anything declarable, the candidates are "Parkas", "Other"
      * and "Hand-printed by the batik method", none of which mention weight. So
      * each candidate is matched against the nearest weight condition found by
      * walking up its ancestors, stopping at the line the merchant's own code
@@ -149,8 +149,8 @@ final class CommodityResolver
      * presenting one extra option.
      *
      * If weight eliminates everything, the narrowing is abandoned and the full
-     * set returned. That means the weight contradicts the whole branch — most
-     * likely grams entered as kilograms — and an empty list would be both
+     * set returned. That means the weight contradicts the whole branch, most
+     * likely grams entered as kilograms and an empty list would be both
      * useless and misleading.
      *
      * @param list<Commodity> $candidates

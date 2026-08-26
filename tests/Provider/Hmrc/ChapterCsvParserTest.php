@@ -111,7 +111,7 @@ final class ChapterCsvParserTest extends TestCase
 
     /**
      * Filtering by `as_of` returns only lines valid on that date, so every end
-     * date is empty. A null end means "in force", never "unknown" — which is
+     * date is empty. A null end means "in force", never "unknown" which is
      * exactly why a withdrawn code needs a separate historic lookup rather
      * than an end-date check.
      */
@@ -134,7 +134,7 @@ final class ChapterCsvParserTest extends TestCase
 
     /**
      * Live chapter 62 carries three productline suffixes, not two. Code
-     * 6203491100 appears at 10, 20 and 80 — "Of artificial fibres", then
+     * 6203491100 appears at 10, 20 and 80 "Of artificial fibres", then
      * "Trousers and breeches", then the declarable line. Treating 10 as the
      * only grouping suffix reads the middle one as declarable.
      */
@@ -189,8 +189,6 @@ final class ChapterCsvParserTest extends TestCase
         self::assertSame(396, count($byCode), 'Fewer distinct codes than lines');
     }
 
-    // ---------------------------------------------------------- end to end
-
     /**
      * The check that would have caught the two bugs real data exposed: parse
      * a whole live chapter, load it, and resolve through it.
@@ -242,8 +240,6 @@ final class ChapterCsvParserTest extends TestCase
         self::assertSame(106845, $resolution->commodity?->sid);
     }
 
-    // -------------------------------------------------------------- streaming
-
     public function testStreamingYieldsTheSameLines(): void
     {
         $streamed = iterator_to_array($this->parser->stream($this->chapterCsv()), false);
@@ -251,8 +247,6 @@ final class ChapterCsvParserTest extends TestCase
         self::assertCount(464, $streamed);
         self::assertSame(43115, $streamed[0]->sid);
     }
-
-    // --------------------------------------------------------------- failures
 
     /**
      * An empty response must fail rather than parse as an empty chapter. A

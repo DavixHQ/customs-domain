@@ -40,20 +40,20 @@ use DateTimeImmutable;
  *
  *     6201000000  heading                                    43116
  *     ├── 6201200000  Of wool or fine animal hair            106820
- *     │   ├── 6201200011  Overcoats, raincoats… (grouping)   106844
+ *     │   ├── 6201200011  Overcoats, raincoats... (grouping)   106844
  *     │   │   ├── 6201200011  Hand-made ponchos              106845  ✓
  *     │   │   └── 6201200019  Other                          106846  ✓
  *     │   └── 6201200091  Other                              106847  ✓
  *     └── 6201300000  Of cotton                              106821
- *         ├── 6201301000  …not exceeding 1 kg                106822
- *         │   ├── 6201301011  Overcoats… (grouping)          106848
+ *         ├── 6201301000  ...not exceeding 1 kg                106822
+ *         │   ├── 6201301011  Overcoats... (grouping)          106848
  *         │   │   ├── 6201301011  Parkas                     106849  ✓
  *         │   │   └── 6201301019  Other                      106850  ✓
  *         │   └── 6201301091  Other (grouping)               106851
  *         │       ├── 6201301091  Hand-printed, batik        106852  ✓
  *         │       └── 6201301099  Other                      106853  ✓
- *         └── 6201309000  …exceeding 1 kg                    106824
- *             ├── 6201309011  Overcoats… (grouping)          106854
+ *         └── 6201309000  ...exceeding 1 kg                    106824
+ *             ├── 6201309011  Overcoats... (grouping)          106854
  *             │   ├── 6201309011  Parkas                     106855  ✓
  *             │   └── 6201309019  Other                      106856  ✓
  *             └── 6201309091  Other (grouping)               106857

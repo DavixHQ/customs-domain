@@ -12,7 +12,7 @@ namespace Davix\Customs\Tariff;
  *
  * The ancestors matter more than they look. Weight conditions live on grouping
  * lines rather than declarable ones, so a rule reasoning about the conditions
- * on a specific commodity has to read upward — the line itself says only
+ * on a specific commodity has to read upward, the line itself says only
  * "Other".
  */
 final class CommodityDetail

@@ -20,7 +20,7 @@ use DateTimeImmutable;
  * Carries the whole Resolution rather than picking pieces out of it. A rule
  * seeing only a null commodity and an empty candidate list cannot tell whether
  * the code is wrong or whether the chapter sync failed, and those must not be
- * reported the same way — one is the merchant's problem and the other is
+ * reported the same way, one is the merchant's problem and the other is
  * entirely the module's. Holding the outcome keeps that distinction alive all
  * the way to the rule that acts on it.
  *
@@ -36,7 +36,7 @@ final class EvaluationContext
      *        against the mirror, or null when resolution was not attempted.
      * @param HistoricRecord|null $historic Result of the baseline lookup that
      *        separates a withdrawn code from one that never existed. Null when
-     *        the lookup was not performed — which is treated as "cannot prove
+     *        the lookup was not performed, which is treated as "cannot prove
      *        it was ever real" rather than as proof it was not.
      * @param CommodityDetail|null $detail Measures fetched for the resolved
      *        commodity. Null on an offline scan, where the mirror answers
@@ -100,13 +100,6 @@ final class EvaluationContext
         return $this->resolution !== null && $this->resolution->outcome === $outcome;
     }
 
-    /**
-     * Whether the mirror was in a position to give a trustworthy answer.
-     *
-     * False when no resolution was attempted at all, or when the chapter was
-     * not mirrored. Rules that would otherwise blame the merchant for a sync
-     * failure check this first.
-     */
     public function isConclusive(): bool
     {
         return $this->resolution !== null && $this->resolution->isConclusive();
@@ -122,10 +115,6 @@ final class EvaluationContext
         return $this->resolution?->commodity !== null;
     }
 
-    /**
-     * The line the code itself matched, which may be a grouping rather than
-     * something declarable. Carries the official description.
-     */
     public function matchedLine(): ?Commodity
     {
         return $this->resolution?->matchedLine;
@@ -144,10 +133,6 @@ final class EvaluationContext
         return count($this->candidates());
     }
 
-    /**
-     * Whether the merchant has a genuine choice to make. One candidate is not
-     * ambiguity — it is an answer.
-     */
     public function isAmbiguous(): bool
     {
         return $this->resolution !== null && $this->resolution->isAmbiguous();

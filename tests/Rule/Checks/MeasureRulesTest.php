@@ -81,11 +81,11 @@ final class MeasureRulesTest extends TestCase
         );
     }
 
-    // ----------------------------------------------------------- prohibitions
+    // Prohibitions
 
     /**
      * Nearly every control measure carries a negative condition reading "not
-     * allowed after control" — the branch taken when the required document is
+     * allowed after control" the branch taken when the required document is
      * absent, not the measure's normal outcome. Chapter 62 garments carry
      * several. Treating them as prohibitions marks an entire apparel catalogue
      * unshippable.
@@ -193,8 +193,6 @@ final class MeasureRulesTest extends TestCase
         );
     }
 
-    // ---------------------------------------------------------- cost measures
-
     /**
      * The precomputed trade_defence flag is set at commodity level for goods
      * where such a measure exists for *some* origin. A cotton parka carries
@@ -272,8 +270,6 @@ final class MeasureRulesTest extends TestCase
         ));
     }
 
-    // ----------------------------------------------------------- completeness
-
     public function testMissingSupplementaryQuantityIsReported(): void
     {
         $rule = new MissingSupplementaryUnits();
@@ -295,8 +291,6 @@ final class MeasureRulesTest extends TestCase
         // The recorded payload carries no end date, so nothing is expiring.
         self::assertNull($rule->evaluate($this->product(), $this->context($detail)));
     }
-
-    // ------------------------------------------------------------- offline
 
     /**
      * On an offline scan no measures are fetched, and every measure rule stays

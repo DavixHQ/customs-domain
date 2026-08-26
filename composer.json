@@ -14,14 +14,9 @@
     ],
     "authors": [
         {
-            "name": "Davix",
-            "homepage": "https://github.com/DavixHQ"
+            "name": "Davix"
         }
     ],
-    "support": {
-        "issues": "https://github.com/DavixHQ/customs-domain/issues",
-        "source": "https://github.com/DavixHQ/customs-domain"
-    },
     "require": {
         "php": ">=8.1",
         "psr/http-client": "^1.0",
@@ -52,10 +47,12 @@
         "nullsafe": "python3 bin/check-nullsafe.py src tests",
         "check": [
             "@boundary",
+            "@characters",
             "@nullsafe",
             "@analyse",
             "@test"
-        ]
+        ],
+        "characters": "python3 bin/check-characters.py"
     },
     "config": {
         "sort-packages": true
