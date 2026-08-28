@@ -1,19 +1,35 @@
 # davix/customs-domain
 
-Platform-agnostic customs and tariff logic: commodity code normalisation and
-validation, nomenclature resolution against a local mirror, and the compliance
-rules that decide whether a product's customs data is fit to ship on.
+Framework-agnostic customs and tariff logic for PHP.
 
-This package knows nothing about any e-commerce platform. It backs
-`davix/module-customs-radar` for Magento 2 and is intended to support
-equivalent integrations elsewhere without modification.
+`davix/customs-domain` handles commodity code normalisation, tariff resolution, customs compliance rules and HMRC tariff data without depending on Magento or any other application framework.
+
+It currently backs `davix/module-customs-radar` for Magento 2, but the domain package is deliberately kept separate so the same logic can be reused by other applications.
+
+## What it does
+
+The package provides:
+
+* Commodity code normalisation and format validation
+* Resolution of commodity codes against a local tariff mirror
+* Measured-property narrowing for ambiguous classifications
+* Great Britain and Northern Ireland tariff support
+* Offline and measure-dependent customs compliance rules
+* Catalogue scanning with tariff lookup deduplication
+* An HMRC tariff client built against PSR interfaces
+* Tariff certificate, quota and historic-code lookups
+
+Storage, queues, scheduling, UI and translation are left to the application using the package.
 
 ## Requirements
 
-PHP 8.1 or later. The only runtime dependencies are PSR interfaces -
-`psr/http-client`, `psr/http-factory`, `psr/http-message`, `psr/log` and
-`psr/simple-cache`. No concrete HTTP client, cache or logger is bundled; the
-consuming application supplies those.
+* PHP 8.1+
+* PSR-18 HTTP client
+* PSR-17 HTTP factories
+* PSR-16 cache implementation if caching is required
+* PSR-3 logger if application logging is required
+
+The package depends on interfaces rather than concrete implementations, so you can use whichever HTTP client, cache and logger already fit your application.
 
 ## Installation
 
@@ -21,49 +37,45 @@ consuming application supplies those.
 composer require davix/customs-domain
 ```
 
-## The boundary
+## Package boundary
 
-One rule, enforced in CI: nothing under `src/` may reference any framework. No
-`Magento\`, no `WP_`, no Guzzle, no Symfony. Configuration arrives as
-constructor arguments; the host reads its own config and passes plain values
-in. Messages come out as a translation key plus a context array, so the host
-owns wording and locale.
+Nothing under `src/` should depend on a framework or e-commerce platform.
+
+That means no Magento services, Symfony components, WordPress APIs or concrete HTTP clients in the domain layer.
+
+The host application is responsible for reading its own configuration and passing plain values or implementations of the package interfaces into the domain.
+
+The boundary can be checked locally with:
 
 ```bash
 composer boundary
 ```
 
-The moment this package can only run inside one platform, it has stopped being
-worth separating from that platform's module.
+It is also checked in CI.
 
-## What lives here
+## Namespaces
 
-| Namespace | Contents |
-|---|---|
-| `Validation` | Code normalisation, format checking, hierarchy helpers |
-| `Tariff` | Commodity and measure value objects, repository contract, resolver, weight parsing |
-| `Product` | The product data contract a host implements over its own storage |
-| `Rule` | The rule engine, settings, and the checks themselves |
-| `Provider` | The tariff service contract, and an HMRC client over PSR-18 |
-| `Exception` | One base type so hosts can isolate domain failures |
+| Namespace    | Purpose                                                               |
+| ------------ | --------------------------------------------------------------------- |
+| `Validation` | Commodity code normalisation, format validation and hierarchy helpers |
+| `Tariff`     | Commodity, measure, quota and resolution domain objects               |
+| `Product`    | Product customs-data contracts                                        |
+| `Rule`       | Compliance rules, evaluation and rule settings                        |
+| `Scan`       | Catalogue scanning and lookup deduplication                           |
+| `Provider`   | Tariff provider contracts and the HMRC implementation                 |
+| `Exception`  | Domain-specific exceptions                                            |
 
-## What does not
+## Commodity code normalisation
 
-Storage, scheduling, queueing, user interface, translation, and anything
-deciding *when* work happens. This package defines what a resolution is and
-what makes a product non-compliant. It never decides where data is kept, when
-it is checked, or how it is presented.
+Commodity codes often arrive from spreadsheets, supplier feeds or manually maintained product data in inconsistent formats.
 
-## Normalising a merchant's code
-
-Merchant commodity data almost always originates in a supplier spreadsheet,
-and spreadsheets damage codes in predictable ways. Normalisation runs in front
-of every rule.
+`CodeNormaliser` handles common cases where the intended code can be recovered safely.
 
 ```php
 use Davix\Customs\Validation\CodeNormaliser;
 
 $normaliser = new CodeNormaliser();
+
 $result = $normaliser->normalise('6201.40.10.19');
 
 $result->isSuccess();                            // true
@@ -72,179 +84,266 @@ $result->wasModified();                          // true
 $normaliser->formatForDisplay($result->code());  // '6201.40.10.19'
 ```
 
-It repairs what can be repaired unambiguously - dotted and spaced grouping,
-Excel's trailing `.0`, leading zeroes stripped by numeric formatting - and
-refuses to guess at anything else:
+Supported cleanup includes things such as:
+
+* dotted or spaced grouping
+* surrounding quotes
+* invisible whitespace
+* Excel-style trailing `.0`
+* leading zeroes lost because a cell was treated as numeric
+
+The normaliser deliberately refuses values where recovering the original code would require guessing.
+
+Scientific notation is one example:
 
 ```php
 $result = $normaliser->normalise('6.20140102E+09');
 
-$result->isFailure();   // true
-$result->failure;       // NormalisationFailure::ScientificNotation
+$result->isFailure(); // true
 ```
 
-Excel exports long codes in scientific notation, destroying the trailing
-digits. A plausible-looking wrong commodity code is more damaging than a
-visible error, so the normaliser reports rather than salvages.
+Once a long commodity code has been converted to scientific notation, digits may already have been lost. Returning a failure is safer than producing another valid-looking but incorrect code.
 
-## Resolving against the mirror
+## The local tariff mirror
 
-The host implements `CommodityRepositoryInterface` over its own storage. The
-resolver reads it and never touches the network, which is what lets a scan run
-with zero HTTP per product and stops a provider outage from flagging an entire
-catalogue as broken.
+Commodity resolution is performed against a local tariff mirror through `CommodityRepositoryInterface`.
+
+The host application implements this interface using whatever storage makes sense for it.
+
+The package does not prescribe a database, ORM or persistence model.
+
+The repository provides access to things such as:
+
+* commodity lookups by goods nomenclature SID
+* commodity lookups by code
+* declarable lines
+* child and descendant relationships
+* chapter availability
+* the jurisdiction represented by the mirror
+
+Resolution itself does not require a network request.
+
+This is intentional. A catalogue scan should still be able to perform useful checks when the remote tariff service is unavailable.
+
+It also means a failed or incomplete tariff sync does not automatically turn every affected product into an `unknown_code` result.
+
+See [Integration](docs/INTEGRATION.md) for more information about implementing the host-side contracts.
+
+## Resolving commodity codes
+
+`CommodityResolver` resolves a normalised commodity code against the local mirror.
 
 ```php
 use Davix\Customs\Tariff\CommodityResolver;
+use Davix\Customs\Tariff\MeasuredProperty;
 
 $resolver = new CommodityResolver($repository);
-$resolution = $resolver->resolve('620140', netWeightKg: 1.5);
 
-$resolution->outcome;          // ResolutionOutcome::Ambiguous
-$resolution->candidates;       // declarable lines to choose between
-$resolution->narrowedByWeight; // whether net weight eliminated any
+$resolution = $resolver->resolve('620140', [
+    MeasuredProperty::NET_WEIGHT => 1.5,
+]);
+
+$resolution->outcome;
+$resolution->commodity;
+$resolution->candidates;
+$resolution->narrowedByMeasurement;
+$resolution->candidatesBeforeNarrowing;
 ```
 
-`ResolutionOutcome` separates "we checked and it is wrong" from "we could not
-check". An unmirrored chapter proves nothing about a code, and reporting a
-failed sync as thousands of bad merchant codes would be both wrong and
-corrosive to trust.
+A code shorter than ten digits may represent a valid heading or subheading rather than a declarable commodity.
 
-## Northern Ireland
+When that happens, the resolver walks the nomenclature below the supplied code and returns the available declarable candidates.
 
-Great Britain and Northern Ireland are separate tariffs. The same commodity
-code can carry different duty, different quotas and different controls in each
-- the men's parka in the test fixtures has 74 measures under the UK tariff and
-94 under the Northern Ireland one.
+### Measured-property narrowing
 
-The two services return byte-identical structures, which is a mercy for the
-mapper and a hazard for everyone else: a client pointed at the wrong base URI
-returns something that looks entirely correct and answers a different
-question. So the jurisdiction is chosen explicitly and carried everywhere.
+Some tariff classifications depend on properties of the goods rather than the code hierarchy alone.
+
+Known measurements can be supplied to help narrow an ambiguous result.
+
+Supported properties include:
+
+| Property           | Key                                  |
+| ------------------ | ------------------------------------ |
+| Net weight         | `MeasuredProperty::NET_WEIGHT`       |
+| Volume             | `MeasuredProperty::VOLUME`           |
+| Alcoholic strength | `MeasuredProperty::ALCOHOL_STRENGTH` |
+| Fat content        | `MeasuredProperty::FAT_CONTENT`      |
+| Protein content    | `MeasuredProperty::PROTEIN_CONTENT`  |
+| Sugar content      | `MeasuredProperty::SUGAR_CONTENT`    |
+| Starch content     | `MeasuredProperty::STARCH_CONTENT`   |
+| Dry matter         | `MeasuredProperty::DRY_MATTER`       |
+
+The measured-property map is intentionally open, so a host application can pass additional measurements without waiting for a dedicated property accessor to be added to the package.
+
+Narrowing is conservative.
+
+If a measurement required to evaluate a candidate is missing, that candidate is not discarded. It is safer to return an extra classification option than to remove the correct one based on incomplete product data.
+
+### Resolution outcomes
+
+Resolution does not treat every unsuccessful lookup as an invalid commodity code.
+
+Important outcomes include:
+
+* resolved to a declarable commodity
+* ambiguous, with multiple declarable candidates
+* code not present in the mirror
+* chapter not available in the mirror
+* code outside the standard nomenclature
+* a matched grouping line with no usable declarable descendants
+
+The distinction between **unknown** and **inconclusive** is important when working with a local tariff mirror.
+
+If Chapter 62 has not been imported, for example, the resolver cannot reasonably conclude that every Chapter 62 code is invalid.
+
+## Great Britain and Northern Ireland
+
+Great Britain and Northern Ireland use separate tariff services.
+
+The package keeps tariff jurisdiction explicit so data from the two services cannot be mixed accidentally.
 
 ```php
 use Davix\Customs\Provider\Hmrc\HmrcClientOptions;
 use Davix\Customs\Tariff\Jurisdiction;
 
-$options = HmrcClientOptions::for(Jurisdiction::NorthernIreland);
-
-$detail->jurisdiction();                            // which tariff answered
-$detail->isFor(Jurisdiction::NorthernIreland);      // did we get what we asked for
+$options = HmrcClientOptions::for(
+    Jurisdiction::NorthernIreland
+);
 ```
 
-Two territories means two mirrors. A repository declares which tariff it holds,
-so a host serving both can compare it against its client before scanning rather
-than discovering the mismatch in the duty rates:
+Applications supporting both tariffs should maintain a separate local mirror for each jurisdiction.
+
+Before scanning, the host can also verify that the repository and remote provider agree:
 
 ```php
 if ($repository->jurisdiction() !== $provider->jurisdiction()) {
-    // reading a Great Britain mirror against a Northern Ireland client
+    throw new RuntimeException(
+        'Tariff repository and provider use different jurisdictions.'
+    );
 }
 ```
 
-Cache keys are scoped by jurisdiction for the same reason.
+Provider cache keys are scoped by jurisdiction as well.
 
-## Running the rules
+## Running compliance rules
+
+Rules evaluate a `ProductCustomsDataInterface` together with an `EvaluationContext`.
 
 ```php
-use Davix\Customs\Rule\{DefaultRuleSet, EvaluationContext};
+use Davix\Customs\Rule\DefaultRuleSet;
+use Davix\Customs\Rule\EvaluationContext;
 
-$pool = DefaultRuleSet::pool();      // offline checks only
-// $pool = DefaultRuleSet::fullPool(); // including measure-dependent checks
+$pool = DefaultRuleSet::pool();
 
-$evaluation = $pool->evaluate($productData, new EvaluationContext(
-    evaluatedAt: new DateTimeImmutable(),
-    settings: $settings,
-    resolution: $resolution,
-    historic: $historicRecord,
-    detail: $commodityDetail,
-));
+// Includes rules that need tariff measures/provider data:
+// $pool = DefaultRuleSet::fullPool();
 
-$evaluation->issueCodes();       // ['ambiguous_expansion', 'missing_origin']
-$evaluation->highestSeverity();  // Severity::Attention
-$evaluation->hasBlocking();      // false
+$evaluation = $pool->evaluate(
+    $productData,
+    new EvaluationContext(
+        evaluatedAt: new DateTimeImmutable(),
+        settings: $settings,
+        resolution: $resolution,
+        historic: $historicRecord,
+        detail: $commodityDetail,
+        certificates: $certificateIndex,
+        quotas: $quotaSet,
+    ),
+);
+
+$evaluation->issueCodes();
+$evaluation->highestSeverity();
+$evaluation->hasBlocking();
 ```
 
-### The offline rule set
+## Offline rules
 
-Every check below evaluates against the local mirror or the product's own
-data, with no network access.
+Offline rules only require product data and the local tariff mirror.
 
-| Code | Severity | Fires when |
-|---|---|---|
-| `missing_hs_code` | Blocked | No commodity code supplied |
-| `invalid_code_format` | Blocked | Present but not a shape a code can be |
-| `withdrawn_code` | Attention | Real once, withdrawn since |
-| `unknown_code` | Blocked | Well formed but never existed |
-| `ambiguous_expansion` | Attention | Real, but more than one declarable line beneath |
-| `missing_origin` | Attention | No country of origin |
-| `origin_not_in_tariff_areas` | Blocked | Origin matches no tariff geographical area |
-| `vague_description` | Attention | Description missing or too generic to use |
-| `description_is_product_name` | Attention | Description is a copy of the product name |
-| `missing_composition` | Attention | No fibre content in a textile chapter |
-| `net_weight_exceeds_gross` | Attention | Net heavier than gross, which is impossible |
-| `stale_verification` | Attention | Confirmed once, not since the configured period |
+| Code                          | Default severity | Fires when                                                   |
+| ----------------------------- | ---------------- | ------------------------------------------------------------ |
+| `missing_hs_code`             | Blocked          | No commodity code is supplied                                |
+| `invalid_code_format`         | Blocked          | The supplied value is not a valid commodity-code shape       |
+| `withdrawn_code`              | Attention        | The code existed historically but is no longer current       |
+| `unknown_code`                | Blocked          | A well-formed code is not found                              |
+| `ambiguous_expansion`         | Attention        | A code expands to more than one declarable line              |
+| `missing_origin`              | Attention        | Country of origin is missing                                 |
+| `origin_not_in_tariff_areas`  | Blocked          | Origin does not match a recognised tariff geographical area  |
+| `vague_description`           | Attention        | Customs description is missing or too generic                |
+| `description_is_product_name` | Attention        | Customs description simply repeats the product name          |
+| `missing_composition`         | Attention        | Fibre composition is missing for configured textile chapters |
+| `net_weight_exceeds_gross`    | Attention        | Net weight is greater than gross weight                      |
+| `stale_verification`          | Attention        | Previously verified data is older than the configured period |
 
-### The measure-dependent rule set
+## Measure-dependent rules
 
-These need commodity measures fetched over the wire, so they cost an HTTP call
-per distinct commodity. A merchant can run the offline set across a whole
-catalogue nightly and reserve these for products that resolved cleanly. All of
-them stay silent when no measures were fetched, so including them in an offline
-scan is harmless rather than wrong.
+These checks require tariff measures or other remote tariff information.
 
-| Code | Severity | Fires when |
-|---|---|---|
-| `prohibited_goods` | Blocked | An unconditional prohibition covers this origin |
-| `licence_required` | Blocked / Attention | A control needs a document; attention where a declaration suffices |
-| `additional_duty_applies` | Attention | An additional duty or sanction applies to this origin |
-| `preference_available` | Opportunity | A lower rate exists for this origin than the standard one |
-| `vat_zero_rating_available` | Opportunity | The commodity carries a zero VAT option |
-| `missing_supplementary_units` | Attention | The commodity is declared in a unit the product does not record |
-| `meursing_code_required` | Attention | Duty depends on composition via a Meursing code |
-| `entry_price_system` | Attention | Duty depends on the price the goods enter at |
-| `code_expiring_soon` | Attention | The code stops being valid inside the warning window |
+When the required information has not been fetched, the rule remains silent rather than trying to infer a result.
 
-Two things these get right that a naive reading of the payload does not.
+| Code                          | Default severity    | Fires when                                                               |
+| ----------------------------- | ------------------- | ------------------------------------------------------------------------ |
+| `prohibited_goods`            | Blocked             | An applicable prohibition prevents movement                              |
+| `licence_required`            | Blocked / Attention | A control requires documentation                                         |
+| `additional_duty_applies`     | Attention           | An additional duty or restriction applies                                |
+| `preference_available`        | Opportunity         | A lower preferential percentage rate is available                        |
+| `quota_exhausted`             | Attention           | A relevant quota is exhausted, unavailable or running low                |
+| `vat_zero_rating_available`   | Opportunity         | A zero VAT option is available                                           |
+| `missing_supplementary_units` | Attention           | The tariff requires a supplementary quantity not recorded by the product |
+| `meursing_code_required`      | Attention           | Duty depends on a Meursing code                                          |
+| `entry_price_system`          | Attention           | Duty depends on the goods' entry price                                   |
+| `code_expiring_soon`          | Attention           | The commodity code expires inside the configured warning period          |
 
-**A negative condition is not a prohibition.** Nearly every control measure
-carries one reading "not allowed after control" - the branch taken when the
-required document is absent, not the measure's normal outcome. Chapter 62
-garments carry several, so counting them marks an entire apparel catalogue
-unshippable. A prohibition means measure series A, or a negative condition with
-no documentary route at all.
+Some of these checks exist because tariff data contains behaviours that are not obvious from the API structure alone.
 
-**Precomputed flags are commodity-level, not origin-level.** A cotton parka
-comes back with `trade_defence: true` because Russia and Belarus attract a 35%
-additional duty. Firing on the flag would report that surcharge against
-Vietnamese stock, so the measures decide and the flag only says whether looking
-is worthwhile.
+Those cases are documented in [Tariff notes](docs/TARIFF-NOTES.md).
 
-### Prerequisites
+## Rule prerequisites
 
-Rules declare which other rules must pass before they are worth running.
-Without that, one unreadable commodity code produces five issues on a single
-product, four of them derived from the first. The merchant fixes one thing,
-four issues vanish, and the counts look arbitrary.
+Rules can depend on earlier checks.
+
+For example, there is little value in attempting tariff resolution when the supplied commodity code is not even structurally valid.
+
+Rules declare those dependencies as prerequisites:
 
 ```php
 public function prerequisites(): array
 {
-    return [InvalidCodeFormat::CODE];
+    return [
+        InvalidCodeFormat::CODE,
+    ];
 }
 ```
 
-A rule whose prerequisite emitted an issue is skipped, and skipping cascades.
-A rule the merchant *disabled* counts as passing instead - silencing one check
-should not silently disable everything downstream of it. `RuleEvaluation`
-keeps the skip list with reasons, so a host can honestly report that a check
-did not run rather than implying it passed.
+If a prerequisite emits an issue, dependent rules are skipped.
+
+Skipping cascades through further dependencies.
+
+A disabled prerequisite is treated as passing. Disabling one rule should not unexpectedly disable unrelated checks further down the chain.
+
+`RuleEvaluation` records skipped rules and the reason they were skipped.
+
+## Rule settings
+
+`RuleSettings` contains merchant or application-specific behaviour.
+
+This includes settings such as:
+
+* disabled rules
+* severity overrides
+* stale verification age
+* vague description terms
+* chapters requiring composition
+* recognised origin codes
+* import or export direction
+* quota low-balance warning threshold
+* code-expiry warning period
+
+The host application owns configuration storage and any UI used to manage these settings.
 
 ## Scanning a catalogue
 
-The rule engine checks one product. `ProductScanner` runs it across a
-catalogue, and lives here rather than in each platform module because the
-expensive decisions are identical everywhere and easy to get quietly wrong.
+`ProductScanner` runs a rule pool over an iterable set of products.
 
 ```php
 use Davix\Customs\Scan\ProductScanner;
@@ -253,81 +352,182 @@ use Davix\Customs\Scan\ScanOptions;
 $scanner = new ProductScanner(
     rules: DefaultRuleSet::fullPool(),
     resolver: $resolver,
-    provider: $client,
+    provider: $provider,
     settings: $settings,
     options: new ScanOptions(),
 );
 
 foreach ($scanner->scan($products) as $result) {
-    // persist $result->evaluation against $result->identifier
+    // Persist, display or otherwise process the result.
 }
 
-$scanner->summary()->productsWithIssues();
+$summary = $scanner->summary();
 ```
 
-**Lookups are per commodity code, not per product.** A 5,000-product apparel
-catalogue commonly holds a couple of hundred distinct codes, so fetching per
-product is 5,000 calls where 200 will do. Certificates are fetched once for the
-whole scan. In the test suite, 200 products resolve with three network calls.
-Deduplication keys on the resolved code, so a catalogue written variously as
-`620130`, `6201.30` and `6201300000` still shares one lookup.
+The scanner returns a generator, allowing a host application to process large catalogues without holding every result in memory.
 
-**Nothing is fetched where it cannot help.** An ambiguous code spans several
-classifications at once, so there is no single measure set to ask for; a code
-missing from the mirror has no measures at all, but is exactly where a historic
-lookup earns its call.
+## Lookup deduplication
 
-**An outage does not discard the scan.** Offline findings survive, the affected
-products are marked incomplete rather than clean, and a run that fails
-repeatedly abandons itself rather than producing a catalogue-wide report built
-on nothing.
+Remote tariff lookups are cached for the lifetime of a scanner.
 
-`ScanOptions::offline()` makes no network calls at all - what a nightly
-catalogue-wide run should use, leaving the measure rules silent rather than
-guessing.
+Commodity detail and quota requests are made using the **resolved commodity code**, not the individual product.
 
-What stays with the host: iterating the catalogue, persistence, queueing,
-progress and cancellation. Those look nothing alike across platforms.
+If 500 products resolve to the same commodity code, they can share the same remote tariff result.
 
-### Adding a rule
+Certificate descriptions are also fetched at most once per scan.
 
-One class implementing `RuleInterface`, and one registration. If it ever takes
-more than that, the abstraction has gone wrong and should be fixed before more
-checks are written.
+This keeps remote traffic tied more closely to the number of unique tariff classifications than the number of products in the catalogue.
 
-## Messages
+## Network use
 
-Rules emit translation keys and context, never sentences:
+`ScanOptions` controls what a scan is allowed to retrieve remotely.
 
 ```php
-$issue->messageKey();   // 'rule.withdrawn_code.message.with_successor'
-$issue->context;        // ['code' => '6201930000', 'successor_code' => '...']
+$options = new ScanOptions(
+    fetchMeasures: true,
+    fetchQuotas: true,
+    resolveWithdrawnCodes: true,
+);
 ```
 
-The host renders them. This package has no framework and no locale, and baking
-English into it would make every consumer inherit one language.
+For a completely offline scan:
+
+```php
+$options = ScanOptions::offline();
+```
+
+Offline scanning disables:
+
+* tariff measure lookups
+* quota lookups
+* historic-code lookups
+
+Rules requiring those inputs remain silent.
+
+## Provider failures
+
+A remote provider failure does not discard checks that can still be performed locally.
+
+If an HMRC request fails during a product scan, offline rules continue to run and the scan result records that the remote portion was incomplete.
+
+The host can therefore distinguish between:
+
+* a clean product
+* a product with customs issues
+* a product whose complete status could not be determined
+
+`ScanOptions::$maxProviderFailures` can be used to stop a run after repeated remote failures.
+
+## HMRC tariff provider
+
+`HmrcClient` implements `TariffProviderInterface` and uses PSR interfaces for external dependencies.
+
+```php
+use Davix\Customs\Provider\Hmrc\HmrcClient;
+use Davix\Customs\Provider\Hmrc\HmrcClientOptions;
+
+$provider = new HmrcClient(
+    httpClient: $httpClient,
+    requestFactory: $requestFactory,
+    options: new HmrcClientOptions(),
+    cache: $cache,
+    logger: $logger,
+);
+```
+
+The provider supports:
+
+* commodity detail and measures
+* complete chapter data for mirror synchronisation
+* tariff changes
+* certificate descriptions
+* historic commodity lookups
+* quota balances
+* service availability checks
+
+Dated lookups use an `as_of` date.
+
+The client also handles:
+
+* transient request retries
+* `Retry-After`
+* jittered retry backoff
+* optional caching
+* jurisdiction-specific cache keys
+
+Cache failures are treated as cache failures rather than tariff failures. A broken cache should not make HMRC appear unavailable.
+
+See [Integration](docs/INTEGRATION.md) for a fuller application wiring example.
+
+## Messages and translation
+
+Rules return message keys and context rather than final English strings.
+
+```php
+$issue->messageKey();
+$issue->context;
+```
+
+The consuming application decides how those messages should be translated and displayed.
+
+This avoids coupling the domain package to any framework translation system.
+
+## Further documentation
+
+* [Integration guide](docs/INTEGRATION.md) - wiring the package into a host application
+* [Architecture](docs/ARCHITECTURE.md) - package boundaries and data flow
+* [Tariff notes](docs/TARIFF-NOTES.md) - useful edge cases found while working with HMRC tariff data
+* [Changelog](CHANGELOG.md) - release history
 
 ## Development
 
+Install dependencies:
+
 ```bash
 composer install
-composer check      # boundary, nullsafe, static analysis, tests
 ```
 
-Individually: `composer boundary`, `composer nullsafe`, `composer analyse`,
-`composer test`.
+Run the complete project check:
 
-PHPStan runs at level max. Tests use recorded fixtures and never contact the
-live tariff API.
+```bash
+composer check
+```
 
-`bin/check-nullsafe.py` catches redundant `?->` operators before PHPStan does,
-with an explanation rather than a lint code. It needs `python3` on PATH.
+`composer check` currently runs:
+
+1. Framework boundary check
+2. Character check
+3. Redundant nullsafe check
+4. PHPStan
+5. PHPUnit
+
+Individual checks can also be run separately:
+
+```bash
+composer boundary
+composer characters
+composer nullsafe
+composer analyse
+composer test
+```
+
+PHPStan runs at maximum level.
+
+Tests use recorded fixtures and do not call the live tariff API.
+
+The nullsafe and character checks require `python3` to be available on `PATH`.
 
 ## Status
 
-Pre-1.0 and under active development. Public interfaces - particularly
-`RuleInterface`, `EvaluationContext` and `CommodityRepositoryInterface` -
-should be treated as unstable until a 1.0 tag.
+Pre-1.0 and under active development.
+
+Public interfaces may change before the first stable release.
+
+In particular, consumers should currently treat the following contracts as unstable:
+
+* `RuleInterface`
+* `EvaluationContext`
+* `CommodityRepositoryInterface`
 
 ## Licence
 
