@@ -15,6 +15,7 @@ use Davix\Customs\Tariff\ChangeRecord;
 use Davix\Customs\Tariff\CommodityDetail;
 use Davix\Customs\Tariff\HistoricRecord;
 use Davix\Customs\Tariff\Jurisdiction;
+use Davix\Customs\Tariff\OriginSchemeSet;
 use Davix\Customs\Tariff\QuotaSet;
 use DateTimeImmutable;
 use Psr\Http\Client\ClientExceptionInterface;
@@ -66,6 +67,7 @@ final class HmrcClient implements TariffProviderInterface
         private readonly ChangesMapper $changesMapper = new ChangesMapper(),
         private readonly CertificateMapper $certificateMapper = new CertificateMapper(),
         private readonly QuotaMapper $quotaMapper = new QuotaMapper(),
+        private readonly RulesOfOriginMapper $rulesOfOriginMapper = new RulesOfOriginMapper(),
     ) {
     }
 
@@ -169,6 +171,34 @@ final class HmrcClient implements TariffProviderInterface
 
         try {
             return $this->quotaMapper->mapJson($body);
+        } catch (\JsonException $e) {
+            throw TariffUnavailableException::malformed($url, $e);
+        }
+    }
+
+    public function rulesOfOrigin(string $subheading, string $countryCode): OriginSchemeSet
+    {
+        // Six digits, because that is the level the agreements are written at.
+        // Passing ten would ask the service a question it has no answer to.
+        $subheading = substr(preg_replace('/\D/', '', $subheading) ?? '', 0, 6);
+        $countryCode = strtoupper(trim($countryCode));
+
+        $url = $this->url(
+            sprintf('/rules_of_origin_schemes/%s/%s', rawurlencode($subheading), rawurlencode($countryCode)),
+            null,
+        );
+
+        // Cached hard. Trade agreements change on the timescale of treaty
+        // negotiations, and the same subheading and origin pair recurs across
+        // every product sharing a classification.
+        $body = $this->cached(
+            $this->cacheKey('origin', $subheading . '.' . $countryCode, $this->clock->now()),
+            max($this->options->commodityCacheTtl, 1),
+            fn (): string => $this->fetch($url, self::ACCEPT_JSON),
+        );
+
+        try {
+            return $this->rulesOfOriginMapper->mapJson($body);
         } catch (\JsonException $e) {
             throw TariffUnavailableException::malformed($url, $e);
         }

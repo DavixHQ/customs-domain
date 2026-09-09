@@ -10,6 +10,7 @@ use Davix\Customs\Tariff\Commodity;
 use Davix\Customs\Tariff\CommodityDetail;
 use Davix\Customs\Tariff\HistoricRecord;
 use Davix\Customs\Tariff\Jurisdiction;
+use Davix\Customs\Tariff\OriginSchemeSet;
 use Davix\Customs\Tariff\QuotaSet;
 use DateTimeImmutable;
 
@@ -99,6 +100,23 @@ interface TariffProviderInterface
      * @throws \Davix\Customs\Exception\TariffUnavailableException
      */
     public function quotas(string $code, ?DateTimeImmutable $asOf = null): QuotaSet;
+
+    /**
+     * Rules of origin for goods of a subheading traded with a country.
+     *
+     * The other half of a preferential rate. A measure saying goods from
+     * Vietnam attract 0% states that the rate exists; these state what the
+     * goods have to satisfy to get it, and what proof to hold. Without them a
+     * merchant is told about a saving and left with no way to claim it.
+     *
+     * Keyed on the six digit subheading and the country rather than on the
+     * commodity, which is what makes this cheap: a catalogue of three thousand
+     * products across a few hundred subheadings and a handful of origins is a
+     * few dozen calls.
+     *
+     * @throws \Davix\Customs\Exception\TariffUnavailableException
+     */
+    public function rulesOfOrigin(string $subheading, string $countryCode): OriginSchemeSet;
 
     /**
      * Which tariff this provider queries.

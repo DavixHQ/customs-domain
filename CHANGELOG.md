@@ -71,6 +71,16 @@ Until `1.0.0`, minor releases may include breaking changes to public interfaces.
 * Replaced weight-only classification narrowing with general measured-property narrowing.
 * Updated the Chapter 62 fixture to more closely represent the structure of live tariff data.
 
+- Rules of origin. A preference measure says a lower rate exists; these say
+  what the goods must satisfy to get it and what proof to hold. Without them a
+  merchant is told about a saving and left with no way to claim it.
+- Every applicable scheme is kept, ordered with the one the measure named
+  first. Vietnamese apparel falls under both the UK-Vietnam agreement and
+  CPTPP, with different rules and different proof, and a merchant who cannot
+  meet one may well meet the other.
+- `ext-mbstring` and `ext-json` are declared. The package has used both
+  throughout and never said so, which worked because most builds include them.
+
 ### Fixed
 
 * Fixed European decimal commas in tariff quantity conditions being interpreted as thousands separators.

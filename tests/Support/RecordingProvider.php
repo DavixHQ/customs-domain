@@ -8,11 +8,13 @@ use Davix\Customs\Exception\TariffUnavailableException;
 use Davix\Customs\Provider\Hmrc\CertificateMapper;
 use Davix\Customs\Provider\Hmrc\CommodityMapper;
 use Davix\Customs\Provider\Hmrc\QuotaMapper;
+use Davix\Customs\Provider\Hmrc\RulesOfOriginMapper;
 use Davix\Customs\Provider\TariffProviderInterface;
 use Davix\Customs\Tariff\CertificateIndex;
 use Davix\Customs\Tariff\CommodityDetail;
 use Davix\Customs\Tariff\HistoricRecord;
 use Davix\Customs\Tariff\Jurisdiction;
+use Davix\Customs\Tariff\OriginSchemeSet;
 use Davix\Customs\Tariff\QuotaSet;
 use DateTimeImmutable;
 
@@ -31,6 +33,9 @@ final class RecordingProvider implements TariffProviderInterface
 
     /** @var list<string> */
     public array $commodityCodesRequested = [];
+
+    /** @var list<string> */
+    public array $originLookups = [];
 
     public function __construct(
         private readonly string $fixtureDirectory,
@@ -83,6 +88,19 @@ final class RecordingProvider implements TariffProviderInterface
         $this->failIfConfigured();
 
         return HistoricRecord::found('Anoraks, of man-made fibres', new DateTimeImmutable('2021-12-31'));
+    }
+
+    /**
+     * Recorded like the rest, so a test can assert that rules of origin are
+     * fetched per subheading and origin rather than per product.
+     */
+    public function rulesOfOrigin(string $subheading, string $countryCode): OriginSchemeSet
+    {
+        $this->record('rules_of_origin');
+        $this->originLookups[] = $subheading . '/' . $countryCode;
+        $this->failIfConfigured();
+
+        return (new RulesOfOriginMapper())->mapJson($this->fixture('rules-620140-VN.json'));
     }
 
     public function jurisdiction(): Jurisdiction
