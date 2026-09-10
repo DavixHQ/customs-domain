@@ -204,6 +204,25 @@ final class RulesOfOriginMapperTest extends TestCase
         self::assertSame('real', $set->withRules()->all()[0]->code);
     }
 
+    /**
+     * Thresholds are published as markdown emphasis. The Vietnam rule set
+     * carries "**47.5%**", which on a screen that cannot render markdown
+     * appears with its asterisks attached to the number that matters most.
+     */
+    public function testEmphasisIsStrippedFromRuleText(): void
+    {
+        $texts = array_map(
+            static fn (OriginRule $rule): string => $rule->plainText(),
+            $this->scheme('vietnam')->allRules(),
+        );
+
+        $joined = implode(' ', $texts);
+
+        self::assertStringContainsString('47.5%', $joined);
+        self::assertStringNotContainsString('*', $joined);
+        self::assertStringNotContainsString('__', $joined);
+    }
+
     public function testAnEmptyResponseIsHandled(): void
     {
         $set = (new RulesOfOriginMapper())->mapJson('{"data": [], "included": []}');

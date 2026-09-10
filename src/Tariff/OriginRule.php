@@ -36,17 +36,22 @@ class OriginRule
     /**
      * The rule with the tariff's own markup removed.
      *
-     * Rule text carries links back to the tariff site and non-breaking spaces
-     * inside code references: "a change to a good of [heading&nbsp;6201]
-     * (/headings/6201)". Rendered raw in an admin panel that reads as broken
-     * rather than as a citation.
+     * Rule text is markdown. It carries links back to the tariff site, bold
+     * around percentage thresholds, and non-breaking spaces inside code
+     * references. Rendered raw in an admin panel, "**47.5%**" appears with its
+     * asterisks and a citation appears as brackets and a path.
      */
     public function plainText(): string
     {
         $text = $this->text;
 
-        // Markdown links: keep the label, drop the target.
+        // Links: keep the label, drop the target.
         $text = (string) preg_replace('/\[([^\]]*)\]\([^)]*\)/', '$1', $text);
+
+        // Emphasis. Thresholds are published as **47.5%** and the asterisks
+        // are noise on a screen that cannot render them.
+        $text = (string) preg_replace('/\*{1,3}([^*]+)\*{1,3}/', '$1', $text);
+        $text = (string) preg_replace('/_{2}([^_]+)_{2}/', '$1', $text);
 
         $text = str_replace(["&nbsp;", "\u{00A0}"], ' ', $text);
         $text = html_entity_decode($text, ENT_QUOTES | ENT_HTML5, 'UTF-8');
